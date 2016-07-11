@@ -14,9 +14,40 @@ To use the bindings, import the pacakge:
 import lib_openshift
 ```
 
+## Some basic info
+
+OpenShift v1 api is exposed via lib_openshift.OapivApi
+Kubernetes v1 api is exposed via lib_openshift.ApivApi
+
+Autoscaling v1 api is exposed via lib_openshift.ApiautoscalingvApi
+Batch v1 api is exposed via lib_openshift.ApibatchvApi
+Extensions v1beta1 api is exposed via lib_openshift.ApiextensionsvbetaApi
+
+models are exposed directly under lib_openshift
+
+## Simple test script
+
+```
+import lib_openshift
+import urllib3
+
+urllib3.disable_warnings()
+
+my_endpoint = 'https://109.0.0.51:8443'
+my_token = 'Bearer vyXQ_ISfV8JeZeMhvd81Dqxb45KHRZMT8Xf3XLJvfUY'
+
+client = lib_openshift.ApiClient(my_endpoint, 'Authorization', my_token))
+
+apiv1=lib_openshift.ApivApi(client)
+oapiv1=lib_openshift.OapivApi(client)
+
+oapiv1.list_namespaced_project()
+```
+
 ## Getting Started
 
 TODO
+
 
 ## Documentation
 
