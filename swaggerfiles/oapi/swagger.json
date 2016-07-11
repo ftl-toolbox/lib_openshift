@@ -1,0 +1,32 @@
+{
+  "swaggerVersion": "1.2",
+  "apiVersion": "",
+  "basePath": "https://10.0.0.51:8443",
+  "resourcePath": "/oapi",
+  "info": {
+   "title": "",
+   "description": ""
+  },
+  "apis": [
+   {
+    "path": "/oapi",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "list supported server API versions",
+      "nickname": "func1",
+      "parameters": [],
+      "produces": [
+       "application/json"
+      ],
+      "consumes": [
+       "application/json"
+      ]
+     }
+    ]
+   }
+  ],
+  "models": {}
+ }

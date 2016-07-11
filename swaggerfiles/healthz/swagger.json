@@ -1,0 +1,61 @@
+{
+  "swaggerVersion": "1.2",
+  "apiVersion": "",
+  "basePath": "https://10.0.0.51:8443",
+  "resourcePath": "/healthz",
+  "info": {
+   "title": "",
+   "description": ""
+  },
+  "apis": [
+   {
+    "path": "/healthz",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "return the health state of the master",
+      "nickname": "func1",
+      "parameters": [],
+      "responseMessages": [
+       {
+        "code": 200,
+        "message": "if master is healthy"
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/healthz/ready",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "return the readiness state of the master",
+      "nickname": "func1",
+      "parameters": [],
+      "responseMessages": [
+       {
+        "code": 200,
+        "message": "if the master is ready"
+       },
+       {
+        "code": 503,
+        "message": "if the master is not ready"
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   }
+  ],
+  "models": {}
+ }

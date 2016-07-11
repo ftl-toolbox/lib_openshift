@@ -1,0 +1,74 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+   {
+    "path": "apis/swagger.json",
+    "description": "get available API versions"
+   },
+   {
+    "path": "version/swagger.json",
+    "description": "git code version from which this is built"
+   },
+   {
+    "path": "api/v1/swagger.json",
+    "description": "API at /api/v1"
+   },
+   {
+    "path": "api/swagger.json",
+    "description": "get available API versions"
+   },
+   {
+    "path": "apis/extensions/v1beta1/swagger.json",
+    "description": "API at /apis/extensions/v1beta1"
+   },
+   {
+    "path": "apis/extensions/swagger.json",
+    "description": "get information of a group"
+   },
+   {
+    "path": "apis/autoscaling/v1/swagger.json",
+    "description": "API at /apis/autoscaling/v1"
+   },
+   {
+    "path": "apis/autoscaling/swagger.json",
+    "description": "get information of a group"
+   },
+   {
+    "path": "apis/batch/v1/swagger.json",
+    "description": "API at /apis/batch/v1"
+   },
+   {
+    "path": "apis/batch/swagger.json",
+    "description": "get information of a group"
+   },
+   {
+    "path": "oapi/v1/swagger.json",
+    "description": "OpenShift REST API, version v1"
+   },
+   {
+    "path": "osapi/swagger.json",
+    "description": ""
+   },
+   {
+    "path": "oapi/swagger.json",
+    "description": ""
+   },
+   {
+    "path": "controllers/swagger.json",
+    "description": ""
+   },
+   {
+    "path": "healthz/swagger.json",
+    "description": ""
+   },
+   {
+    "path": "healthz/ready/swagger.json",
+    "description": ""
+   }
+  ],
+  "apiVersion": "",
+  "info": {
+   "title": "",
+   "description": ""
+  }
+ }

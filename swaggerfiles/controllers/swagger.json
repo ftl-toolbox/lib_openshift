@@ -1,0 +1,79 @@
+{
+  "swaggerVersion": "1.2",
+  "apiVersion": "",
+  "basePath": "https://10.0.0.51:8443",
+  "resourcePath": "/controllers",
+  "info": {
+   "title": "",
+   "description": ""
+  },
+  "apis": [
+   {
+    "path": "/controllers",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "Check whether the controllers are running on this master",
+      "nickname": "func1",
+      "parameters": [],
+      "responseMessages": [
+       {
+        "code": 200,
+        "message": "if controllers are running"
+       },
+       {
+        "code": 202,
+        "message": "if controllers are waiting to be started"
+       },
+       {
+        "code": 405,
+        "message": "if controllers are disabled"
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     },
+     {
+      "type": "void",
+      "method": "PUT",
+      "summary": "Start controllers on this master",
+      "nickname": "func2",
+      "parameters": [],
+      "responseMessages": [
+       {
+        "code": 200,
+        "message": "if controllers have started"
+       },
+       {
+        "code": 405,
+        "message": "if controllers are disabled"
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     },
+     {
+      "type": "void",
+      "method": "DELETE",
+      "summary": "Stop the master",
+      "nickname": "func3",
+      "parameters": [],
+      "responseMessages": [
+       {
+        "code": 202,
+        "message": "if the master will stop"
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   }
+  ],
+  "models": {}
+ }
