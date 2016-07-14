@@ -44,12 +44,6 @@ oapiv1=lib_openshift.OapivApi(client)
 oapiv1.list_namespaced_project()
 ```
 
-## Generating Docs from virtualenv
-
-pip install -r docs_requirements.txt
-make -C docs html SPHINXBUILD="python $(which sphinx-build)"
-xdg-open docs/_build/html/index.html
-
 ## Getting Started
 
 TODO
