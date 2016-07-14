@@ -33,7 +33,7 @@ import urllib3
 
 urllib3.disable_warnings()
 
-my_endpoint = 'https://109.0.0.51:8443'
+my_endpoint = 'https://10.0.0.51:8443'
 my_token = 'Bearer vyXQ_ISfV8JeZeMhvd81Dqxb45KHRZMT8Xf3XLJvfUY'
 
 client = lib_openshift.ApiClient(my_endpoint, 'Authorization', my_token)
