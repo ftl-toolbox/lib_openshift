@@ -36,7 +36,7 @@ urllib3.disable_warnings()
 my_endpoint = 'https://109.0.0.51:8443'
 my_token = 'Bearer vyXQ_ISfV8JeZeMhvd81Dqxb45KHRZMT8Xf3XLJvfUY'
 
-client = lib_openshift.ApiClient(my_endpoint, 'Authorization', my_token))
+client = lib_openshift.ApiClient(my_endpoint, 'Authorization', my_token)
 
 apiv1=lib_openshift.ApivApi(client)
 oapiv1=lib_openshift.OapivApi(client)
