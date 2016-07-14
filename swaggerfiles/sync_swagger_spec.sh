@@ -13,4 +13,5 @@ done
 
 for file in `find . -name swagger.json`; do
   sed -i -e 's/"type": "any"/"type": "object"/g' $file
+  sed -i -e "s#${SWAGGER_ENDPOINT%/*}#https://localhost:8443#" $file
 done

@@ -1,7 +1,7 @@
 {
   "swaggerVersion": "1.2",
   "apiVersion": "",
-  "basePath": "https://10.0.0.51:8443",
+  "basePath": "https://localhost:8443",
   "resourcePath": "/healthz",
   "info": {
    "title": "",

@@ -1,6 +1,6 @@
 # lib_openshift.ApivApi
 
-All URIs are relative to *https://10.0.0.51:8443/*
+All URIs are relative to *https://localhost:8443/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
