@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ftl-toolbox/lib_openshift.svg?branch=master)](https://travis-ci.org/ftl-toolbox/lib_openshift)
+
 ## Requirements.
 Python 2.7 and later.
 
