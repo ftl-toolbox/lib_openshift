@@ -30,14 +30,14 @@ import unittest
 
 import lib_openshift
 from lib_openshift.rest import ApiException
-from lib_openshift.apis.oapiv_api import OapivApi
+from lib_openshift.apis.oapiv1_api import Oapiv1Api
 
 
-class TestOapivApi(unittest.TestCase):
-    """ OapivApi unit test stubs """
+class TestOapiv1Api(unittest.TestCase):
+    """ Oapiv1Api unit test stubs """
 
     def setUp(self):
-        self.api = lib_openshift.apis.oapiv_api.OapivApi()
+        self.api = lib_openshift.apis.oapiv1_api.Oapiv1Api()
 
     def tearDown(self):
         pass

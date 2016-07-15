@@ -1,98 +1,98 @@
-# lib_openshift.ApisextensionsvbetaApi
+# lib_openshift.Apisextensionsv1beta1Api
 
 All URIs are relative to *https://localhost:8443/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_daemon_set**](ApisextensionsvbetaApi.md#create_daemon_set) | **POST** /apis/extensions/v1beta1/daemonsets | create a DaemonSet
-[**create_deployment**](ApisextensionsvbetaApi.md#create_deployment) | **POST** /apis/extensions/v1beta1/deployments | create a Deployment
-[**create_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#create_horizontal_pod_autoscaler) | **POST** /apis/extensions/v1beta1/horizontalpodautoscalers | create a HorizontalPodAutoscaler
-[**create_ingress**](ApisextensionsvbetaApi.md#create_ingress) | **POST** /apis/extensions/v1beta1/ingresses | create a Ingress
-[**create_job**](ApisextensionsvbetaApi.md#create_job) | **POST** /apis/extensions/v1beta1/jobs | create a Job
-[**create_namespaced_daemon_set**](ApisextensionsvbetaApi.md#create_namespaced_daemon_set) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | create a DaemonSet
-[**create_namespaced_deployment**](ApisextensionsvbetaApi.md#create_namespaced_deployment) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | create a Deployment
-[**create_namespaced_deployment_rollback_rollback**](ApisextensionsvbetaApi.md#create_namespaced_deployment_rollback_rollback) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/rollback | create rollback of a DeploymentRollback
-[**create_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#create_namespaced_horizontal_pod_autoscaler) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | create a HorizontalPodAutoscaler
-[**create_namespaced_ingress**](ApisextensionsvbetaApi.md#create_namespaced_ingress) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | create a Ingress
-[**create_namespaced_job**](ApisextensionsvbetaApi.md#create_namespaced_job) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | create a Job
-[**create_namespaced_replica_set**](ApisextensionsvbetaApi.md#create_namespaced_replica_set) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | create a ReplicaSet
-[**create_replica_set**](ApisextensionsvbetaApi.md#create_replica_set) | **POST** /apis/extensions/v1beta1/replicasets | create a ReplicaSet
-[**delete_namespaced_daemon_set**](ApisextensionsvbetaApi.md#delete_namespaced_daemon_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | delete a DaemonSet
-[**delete_namespaced_deployment**](ApisextensionsvbetaApi.md#delete_namespaced_deployment) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | delete a Deployment
-[**delete_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#delete_namespaced_horizontal_pod_autoscaler) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | delete a HorizontalPodAutoscaler
-[**delete_namespaced_ingress**](ApisextensionsvbetaApi.md#delete_namespaced_ingress) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | delete a Ingress
-[**delete_namespaced_job**](ApisextensionsvbetaApi.md#delete_namespaced_job) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | delete a Job
-[**delete_namespaced_replica_set**](ApisextensionsvbetaApi.md#delete_namespaced_replica_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | delete a ReplicaSet
-[**deletecollection_namespaced_daemon_set**](ApisextensionsvbetaApi.md#deletecollection_namespaced_daemon_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | delete collection of DaemonSet
-[**deletecollection_namespaced_deployment**](ApisextensionsvbetaApi.md#deletecollection_namespaced_deployment) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | delete collection of Deployment
-[**deletecollection_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#deletecollection_namespaced_horizontal_pod_autoscaler) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | delete collection of HorizontalPodAutoscaler
-[**deletecollection_namespaced_ingress**](ApisextensionsvbetaApi.md#deletecollection_namespaced_ingress) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | delete collection of Ingress
-[**deletecollection_namespaced_job**](ApisextensionsvbetaApi.md#deletecollection_namespaced_job) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | delete collection of Job
-[**deletecollection_namespaced_replica_set**](ApisextensionsvbetaApi.md#deletecollection_namespaced_replica_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | delete collection of ReplicaSet
-[**get_api_resources**](ApisextensionsvbetaApi.md#get_api_resources) | **GET** /apis/extensions/v1beta1 | get available resources
-[**list_daemon_set**](ApisextensionsvbetaApi.md#list_daemon_set) | **GET** /apis/extensions/v1beta1/daemonsets | list or watch objects of kind DaemonSet
-[**list_deployment**](ApisextensionsvbetaApi.md#list_deployment) | **GET** /apis/extensions/v1beta1/deployments | list or watch objects of kind Deployment
-[**list_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#list_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/horizontalpodautoscalers | list or watch objects of kind HorizontalPodAutoscaler
-[**list_ingress**](ApisextensionsvbetaApi.md#list_ingress) | **GET** /apis/extensions/v1beta1/ingresses | list or watch objects of kind Ingress
-[**list_job**](ApisextensionsvbetaApi.md#list_job) | **GET** /apis/extensions/v1beta1/jobs | list or watch objects of kind Job
-[**list_namespaced_daemon_set**](ApisextensionsvbetaApi.md#list_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | list or watch objects of kind DaemonSet
-[**list_namespaced_deployment**](ApisextensionsvbetaApi.md#list_namespaced_deployment) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | list or watch objects of kind Deployment
-[**list_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#list_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | list or watch objects of kind HorizontalPodAutoscaler
-[**list_namespaced_ingress**](ApisextensionsvbetaApi.md#list_namespaced_ingress) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | list or watch objects of kind Ingress
-[**list_namespaced_job**](ApisextensionsvbetaApi.md#list_namespaced_job) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | list or watch objects of kind Job
-[**list_namespaced_replica_set**](ApisextensionsvbetaApi.md#list_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | list or watch objects of kind ReplicaSet
-[**list_replica_set**](ApisextensionsvbetaApi.md#list_replica_set) | **GET** /apis/extensions/v1beta1/replicasets | list or watch objects of kind ReplicaSet
-[**patch_namespaced_daemon_set**](ApisextensionsvbetaApi.md#patch_namespaced_daemon_set) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | partially update the specified DaemonSet
-[**patch_namespaced_deployment**](ApisextensionsvbetaApi.md#patch_namespaced_deployment) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | partially update the specified Deployment
-[**patch_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#patch_namespaced_horizontal_pod_autoscaler) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | partially update the specified HorizontalPodAutoscaler
-[**patch_namespaced_ingress**](ApisextensionsvbetaApi.md#patch_namespaced_ingress) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | partially update the specified Ingress
-[**patch_namespaced_job**](ApisextensionsvbetaApi.md#patch_namespaced_job) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | partially update the specified Job
-[**patch_namespaced_replica_set**](ApisextensionsvbetaApi.md#patch_namespaced_replica_set) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | partially update the specified ReplicaSet
-[**patch_namespaced_scale_scale**](ApisextensionsvbetaApi.md#patch_namespaced_scale_scale) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | partially update scale of the specified Scale
-[**patch_namespaced_scale_scale_0**](ApisextensionsvbetaApi.md#patch_namespaced_scale_scale_0) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | partially update scale of the specified Scale
-[**patch_namespaced_scale_scale_1**](ApisextensionsvbetaApi.md#patch_namespaced_scale_scale_1) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | partially update scale of the specified Scale
-[**read_namespaced_daemon_set**](ApisextensionsvbetaApi.md#read_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | read the specified DaemonSet
-[**read_namespaced_deployment**](ApisextensionsvbetaApi.md#read_namespaced_deployment) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | read the specified Deployment
-[**read_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#read_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | read the specified HorizontalPodAutoscaler
-[**read_namespaced_ingress**](ApisextensionsvbetaApi.md#read_namespaced_ingress) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | read the specified Ingress
-[**read_namespaced_job**](ApisextensionsvbetaApi.md#read_namespaced_job) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | read the specified Job
-[**read_namespaced_replica_set**](ApisextensionsvbetaApi.md#read_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | read the specified ReplicaSet
-[**read_namespaced_scale_scale**](ApisextensionsvbetaApi.md#read_namespaced_scale_scale) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | read scale of the specified Scale
-[**read_namespaced_scale_scale_0**](ApisextensionsvbetaApi.md#read_namespaced_scale_scale_0) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | read scale of the specified Scale
-[**read_namespaced_scale_scale_1**](ApisextensionsvbetaApi.md#read_namespaced_scale_scale_1) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | read scale of the specified Scale
-[**replace_namespaced_daemon_set**](ApisextensionsvbetaApi.md#replace_namespaced_daemon_set) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | replace the specified DaemonSet
-[**replace_namespaced_daemon_set_status**](ApisextensionsvbetaApi.md#replace_namespaced_daemon_set_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}/status | replace status of the specified DaemonSet
-[**replace_namespaced_deployment**](ApisextensionsvbetaApi.md#replace_namespaced_deployment) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | replace the specified Deployment
-[**replace_namespaced_deployment_status**](ApisextensionsvbetaApi.md#replace_namespaced_deployment_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/status | replace status of the specified Deployment
-[**replace_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#replace_namespaced_horizontal_pod_autoscaler) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | replace the specified HorizontalPodAutoscaler
-[**replace_namespaced_horizontal_pod_autoscaler_status**](ApisextensionsvbetaApi.md#replace_namespaced_horizontal_pod_autoscaler_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status | replace status of the specified HorizontalPodAutoscaler
-[**replace_namespaced_ingress**](ApisextensionsvbetaApi.md#replace_namespaced_ingress) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | replace the specified Ingress
-[**replace_namespaced_ingress_status**](ApisextensionsvbetaApi.md#replace_namespaced_ingress_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name}/status | replace status of the specified Ingress
-[**replace_namespaced_job**](ApisextensionsvbetaApi.md#replace_namespaced_job) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | replace the specified Job
-[**replace_namespaced_job_status**](ApisextensionsvbetaApi.md#replace_namespaced_job_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name}/status | replace status of the specified Job
-[**replace_namespaced_replica_set**](ApisextensionsvbetaApi.md#replace_namespaced_replica_set) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | replace the specified ReplicaSet
-[**replace_namespaced_replica_set_status**](ApisextensionsvbetaApi.md#replace_namespaced_replica_set_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/status | replace status of the specified ReplicaSet
-[**replace_namespaced_scale_scale**](ApisextensionsvbetaApi.md#replace_namespaced_scale_scale) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | replace scale of the specified Scale
-[**replace_namespaced_scale_scale_0**](ApisextensionsvbetaApi.md#replace_namespaced_scale_scale_0) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | replace scale of the specified Scale
-[**replace_namespaced_scale_scale_1**](ApisextensionsvbetaApi.md#replace_namespaced_scale_scale_1) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | replace scale of the specified Scale
-[**watch_daemon_set_list**](ApisextensionsvbetaApi.md#watch_daemon_set_list) | **GET** /apis/extensions/v1beta1/watch/daemonsets | watch individual changes to a list of DaemonSet
-[**watch_deployment_list**](ApisextensionsvbetaApi.md#watch_deployment_list) | **GET** /apis/extensions/v1beta1/watch/deployments | watch individual changes to a list of Deployment
-[**watch_horizontal_pod_autoscaler_list**](ApisextensionsvbetaApi.md#watch_horizontal_pod_autoscaler_list) | **GET** /apis/extensions/v1beta1/watch/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
-[**watch_ingress_list**](ApisextensionsvbetaApi.md#watch_ingress_list) | **GET** /apis/extensions/v1beta1/watch/ingresses | watch individual changes to a list of Ingress
-[**watch_job_list**](ApisextensionsvbetaApi.md#watch_job_list) | **GET** /apis/extensions/v1beta1/watch/jobs | watch individual changes to a list of Job
-[**watch_namespaced_daemon_set**](ApisextensionsvbetaApi.md#watch_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets/{name} | watch changes to an object of kind DaemonSet
-[**watch_namespaced_daemon_set_list**](ApisextensionsvbetaApi.md#watch_namespaced_daemon_set_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets | watch individual changes to a list of DaemonSet
-[**watch_namespaced_deployment**](ApisextensionsvbetaApi.md#watch_namespaced_deployment) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments/{name} | watch changes to an object of kind Deployment
-[**watch_namespaced_deployment_list**](ApisextensionsvbetaApi.md#watch_namespaced_deployment_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments | watch individual changes to a list of Deployment
-[**watch_namespaced_horizontal_pod_autoscaler**](ApisextensionsvbetaApi.md#watch_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name} | watch changes to an object of kind HorizontalPodAutoscaler
-[**watch_namespaced_horizontal_pod_autoscaler_list**](ApisextensionsvbetaApi.md#watch_namespaced_horizontal_pod_autoscaler_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
-[**watch_namespaced_ingress**](ApisextensionsvbetaApi.md#watch_namespaced_ingress) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses/{name} | watch changes to an object of kind Ingress
-[**watch_namespaced_ingress_list**](ApisextensionsvbetaApi.md#watch_namespaced_ingress_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses | watch individual changes to a list of Ingress
-[**watch_namespaced_job**](ApisextensionsvbetaApi.md#watch_namespaced_job) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs/{name} | watch changes to an object of kind Job
-[**watch_namespaced_job_list**](ApisextensionsvbetaApi.md#watch_namespaced_job_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs | watch individual changes to a list of Job
-[**watch_namespaced_replica_set**](ApisextensionsvbetaApi.md#watch_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets/{name} | watch changes to an object of kind ReplicaSet
-[**watch_namespaced_replica_set_list**](ApisextensionsvbetaApi.md#watch_namespaced_replica_set_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets | watch individual changes to a list of ReplicaSet
-[**watch_replica_set_list**](ApisextensionsvbetaApi.md#watch_replica_set_list) | **GET** /apis/extensions/v1beta1/watch/replicasets | watch individual changes to a list of ReplicaSet
+[**create_daemon_set**](Apisextensionsv1beta1Api.md#create_daemon_set) | **POST** /apis/extensions/v1beta1/daemonsets | create a DaemonSet
+[**create_deployment**](Apisextensionsv1beta1Api.md#create_deployment) | **POST** /apis/extensions/v1beta1/deployments | create a Deployment
+[**create_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#create_horizontal_pod_autoscaler) | **POST** /apis/extensions/v1beta1/horizontalpodautoscalers | create a HorizontalPodAutoscaler
+[**create_ingress**](Apisextensionsv1beta1Api.md#create_ingress) | **POST** /apis/extensions/v1beta1/ingresses | create a Ingress
+[**create_job**](Apisextensionsv1beta1Api.md#create_job) | **POST** /apis/extensions/v1beta1/jobs | create a Job
+[**create_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#create_namespaced_daemon_set) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | create a DaemonSet
+[**create_namespaced_deployment**](Apisextensionsv1beta1Api.md#create_namespaced_deployment) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | create a Deployment
+[**create_namespaced_deployment_rollback_rollback**](Apisextensionsv1beta1Api.md#create_namespaced_deployment_rollback_rollback) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/rollback | create rollback of a DeploymentRollback
+[**create_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#create_namespaced_horizontal_pod_autoscaler) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | create a HorizontalPodAutoscaler
+[**create_namespaced_ingress**](Apisextensionsv1beta1Api.md#create_namespaced_ingress) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | create a Ingress
+[**create_namespaced_job**](Apisextensionsv1beta1Api.md#create_namespaced_job) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | create a Job
+[**create_namespaced_replica_set**](Apisextensionsv1beta1Api.md#create_namespaced_replica_set) | **POST** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | create a ReplicaSet
+[**create_replica_set**](Apisextensionsv1beta1Api.md#create_replica_set) | **POST** /apis/extensions/v1beta1/replicasets | create a ReplicaSet
+[**delete_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#delete_namespaced_daemon_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | delete a DaemonSet
+[**delete_namespaced_deployment**](Apisextensionsv1beta1Api.md#delete_namespaced_deployment) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | delete a Deployment
+[**delete_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#delete_namespaced_horizontal_pod_autoscaler) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | delete a HorizontalPodAutoscaler
+[**delete_namespaced_ingress**](Apisextensionsv1beta1Api.md#delete_namespaced_ingress) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | delete a Ingress
+[**delete_namespaced_job**](Apisextensionsv1beta1Api.md#delete_namespaced_job) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | delete a Job
+[**delete_namespaced_replica_set**](Apisextensionsv1beta1Api.md#delete_namespaced_replica_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | delete a ReplicaSet
+[**deletecollection_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_daemon_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | delete collection of DaemonSet
+[**deletecollection_namespaced_deployment**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_deployment) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | delete collection of Deployment
+[**deletecollection_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_horizontal_pod_autoscaler) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | delete collection of HorizontalPodAutoscaler
+[**deletecollection_namespaced_ingress**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_ingress) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | delete collection of Ingress
+[**deletecollection_namespaced_job**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_job) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | delete collection of Job
+[**deletecollection_namespaced_replica_set**](Apisextensionsv1beta1Api.md#deletecollection_namespaced_replica_set) | **DELETE** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | delete collection of ReplicaSet
+[**get_api_resources**](Apisextensionsv1beta1Api.md#get_api_resources) | **GET** /apis/extensions/v1beta1 | get available resources
+[**list_daemon_set**](Apisextensionsv1beta1Api.md#list_daemon_set) | **GET** /apis/extensions/v1beta1/daemonsets | list or watch objects of kind DaemonSet
+[**list_deployment**](Apisextensionsv1beta1Api.md#list_deployment) | **GET** /apis/extensions/v1beta1/deployments | list or watch objects of kind Deployment
+[**list_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#list_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/horizontalpodautoscalers | list or watch objects of kind HorizontalPodAutoscaler
+[**list_ingress**](Apisextensionsv1beta1Api.md#list_ingress) | **GET** /apis/extensions/v1beta1/ingresses | list or watch objects of kind Ingress
+[**list_job**](Apisextensionsv1beta1Api.md#list_job) | **GET** /apis/extensions/v1beta1/jobs | list or watch objects of kind Job
+[**list_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#list_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets | list or watch objects of kind DaemonSet
+[**list_namespaced_deployment**](Apisextensionsv1beta1Api.md#list_namespaced_deployment) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments | list or watch objects of kind Deployment
+[**list_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#list_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers | list or watch objects of kind HorizontalPodAutoscaler
+[**list_namespaced_ingress**](Apisextensionsv1beta1Api.md#list_namespaced_ingress) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses | list or watch objects of kind Ingress
+[**list_namespaced_job**](Apisextensionsv1beta1Api.md#list_namespaced_job) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/jobs | list or watch objects of kind Job
+[**list_namespaced_replica_set**](Apisextensionsv1beta1Api.md#list_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets | list or watch objects of kind ReplicaSet
+[**list_replica_set**](Apisextensionsv1beta1Api.md#list_replica_set) | **GET** /apis/extensions/v1beta1/replicasets | list or watch objects of kind ReplicaSet
+[**patch_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#patch_namespaced_daemon_set) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | partially update the specified DaemonSet
+[**patch_namespaced_deployment**](Apisextensionsv1beta1Api.md#patch_namespaced_deployment) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | partially update the specified Deployment
+[**patch_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#patch_namespaced_horizontal_pod_autoscaler) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | partially update the specified HorizontalPodAutoscaler
+[**patch_namespaced_ingress**](Apisextensionsv1beta1Api.md#patch_namespaced_ingress) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | partially update the specified Ingress
+[**patch_namespaced_job**](Apisextensionsv1beta1Api.md#patch_namespaced_job) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | partially update the specified Job
+[**patch_namespaced_replica_set**](Apisextensionsv1beta1Api.md#patch_namespaced_replica_set) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | partially update the specified ReplicaSet
+[**patch_namespaced_scale_scale**](Apisextensionsv1beta1Api.md#patch_namespaced_scale_scale) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | partially update scale of the specified Scale
+[**patch_namespaced_scale_scale_0**](Apisextensionsv1beta1Api.md#patch_namespaced_scale_scale_0) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | partially update scale of the specified Scale
+[**patch_namespaced_scale_scale_1**](Apisextensionsv1beta1Api.md#patch_namespaced_scale_scale_1) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | partially update scale of the specified Scale
+[**read_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#read_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | read the specified DaemonSet
+[**read_namespaced_deployment**](Apisextensionsv1beta1Api.md#read_namespaced_deployment) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | read the specified Deployment
+[**read_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#read_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | read the specified HorizontalPodAutoscaler
+[**read_namespaced_ingress**](Apisextensionsv1beta1Api.md#read_namespaced_ingress) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | read the specified Ingress
+[**read_namespaced_job**](Apisextensionsv1beta1Api.md#read_namespaced_job) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | read the specified Job
+[**read_namespaced_replica_set**](Apisextensionsv1beta1Api.md#read_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | read the specified ReplicaSet
+[**read_namespaced_scale_scale**](Apisextensionsv1beta1Api.md#read_namespaced_scale_scale) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | read scale of the specified Scale
+[**read_namespaced_scale_scale_0**](Apisextensionsv1beta1Api.md#read_namespaced_scale_scale_0) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | read scale of the specified Scale
+[**read_namespaced_scale_scale_1**](Apisextensionsv1beta1Api.md#read_namespaced_scale_scale_1) | **GET** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | read scale of the specified Scale
+[**replace_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#replace_namespaced_daemon_set) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | replace the specified DaemonSet
+[**replace_namespaced_daemon_set_status**](Apisextensionsv1beta1Api.md#replace_namespaced_daemon_set_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}/status | replace status of the specified DaemonSet
+[**replace_namespaced_deployment**](Apisextensionsv1beta1Api.md#replace_namespaced_deployment) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | replace the specified Deployment
+[**replace_namespaced_deployment_status**](Apisextensionsv1beta1Api.md#replace_namespaced_deployment_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/status | replace status of the specified Deployment
+[**replace_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#replace_namespaced_horizontal_pod_autoscaler) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | replace the specified HorizontalPodAutoscaler
+[**replace_namespaced_horizontal_pod_autoscaler_status**](Apisextensionsv1beta1Api.md#replace_namespaced_horizontal_pod_autoscaler_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status | replace status of the specified HorizontalPodAutoscaler
+[**replace_namespaced_ingress**](Apisextensionsv1beta1Api.md#replace_namespaced_ingress) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | replace the specified Ingress
+[**replace_namespaced_ingress_status**](Apisextensionsv1beta1Api.md#replace_namespaced_ingress_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name}/status | replace status of the specified Ingress
+[**replace_namespaced_job**](Apisextensionsv1beta1Api.md#replace_namespaced_job) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | replace the specified Job
+[**replace_namespaced_job_status**](Apisextensionsv1beta1Api.md#replace_namespaced_job_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name}/status | replace status of the specified Job
+[**replace_namespaced_replica_set**](Apisextensionsv1beta1Api.md#replace_namespaced_replica_set) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | replace the specified ReplicaSet
+[**replace_namespaced_replica_set_status**](Apisextensionsv1beta1Api.md#replace_namespaced_replica_set_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/status | replace status of the specified ReplicaSet
+[**replace_namespaced_scale_scale**](Apisextensionsv1beta1Api.md#replace_namespaced_scale_scale) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | replace scale of the specified Scale
+[**replace_namespaced_scale_scale_0**](Apisextensionsv1beta1Api.md#replace_namespaced_scale_scale_0) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | replace scale of the specified Scale
+[**replace_namespaced_scale_scale_1**](Apisextensionsv1beta1Api.md#replace_namespaced_scale_scale_1) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | replace scale of the specified Scale
+[**watch_daemon_set_list**](Apisextensionsv1beta1Api.md#watch_daemon_set_list) | **GET** /apis/extensions/v1beta1/watch/daemonsets | watch individual changes to a list of DaemonSet
+[**watch_deployment_list**](Apisextensionsv1beta1Api.md#watch_deployment_list) | **GET** /apis/extensions/v1beta1/watch/deployments | watch individual changes to a list of Deployment
+[**watch_horizontal_pod_autoscaler_list**](Apisextensionsv1beta1Api.md#watch_horizontal_pod_autoscaler_list) | **GET** /apis/extensions/v1beta1/watch/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
+[**watch_ingress_list**](Apisextensionsv1beta1Api.md#watch_ingress_list) | **GET** /apis/extensions/v1beta1/watch/ingresses | watch individual changes to a list of Ingress
+[**watch_job_list**](Apisextensionsv1beta1Api.md#watch_job_list) | **GET** /apis/extensions/v1beta1/watch/jobs | watch individual changes to a list of Job
+[**watch_namespaced_daemon_set**](Apisextensionsv1beta1Api.md#watch_namespaced_daemon_set) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets/{name} | watch changes to an object of kind DaemonSet
+[**watch_namespaced_daemon_set_list**](Apisextensionsv1beta1Api.md#watch_namespaced_daemon_set_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets | watch individual changes to a list of DaemonSet
+[**watch_namespaced_deployment**](Apisextensionsv1beta1Api.md#watch_namespaced_deployment) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments/{name} | watch changes to an object of kind Deployment
+[**watch_namespaced_deployment_list**](Apisextensionsv1beta1Api.md#watch_namespaced_deployment_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments | watch individual changes to a list of Deployment
+[**watch_namespaced_horizontal_pod_autoscaler**](Apisextensionsv1beta1Api.md#watch_namespaced_horizontal_pod_autoscaler) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name} | watch changes to an object of kind HorizontalPodAutoscaler
+[**watch_namespaced_horizontal_pod_autoscaler_list**](Apisextensionsv1beta1Api.md#watch_namespaced_horizontal_pod_autoscaler_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
+[**watch_namespaced_ingress**](Apisextensionsv1beta1Api.md#watch_namespaced_ingress) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses/{name} | watch changes to an object of kind Ingress
+[**watch_namespaced_ingress_list**](Apisextensionsv1beta1Api.md#watch_namespaced_ingress_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses | watch individual changes to a list of Ingress
+[**watch_namespaced_job**](Apisextensionsv1beta1Api.md#watch_namespaced_job) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs/{name} | watch changes to an object of kind Job
+[**watch_namespaced_job_list**](Apisextensionsv1beta1Api.md#watch_namespaced_job_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs | watch individual changes to a list of Job
+[**watch_namespaced_replica_set**](Apisextensionsv1beta1Api.md#watch_namespaced_replica_set) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets/{name} | watch changes to an object of kind ReplicaSet
+[**watch_namespaced_replica_set_list**](Apisextensionsv1beta1Api.md#watch_namespaced_replica_set_list) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets | watch individual changes to a list of ReplicaSet
+[**watch_replica_set_list**](Apisextensionsv1beta1Api.md#watch_replica_set_list) | **GET** /apis/extensions/v1beta1/watch/replicasets | watch individual changes to a list of ReplicaSet
 
 
 # **create_daemon_set**
@@ -108,7 +108,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1DaemonSet() # V1beta1DaemonSet | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -117,7 +117,7 @@ try:
     api_response = api_instance.create_daemon_set(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -155,7 +155,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Deployment() # V1beta1Deployment | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -164,7 +164,7 @@ try:
     api_response = api_instance.create_deployment(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -202,7 +202,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1HorizontalPodAutoscaler() # V1beta1HorizontalPodAutoscaler | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -211,7 +211,7 @@ try:
     api_response = api_instance.create_horizontal_pod_autoscaler(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -249,7 +249,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Ingress() # V1beta1Ingress | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -258,7 +258,7 @@ try:
     api_response = api_instance.create_ingress(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -296,7 +296,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Job() # V1beta1Job | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -305,7 +305,7 @@ try:
     api_response = api_instance.create_job(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_job: %s\n" % e
 ```
 
 ### Parameters
@@ -343,7 +343,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1DaemonSet() # V1beta1DaemonSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -353,7 +353,7 @@ try:
     api_response = api_instance.create_namespaced_daemon_set(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -392,7 +392,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Deployment() # V1beta1Deployment | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -402,7 +402,7 @@ try:
     api_response = api_instance.create_namespaced_deployment(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -441,7 +441,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1DeploymentRollback() # V1beta1DeploymentRollback | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DeploymentRollback
@@ -452,7 +452,7 @@ try:
     api_response = api_instance.create_namespaced_deployment_rollback_rollback(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_deployment_rollback_rollback: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_deployment_rollback_rollback: %s\n" % e
 ```
 
 ### Parameters
@@ -492,7 +492,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1HorizontalPodAutoscaler() # V1beta1HorizontalPodAutoscaler | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -502,7 +502,7 @@ try:
     api_response = api_instance.create_namespaced_horizontal_pod_autoscaler(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -541,7 +541,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Ingress() # V1beta1Ingress | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -551,7 +551,7 @@ try:
     api_response = api_instance.create_namespaced_ingress(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -590,7 +590,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Job() # V1beta1Job | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -600,7 +600,7 @@ try:
     api_response = api_instance.create_namespaced_job(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -639,7 +639,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1ReplicaSet() # V1beta1ReplicaSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -649,7 +649,7 @@ try:
     api_response = api_instance.create_namespaced_replica_set(body, namespace, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -688,7 +688,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1ReplicaSet() # V1beta1ReplicaSet | 
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 
@@ -697,7 +697,7 @@ try:
     api_response = api_instance.create_replica_set(body, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->create_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->create_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -735,7 +735,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
@@ -746,7 +746,7 @@ try:
     api_response = api_instance.delete_namespaced_daemon_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -786,7 +786,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
@@ -797,7 +797,7 @@ try:
     api_response = api_instance.delete_namespaced_deployment(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -837,7 +837,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
@@ -848,7 +848,7 @@ try:
     api_response = api_instance.delete_namespaced_horizontal_pod_autoscaler(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -888,7 +888,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
@@ -899,7 +899,7 @@ try:
     api_response = api_instance.delete_namespaced_ingress(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -939,7 +939,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
@@ -950,7 +950,7 @@ try:
     api_response = api_instance.delete_namespaced_job(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -990,7 +990,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1DeleteOptions() # V1DeleteOptions | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
@@ -1001,7 +1001,7 @@ try:
     api_response = api_instance.delete_namespaced_replica_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->delete_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->delete_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -1041,7 +1041,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1055,7 +1055,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_daemon_set(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -1098,7 +1098,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1112,7 +1112,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_deployment(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -1155,7 +1155,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1169,7 +1169,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -1212,7 +1212,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1226,7 +1226,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_ingress(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -1269,7 +1269,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1283,7 +1283,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_job(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -1326,7 +1326,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1340,7 +1340,7 @@ try:
     api_response = api_instance.deletecollection_namespaced_replica_set(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->deletecollection_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->deletecollection_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -1383,13 +1383,13 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 
 try: 
     # get available resources
     api_instance.get_api_resources()
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->get_api_resources: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->get_api_resources: %s\n" % e
 ```
 
 ### Parameters
@@ -1423,7 +1423,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -1436,7 +1436,7 @@ try:
     api_response = api_instance.list_daemon_set(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -1478,7 +1478,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -1491,7 +1491,7 @@ try:
     api_response = api_instance.list_deployment(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -1533,7 +1533,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -1546,7 +1546,7 @@ try:
     api_response = api_instance.list_horizontal_pod_autoscaler(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -1588,7 +1588,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -1601,7 +1601,7 @@ try:
     api_response = api_instance.list_ingress(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -1643,7 +1643,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -1656,7 +1656,7 @@ try:
     api_response = api_instance.list_job(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_job: %s\n" % e
 ```
 
 ### Parameters
@@ -1698,7 +1698,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1712,7 +1712,7 @@ try:
     api_response = api_instance.list_namespaced_daemon_set(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -1755,7 +1755,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1769,7 +1769,7 @@ try:
     api_response = api_instance.list_namespaced_deployment(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -1812,7 +1812,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1826,7 +1826,7 @@ try:
     api_response = api_instance.list_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -1869,7 +1869,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1883,7 +1883,7 @@ try:
     api_response = api_instance.list_namespaced_ingress(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -1926,7 +1926,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1940,7 +1940,7 @@ try:
     api_response = api_instance.list_namespaced_job(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -1983,7 +1983,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -1997,7 +1997,7 @@ try:
     api_response = api_instance.list_namespaced_replica_set(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2040,7 +2040,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -2053,7 +2053,7 @@ try:
     api_response = api_instance.list_replica_set(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->list_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->list_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2095,7 +2095,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
@@ -2106,7 +2106,7 @@ try:
     api_response = api_instance.patch_namespaced_daemon_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2146,7 +2146,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
@@ -2157,7 +2157,7 @@ try:
     api_response = api_instance.patch_namespaced_deployment(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -2197,7 +2197,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
@@ -2208,7 +2208,7 @@ try:
     api_response = api_instance.patch_namespaced_horizontal_pod_autoscaler(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -2248,7 +2248,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
@@ -2259,7 +2259,7 @@ try:
     api_response = api_instance.patch_namespaced_ingress(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -2299,7 +2299,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
@@ -2310,7 +2310,7 @@ try:
     api_response = api_instance.patch_namespaced_job(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -2350,7 +2350,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
@@ -2361,7 +2361,7 @@ try:
     api_response = api_instance.patch_namespaced_replica_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2401,7 +2401,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -2412,7 +2412,7 @@ try:
     api_response = api_instance.patch_namespaced_scale_scale(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_scale_scale: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_scale_scale: %s\n" % e
 ```
 
 ### Parameters
@@ -2452,7 +2452,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -2463,7 +2463,7 @@ try:
     api_response = api_instance.patch_namespaced_scale_scale_0(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_scale_scale_0: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_scale_scale_0: %s\n" % e
 ```
 
 ### Parameters
@@ -2503,7 +2503,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.UnversionedPatch() # UnversionedPatch | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -2514,7 +2514,7 @@ try:
     api_response = api_instance.patch_namespaced_scale_scale_1(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->patch_namespaced_scale_scale_1: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->patch_namespaced_scale_scale_1: %s\n" % e
 ```
 
 ### Parameters
@@ -2554,7 +2554,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2566,7 +2566,7 @@ try:
     api_response = api_instance.read_namespaced_daemon_set(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2607,7 +2607,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2619,7 +2619,7 @@ try:
     api_response = api_instance.read_namespaced_deployment(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -2660,7 +2660,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2672,7 +2672,7 @@ try:
     api_response = api_instance.read_namespaced_horizontal_pod_autoscaler(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -2713,7 +2713,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2725,7 +2725,7 @@ try:
     api_response = api_instance.read_namespaced_ingress(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -2766,7 +2766,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2778,7 +2778,7 @@ try:
     api_response = api_instance.read_namespaced_job(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -2819,7 +2819,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2831,7 +2831,7 @@ try:
     api_response = api_instance.read_namespaced_replica_set(namespace, name, pretty=pretty, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -2872,7 +2872,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2882,7 +2882,7 @@ try:
     api_response = api_instance.read_namespaced_scale_scale(namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_scale_scale: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_scale_scale: %s\n" % e
 ```
 
 ### Parameters
@@ -2921,7 +2921,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2931,7 +2931,7 @@ try:
     api_response = api_instance.read_namespaced_scale_scale_0(namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_scale_scale_0: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_scale_scale_0: %s\n" % e
 ```
 
 ### Parameters
@@ -2970,7 +2970,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -2980,7 +2980,7 @@ try:
     api_response = api_instance.read_namespaced_scale_scale_1(namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->read_namespaced_scale_scale_1: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->read_namespaced_scale_scale_1: %s\n" % e
 ```
 
 ### Parameters
@@ -3019,7 +3019,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1DaemonSet() # V1beta1DaemonSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
@@ -3030,7 +3030,7 @@ try:
     api_response = api_instance.replace_namespaced_daemon_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -3070,7 +3070,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1DaemonSet() # V1beta1DaemonSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
@@ -3081,7 +3081,7 @@ try:
     api_response = api_instance.replace_namespaced_daemon_set_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_daemon_set_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_daemon_set_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3121,7 +3121,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Deployment() # V1beta1Deployment | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
@@ -3132,7 +3132,7 @@ try:
     api_response = api_instance.replace_namespaced_deployment(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -3172,7 +3172,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Deployment() # V1beta1Deployment | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
@@ -3183,7 +3183,7 @@ try:
     api_response = api_instance.replace_namespaced_deployment_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_deployment_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_deployment_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3223,7 +3223,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1HorizontalPodAutoscaler() # V1beta1HorizontalPodAutoscaler | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
@@ -3234,7 +3234,7 @@ try:
     api_response = api_instance.replace_namespaced_horizontal_pod_autoscaler(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -3274,7 +3274,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1HorizontalPodAutoscaler() # V1beta1HorizontalPodAutoscaler | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
@@ -3285,7 +3285,7 @@ try:
     api_response = api_instance.replace_namespaced_horizontal_pod_autoscaler_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_horizontal_pod_autoscaler_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_horizontal_pod_autoscaler_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3325,7 +3325,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Ingress() # V1beta1Ingress | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
@@ -3336,7 +3336,7 @@ try:
     api_response = api_instance.replace_namespaced_ingress(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -3376,7 +3376,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Ingress() # V1beta1Ingress | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
@@ -3387,7 +3387,7 @@ try:
     api_response = api_instance.replace_namespaced_ingress_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_ingress_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_ingress_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3427,7 +3427,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Job() # V1beta1Job | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
@@ -3438,7 +3438,7 @@ try:
     api_response = api_instance.replace_namespaced_job(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -3478,7 +3478,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Job() # V1beta1Job | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
@@ -3489,7 +3489,7 @@ try:
     api_response = api_instance.replace_namespaced_job_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_job_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_job_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3529,7 +3529,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1ReplicaSet() # V1beta1ReplicaSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
@@ -3540,7 +3540,7 @@ try:
     api_response = api_instance.replace_namespaced_replica_set(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -3580,7 +3580,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1ReplicaSet() # V1beta1ReplicaSet | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
@@ -3591,7 +3591,7 @@ try:
     api_response = api_instance.replace_namespaced_replica_set_status(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_replica_set_status: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_replica_set_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3631,7 +3631,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Scale() # V1beta1Scale | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -3642,7 +3642,7 @@ try:
     api_response = api_instance.replace_namespaced_scale_scale(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_scale_scale: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_scale_scale: %s\n" % e
 ```
 
 ### Parameters
@@ -3682,7 +3682,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Scale() # V1beta1Scale | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -3693,7 +3693,7 @@ try:
     api_response = api_instance.replace_namespaced_scale_scale_0(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_scale_scale_0: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_scale_scale_0: %s\n" % e
 ```
 
 ### Parameters
@@ -3733,7 +3733,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 body = lib_openshift.V1beta1Scale() # V1beta1Scale | 
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Scale
@@ -3744,7 +3744,7 @@ try:
     api_response = api_instance.replace_namespaced_scale_scale_1(body, namespace, name, pretty=pretty)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->replace_namespaced_scale_scale_1: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->replace_namespaced_scale_scale_1: %s\n" % e
 ```
 
 ### Parameters
@@ -3784,7 +3784,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -3797,7 +3797,7 @@ try:
     api_response = api_instance.watch_daemon_set_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_daemon_set_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_daemon_set_list: %s\n" % e
 ```
 
 ### Parameters
@@ -3839,7 +3839,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -3852,7 +3852,7 @@ try:
     api_response = api_instance.watch_deployment_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_deployment_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_deployment_list: %s\n" % e
 ```
 
 ### Parameters
@@ -3894,7 +3894,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -3907,7 +3907,7 @@ try:
     api_response = api_instance.watch_horizontal_pod_autoscaler_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_horizontal_pod_autoscaler_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_horizontal_pod_autoscaler_list: %s\n" % e
 ```
 
 ### Parameters
@@ -3949,7 +3949,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -3962,7 +3962,7 @@ try:
     api_response = api_instance.watch_ingress_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_ingress_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_ingress_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4004,7 +4004,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -4017,7 +4017,7 @@ try:
     api_response = api_instance.watch_job_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_job_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_job_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4059,7 +4059,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the DaemonSet
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4074,7 +4074,7 @@ try:
     api_response = api_instance.watch_namespaced_daemon_set(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_daemon_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_daemon_set: %s\n" % e
 ```
 
 ### Parameters
@@ -4118,7 +4118,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4132,7 +4132,7 @@ try:
     api_response = api_instance.watch_namespaced_daemon_set_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_daemon_set_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_daemon_set_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4175,7 +4175,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Deployment
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4190,7 +4190,7 @@ try:
     api_response = api_instance.watch_namespaced_deployment(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_deployment: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_deployment: %s\n" % e
 ```
 
 ### Parameters
@@ -4234,7 +4234,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4248,7 +4248,7 @@ try:
     api_response = api_instance.watch_namespaced_deployment_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_deployment_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_deployment_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4291,7 +4291,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the HorizontalPodAutoscaler
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4306,7 +4306,7 @@ try:
     api_response = api_instance.watch_namespaced_horizontal_pod_autoscaler(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_horizontal_pod_autoscaler: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_horizontal_pod_autoscaler: %s\n" % e
 ```
 
 ### Parameters
@@ -4350,7 +4350,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4364,7 +4364,7 @@ try:
     api_response = api_instance.watch_namespaced_horizontal_pod_autoscaler_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_horizontal_pod_autoscaler_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_horizontal_pod_autoscaler_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4407,7 +4407,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Ingress
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4422,7 +4422,7 @@ try:
     api_response = api_instance.watch_namespaced_ingress(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_ingress: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_ingress: %s\n" % e
 ```
 
 ### Parameters
@@ -4466,7 +4466,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4480,7 +4480,7 @@ try:
     api_response = api_instance.watch_namespaced_ingress_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_ingress_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_ingress_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4523,7 +4523,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the Job
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4538,7 +4538,7 @@ try:
     api_response = api_instance.watch_namespaced_job(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_job: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_job: %s\n" % e
 ```
 
 ### Parameters
@@ -4582,7 +4582,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4596,7 +4596,7 @@ try:
     api_response = api_instance.watch_namespaced_job_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_job_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_job_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4639,7 +4639,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 name = 'name_example' # str | name of the ReplicaSet
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
@@ -4654,7 +4654,7 @@ try:
     api_response = api_instance.watch_namespaced_replica_set(namespace, name, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_replica_set: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_replica_set: %s\n" % e
 ```
 
 ### Parameters
@@ -4698,7 +4698,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
@@ -4712,7 +4712,7 @@ try:
     api_response = api_instance.watch_namespaced_replica_set_list(namespace, pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_namespaced_replica_set_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_namespaced_replica_set_list: %s\n" % e
 ```
 
 ### Parameters
@@ -4755,7 +4755,7 @@ from lib_openshift.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = lib_openshift.ApisextensionsvbetaApi()
+api_instance = lib_openshift.Apisextensionsv1beta1Api()
 pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
 field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -4768,7 +4768,7 @@ try:
     api_response = api_instance.watch_replica_set_list(pretty=pretty, label_selector=label_selector, field_selector=field_selector, watch=watch, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ApisextensionsvbetaApi->watch_replica_set_list: %s\n" % e
+    print "Exception when calling Apisextensionsv1beta1Api->watch_replica_set_list: %s\n" % e
 ```
 
 ### Parameters

@@ -360,17 +360,17 @@ from .models.v1beta1_subresource_reference import V1beta1SubresourceReference
 from .apis.api_api import ApiApi
 from .apis.apis_api import ApisApi
 from .apis.apisautoscaling_api import ApisautoscalingApi
-from .apis.apisautoscalingv_api import ApisautoscalingvApi
+from .apis.apisautoscalingv1_api import Apisautoscalingv1Api
 from .apis.apisbatch_api import ApisbatchApi
-from .apis.apisbatchv_api import ApisbatchvApi
+from .apis.apisbatchv1_api import Apisbatchv1Api
 from .apis.apisextensions_api import ApisextensionsApi
-from .apis.apisextensionsvbeta_api import ApisextensionsvbetaApi
-from .apis.apiv_api import ApivApi
+from .apis.apisextensionsv1beta1_api import Apisextensionsv1beta1Api
+from .apis.apiv1_api import Apiv1Api
 from .apis.controllers_api import ControllersApi
 from .apis.healthz_api import HealthzApi
 from .apis.healthzready_api import HealthzreadyApi
 from .apis.oapi_api import OapiApi
-from .apis.oapiv_api import OapivApi
+from .apis.oapiv1_api import Oapiv1Api
 from .apis.osapi_api import OsapiApi
 from .apis.version_api import VersionApi
 

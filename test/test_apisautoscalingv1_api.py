@@ -30,14 +30,14 @@ import unittest
 
 import lib_openshift
 from lib_openshift.rest import ApiException
-from lib_openshift.apis.apisautoscalingv_api import ApisautoscalingvApi
+from lib_openshift.apis.apisautoscalingv1_api import Apisautoscalingv1Api
 
 
-class TestApisautoscalingvApi(unittest.TestCase):
-    """ ApisautoscalingvApi unit test stubs """
+class TestApisautoscalingv1Api(unittest.TestCase):
+    """ Apisautoscalingv1Api unit test stubs """
 
     def setUp(self):
-        self.api = lib_openshift.apis.apisautoscalingv_api.ApisautoscalingvApi()
+        self.api = lib_openshift.apis.apisautoscalingv1_api.Apisautoscalingv1Api()
 
     def tearDown(self):
         pass

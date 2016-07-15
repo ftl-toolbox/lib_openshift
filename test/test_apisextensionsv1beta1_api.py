@@ -30,14 +30,14 @@ import unittest
 
 import lib_openshift
 from lib_openshift.rest import ApiException
-from lib_openshift.apis.apisextensionsvbeta_api import ApisextensionsvbetaApi
+from lib_openshift.apis.apisextensionsv1beta1_api import Apisextensionsv1beta1Api
 
 
-class TestApisextensionsvbetaApi(unittest.TestCase):
-    """ ApisextensionsvbetaApi unit test stubs """
+class TestApisextensionsv1beta1Api(unittest.TestCase):
+    """ Apisextensionsv1beta1Api unit test stubs """
 
     def setUp(self):
-        self.api = lib_openshift.apis.apisextensionsvbeta_api.ApisextensionsvbetaApi()
+        self.api = lib_openshift.apis.apisextensionsv1beta1_api.Apisextensionsv1beta1Api()
 
     def tearDown(self):
         pass
