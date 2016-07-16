@@ -15,11 +15,11 @@ for spec in $specs; do
     sanitized=${api//\//_}
     outdir=generated/${sanitized}
 
-    mkdir -p ${outdir}
+    mkdir -p "${outdir}"
 
     echo "{ \"packageName\": \"${sanitized}\", \"packageVersion\": \"${PACKAGE_VERSION}\" }" > ${outdir}/swagger_codegen_config.json
     echo -e "README.md\ntox.ini\n.gitignore\n.travis.yml\ngit_push.sh" > ${outdir}/.swagger-codegen-ignore
-    java -jar ~/bin/swagger-codegen-cli.jar generate -o ${outdir} -i swaggerfiles/${spec} -l python -c ${outdir}/swagger_codegen_config.json -t swagger_codegen_template
+    java -jar ~/bin/swagger-codegen-cli.jar generate -o ${outdir} -i swaggerfiles/${spec} -l python -c ${outdir}/swagger_codegen_config.json -t codegen_templates/individual_api
   fi
 done
 
