@@ -13,4 +13,4 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - nosetests
-  - for api in generated/*; do nosetests -w api; done
+  - for api in generated/*; do nosetests -w $api; done
