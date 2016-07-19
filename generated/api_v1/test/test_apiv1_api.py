@@ -42,342 +42,6 @@ class TestApiv1Api(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_connect_delete_namespaced_node_proxy(self):
-        """
-        Test case for connect_delete_namespaced_node_proxy
-
-        connect DELETE requests to proxy of Node
-        """
-        pass
-
-    def test_connect_delete_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_delete_namespaced_node_proxy_0
-
-        connect DELETE requests to proxy of Node
-        """
-        pass
-
-    def test_connect_delete_namespaced_pod_proxy(self):
-        """
-        Test case for connect_delete_namespaced_pod_proxy
-
-        connect DELETE requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_delete_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_delete_namespaced_pod_proxy_0
-
-        connect DELETE requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_delete_namespaced_service_proxy(self):
-        """
-        Test case for connect_delete_namespaced_service_proxy
-
-        connect DELETE requests to proxy of Service
-        """
-        pass
-
-    def test_connect_delete_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_delete_namespaced_service_proxy_0
-
-        connect DELETE requests to proxy of Service
-        """
-        pass
-
-    def test_connect_get_namespaced_node_proxy(self):
-        """
-        Test case for connect_get_namespaced_node_proxy
-
-        connect GET requests to proxy of Node
-        """
-        pass
-
-    def test_connect_get_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_get_namespaced_node_proxy_0
-
-        connect GET requests to proxy of Node
-        """
-        pass
-
-    def test_connect_get_namespaced_pod_attach(self):
-        """
-        Test case for connect_get_namespaced_pod_attach
-
-        connect GET requests to attach of Pod
-        """
-        pass
-
-    def test_connect_get_namespaced_pod_exec(self):
-        """
-        Test case for connect_get_namespaced_pod_exec
-
-        connect GET requests to exec of Pod
-        """
-        pass
-
-    def test_connect_get_namespaced_pod_portforward(self):
-        """
-        Test case for connect_get_namespaced_pod_portforward
-
-        connect GET requests to portforward of Pod
-        """
-        pass
-
-    def test_connect_get_namespaced_pod_proxy(self):
-        """
-        Test case for connect_get_namespaced_pod_proxy
-
-        connect GET requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_get_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_get_namespaced_pod_proxy_0
-
-        connect GET requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_get_namespaced_service_proxy(self):
-        """
-        Test case for connect_get_namespaced_service_proxy
-
-        connect GET requests to proxy of Service
-        """
-        pass
-
-    def test_connect_get_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_get_namespaced_service_proxy_0
-
-        connect GET requests to proxy of Service
-        """
-        pass
-
-    def test_connect_head_namespaced_node_proxy(self):
-        """
-        Test case for connect_head_namespaced_node_proxy
-
-        connect HEAD requests to proxy of Node
-        """
-        pass
-
-    def test_connect_head_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_head_namespaced_node_proxy_0
-
-        connect HEAD requests to proxy of Node
-        """
-        pass
-
-    def test_connect_head_namespaced_pod_proxy(self):
-        """
-        Test case for connect_head_namespaced_pod_proxy
-
-        connect HEAD requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_head_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_head_namespaced_pod_proxy_0
-
-        connect HEAD requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_head_namespaced_service_proxy(self):
-        """
-        Test case for connect_head_namespaced_service_proxy
-
-        connect HEAD requests to proxy of Service
-        """
-        pass
-
-    def test_connect_head_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_head_namespaced_service_proxy_0
-
-        connect HEAD requests to proxy of Service
-        """
-        pass
-
-    def test_connect_options_namespaced_node_proxy(self):
-        """
-        Test case for connect_options_namespaced_node_proxy
-
-        connect OPTIONS requests to proxy of Node
-        """
-        pass
-
-    def test_connect_options_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_options_namespaced_node_proxy_0
-
-        connect OPTIONS requests to proxy of Node
-        """
-        pass
-
-    def test_connect_options_namespaced_pod_proxy(self):
-        """
-        Test case for connect_options_namespaced_pod_proxy
-
-        connect OPTIONS requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_options_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_options_namespaced_pod_proxy_0
-
-        connect OPTIONS requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_options_namespaced_service_proxy(self):
-        """
-        Test case for connect_options_namespaced_service_proxy
-
-        connect OPTIONS requests to proxy of Service
-        """
-        pass
-
-    def test_connect_options_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_options_namespaced_service_proxy_0
-
-        connect OPTIONS requests to proxy of Service
-        """
-        pass
-
-    def test_connect_post_namespaced_node_proxy(self):
-        """
-        Test case for connect_post_namespaced_node_proxy
-
-        connect POST requests to proxy of Node
-        """
-        pass
-
-    def test_connect_post_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_post_namespaced_node_proxy_0
-
-        connect POST requests to proxy of Node
-        """
-        pass
-
-    def test_connect_post_namespaced_pod_attach(self):
-        """
-        Test case for connect_post_namespaced_pod_attach
-
-        connect POST requests to attach of Pod
-        """
-        pass
-
-    def test_connect_post_namespaced_pod_exec(self):
-        """
-        Test case for connect_post_namespaced_pod_exec
-
-        connect POST requests to exec of Pod
-        """
-        pass
-
-    def test_connect_post_namespaced_pod_portforward(self):
-        """
-        Test case for connect_post_namespaced_pod_portforward
-
-        connect POST requests to portforward of Pod
-        """
-        pass
-
-    def test_connect_post_namespaced_pod_proxy(self):
-        """
-        Test case for connect_post_namespaced_pod_proxy
-
-        connect POST requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_post_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_post_namespaced_pod_proxy_0
-
-        connect POST requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_post_namespaced_service_proxy(self):
-        """
-        Test case for connect_post_namespaced_service_proxy
-
-        connect POST requests to proxy of Service
-        """
-        pass
-
-    def test_connect_post_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_post_namespaced_service_proxy_0
-
-        connect POST requests to proxy of Service
-        """
-        pass
-
-    def test_connect_put_namespaced_node_proxy(self):
-        """
-        Test case for connect_put_namespaced_node_proxy
-
-        connect PUT requests to proxy of Node
-        """
-        pass
-
-    def test_connect_put_namespaced_node_proxy_0(self):
-        """
-        Test case for connect_put_namespaced_node_proxy_0
-
-        connect PUT requests to proxy of Node
-        """
-        pass
-
-    def test_connect_put_namespaced_pod_proxy(self):
-        """
-        Test case for connect_put_namespaced_pod_proxy
-
-        connect PUT requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_put_namespaced_pod_proxy_0(self):
-        """
-        Test case for connect_put_namespaced_pod_proxy_0
-
-        connect PUT requests to proxy of Pod
-        """
-        pass
-
-    def test_connect_put_namespaced_service_proxy(self):
-        """
-        Test case for connect_put_namespaced_service_proxy
-
-        connect PUT requests to proxy of Service
-        """
-        pass
-
-    def test_connect_put_namespaced_service_proxy_0(self):
-        """
-        Test case for connect_put_namespaced_service_proxy_0
-
-        connect PUT requests to proxy of Service
-        """
-        pass
-
     def test_create_binding(self):
         """
         Test case for create_binding
@@ -674,6 +338,22 @@ class TestApiv1Api(unittest.TestCase):
         """
         pass
 
+    def test_delete_namespaced_node_proxy(self):
+        """
+        Test case for delete_namespaced_node_proxy
+
+        connect DELETE requests to proxy of Node
+        """
+        pass
+
+    def test_delete_namespaced_node_proxy_0(self):
+        """
+        Test case for delete_namespaced_node_proxy_0
+
+        connect DELETE requests to proxy of Node
+        """
+        pass
+
     def test_delete_namespaced_persistent_volume(self):
         """
         Test case for delete_namespaced_persistent_volume
@@ -695,6 +375,22 @@ class TestApiv1Api(unittest.TestCase):
         Test case for delete_namespaced_pod
 
         delete a Pod
+        """
+        pass
+
+    def test_delete_namespaced_pod_proxy(self):
+        """
+        Test case for delete_namespaced_pod_proxy
+
+        connect DELETE requests to proxy of Pod
+        """
+        pass
+
+    def test_delete_namespaced_pod_proxy_0(self):
+        """
+        Test case for delete_namespaced_pod_proxy_0
+
+        connect DELETE requests to proxy of Pod
         """
         pass
 
@@ -751,6 +447,22 @@ class TestApiv1Api(unittest.TestCase):
         Test case for delete_namespaced_service_account
 
         delete a ServiceAccount
+        """
+        pass
+
+    def test_delete_namespaced_service_proxy(self):
+        """
+        Test case for delete_namespaced_service_proxy
+
+        connect DELETE requests to proxy of Service
+        """
+        pass
+
+    def test_delete_namespaced_service_proxy_0(self):
+        """
+        Test case for delete_namespaced_service_proxy_0
+
+        connect DELETE requests to proxy of Service
         """
         pass
 
@@ -879,6 +591,126 @@ class TestApiv1Api(unittest.TestCase):
         Test case for get_api_resources
 
         get available resources
+        """
+        pass
+
+    def test_get_namespaced_node_proxy(self):
+        """
+        Test case for get_namespaced_node_proxy
+
+        connect GET requests to proxy of Node
+        """
+        pass
+
+    def test_get_namespaced_node_proxy_0(self):
+        """
+        Test case for get_namespaced_node_proxy_0
+
+        connect GET requests to proxy of Node
+        """
+        pass
+
+    def test_get_namespaced_pod_attach(self):
+        """
+        Test case for get_namespaced_pod_attach
+
+        connect GET requests to attach of Pod
+        """
+        pass
+
+    def test_get_namespaced_pod_exec(self):
+        """
+        Test case for get_namespaced_pod_exec
+
+        connect GET requests to exec of Pod
+        """
+        pass
+
+    def test_get_namespaced_pod_portforward(self):
+        """
+        Test case for get_namespaced_pod_portforward
+
+        connect GET requests to portforward of Pod
+        """
+        pass
+
+    def test_get_namespaced_pod_proxy(self):
+        """
+        Test case for get_namespaced_pod_proxy
+
+        connect GET requests to proxy of Pod
+        """
+        pass
+
+    def test_get_namespaced_pod_proxy_0(self):
+        """
+        Test case for get_namespaced_pod_proxy_0
+
+        connect GET requests to proxy of Pod
+        """
+        pass
+
+    def test_get_namespaced_service_proxy(self):
+        """
+        Test case for get_namespaced_service_proxy
+
+        connect GET requests to proxy of Service
+        """
+        pass
+
+    def test_get_namespaced_service_proxy_0(self):
+        """
+        Test case for get_namespaced_service_proxy_0
+
+        connect GET requests to proxy of Service
+        """
+        pass
+
+    def test_head_namespaced_node_proxy(self):
+        """
+        Test case for head_namespaced_node_proxy
+
+        connect HEAD requests to proxy of Node
+        """
+        pass
+
+    def test_head_namespaced_node_proxy_0(self):
+        """
+        Test case for head_namespaced_node_proxy_0
+
+        connect HEAD requests to proxy of Node
+        """
+        pass
+
+    def test_head_namespaced_pod_proxy(self):
+        """
+        Test case for head_namespaced_pod_proxy
+
+        connect HEAD requests to proxy of Pod
+        """
+        pass
+
+    def test_head_namespaced_pod_proxy_0(self):
+        """
+        Test case for head_namespaced_pod_proxy_0
+
+        connect HEAD requests to proxy of Pod
+        """
+        pass
+
+    def test_head_namespaced_service_proxy(self):
+        """
+        Test case for head_namespaced_service_proxy
+
+        connect HEAD requests to proxy of Service
+        """
+        pass
+
+    def test_head_namespaced_service_proxy_0(self):
+        """
+        Test case for head_namespaced_service_proxy_0
+
+        connect HEAD requests to proxy of Service
         """
         pass
 
@@ -1114,6 +946,54 @@ class TestApiv1Api(unittest.TestCase):
         """
         pass
 
+    def test_options_namespaced_node_proxy(self):
+        """
+        Test case for options_namespaced_node_proxy
+
+        connect OPTIONS requests to proxy of Node
+        """
+        pass
+
+    def test_options_namespaced_node_proxy_0(self):
+        """
+        Test case for options_namespaced_node_proxy_0
+
+        connect OPTIONS requests to proxy of Node
+        """
+        pass
+
+    def test_options_namespaced_pod_proxy(self):
+        """
+        Test case for options_namespaced_pod_proxy
+
+        connect OPTIONS requests to proxy of Pod
+        """
+        pass
+
+    def test_options_namespaced_pod_proxy_0(self):
+        """
+        Test case for options_namespaced_pod_proxy_0
+
+        connect OPTIONS requests to proxy of Pod
+        """
+        pass
+
+    def test_options_namespaced_service_proxy(self):
+        """
+        Test case for options_namespaced_service_proxy
+
+        connect OPTIONS requests to proxy of Service
+        """
+        pass
+
+    def test_options_namespaced_service_proxy_0(self):
+        """
+        Test case for options_namespaced_service_proxy_0
+
+        connect OPTIONS requests to proxy of Service
+        """
+        pass
+
     def test_patch_namespaced_config_map(self):
         """
         Test case for patch_namespaced_config_map
@@ -1247,6 +1127,78 @@ class TestApiv1Api(unittest.TestCase):
         Test case for patch_namespaced_service_account
 
         partially update the specified ServiceAccount
+        """
+        pass
+
+    def test_post_namespaced_node_proxy(self):
+        """
+        Test case for post_namespaced_node_proxy
+
+        connect POST requests to proxy of Node
+        """
+        pass
+
+    def test_post_namespaced_node_proxy_0(self):
+        """
+        Test case for post_namespaced_node_proxy_0
+
+        connect POST requests to proxy of Node
+        """
+        pass
+
+    def test_post_namespaced_pod_attach(self):
+        """
+        Test case for post_namespaced_pod_attach
+
+        connect POST requests to attach of Pod
+        """
+        pass
+
+    def test_post_namespaced_pod_exec(self):
+        """
+        Test case for post_namespaced_pod_exec
+
+        connect POST requests to exec of Pod
+        """
+        pass
+
+    def test_post_namespaced_pod_portforward(self):
+        """
+        Test case for post_namespaced_pod_portforward
+
+        connect POST requests to portforward of Pod
+        """
+        pass
+
+    def test_post_namespaced_pod_proxy(self):
+        """
+        Test case for post_namespaced_pod_proxy
+
+        connect POST requests to proxy of Pod
+        """
+        pass
+
+    def test_post_namespaced_pod_proxy_0(self):
+        """
+        Test case for post_namespaced_pod_proxy_0
+
+        connect POST requests to proxy of Pod
+        """
+        pass
+
+    def test_post_namespaced_service_proxy(self):
+        """
+        Test case for post_namespaced_service_proxy
+
+        connect POST requests to proxy of Service
+        """
+        pass
+
+    def test_post_namespaced_service_proxy_0(self):
+        """
+        Test case for post_namespaced_service_proxy_0
+
+        connect POST requests to proxy of Service
         """
         pass
 
@@ -1535,6 +1487,54 @@ class TestApiv1Api(unittest.TestCase):
         Test case for proxy_put_namespaced_service_0
 
         proxy PUT requests to Service
+        """
+        pass
+
+    def test_put_namespaced_node_proxy(self):
+        """
+        Test case for put_namespaced_node_proxy
+
+        connect PUT requests to proxy of Node
+        """
+        pass
+
+    def test_put_namespaced_node_proxy_0(self):
+        """
+        Test case for put_namespaced_node_proxy_0
+
+        connect PUT requests to proxy of Node
+        """
+        pass
+
+    def test_put_namespaced_pod_proxy(self):
+        """
+        Test case for put_namespaced_pod_proxy
+
+        connect PUT requests to proxy of Pod
+        """
+        pass
+
+    def test_put_namespaced_pod_proxy_0(self):
+        """
+        Test case for put_namespaced_pod_proxy_0
+
+        connect PUT requests to proxy of Pod
+        """
+        pass
+
+    def test_put_namespaced_service_proxy(self):
+        """
+        Test case for put_namespaced_service_proxy
+
+        connect PUT requests to proxy of Service
+        """
+        pass
+
+    def test_put_namespaced_service_proxy_0(self):
+        """
+        Test case for put_namespaced_service_proxy_0
+
+        connect PUT requests to proxy of Service
         """
         pass
 

@@ -4,48 +4,6 @@ All URIs are relative to *https://localhost:8443/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**connect_delete_namespaced_node_proxy**](Apiv1Api.md#connect_delete_namespaced_node_proxy) | **DELETE** /api/v1/nodes/{name}/proxy | connect DELETE requests to proxy of Node
-[**connect_delete_namespaced_node_proxy_0**](Apiv1Api.md#connect_delete_namespaced_node_proxy_0) | **DELETE** /api/v1/nodes/{name}/proxy/{path} | connect DELETE requests to proxy of Node
-[**connect_delete_namespaced_pod_proxy**](Apiv1Api.md#connect_delete_namespaced_pod_proxy) | **DELETE** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect DELETE requests to proxy of Pod
-[**connect_delete_namespaced_pod_proxy_0**](Apiv1Api.md#connect_delete_namespaced_pod_proxy_0) | **DELETE** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect DELETE requests to proxy of Pod
-[**connect_delete_namespaced_service_proxy**](Apiv1Api.md#connect_delete_namespaced_service_proxy) | **DELETE** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect DELETE requests to proxy of Service
-[**connect_delete_namespaced_service_proxy_0**](Apiv1Api.md#connect_delete_namespaced_service_proxy_0) | **DELETE** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect DELETE requests to proxy of Service
-[**connect_get_namespaced_node_proxy**](Apiv1Api.md#connect_get_namespaced_node_proxy) | **GET** /api/v1/nodes/{name}/proxy | connect GET requests to proxy of Node
-[**connect_get_namespaced_node_proxy_0**](Apiv1Api.md#connect_get_namespaced_node_proxy_0) | **GET** /api/v1/nodes/{name}/proxy/{path} | connect GET requests to proxy of Node
-[**connect_get_namespaced_pod_attach**](Apiv1Api.md#connect_get_namespaced_pod_attach) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/attach | connect GET requests to attach of Pod
-[**connect_get_namespaced_pod_exec**](Apiv1Api.md#connect_get_namespaced_pod_exec) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/exec | connect GET requests to exec of Pod
-[**connect_get_namespaced_pod_portforward**](Apiv1Api.md#connect_get_namespaced_pod_portforward) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/portforward | connect GET requests to portforward of Pod
-[**connect_get_namespaced_pod_proxy**](Apiv1Api.md#connect_get_namespaced_pod_proxy) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect GET requests to proxy of Pod
-[**connect_get_namespaced_pod_proxy_0**](Apiv1Api.md#connect_get_namespaced_pod_proxy_0) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect GET requests to proxy of Pod
-[**connect_get_namespaced_service_proxy**](Apiv1Api.md#connect_get_namespaced_service_proxy) | **GET** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect GET requests to proxy of Service
-[**connect_get_namespaced_service_proxy_0**](Apiv1Api.md#connect_get_namespaced_service_proxy_0) | **GET** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect GET requests to proxy of Service
-[**connect_head_namespaced_node_proxy**](Apiv1Api.md#connect_head_namespaced_node_proxy) | **HEAD** /api/v1/nodes/{name}/proxy | connect HEAD requests to proxy of Node
-[**connect_head_namespaced_node_proxy_0**](Apiv1Api.md#connect_head_namespaced_node_proxy_0) | **HEAD** /api/v1/nodes/{name}/proxy/{path} | connect HEAD requests to proxy of Node
-[**connect_head_namespaced_pod_proxy**](Apiv1Api.md#connect_head_namespaced_pod_proxy) | **HEAD** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect HEAD requests to proxy of Pod
-[**connect_head_namespaced_pod_proxy_0**](Apiv1Api.md#connect_head_namespaced_pod_proxy_0) | **HEAD** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect HEAD requests to proxy of Pod
-[**connect_head_namespaced_service_proxy**](Apiv1Api.md#connect_head_namespaced_service_proxy) | **HEAD** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect HEAD requests to proxy of Service
-[**connect_head_namespaced_service_proxy_0**](Apiv1Api.md#connect_head_namespaced_service_proxy_0) | **HEAD** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect HEAD requests to proxy of Service
-[**connect_options_namespaced_node_proxy**](Apiv1Api.md#connect_options_namespaced_node_proxy) | **OPTIONS** /api/v1/nodes/{name}/proxy | connect OPTIONS requests to proxy of Node
-[**connect_options_namespaced_node_proxy_0**](Apiv1Api.md#connect_options_namespaced_node_proxy_0) | **OPTIONS** /api/v1/nodes/{name}/proxy/{path} | connect OPTIONS requests to proxy of Node
-[**connect_options_namespaced_pod_proxy**](Apiv1Api.md#connect_options_namespaced_pod_proxy) | **OPTIONS** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect OPTIONS requests to proxy of Pod
-[**connect_options_namespaced_pod_proxy_0**](Apiv1Api.md#connect_options_namespaced_pod_proxy_0) | **OPTIONS** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect OPTIONS requests to proxy of Pod
-[**connect_options_namespaced_service_proxy**](Apiv1Api.md#connect_options_namespaced_service_proxy) | **OPTIONS** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect OPTIONS requests to proxy of Service
-[**connect_options_namespaced_service_proxy_0**](Apiv1Api.md#connect_options_namespaced_service_proxy_0) | **OPTIONS** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect OPTIONS requests to proxy of Service
-[**connect_post_namespaced_node_proxy**](Apiv1Api.md#connect_post_namespaced_node_proxy) | **POST** /api/v1/nodes/{name}/proxy | connect POST requests to proxy of Node
-[**connect_post_namespaced_node_proxy_0**](Apiv1Api.md#connect_post_namespaced_node_proxy_0) | **POST** /api/v1/nodes/{name}/proxy/{path} | connect POST requests to proxy of Node
-[**connect_post_namespaced_pod_attach**](Apiv1Api.md#connect_post_namespaced_pod_attach) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/attach | connect POST requests to attach of Pod
-[**connect_post_namespaced_pod_exec**](Apiv1Api.md#connect_post_namespaced_pod_exec) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/exec | connect POST requests to exec of Pod
-[**connect_post_namespaced_pod_portforward**](Apiv1Api.md#connect_post_namespaced_pod_portforward) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/portforward | connect POST requests to portforward of Pod
-[**connect_post_namespaced_pod_proxy**](Apiv1Api.md#connect_post_namespaced_pod_proxy) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect POST requests to proxy of Pod
-[**connect_post_namespaced_pod_proxy_0**](Apiv1Api.md#connect_post_namespaced_pod_proxy_0) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect POST requests to proxy of Pod
-[**connect_post_namespaced_service_proxy**](Apiv1Api.md#connect_post_namespaced_service_proxy) | **POST** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect POST requests to proxy of Service
-[**connect_post_namespaced_service_proxy_0**](Apiv1Api.md#connect_post_namespaced_service_proxy_0) | **POST** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect POST requests to proxy of Service
-[**connect_put_namespaced_node_proxy**](Apiv1Api.md#connect_put_namespaced_node_proxy) | **PUT** /api/v1/nodes/{name}/proxy | connect PUT requests to proxy of Node
-[**connect_put_namespaced_node_proxy_0**](Apiv1Api.md#connect_put_namespaced_node_proxy_0) | **PUT** /api/v1/nodes/{name}/proxy/{path} | connect PUT requests to proxy of Node
-[**connect_put_namespaced_pod_proxy**](Apiv1Api.md#connect_put_namespaced_pod_proxy) | **PUT** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect PUT requests to proxy of Pod
-[**connect_put_namespaced_pod_proxy_0**](Apiv1Api.md#connect_put_namespaced_pod_proxy_0) | **PUT** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect PUT requests to proxy of Pod
-[**connect_put_namespaced_service_proxy**](Apiv1Api.md#connect_put_namespaced_service_proxy) | **PUT** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect PUT requests to proxy of Service
-[**connect_put_namespaced_service_proxy_0**](Apiv1Api.md#connect_put_namespaced_service_proxy_0) | **PUT** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect PUT requests to proxy of Service
 [**create_binding**](Apiv1Api.md#create_binding) | **POST** /api/v1/bindings | create a Binding
 [**create_config_map**](Apiv1Api.md#create_config_map) | **POST** /api/v1/configmaps | create a ConfigMap
 [**create_endpoints**](Apiv1Api.md#create_endpoints) | **POST** /api/v1/endpoints | create a Endpoints
@@ -83,9 +41,13 @@ Method | HTTP request | Description
 [**delete_namespaced_limit_range**](Apiv1Api.md#delete_namespaced_limit_range) | **DELETE** /api/v1/namespaces/{namespace}/limitranges/{name} | delete a LimitRange
 [**delete_namespaced_namespace**](Apiv1Api.md#delete_namespaced_namespace) | **DELETE** /api/v1/namespaces/{name} | delete a Namespace
 [**delete_namespaced_node**](Apiv1Api.md#delete_namespaced_node) | **DELETE** /api/v1/nodes/{name} | delete a Node
+[**delete_namespaced_node_proxy**](Apiv1Api.md#delete_namespaced_node_proxy) | **DELETE** /api/v1/nodes/{name}/proxy | connect DELETE requests to proxy of Node
+[**delete_namespaced_node_proxy_0**](Apiv1Api.md#delete_namespaced_node_proxy_0) | **DELETE** /api/v1/nodes/{name}/proxy/{path} | connect DELETE requests to proxy of Node
 [**delete_namespaced_persistent_volume**](Apiv1Api.md#delete_namespaced_persistent_volume) | **DELETE** /api/v1/persistentvolumes/{name} | delete a PersistentVolume
 [**delete_namespaced_persistent_volume_claim**](Apiv1Api.md#delete_namespaced_persistent_volume_claim) | **DELETE** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | delete a PersistentVolumeClaim
 [**delete_namespaced_pod**](Apiv1Api.md#delete_namespaced_pod) | **DELETE** /api/v1/namespaces/{namespace}/pods/{name} | delete a Pod
+[**delete_namespaced_pod_proxy**](Apiv1Api.md#delete_namespaced_pod_proxy) | **DELETE** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect DELETE requests to proxy of Pod
+[**delete_namespaced_pod_proxy_0**](Apiv1Api.md#delete_namespaced_pod_proxy_0) | **DELETE** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect DELETE requests to proxy of Pod
 [**delete_namespaced_pod_template**](Apiv1Api.md#delete_namespaced_pod_template) | **DELETE** /api/v1/namespaces/{namespace}/podtemplates/{name} | delete a PodTemplate
 [**delete_namespaced_replication_controller**](Apiv1Api.md#delete_namespaced_replication_controller) | **DELETE** /api/v1/namespaces/{namespace}/replicationcontrollers/{name} | delete a ReplicationController
 [**delete_namespaced_resource_quota**](Apiv1Api.md#delete_namespaced_resource_quota) | **DELETE** /api/v1/namespaces/{namespace}/resourcequotas/{name} | delete a ResourceQuota
@@ -93,6 +55,8 @@ Method | HTTP request | Description
 [**delete_namespaced_security_context_constraints**](Apiv1Api.md#delete_namespaced_security_context_constraints) | **DELETE** /api/v1/securitycontextconstraints/{name} | delete a SecurityContextConstraints
 [**delete_namespaced_service**](Apiv1Api.md#delete_namespaced_service) | **DELETE** /api/v1/namespaces/{namespace}/services/{name} | delete a Service
 [**delete_namespaced_service_account**](Apiv1Api.md#delete_namespaced_service_account) | **DELETE** /api/v1/namespaces/{namespace}/serviceaccounts/{name} | delete a ServiceAccount
+[**delete_namespaced_service_proxy**](Apiv1Api.md#delete_namespaced_service_proxy) | **DELETE** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect DELETE requests to proxy of Service
+[**delete_namespaced_service_proxy_0**](Apiv1Api.md#delete_namespaced_service_proxy_0) | **DELETE** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect DELETE requests to proxy of Service
 [**deletecollection_namespaced_config_map**](Apiv1Api.md#deletecollection_namespaced_config_map) | **DELETE** /api/v1/namespaces/{namespace}/configmaps | delete collection of ConfigMap
 [**deletecollection_namespaced_endpoints**](Apiv1Api.md#deletecollection_namespaced_endpoints) | **DELETE** /api/v1/namespaces/{namespace}/endpoints | delete collection of Endpoints
 [**deletecollection_namespaced_event**](Apiv1Api.md#deletecollection_namespaced_event) | **DELETE** /api/v1/namespaces/{namespace}/events | delete collection of Event
@@ -109,6 +73,21 @@ Method | HTTP request | Description
 [**deletecollection_namespaced_security_context_constraints**](Apiv1Api.md#deletecollection_namespaced_security_context_constraints) | **DELETE** /api/v1/securitycontextconstraints | delete collection of SecurityContextConstraints
 [**deletecollection_namespaced_service_account**](Apiv1Api.md#deletecollection_namespaced_service_account) | **DELETE** /api/v1/namespaces/{namespace}/serviceaccounts | delete collection of ServiceAccount
 [**get_api_resources**](Apiv1Api.md#get_api_resources) | **GET** /api/v1 | get available resources
+[**get_namespaced_node_proxy**](Apiv1Api.md#get_namespaced_node_proxy) | **GET** /api/v1/nodes/{name}/proxy | connect GET requests to proxy of Node
+[**get_namespaced_node_proxy_0**](Apiv1Api.md#get_namespaced_node_proxy_0) | **GET** /api/v1/nodes/{name}/proxy/{path} | connect GET requests to proxy of Node
+[**get_namespaced_pod_attach**](Apiv1Api.md#get_namespaced_pod_attach) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/attach | connect GET requests to attach of Pod
+[**get_namespaced_pod_exec**](Apiv1Api.md#get_namespaced_pod_exec) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/exec | connect GET requests to exec of Pod
+[**get_namespaced_pod_portforward**](Apiv1Api.md#get_namespaced_pod_portforward) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/portforward | connect GET requests to portforward of Pod
+[**get_namespaced_pod_proxy**](Apiv1Api.md#get_namespaced_pod_proxy) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect GET requests to proxy of Pod
+[**get_namespaced_pod_proxy_0**](Apiv1Api.md#get_namespaced_pod_proxy_0) | **GET** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect GET requests to proxy of Pod
+[**get_namespaced_service_proxy**](Apiv1Api.md#get_namespaced_service_proxy) | **GET** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect GET requests to proxy of Service
+[**get_namespaced_service_proxy_0**](Apiv1Api.md#get_namespaced_service_proxy_0) | **GET** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect GET requests to proxy of Service
+[**head_namespaced_node_proxy**](Apiv1Api.md#head_namespaced_node_proxy) | **HEAD** /api/v1/nodes/{name}/proxy | connect HEAD requests to proxy of Node
+[**head_namespaced_node_proxy_0**](Apiv1Api.md#head_namespaced_node_proxy_0) | **HEAD** /api/v1/nodes/{name}/proxy/{path} | connect HEAD requests to proxy of Node
+[**head_namespaced_pod_proxy**](Apiv1Api.md#head_namespaced_pod_proxy) | **HEAD** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect HEAD requests to proxy of Pod
+[**head_namespaced_pod_proxy_0**](Apiv1Api.md#head_namespaced_pod_proxy_0) | **HEAD** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect HEAD requests to proxy of Pod
+[**head_namespaced_service_proxy**](Apiv1Api.md#head_namespaced_service_proxy) | **HEAD** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect HEAD requests to proxy of Service
+[**head_namespaced_service_proxy_0**](Apiv1Api.md#head_namespaced_service_proxy_0) | **HEAD** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect HEAD requests to proxy of Service
 [**list_config_map**](Apiv1Api.md#list_config_map) | **GET** /api/v1/configmaps | list or watch objects of kind ConfigMap
 [**list_endpoints**](Apiv1Api.md#list_endpoints) | **GET** /api/v1/endpoints | list or watch objects of kind Endpoints
 [**list_event**](Apiv1Api.md#list_event) | **GET** /api/v1/events | list or watch objects of kind Event
@@ -138,6 +117,12 @@ Method | HTTP request | Description
 [**list_secret**](Apiv1Api.md#list_secret) | **GET** /api/v1/secrets | list or watch objects of kind Secret
 [**list_service**](Apiv1Api.md#list_service) | **GET** /api/v1/services | list or watch objects of kind Service
 [**list_service_account**](Apiv1Api.md#list_service_account) | **GET** /api/v1/serviceaccounts | list or watch objects of kind ServiceAccount
+[**options_namespaced_node_proxy**](Apiv1Api.md#options_namespaced_node_proxy) | **OPTIONS** /api/v1/nodes/{name}/proxy | connect OPTIONS requests to proxy of Node
+[**options_namespaced_node_proxy_0**](Apiv1Api.md#options_namespaced_node_proxy_0) | **OPTIONS** /api/v1/nodes/{name}/proxy/{path} | connect OPTIONS requests to proxy of Node
+[**options_namespaced_pod_proxy**](Apiv1Api.md#options_namespaced_pod_proxy) | **OPTIONS** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect OPTIONS requests to proxy of Pod
+[**options_namespaced_pod_proxy_0**](Apiv1Api.md#options_namespaced_pod_proxy_0) | **OPTIONS** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect OPTIONS requests to proxy of Pod
+[**options_namespaced_service_proxy**](Apiv1Api.md#options_namespaced_service_proxy) | **OPTIONS** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect OPTIONS requests to proxy of Service
+[**options_namespaced_service_proxy_0**](Apiv1Api.md#options_namespaced_service_proxy_0) | **OPTIONS** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect OPTIONS requests to proxy of Service
 [**patch_namespaced_config_map**](Apiv1Api.md#patch_namespaced_config_map) | **PATCH** /api/v1/namespaces/{namespace}/configmaps/{name} | partially update the specified ConfigMap
 [**patch_namespaced_endpoints**](Apiv1Api.md#patch_namespaced_endpoints) | **PATCH** /api/v1/namespaces/{namespace}/endpoints/{name} | partially update the specified Endpoints
 [**patch_namespaced_event**](Apiv1Api.md#patch_namespaced_event) | **PATCH** /api/v1/namespaces/{namespace}/events/{name} | partially update the specified Event
@@ -155,6 +140,15 @@ Method | HTTP request | Description
 [**patch_namespaced_security_context_constraints**](Apiv1Api.md#patch_namespaced_security_context_constraints) | **PATCH** /api/v1/securitycontextconstraints/{name} | partially update the specified SecurityContextConstraints
 [**patch_namespaced_service**](Apiv1Api.md#patch_namespaced_service) | **PATCH** /api/v1/namespaces/{namespace}/services/{name} | partially update the specified Service
 [**patch_namespaced_service_account**](Apiv1Api.md#patch_namespaced_service_account) | **PATCH** /api/v1/namespaces/{namespace}/serviceaccounts/{name} | partially update the specified ServiceAccount
+[**post_namespaced_node_proxy**](Apiv1Api.md#post_namespaced_node_proxy) | **POST** /api/v1/nodes/{name}/proxy | connect POST requests to proxy of Node
+[**post_namespaced_node_proxy_0**](Apiv1Api.md#post_namespaced_node_proxy_0) | **POST** /api/v1/nodes/{name}/proxy/{path} | connect POST requests to proxy of Node
+[**post_namespaced_pod_attach**](Apiv1Api.md#post_namespaced_pod_attach) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/attach | connect POST requests to attach of Pod
+[**post_namespaced_pod_exec**](Apiv1Api.md#post_namespaced_pod_exec) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/exec | connect POST requests to exec of Pod
+[**post_namespaced_pod_portforward**](Apiv1Api.md#post_namespaced_pod_portforward) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/portforward | connect POST requests to portforward of Pod
+[**post_namespaced_pod_proxy**](Apiv1Api.md#post_namespaced_pod_proxy) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect POST requests to proxy of Pod
+[**post_namespaced_pod_proxy_0**](Apiv1Api.md#post_namespaced_pod_proxy_0) | **POST** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect POST requests to proxy of Pod
+[**post_namespaced_service_proxy**](Apiv1Api.md#post_namespaced_service_proxy) | **POST** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect POST requests to proxy of Service
+[**post_namespaced_service_proxy_0**](Apiv1Api.md#post_namespaced_service_proxy_0) | **POST** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect POST requests to proxy of Service
 [**proxy_delete_namespaced_node**](Apiv1Api.md#proxy_delete_namespaced_node) | **DELETE** /api/v1/proxy/nodes/{name} | proxy DELETE requests to Node
 [**proxy_delete_namespaced_node_0**](Apiv1Api.md#proxy_delete_namespaced_node_0) | **DELETE** /api/v1/proxy/nodes/{name}/{path} | proxy DELETE requests to Node
 [**proxy_delete_namespaced_pod**](Apiv1Api.md#proxy_delete_namespaced_pod) | **DELETE** /api/v1/proxy/namespaces/{namespace}/pods/{name} | proxy DELETE requests to Pod
@@ -191,6 +185,12 @@ Method | HTTP request | Description
 [**proxy_put_namespaced_pod_0**](Apiv1Api.md#proxy_put_namespaced_pod_0) | **PUT** /api/v1/proxy/namespaces/{namespace}/pods/{name}/{path} | proxy PUT requests to Pod
 [**proxy_put_namespaced_service**](Apiv1Api.md#proxy_put_namespaced_service) | **PUT** /api/v1/proxy/namespaces/{namespace}/services/{name} | proxy PUT requests to Service
 [**proxy_put_namespaced_service_0**](Apiv1Api.md#proxy_put_namespaced_service_0) | **PUT** /api/v1/proxy/namespaces/{namespace}/services/{name}/{path} | proxy PUT requests to Service
+[**put_namespaced_node_proxy**](Apiv1Api.md#put_namespaced_node_proxy) | **PUT** /api/v1/nodes/{name}/proxy | connect PUT requests to proxy of Node
+[**put_namespaced_node_proxy_0**](Apiv1Api.md#put_namespaced_node_proxy_0) | **PUT** /api/v1/nodes/{name}/proxy/{path} | connect PUT requests to proxy of Node
+[**put_namespaced_pod_proxy**](Apiv1Api.md#put_namespaced_pod_proxy) | **PUT** /api/v1/namespaces/{namespace}/pods/{name}/proxy | connect PUT requests to proxy of Pod
+[**put_namespaced_pod_proxy_0**](Apiv1Api.md#put_namespaced_pod_proxy_0) | **PUT** /api/v1/namespaces/{namespace}/pods/{name}/proxy/{path} | connect PUT requests to proxy of Pod
+[**put_namespaced_service_proxy**](Apiv1Api.md#put_namespaced_service_proxy) | **PUT** /api/v1/namespaces/{namespace}/services/{name}/proxy | connect PUT requests to proxy of Service
+[**put_namespaced_service_proxy_0**](Apiv1Api.md#put_namespaced_service_proxy_0) | **PUT** /api/v1/namespaces/{namespace}/services/{name}/proxy/{path} | connect PUT requests to proxy of Service
 [**read_namespaced_component_status**](Apiv1Api.md#read_namespaced_component_status) | **GET** /api/v1/componentstatuses/{name} | read the specified ComponentStatus
 [**read_namespaced_config_map**](Apiv1Api.md#read_namespaced_config_map) | **GET** /api/v1/namespaces/{namespace}/configmaps/{name} | read the specified ConfigMap
 [**read_namespaced_endpoints**](Apiv1Api.md#read_namespaced_endpoints) | **GET** /api/v1/namespaces/{namespace}/endpoints/{name} | read the specified Endpoints
@@ -281,2108 +281,6 @@ Method | HTTP request | Description
 [**watch_service_account_list**](Apiv1Api.md#watch_service_account_list) | **GET** /api/v1/watch/serviceaccounts | watch individual changes to a list of ServiceAccount
 [**watch_service_list**](Apiv1Api.md#watch_service_list) | **GET** /api/v1/watch/services | watch individual changes to a list of Service
 
-
-# **connect_delete_namespaced_node_proxy**
-> str connect_delete_namespaced_node_proxy(name, path=path)
-
-connect DELETE requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Node
-    api_response = api_instance.connect_delete_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_delete_namespaced_node_proxy_0**
-> str connect_delete_namespaced_node_proxy_0(name, path2, path=path)
-
-connect DELETE requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Node
-    api_response = api_instance.connect_delete_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_delete_namespaced_pod_proxy**
-> str connect_delete_namespaced_pod_proxy(namespace, name, path=path)
-
-connect DELETE requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Pod
-    api_response = api_instance.connect_delete_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_delete_namespaced_pod_proxy_0**
-> str connect_delete_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect DELETE requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Pod
-    api_response = api_instance.connect_delete_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_delete_namespaced_service_proxy**
-> str connect_delete_namespaced_service_proxy(namespace, name, path=path)
-
-connect DELETE requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Service
-    api_response = api_instance.connect_delete_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_delete_namespaced_service_proxy_0**
-> str connect_delete_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect DELETE requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect DELETE requests to proxy of Service
-    api_response = api_instance.connect_delete_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_delete_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_node_proxy**
-> str connect_get_namespaced_node_proxy(name, path=path)
-
-connect GET requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect GET requests to proxy of Node
-    api_response = api_instance.connect_get_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_node_proxy_0**
-> str connect_get_namespaced_node_proxy_0(name, path2, path=path)
-
-connect GET requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect GET requests to proxy of Node
-    api_response = api_instance.connect_get_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_pod_attach**
-> str connect_get_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
-
-connect GET requests to attach of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-stdin = true # bool | Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. (optional)
-stdout = true # bool | Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. (optional)
-stderr = true # bool | Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. (optional)
-tty = true # bool | TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. (optional)
-container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
-
-try: 
-    # connect GET requests to attach of Pod
-    api_response = api_instance.connect_get_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_pod_attach: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **stdin** | **bool**| Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. | [optional] 
- **stdout** | **bool**| Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. | [optional] 
- **stderr** | **bool**| Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. | [optional] 
- **tty** | **bool**| TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. | [optional] 
- **container** | **str**| The container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_pod_exec**
-> str connect_get_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
-
-connect GET requests to exec of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-stdin = true # bool | Redirect the standard input stream of the pod for this call. Defaults to false. (optional)
-stdout = true # bool | Redirect the standard output stream of the pod for this call. Defaults to true. (optional)
-stderr = true # bool | Redirect the standard error stream of the pod for this call. Defaults to true. (optional)
-tty = true # bool | TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. (optional)
-container = 'container_example' # str | Container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
-command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
-
-try: 
-    # connect GET requests to exec of Pod
-    api_response = api_instance.connect_get_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_pod_exec: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **stdin** | **bool**| Redirect the standard input stream of the pod for this call. Defaults to false. | [optional] 
- **stdout** | **bool**| Redirect the standard output stream of the pod for this call. Defaults to true. | [optional] 
- **stderr** | **bool**| Redirect the standard error stream of the pod for this call. Defaults to true. | [optional] 
- **tty** | **bool**| TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. | [optional] 
- **container** | **str**| Container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
- **command** | **str**| Command is the remote command to execute. argv array. Not executed within a shell. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_pod_portforward**
-> str connect_get_namespaced_pod_portforward(namespace, name)
-
-connect GET requests to portforward of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-
-try: 
-    # connect GET requests to portforward of Pod
-    api_response = api_instance.connect_get_namespaced_pod_portforward(namespace, name)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_pod_portforward: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_pod_proxy**
-> str connect_get_namespaced_pod_proxy(namespace, name, path=path)
-
-connect GET requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect GET requests to proxy of Pod
-    api_response = api_instance.connect_get_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_pod_proxy_0**
-> str connect_get_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect GET requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect GET requests to proxy of Pod
-    api_response = api_instance.connect_get_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_service_proxy**
-> str connect_get_namespaced_service_proxy(namespace, name, path=path)
-
-connect GET requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect GET requests to proxy of Service
-    api_response = api_instance.connect_get_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_get_namespaced_service_proxy_0**
-> str connect_get_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect GET requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect GET requests to proxy of Service
-    api_response = api_instance.connect_get_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_get_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_node_proxy**
-> str connect_head_namespaced_node_proxy(name, path=path)
-
-connect HEAD requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Node
-    api_response = api_instance.connect_head_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_node_proxy_0**
-> str connect_head_namespaced_node_proxy_0(name, path2, path=path)
-
-connect HEAD requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Node
-    api_response = api_instance.connect_head_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_pod_proxy**
-> str connect_head_namespaced_pod_proxy(namespace, name, path=path)
-
-connect HEAD requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Pod
-    api_response = api_instance.connect_head_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_pod_proxy_0**
-> str connect_head_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect HEAD requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Pod
-    api_response = api_instance.connect_head_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_service_proxy**
-> str connect_head_namespaced_service_proxy(namespace, name, path=path)
-
-connect HEAD requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Service
-    api_response = api_instance.connect_head_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_head_namespaced_service_proxy_0**
-> str connect_head_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect HEAD requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect HEAD requests to proxy of Service
-    api_response = api_instance.connect_head_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_head_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_node_proxy**
-> str connect_options_namespaced_node_proxy(name, path=path)
-
-connect OPTIONS requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Node
-    api_response = api_instance.connect_options_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_node_proxy_0**
-> str connect_options_namespaced_node_proxy_0(name, path2, path=path)
-
-connect OPTIONS requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Node
-    api_response = api_instance.connect_options_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_pod_proxy**
-> str connect_options_namespaced_pod_proxy(namespace, name, path=path)
-
-connect OPTIONS requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Pod
-    api_response = api_instance.connect_options_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_pod_proxy_0**
-> str connect_options_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect OPTIONS requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Pod
-    api_response = api_instance.connect_options_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_service_proxy**
-> str connect_options_namespaced_service_proxy(namespace, name, path=path)
-
-connect OPTIONS requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Service
-    api_response = api_instance.connect_options_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_options_namespaced_service_proxy_0**
-> str connect_options_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect OPTIONS requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect OPTIONS requests to proxy of Service
-    api_response = api_instance.connect_options_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_options_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_node_proxy**
-> str connect_post_namespaced_node_proxy(name, path=path)
-
-connect POST requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect POST requests to proxy of Node
-    api_response = api_instance.connect_post_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_node_proxy_0**
-> str connect_post_namespaced_node_proxy_0(name, path2, path=path)
-
-connect POST requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect POST requests to proxy of Node
-    api_response = api_instance.connect_post_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_pod_attach**
-> str connect_post_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
-
-connect POST requests to attach of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-stdin = true # bool | Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. (optional)
-stdout = true # bool | Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. (optional)
-stderr = true # bool | Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. (optional)
-tty = true # bool | TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. (optional)
-container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
-
-try: 
-    # connect POST requests to attach of Pod
-    api_response = api_instance.connect_post_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_pod_attach: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **stdin** | **bool**| Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. | [optional] 
- **stdout** | **bool**| Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. | [optional] 
- **stderr** | **bool**| Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. | [optional] 
- **tty** | **bool**| TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. | [optional] 
- **container** | **str**| The container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_pod_exec**
-> str connect_post_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
-
-connect POST requests to exec of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-stdin = true # bool | Redirect the standard input stream of the pod for this call. Defaults to false. (optional)
-stdout = true # bool | Redirect the standard output stream of the pod for this call. Defaults to true. (optional)
-stderr = true # bool | Redirect the standard error stream of the pod for this call. Defaults to true. (optional)
-tty = true # bool | TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. (optional)
-container = 'container_example' # str | Container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
-command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
-
-try: 
-    # connect POST requests to exec of Pod
-    api_response = api_instance.connect_post_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_pod_exec: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **stdin** | **bool**| Redirect the standard input stream of the pod for this call. Defaults to false. | [optional] 
- **stdout** | **bool**| Redirect the standard output stream of the pod for this call. Defaults to true. | [optional] 
- **stderr** | **bool**| Redirect the standard error stream of the pod for this call. Defaults to true. | [optional] 
- **tty** | **bool**| TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. | [optional] 
- **container** | **str**| Container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
- **command** | **str**| Command is the remote command to execute. argv array. Not executed within a shell. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_pod_portforward**
-> str connect_post_namespaced_pod_portforward(namespace, name)
-
-connect POST requests to portforward of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-
-try: 
-    # connect POST requests to portforward of Pod
-    api_response = api_instance.connect_post_namespaced_pod_portforward(namespace, name)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_pod_portforward: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_pod_proxy**
-> str connect_post_namespaced_pod_proxy(namespace, name, path=path)
-
-connect POST requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect POST requests to proxy of Pod
-    api_response = api_instance.connect_post_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_pod_proxy_0**
-> str connect_post_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect POST requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect POST requests to proxy of Pod
-    api_response = api_instance.connect_post_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_service_proxy**
-> str connect_post_namespaced_service_proxy(namespace, name, path=path)
-
-connect POST requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect POST requests to proxy of Service
-    api_response = api_instance.connect_post_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_service_proxy_0**
-> str connect_post_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect POST requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect POST requests to proxy of Service
-    api_response = api_instance.connect_post_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_post_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_node_proxy**
-> str connect_put_namespaced_node_proxy(name, path=path)
-
-connect PUT requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect PUT requests to proxy of Node
-    api_response = api_instance.connect_put_namespaced_node_proxy(name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_node_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_node_proxy_0**
-> str connect_put_namespaced_node_proxy_0(name, path2, path=path)
-
-connect PUT requests to proxy of Node
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-name = 'name_example' # str | name of the Node
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
-
-try: 
-    # connect PUT requests to proxy of Node
-    api_response = api_instance.connect_put_namespaced_node_proxy_0(name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_node_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the Node | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_pod_proxy**
-> str connect_put_namespaced_pod_proxy(namespace, name, path=path)
-
-connect PUT requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect PUT requests to proxy of Pod
-    api_response = api_instance.connect_put_namespaced_pod_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_pod_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_pod_proxy_0**
-> str connect_put_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-
-connect PUT requests to proxy of Pod
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect PUT requests to proxy of Pod
-    api_response = api_instance.connect_put_namespaced_pod_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_pod_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_service_proxy**
-> str connect_put_namespaced_service_proxy(namespace, name, path=path)
-
-connect PUT requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect PUT requests to proxy of Service
-    api_response = api_instance.connect_put_namespaced_service_proxy(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_service_proxy: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_put_namespaced_service_proxy_0**
-> str connect_put_namespaced_service_proxy_0(namespace, name, path2, path=path)
-
-connect PUT requests to proxy of Service
-
-### Example 
-```python
-import time
-import api_v1
-from api_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = api_v1.Apiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
-
-try: 
-    # connect PUT requests to proxy of Service
-    api_response = api_instance.connect_put_namespaced_service_proxy_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Apiv1Api->connect_put_namespaced_service_proxy_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_binding**
 > V1Binding create_binding(body, pretty=pretty)
@@ -4173,6 +2071,102 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_namespaced_node_proxy**
+> str delete_namespaced_node_proxy(name, path=path)
+
+connect DELETE requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Node
+    api_response = api_instance.delete_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_namespaced_node_proxy_0**
+> str delete_namespaced_node_proxy_0(name, path2, path=path)
+
+connect DELETE requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Node
+    api_response = api_instance.delete_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_namespaced_persistent_volume**
 > UnversionedStatus delete_namespaced_persistent_volume(body, name, pretty=pretty)
 
@@ -4321,6 +2315,106 @@ No authorization required
 
  - **Content-Type**: */*
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_namespaced_pod_proxy**
+> str delete_namespaced_pod_proxy(namespace, name, path=path)
+
+connect DELETE requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Pod
+    api_response = api_instance.delete_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_namespaced_pod_proxy_0**
+> str delete_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect DELETE requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Pod
+    api_response = api_instance.delete_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4674,6 +2768,106 @@ No authorization required
 
  - **Content-Type**: */*
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_namespaced_service_proxy**
+> str delete_namespaced_service_proxy(namespace, name, path=path)
+
+connect DELETE requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Service
+    api_response = api_instance.delete_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_namespaced_service_proxy_0**
+> str delete_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect DELETE requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect DELETE requests to proxy of Service
+    api_response = api_instance.delete_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->delete_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5561,6 +3755,761 @@ No authorization required
 
  - **Content-Type**: application/json, application/yaml
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_node_proxy**
+> str get_namespaced_node_proxy(name, path=path)
+
+connect GET requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect GET requests to proxy of Node
+    api_response = api_instance.get_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_node_proxy_0**
+> str get_namespaced_node_proxy_0(name, path2, path=path)
+
+connect GET requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect GET requests to proxy of Node
+    api_response = api_instance.get_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_pod_attach**
+> str get_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
+
+connect GET requests to attach of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+stdin = true # bool | Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. (optional)
+stdout = true # bool | Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. (optional)
+stderr = true # bool | Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. (optional)
+tty = true # bool | TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. (optional)
+container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
+
+try: 
+    # connect GET requests to attach of Pod
+    api_response = api_instance.get_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_pod_attach: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **stdin** | **bool**| Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. | [optional] 
+ **stdout** | **bool**| Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. | [optional] 
+ **stderr** | **bool**| Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. | [optional] 
+ **tty** | **bool**| TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. | [optional] 
+ **container** | **str**| The container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_pod_exec**
+> str get_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
+
+connect GET requests to exec of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+stdin = true # bool | Redirect the standard input stream of the pod for this call. Defaults to false. (optional)
+stdout = true # bool | Redirect the standard output stream of the pod for this call. Defaults to true. (optional)
+stderr = true # bool | Redirect the standard error stream of the pod for this call. Defaults to true. (optional)
+tty = true # bool | TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. (optional)
+container = 'container_example' # str | Container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
+command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
+
+try: 
+    # connect GET requests to exec of Pod
+    api_response = api_instance.get_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_pod_exec: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **stdin** | **bool**| Redirect the standard input stream of the pod for this call. Defaults to false. | [optional] 
+ **stdout** | **bool**| Redirect the standard output stream of the pod for this call. Defaults to true. | [optional] 
+ **stderr** | **bool**| Redirect the standard error stream of the pod for this call. Defaults to true. | [optional] 
+ **tty** | **bool**| TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. | [optional] 
+ **container** | **str**| Container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
+ **command** | **str**| Command is the remote command to execute. argv array. Not executed within a shell. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_pod_portforward**
+> str get_namespaced_pod_portforward(namespace, name)
+
+connect GET requests to portforward of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+
+try: 
+    # connect GET requests to portforward of Pod
+    api_response = api_instance.get_namespaced_pod_portforward(namespace, name)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_pod_portforward: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_pod_proxy**
+> str get_namespaced_pod_proxy(namespace, name, path=path)
+
+connect GET requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect GET requests to proxy of Pod
+    api_response = api_instance.get_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_pod_proxy_0**
+> str get_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect GET requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect GET requests to proxy of Pod
+    api_response = api_instance.get_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_service_proxy**
+> str get_namespaced_service_proxy(namespace, name, path=path)
+
+connect GET requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect GET requests to proxy of Service
+    api_response = api_instance.get_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_namespaced_service_proxy_0**
+> str get_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect GET requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect GET requests to proxy of Service
+    api_response = api_instance.get_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->get_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_node_proxy**
+> str head_namespaced_node_proxy(name, path=path)
+
+connect HEAD requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Node
+    api_response = api_instance.head_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_node_proxy_0**
+> str head_namespaced_node_proxy_0(name, path2, path=path)
+
+connect HEAD requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Node
+    api_response = api_instance.head_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_pod_proxy**
+> str head_namespaced_pod_proxy(namespace, name, path=path)
+
+connect HEAD requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Pod
+    api_response = api_instance.head_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_pod_proxy_0**
+> str head_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect HEAD requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Pod
+    api_response = api_instance.head_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_service_proxy**
+> str head_namespaced_service_proxy(namespace, name, path=path)
+
+connect HEAD requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Service
+    api_response = api_instance.head_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **head_namespaced_service_proxy_0**
+> str head_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect HEAD requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect HEAD requests to proxy of Service
+    api_response = api_instance.head_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->head_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7183,6 +6132,302 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **options_namespaced_node_proxy**
+> str options_namespaced_node_proxy(name, path=path)
+
+connect OPTIONS requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Node
+    api_response = api_instance.options_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **options_namespaced_node_proxy_0**
+> str options_namespaced_node_proxy_0(name, path2, path=path)
+
+connect OPTIONS requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Node
+    api_response = api_instance.options_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **options_namespaced_pod_proxy**
+> str options_namespaced_pod_proxy(namespace, name, path=path)
+
+connect OPTIONS requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Pod
+    api_response = api_instance.options_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **options_namespaced_pod_proxy_0**
+> str options_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect OPTIONS requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Pod
+    api_response = api_instance.options_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **options_namespaced_service_proxy**
+> str options_namespaced_service_proxy(namespace, name, path=path)
+
+connect OPTIONS requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Service
+    api_response = api_instance.options_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **options_namespaced_service_proxy_0**
+> str options_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect OPTIONS requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect OPTIONS requests to proxy of Service
+    api_response = api_instance.options_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->options_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_namespaced_config_map**
 > V1ConfigMap patch_namespaced_config_map(body, namespace, name, pretty=pretty)
 
@@ -8039,6 +7284,465 @@ No authorization required
 
  - **Content-Type**: application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_node_proxy**
+> str post_namespaced_node_proxy(name, path=path)
+
+connect POST requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect POST requests to proxy of Node
+    api_response = api_instance.post_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_node_proxy_0**
+> str post_namespaced_node_proxy_0(name, path2, path=path)
+
+connect POST requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect POST requests to proxy of Node
+    api_response = api_instance.post_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_pod_attach**
+> str post_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
+
+connect POST requests to attach of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+stdin = true # bool | Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. (optional)
+stdout = true # bool | Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. (optional)
+stderr = true # bool | Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. (optional)
+tty = true # bool | TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. (optional)
+container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
+
+try: 
+    # connect POST requests to attach of Pod
+    api_response = api_instance.post_namespaced_pod_attach(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_pod_attach: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **stdin** | **bool**| Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false. | [optional] 
+ **stdout** | **bool**| Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true. | [optional] 
+ **stderr** | **bool**| Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true. | [optional] 
+ **tty** | **bool**| TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false. | [optional] 
+ **container** | **str**| The container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_pod_exec**
+> str post_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
+
+connect POST requests to exec of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+stdin = true # bool | Redirect the standard input stream of the pod for this call. Defaults to false. (optional)
+stdout = true # bool | Redirect the standard output stream of the pod for this call. Defaults to true. (optional)
+stderr = true # bool | Redirect the standard error stream of the pod for this call. Defaults to true. (optional)
+tty = true # bool | TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. (optional)
+container = 'container_example' # str | Container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
+command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
+
+try: 
+    # connect POST requests to exec of Pod
+    api_response = api_instance.post_namespaced_pod_exec(namespace, name, stdin=stdin, stdout=stdout, stderr=stderr, tty=tty, container=container, command=command)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_pod_exec: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **stdin** | **bool**| Redirect the standard input stream of the pod for this call. Defaults to false. | [optional] 
+ **stdout** | **bool**| Redirect the standard output stream of the pod for this call. Defaults to true. | [optional] 
+ **stderr** | **bool**| Redirect the standard error stream of the pod for this call. Defaults to true. | [optional] 
+ **tty** | **bool**| TTY if true indicates that a tty will be allocated for the exec call. Defaults to false. | [optional] 
+ **container** | **str**| Container in which to execute the command. Defaults to only container if there is only one container in the pod. | [optional] 
+ **command** | **str**| Command is the remote command to execute. argv array. Not executed within a shell. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_pod_portforward**
+> str post_namespaced_pod_portforward(namespace, name)
+
+connect POST requests to portforward of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+
+try: 
+    # connect POST requests to portforward of Pod
+    api_response = api_instance.post_namespaced_pod_portforward(namespace, name)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_pod_portforward: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_pod_proxy**
+> str post_namespaced_pod_proxy(namespace, name, path=path)
+
+connect POST requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect POST requests to proxy of Pod
+    api_response = api_instance.post_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_pod_proxy_0**
+> str post_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect POST requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect POST requests to proxy of Pod
+    api_response = api_instance.post_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_service_proxy**
+> str post_namespaced_service_proxy(namespace, name, path=path)
+
+connect POST requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect POST requests to proxy of Service
+    api_response = api_instance.post_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_service_proxy_0**
+> str post_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect POST requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect POST requests to proxy of Service
+    api_response = api_instance.post_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->post_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -9730,6 +9434,302 @@ Name | Type | Description  | Notes
  **namespace** | **str**| object name and auth scope, such as for teams and projects | 
  **name** | **str**| name of the Service | 
  **path** | **str**| path to the resource | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_node_proxy**
+> str put_namespaced_node_proxy(name, path=path)
+
+connect PUT requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect PUT requests to proxy of Node
+    api_response = api_instance.put_namespaced_node_proxy(name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_node_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_node_proxy_0**
+> str put_namespaced_node_proxy_0(name, path2, path=path)
+
+connect PUT requests to proxy of Node
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+name = 'name_example' # str | name of the Node
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
+
+try: 
+    # connect PUT requests to proxy of Node
+    api_response = api_instance.put_namespaced_node_proxy_0(name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_node_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| name of the Node | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to node. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_pod_proxy**
+> str put_namespaced_pod_proxy(namespace, name, path=path)
+
+connect PUT requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect PUT requests to proxy of Pod
+    api_response = api_instance.put_namespaced_pod_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_pod_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_pod_proxy_0**
+> str put_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+
+connect PUT requests to proxy of Pod
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Pod
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect PUT requests to proxy of Pod
+    api_response = api_instance.put_namespaced_pod_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_pod_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Pod | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_service_proxy**
+> str put_namespaced_service_proxy(namespace, name, path=path)
+
+connect PUT requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect PUT requests to proxy of Service
+    api_response = api_instance.put_namespaced_service_proxy(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_service_proxy: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_namespaced_service_proxy_0**
+> str put_namespaced_service_proxy_0(namespace, name, path2, path=path)
+
+connect PUT requests to proxy of Service
+
+### Example 
+```python
+import time
+import api_v1
+from api_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = api_v1.Apiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Service
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
+
+try: 
+    # connect PUT requests to proxy of Service
+    api_response = api_instance.put_namespaced_service_proxy_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Apiv1Api->put_namespaced_service_proxy_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Service | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q&#x3D;user:kimchy. Path is _search?q&#x3D;user:kimchy. | [optional] 
 
 ### Return type
 

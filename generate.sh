@@ -17,6 +17,12 @@ for spec in $specs; do
 
     mkdir -p "${outdir}"
 
+    if [ ! -e "lib_openshift/${sanitized}" ]; then
+      pushd lib_openshift
+      ln -s ../generated/${sanitized}/${sanitized}
+      popd
+    fi
+
     echo "{ \"packageName\": \"${sanitized}\", \"packageVersion\": \"${PACKAGE_VERSION}\" }" > ${outdir}/swagger_codegen_config.json
     echo -e "README.md\ntox.ini\n.gitignore\n.travis.yml\ngit_push.sh" > ${outdir}/.swagger-codegen-ignore
     java -jar ~/bin/swagger-codegen-cli.jar generate -o ${outdir} -i swaggerfiles/${spec} -l python -c ${outdir}/swagger_codegen_config.json -t codegen_templates/individual_api

@@ -51,4942 +51,6 @@ class Apiv1Api(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def connect_delete_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_delete_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_delete_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_delete_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_delete_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_delete_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_delete_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_delete_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_delete_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_delete_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_delete_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_delete_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect DELETE requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_delete_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_delete_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect DELETE requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_delete_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_delete_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_delete_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_delete_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect GET requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_get_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect GET requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_get_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_get_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_pod_attach(self, namespace, name, **kwargs):
-        """
-        connect GET requests to attach of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_attach(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
-        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
-        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_get_namespaced_pod_attach_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect GET requests to attach of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_attach_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
-        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
-        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_pod_attach" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_attach`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_attach`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/attach'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'stdin' in params:
-            query_params['stdin'] = params['stdin']
-        if 'stdout' in params:
-            query_params['stdout'] = params['stdout']
-        if 'stderr' in params:
-            query_params['stderr'] = params['stderr']
-        if 'tty' in params:
-            query_params['tty'] = params['tty']
-        if 'container' in params:
-            query_params['container'] = params['container']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_pod_exec(self, namespace, name, **kwargs):
-        """
-        connect GET requests to exec of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_exec(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
-        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
-        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_get_namespaced_pod_exec_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect GET requests to exec of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_exec_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
-        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
-        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container', 'command']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_pod_exec" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_exec`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_exec`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/exec'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'stdin' in params:
-            query_params['stdin'] = params['stdin']
-        if 'stdout' in params:
-            query_params['stdout'] = params['stdout']
-        if 'stderr' in params:
-            query_params['stderr'] = params['stderr']
-        if 'tty' in params:
-            query_params['tty'] = params['tty']
-        if 'container' in params:
-            query_params['container'] = params['container']
-        if 'command' in params:
-            query_params['command'] = params['command']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_pod_portforward(self, namespace, name, **kwargs):
-        """
-        connect GET requests to portforward of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_portforward(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_get_namespaced_pod_portforward_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect GET requests to portforward of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_portforward_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_pod_portforward" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_portforward`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_portforward`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/portforward'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect GET requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_get_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect GET requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_get_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_get_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect GET requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_get_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect GET requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_get_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_get_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect GET requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_get_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_get_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_get_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_get_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_head_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_head_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_head_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_head_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_head_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_head_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_head_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect HEAD requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_head_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_head_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect HEAD requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_head_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_head_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_head_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_head_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'HEAD',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_options_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_options_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_options_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_options_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_options_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_options_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_options_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_options_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_options_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect OPTIONS requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_options_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_options_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_options_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_options_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'OPTIONS',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect POST requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_post_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect POST requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_post_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_post_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_pod_attach(self, namespace, name, **kwargs):
-        """
-        connect POST requests to attach of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_attach(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
-        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
-        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_pod_attach_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to attach of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_attach_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
-        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
-        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_pod_attach" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_attach`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_attach`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/attach'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'stdin' in params:
-            query_params['stdin'] = params['stdin']
-        if 'stdout' in params:
-            query_params['stdout'] = params['stdout']
-        if 'stderr' in params:
-            query_params['stderr'] = params['stderr']
-        if 'tty' in params:
-            query_params['tty'] = params['tty']
-        if 'container' in params:
-            query_params['container'] = params['container']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_pod_exec(self, namespace, name, **kwargs):
-        """
-        connect POST requests to exec of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_exec(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
-        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
-        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_pod_exec_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to exec of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_exec_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
-        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
-        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
-        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
-        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
-        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container', 'command']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_pod_exec" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_exec`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_exec`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/exec'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'stdin' in params:
-            query_params['stdin'] = params['stdin']
-        if 'stdout' in params:
-            query_params['stdout'] = params['stdout']
-        if 'stderr' in params:
-            query_params['stderr'] = params['stderr']
-        if 'tty' in params:
-            query_params['tty'] = params['tty']
-        if 'container' in params:
-            query_params['container'] = params['container']
-        if 'command' in params:
-            query_params['command'] = params['command']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_pod_portforward(self, namespace, name, **kwargs):
-        """
-        connect POST requests to portforward of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_portforward(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_pod_portforward_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to portforward of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_portforward_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_pod_portforward" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_portforward`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_portforward`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/portforward'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect POST requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_post_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_post_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect POST requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_post_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_post_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_node_proxy(self, name, **kwargs):
-        """
-        connect PUT requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_node_proxy(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_node_proxy_with_http_info(name, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_node_proxy_with_http_info(name, **kwargs)
-            return data
-
-    def connect_put_namespaced_node_proxy_with_http_info(self, name, **kwargs):
-        """
-        connect PUT requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_node_proxy_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_node_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_node_proxy`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_node_proxy_0(self, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_node_proxy_0(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
-            return data
-
-    def connect_put_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Node
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: name of the Node (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to node.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_node_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_node_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_put_namespaced_node_proxy_0`")
-
-        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_pod_proxy(self, namespace, name, **kwargs):
-        """
-        connect PUT requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_pod_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_put_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect PUT requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_pod_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_pod_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_pod_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_put_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Pod
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Pod (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_pod_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_pod_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_pod_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_put_namespaced_pod_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_service_proxy(self, namespace, name, **kwargs):
-        """
-        connect PUT requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_service_proxy(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_put_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect PUT requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_service_proxy" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_service_proxy`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_service_proxy`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_put_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_put_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect PUT requests to proxy of Service
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Service (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_put_namespaced_service_proxy_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_put_namespaced_service_proxy_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_put_namespaced_service_proxy_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_put_namespaced_service_proxy_0`")
-
-        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
     def create_binding(self, body, **kwargs):
         """
         create a Binding
@@ -9158,6 +4222,229 @@ class Apiv1Api(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
+    def delete_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.delete_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def delete_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.delete_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def delete_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `delete_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
     def delete_namespaced_persistent_volume(self, body, name, **kwargs):
         """
         delete a PersistentVolume
@@ -9513,6 +4800,243 @@ class Apiv1Api(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.delete_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def delete_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def delete_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `delete_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -10353,6 +5877,243 @@ class Apiv1Api(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.delete_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def delete_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect DELETE requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def delete_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect DELETE requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `delete_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -12342,6 +8103,1777 @@ class Apiv1Api(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type=None,
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect GET requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.get_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def get_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect GET requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.get_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def get_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `get_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_pod_attach(self, namespace, name, **kwargs):
+        """
+        connect GET requests to attach of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_attach(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
+        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
+        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_pod_attach_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect GET requests to attach of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_attach_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
+        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
+        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_pod_attach" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_pod_attach`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_pod_attach`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/attach'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'stdin' in params:
+            query_params['stdin'] = params['stdin']
+        if 'stdout' in params:
+            query_params['stdout'] = params['stdout']
+        if 'stderr' in params:
+            query_params['stderr'] = params['stderr']
+        if 'tty' in params:
+            query_params['tty'] = params['tty']
+        if 'container' in params:
+            query_params['container'] = params['container']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_pod_exec(self, namespace, name, **kwargs):
+        """
+        connect GET requests to exec of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_exec(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
+        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
+        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_pod_exec_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect GET requests to exec of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_exec_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
+        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
+        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container', 'command']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_pod_exec" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_pod_exec`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_pod_exec`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/exec'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'stdin' in params:
+            query_params['stdin'] = params['stdin']
+        if 'stdout' in params:
+            query_params['stdout'] = params['stdout']
+        if 'stderr' in params:
+            query_params['stderr'] = params['stderr']
+        if 'tty' in params:
+            query_params['tty'] = params['tty']
+        if 'container' in params:
+            query_params['container'] = params['container']
+        if 'command' in params:
+            query_params['command'] = params['command']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_pod_portforward(self, namespace, name, **kwargs):
+        """
+        connect GET requests to portforward of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_portforward(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_pod_portforward_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect GET requests to portforward of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_portforward_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_pod_portforward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_pod_portforward`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_pod_portforward`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/portforward'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect GET requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect GET requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def get_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `get_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect GET requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect GET requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def get_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect GET requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `get_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.head_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def head_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.head_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def head_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `head_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.head_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def head_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `head_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def head_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `head_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `head_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.head_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def head_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect HEAD requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `head_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def head_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def head_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect HEAD requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.head_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method head_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `head_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `head_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `head_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'HEAD',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -15939,6 +13471,703 @@ class Apiv1Api(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
+    def options_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.options_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def options_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def options_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.options_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def options_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `options_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def options_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.options_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def options_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `options_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def options_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def options_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `options_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `options_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def options_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.options_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def options_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `options_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def options_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def options_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect OPTIONS requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.options_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method options_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `options_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `options_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `options_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'OPTIONS',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
     def patch_namespaced_config_map(self, body, namespace, name, **kwargs):
         """
         partially update the specified ConfigMap
@@ -17981,6 +16210,1080 @@ class Apiv1Api(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type='V1ServiceAccount',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect POST requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.post_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def post_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect POST requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.post_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def post_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `post_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_pod_attach(self, namespace, name, **kwargs):
+        """
+        connect POST requests to attach of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_attach(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
+        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
+        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_pod_attach_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_pod_attach_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to attach of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_attach_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.
+        :param bool stderr: Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.
+        :param str container: The container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_pod_attach" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_pod_attach`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_pod_attach`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/attach'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'stdin' in params:
+            query_params['stdin'] = params['stdin']
+        if 'stdout' in params:
+            query_params['stdout'] = params['stdout']
+        if 'stderr' in params:
+            query_params['stderr'] = params['stderr']
+        if 'tty' in params:
+            query_params['tty'] = params['tty']
+        if 'container' in params:
+            query_params['container'] = params['container']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_pod_exec(self, namespace, name, **kwargs):
+        """
+        connect POST requests to exec of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_exec(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
+        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
+        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_pod_exec_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_pod_exec_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to exec of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_exec_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param bool stdin: Redirect the standard input stream of the pod for this call. Defaults to false.
+        :param bool stdout: Redirect the standard output stream of the pod for this call. Defaults to true.
+        :param bool stderr: Redirect the standard error stream of the pod for this call. Defaults to true.
+        :param bool tty: TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.
+        :param str container: Container in which to execute the command. Defaults to only container if there is only one container in the pod.
+        :param str command: Command is the remote command to execute. argv array. Not executed within a shell.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'stdin', 'stdout', 'stderr', 'tty', 'container', 'command']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_pod_exec" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_pod_exec`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_pod_exec`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/exec'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'stdin' in params:
+            query_params['stdin'] = params['stdin']
+        if 'stdout' in params:
+            query_params['stdout'] = params['stdout']
+        if 'stderr' in params:
+            query_params['stderr'] = params['stderr']
+        if 'tty' in params:
+            query_params['tty'] = params['tty']
+        if 'container' in params:
+            query_params['container'] = params['container']
+        if 'command' in params:
+            query_params['command'] = params['command']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_pod_portforward(self, namespace, name, **kwargs):
+        """
+        connect POST requests to portforward of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_portforward(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_pod_portforward_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_pod_portforward_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to portforward of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_portforward_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_pod_portforward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_pod_portforward`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_pod_portforward`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/portforward'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect POST requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def post_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `post_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect POST requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def post_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `post_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -21990,6 +21293,703 @@ class Apiv1Api(object):
             path_params['path'] = params['path']
 
         query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_node_proxy(self, name, **kwargs):
+        """
+        connect PUT requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_node_proxy(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_node_proxy_with_http_info(name, **kwargs)
+        else:
+            (data) = self.put_namespaced_node_proxy_with_http_info(name, **kwargs)
+            return data
+
+    def put_namespaced_node_proxy_with_http_info(self, name, **kwargs):
+        """
+        connect PUT requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_node_proxy_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_node_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_node_proxy`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_node_proxy_0(self, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_node_proxy_0(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+        else:
+            (data) = self.put_namespaced_node_proxy_0_with_http_info(name, path2, **kwargs)
+            return data
+
+    def put_namespaced_node_proxy_0_with_http_info(self, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Node
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_node_proxy_0_with_http_info(name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: name of the Node (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to node.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_node_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_node_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `put_namespaced_node_proxy_0`")
+
+        resource_path = '/api/v1/nodes/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_pod_proxy(self, namespace, name, **kwargs):
+        """
+        connect PUT requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_pod_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.put_namespaced_pod_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def put_namespaced_pod_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect PUT requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_pod_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_pod_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `put_namespaced_pod_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_pod_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_pod_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_pod_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def put_namespaced_pod_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Pod
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_pod_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Pod (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_pod_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `put_namespaced_pod_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_pod_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `put_namespaced_pod_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_service_proxy(self, namespace, name, **kwargs):
+        """
+        connect PUT requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_service_proxy(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.put_namespaced_service_proxy_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def put_namespaced_service_proxy_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect PUT requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_service_proxy_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_service_proxy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `put_namespaced_service_proxy`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_service_proxy`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def put_namespaced_service_proxy_0(self, namespace, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_service_proxy_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def put_namespaced_service_proxy_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect PUT requests to proxy of Service
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.put_namespaced_service_proxy_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Service (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method put_namespaced_service_proxy_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `put_namespaced_service_proxy_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `put_namespaced_service_proxy_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `put_namespaced_service_proxy_0`")
+
+        resource_path = '/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
 
         header_params = {}
 

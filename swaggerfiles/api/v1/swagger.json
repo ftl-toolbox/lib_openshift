@@ -4956,7 +4956,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Node",
-      "nickname": "connectGetNamespacedNodeProxy",
+      "nickname": "GetNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -4986,7 +4986,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Node",
-      "nickname": "connectPostNamespacedNodeProxy",
+      "nickname": "PostNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5016,7 +5016,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Node",
-      "nickname": "connectPutNamespacedNodeProxy",
+      "nickname": "PutNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5046,7 +5046,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Node",
-      "nickname": "connectDeleteNamespacedNodeProxy",
+      "nickname": "DeleteNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5076,7 +5076,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Node",
-      "nickname": "connectHeadNamespacedNodeProxy",
+      "nickname": "HeadNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5106,7 +5106,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Node",
-      "nickname": "connectOptionsNamespacedNodeProxy",
+      "nickname": "OptionsNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5142,7 +5142,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Node",
-      "nickname": "connectGetNamespacedNodeProxy",
+      "nickname": "GetNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5180,7 +5180,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Node",
-      "nickname": "connectPostNamespacedNodeProxy",
+      "nickname": "PostNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5218,7 +5218,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Node",
-      "nickname": "connectPutNamespacedNodeProxy",
+      "nickname": "PutNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5256,7 +5256,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Node",
-      "nickname": "connectDeleteNamespacedNodeProxy",
+      "nickname": "DeleteNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5294,7 +5294,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Node",
-      "nickname": "connectHeadNamespacedNodeProxy",
+      "nickname": "HeadNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -5332,7 +5332,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Node",
-      "nickname": "connectOptionsNamespacedNodeProxy",
+      "nickname": "OptionsNamespacedNodeProxy",
       "parameters": [
        {
         "type": "string",
@@ -8108,7 +8108,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to attach of Pod",
-      "nickname": "connectGetNamespacedPodAttach",
+      "nickname": "GetNamespacedPodAttach",
       "parameters": [
        {
         "type": "boolean",
@@ -8178,7 +8178,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to attach of Pod",
-      "nickname": "connectPostNamespacedPodAttach",
+      "nickname": "PostNamespacedPodAttach",
       "parameters": [
        {
         "type": "boolean",
@@ -8314,7 +8314,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to exec of Pod",
-      "nickname": "connectGetNamespacedPodExec",
+      "nickname": "GetNamespacedPodExec",
       "parameters": [
        {
         "type": "boolean",
@@ -8392,7 +8392,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to exec of Pod",
-      "nickname": "connectPostNamespacedPodExec",
+      "nickname": "PostNamespacedPodExec",
       "parameters": [
        {
         "type": "boolean",
@@ -8592,7 +8592,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to portforward of Pod",
-      "nickname": "connectGetNamespacedPodPortforward",
+      "nickname": "GetNamespacedPodPortforward",
       "parameters": [
        {
         "type": "string",
@@ -8622,7 +8622,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to portforward of Pod",
-      "nickname": "connectPostNamespacedPodPortforward",
+      "nickname": "PostNamespacedPodPortforward",
       "parameters": [
        {
         "type": "string",
@@ -8658,7 +8658,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Pod",
-      "nickname": "connectGetNamespacedPodProxy",
+      "nickname": "GetNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8696,7 +8696,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Pod",
-      "nickname": "connectPostNamespacedPodProxy",
+      "nickname": "PostNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8734,7 +8734,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Pod",
-      "nickname": "connectPutNamespacedPodProxy",
+      "nickname": "PutNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8772,7 +8772,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Pod",
-      "nickname": "connectDeleteNamespacedPodProxy",
+      "nickname": "DeleteNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8810,7 +8810,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Pod",
-      "nickname": "connectHeadNamespacedPodProxy",
+      "nickname": "HeadNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8848,7 +8848,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Pod",
-      "nickname": "connectOptionsNamespacedPodProxy",
+      "nickname": "OptionsNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8892,7 +8892,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Pod",
-      "nickname": "connectGetNamespacedPodProxy",
+      "nickname": "GetNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8938,7 +8938,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Pod",
-      "nickname": "connectPostNamespacedPodProxy",
+      "nickname": "PostNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -8984,7 +8984,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Pod",
-      "nickname": "connectPutNamespacedPodProxy",
+      "nickname": "PutNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -9030,7 +9030,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Pod",
-      "nickname": "connectDeleteNamespacedPodProxy",
+      "nickname": "DeleteNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -9076,7 +9076,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Pod",
-      "nickname": "connectHeadNamespacedPodProxy",
+      "nickname": "HeadNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -9122,7 +9122,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Pod",
-      "nickname": "connectOptionsNamespacedPodProxy",
+      "nickname": "OptionsNamespacedPodProxy",
       "parameters": [
        {
         "type": "string",
@@ -15210,7 +15210,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Service",
-      "nickname": "connectGetNamespacedServiceProxy",
+      "nickname": "GetNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15248,7 +15248,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Service",
-      "nickname": "connectPostNamespacedServiceProxy",
+      "nickname": "PostNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15286,7 +15286,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Service",
-      "nickname": "connectPutNamespacedServiceProxy",
+      "nickname": "PutNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15324,7 +15324,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Service",
-      "nickname": "connectDeleteNamespacedServiceProxy",
+      "nickname": "DeleteNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15362,7 +15362,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Service",
-      "nickname": "connectHeadNamespacedServiceProxy",
+      "nickname": "HeadNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15400,7 +15400,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Service",
-      "nickname": "connectOptionsNamespacedServiceProxy",
+      "nickname": "OptionsNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15444,7 +15444,7 @@
       "type": "string",
       "method": "GET",
       "summary": "connect GET requests to proxy of Service",
-      "nickname": "connectGetNamespacedServiceProxy",
+      "nickname": "GetNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15490,7 +15490,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to proxy of Service",
-      "nickname": "connectPostNamespacedServiceProxy",
+      "nickname": "PostNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15536,7 +15536,7 @@
       "type": "string",
       "method": "PUT",
       "summary": "connect PUT requests to proxy of Service",
-      "nickname": "connectPutNamespacedServiceProxy",
+      "nickname": "PutNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15582,7 +15582,7 @@
       "type": "string",
       "method": "DELETE",
       "summary": "connect DELETE requests to proxy of Service",
-      "nickname": "connectDeleteNamespacedServiceProxy",
+      "nickname": "DeleteNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15628,7 +15628,7 @@
       "type": "string",
       "method": "HEAD",
       "summary": "connect HEAD requests to proxy of Service",
-      "nickname": "connectHeadNamespacedServiceProxy",
+      "nickname": "HeadNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",
@@ -15674,7 +15674,7 @@
       "type": "string",
       "method": "OPTIONS",
       "summary": "connect OPTIONS requests to proxy of Service",
-      "nickname": "connectOptionsNamespacedServiceProxy",
+      "nickname": "OptionsNamespacedServiceProxy",
       "parameters": [
        {
         "type": "string",

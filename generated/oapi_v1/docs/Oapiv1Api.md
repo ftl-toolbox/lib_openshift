@@ -4,9 +4,6 @@ All URIs are relative to *https://localhost:8443/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**connect_post_namespaced_binary_build_request_options_instantiatebinary**](Oapiv1Api.md#connect_post_namespaced_binary_build_request_options_instantiatebinary) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/instantiatebinary | connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-[**connect_post_namespaced_status_webhooks**](Oapiv1Api.md#connect_post_namespaced_status_webhooks) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks | connect POST requests to webhooks of Status
-[**connect_post_namespaced_status_webhooks_0**](Oapiv1Api.md#connect_post_namespaced_status_webhooks_0) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks/{path} | connect POST requests to webhooks of Status
 [**create_build**](Oapiv1Api.md#create_build) | **POST** /oapi/v1/builds | create a Build
 [**create_build_config**](Oapiv1Api.md#create_build_config) | **POST** /oapi/v1/buildconfigs | create a BuildConfig
 [**create_deployment_config**](Oapiv1Api.md#create_deployment_config) | **POST** /oapi/v1/deploymentconfigs | create a DeploymentConfig
@@ -177,6 +174,9 @@ Method | HTTP request | Description
 [**patch_namespaced_template**](Oapiv1Api.md#patch_namespaced_template) | **PATCH** /oapi/v1/namespaces/{namespace}/templates/{name} | partially update the specified Template
 [**patch_namespaced_user**](Oapiv1Api.md#patch_namespaced_user) | **PATCH** /oapi/v1/users/{name} | partially update the specified User
 [**patch_namespaced_user_identity_mapping**](Oapiv1Api.md#patch_namespaced_user_identity_mapping) | **PATCH** /oapi/v1/useridentitymappings/{name} | partially update the specified UserIdentityMapping
+[**post_namespaced_binary_build_request_options_instantiatebinary**](Oapiv1Api.md#post_namespaced_binary_build_request_options_instantiatebinary) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/instantiatebinary | connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+[**post_namespaced_status_webhooks**](Oapiv1Api.md#post_namespaced_status_webhooks) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks | connect POST requests to webhooks of Status
+[**post_namespaced_status_webhooks_0**](Oapiv1Api.md#post_namespaced_status_webhooks_0) | **POST** /oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks/{path} | connect POST requests to webhooks of Status
 [**read_namespaced_build**](Oapiv1Api.md#read_namespaced_build) | **GET** /oapi/v1/namespaces/{namespace}/builds/{name} | read the specified Build
 [**read_namespaced_build_config**](Oapiv1Api.md#read_namespaced_build_config) | **GET** /oapi/v1/namespaces/{namespace}/buildconfigs/{name} | read the specified BuildConfig
 [**read_namespaced_build_log_log**](Oapiv1Api.md#read_namespaced_build_log_log) | **GET** /oapi/v1/namespaces/{namespace}/builds/{name}/log | read log of the specified BuildLog
@@ -288,167 +288,6 @@ Method | HTTP request | Description
 [**watch_route_list**](Oapiv1Api.md#watch_route_list) | **GET** /oapi/v1/watch/routes | watch individual changes to a list of Route
 [**watch_template_list**](Oapiv1Api.md#watch_template_list) | **GET** /oapi/v1/watch/templates | watch individual changes to a list of Template
 
-
-# **connect_post_namespaced_binary_build_request_options_instantiatebinary**
-> str connect_post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, as_file=as_file, revision_commit=revision_commit, revision_message=revision_message, revision_author_name=revision_author_name, revision_author_email=revision_author_email, revision_committer_name=revision_committer_name, revision_committer_email=revision_committer_email)
-
-connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-
-### Example 
-```python
-import time
-import oapi_v1
-from oapi_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = oapi_v1.Oapiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the BinaryBuildRequestOptions
-as_file = 'as_file_example' # str | AsFile determines if the binary should be created as a file within the source rather than extracted as an archive (optional)
-revision_commit = 'revision_commit_example' # str | Commit is the value identifying a specific commit (optional)
-revision_message = 'revision_message_example' # str | Message is the description of a specific commit (optional)
-revision_author_name = 'revision_author_name_example' # str | AuthorName of the source control user (optional)
-revision_author_email = 'revision_author_email_example' # str | AuthorEmail of the source control user (optional)
-revision_committer_name = 'revision_committer_name_example' # str | CommitterName of the source control user (optional)
-revision_committer_email = 'revision_committer_email_example' # str | CommitterEmail of the source control user (optional)
-
-try: 
-    # connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-    api_response = api_instance.connect_post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, as_file=as_file, revision_commit=revision_commit, revision_message=revision_message, revision_author_name=revision_author_name, revision_author_email=revision_author_email, revision_committer_name=revision_committer_name, revision_committer_email=revision_committer_email)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Oapiv1Api->connect_post_namespaced_binary_build_request_options_instantiatebinary: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the BinaryBuildRequestOptions | 
- **as_file** | **str**| AsFile determines if the binary should be created as a file within the source rather than extracted as an archive | [optional] 
- **revision_commit** | **str**| Commit is the value identifying a specific commit | [optional] 
- **revision_message** | **str**| Message is the description of a specific commit | [optional] 
- **revision_author_name** | **str**| AuthorName of the source control user | [optional] 
- **revision_author_email** | **str**| AuthorEmail of the source control user | [optional] 
- **revision_committer_name** | **str**| CommitterName of the source control user | [optional] 
- **revision_committer_email** | **str**| CommitterEmail of the source control user | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_status_webhooks**
-> str connect_post_namespaced_status_webhooks(namespace, name, path=path)
-
-connect POST requests to webhooks of Status
-
-### Example 
-```python
-import time
-import oapi_v1
-from oapi_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = oapi_v1.Oapiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Status
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect POST requests to webhooks of Status
-    api_response = api_instance.connect_post_namespaced_status_webhooks(namespace, name, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Oapiv1Api->connect_post_namespaced_status_webhooks: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Status | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **connect_post_namespaced_status_webhooks_0**
-> str connect_post_namespaced_status_webhooks_0(namespace, name, path2, path=path)
-
-connect POST requests to webhooks of Status
-
-### Example 
-```python
-import time
-import oapi_v1
-from oapi_v1.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = oapi_v1.Oapiv1Api()
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Status
-path2 = 'path_example' # str | path to the resource
-path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
-
-try: 
-    # connect POST requests to webhooks of Status
-    api_response = api_instance.connect_post_namespaced_status_webhooks_0(namespace, name, path2, path=path)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling Oapiv1Api->connect_post_namespaced_status_webhooks_0: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Status | 
- **path2** | **str**| path to the resource | 
- **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_build**
 > V1Build create_build(body, pretty=pretty)
@@ -9126,6 +8965,167 @@ No authorization required
 
  - **Content-Type**: application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_binary_build_request_options_instantiatebinary**
+> str post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, as_file=as_file, revision_commit=revision_commit, revision_message=revision_message, revision_author_name=revision_author_name, revision_author_email=revision_author_email, revision_committer_name=revision_committer_name, revision_committer_email=revision_committer_email)
+
+connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+
+### Example 
+```python
+import time
+import oapi_v1
+from oapi_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = oapi_v1.Oapiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the BinaryBuildRequestOptions
+as_file = 'as_file_example' # str | AsFile determines if the binary should be created as a file within the source rather than extracted as an archive (optional)
+revision_commit = 'revision_commit_example' # str | Commit is the value identifying a specific commit (optional)
+revision_message = 'revision_message_example' # str | Message is the description of a specific commit (optional)
+revision_author_name = 'revision_author_name_example' # str | AuthorName of the source control user (optional)
+revision_author_email = 'revision_author_email_example' # str | AuthorEmail of the source control user (optional)
+revision_committer_name = 'revision_committer_name_example' # str | CommitterName of the source control user (optional)
+revision_committer_email = 'revision_committer_email_example' # str | CommitterEmail of the source control user (optional)
+
+try: 
+    # connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+    api_response = api_instance.post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, as_file=as_file, revision_commit=revision_commit, revision_message=revision_message, revision_author_name=revision_author_name, revision_author_email=revision_author_email, revision_committer_name=revision_committer_name, revision_committer_email=revision_committer_email)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Oapiv1Api->post_namespaced_binary_build_request_options_instantiatebinary: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the BinaryBuildRequestOptions | 
+ **as_file** | **str**| AsFile determines if the binary should be created as a file within the source rather than extracted as an archive | [optional] 
+ **revision_commit** | **str**| Commit is the value identifying a specific commit | [optional] 
+ **revision_message** | **str**| Message is the description of a specific commit | [optional] 
+ **revision_author_name** | **str**| AuthorName of the source control user | [optional] 
+ **revision_author_email** | **str**| AuthorEmail of the source control user | [optional] 
+ **revision_committer_name** | **str**| CommitterName of the source control user | [optional] 
+ **revision_committer_email** | **str**| CommitterEmail of the source control user | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_status_webhooks**
+> str post_namespaced_status_webhooks(namespace, name, path=path)
+
+connect POST requests to webhooks of Status
+
+### Example 
+```python
+import time
+import oapi_v1
+from oapi_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = oapi_v1.Oapiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Status
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect POST requests to webhooks of Status
+    api_response = api_instance.post_namespaced_status_webhooks(namespace, name, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Oapiv1Api->post_namespaced_status_webhooks: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Status | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_namespaced_status_webhooks_0**
+> str post_namespaced_status_webhooks_0(namespace, name, path2, path=path)
+
+connect POST requests to webhooks of Status
+
+### Example 
+```python
+import time
+import oapi_v1
+from oapi_v1.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = oapi_v1.Oapiv1Api()
+namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
+name = 'name_example' # str | name of the Status
+path2 = 'path_example' # str | path to the resource
+path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
+
+try: 
+    # connect POST requests to webhooks of Status
+    api_response = api_instance.post_namespaced_status_webhooks_0(namespace, name, path2, path=path)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling Oapiv1Api->post_namespaced_status_webhooks_0: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| object name and auth scope, such as for teams and projects | 
+ **name** | **str**| name of the Status | 
+ **path2** | **str**| path to the resource | 
+ **path** | **str**| Path is the URL path to use for the current proxy request to pod. | [optional] 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

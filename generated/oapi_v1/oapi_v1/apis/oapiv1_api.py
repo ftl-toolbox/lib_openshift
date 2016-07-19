@@ -51,382 +51,6 @@ class Oapiv1Api(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def connect_post_namespaced_binary_build_request_options_instantiatebinary(self, namespace, name, **kwargs):
-        """
-        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the BinaryBuildRequestOptions (required)
-        :param str as_file: AsFile determines if the binary should be created as a file within the source rather than extracted as an archive
-        :param str revision_commit: Commit is the value identifying a specific commit
-        :param str revision_message: Message is the description of a specific commit
-        :param str revision_author_name: AuthorName of the source control user
-        :param str revision_author_email: AuthorEmail of the source control user
-        :param str revision_committer_name: CommitterName of the source control user
-        :param str revision_committer_email: CommitterEmail of the source control user
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the BinaryBuildRequestOptions (required)
-        :param str as_file: AsFile determines if the binary should be created as a file within the source rather than extracted as an archive
-        :param str revision_commit: Commit is the value identifying a specific commit
-        :param str revision_message: Message is the description of a specific commit
-        :param str revision_author_name: AuthorName of the source control user
-        :param str revision_author_email: AuthorEmail of the source control user
-        :param str revision_committer_name: CommitterName of the source control user
-        :param str revision_committer_email: CommitterEmail of the source control user
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'as_file', 'revision_commit', 'revision_message', 'revision_author_name', 'revision_author_email', 'revision_committer_name', 'revision_committer_email']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_binary_build_request_options_instantiatebinary" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_binary_build_request_options_instantiatebinary`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_binary_build_request_options_instantiatebinary`")
-
-        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/instantiatebinary'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'as_file' in params:
-            query_params['asFile'] = params['as_file']
-        if 'revision_commit' in params:
-            query_params['revision.commit'] = params['revision_commit']
-        if 'revision_message' in params:
-            query_params['revision.message'] = params['revision_message']
-        if 'revision_author_name' in params:
-            query_params['revision.authorName'] = params['revision_author_name']
-        if 'revision_author_email' in params:
-            query_params['revision.authorEmail'] = params['revision_author_email']
-        if 'revision_committer_name' in params:
-            query_params['revision.committerName'] = params['revision_committer_name']
-        if 'revision_committer_email' in params:
-            query_params['revision.committerEmail'] = params['revision_committer_email']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_status_webhooks(self, namespace, name, **kwargs):
-        """
-        connect POST requests to webhooks of Status
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_status_webhooks(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Status (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_status_webhooks_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_status_webhooks_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def connect_post_namespaced_status_webhooks_with_http_info(self, namespace, name, **kwargs):
-        """
-        connect POST requests to webhooks of Status
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_status_webhooks_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Status (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_status_webhooks" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_status_webhooks`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_status_webhooks`")
-
-        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def connect_post_namespaced_status_webhooks_0(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to webhooks of Status
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_status_webhooks_0(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Status (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.connect_post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, **kwargs)
-        else:
-            (data) = self.connect_post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, **kwargs)
-            return data
-
-    def connect_post_namespaced_status_webhooks_0_with_http_info(self, namespace, name, path2, **kwargs):
-        """
-        connect POST requests to webhooks of Status
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.connect_post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Status (required)
-        :param str path2: path to the resource (required)
-        :param str path: Path is the URL path to use for the current proxy request to pod.
-        :return: str
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'path2', 'path']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method connect_post_namespaced_status_webhooks_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `connect_post_namespaced_status_webhooks_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `connect_post_namespaced_status_webhooks_0`")
-        # verify the required parameter 'path2' is set
-        if ('path2' not in params) or (params['path2'] is None):
-            raise ValueError("Missing the required parameter `path2` when calling `connect_post_namespaced_status_webhooks_0`")
-
-        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks/{path}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'path2' in params:
-            path_params['path'] = params['path2']
-
-        query_params = {}
-        if 'path' in params:
-            query_params['path'] = params['path']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='str',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
     def create_build(self, body, **kwargs):
         """
         create a Build
@@ -20338,6 +19962,382 @@ class Oapiv1Api(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type='V1UserIdentityMapping',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_binary_build_request_options_instantiatebinary(self, namespace, name, **kwargs):
+        """
+        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_binary_build_request_options_instantiatebinary(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the BinaryBuildRequestOptions (required)
+        :param str as_file: AsFile determines if the binary should be created as a file within the source rather than extracted as an archive
+        :param str revision_commit: Commit is the value identifying a specific commit
+        :param str revision_message: Message is the description of a specific commit
+        :param str revision_author_name: AuthorName of the source control user
+        :param str revision_author_email: AuthorEmail of the source control user
+        :param str revision_committer_name: CommitterName of the source control user
+        :param str revision_committer_email: CommitterEmail of the source control user
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_binary_build_request_options_instantiatebinary_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the BinaryBuildRequestOptions (required)
+        :param str as_file: AsFile determines if the binary should be created as a file within the source rather than extracted as an archive
+        :param str revision_commit: Commit is the value identifying a specific commit
+        :param str revision_message: Message is the description of a specific commit
+        :param str revision_author_name: AuthorName of the source control user
+        :param str revision_author_email: AuthorEmail of the source control user
+        :param str revision_committer_name: CommitterName of the source control user
+        :param str revision_committer_email: CommitterEmail of the source control user
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'as_file', 'revision_commit', 'revision_message', 'revision_author_name', 'revision_author_email', 'revision_committer_name', 'revision_committer_email']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_binary_build_request_options_instantiatebinary" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_binary_build_request_options_instantiatebinary`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_binary_build_request_options_instantiatebinary`")
+
+        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/instantiatebinary'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'as_file' in params:
+            query_params['asFile'] = params['as_file']
+        if 'revision_commit' in params:
+            query_params['revision.commit'] = params['revision_commit']
+        if 'revision_message' in params:
+            query_params['revision.message'] = params['revision_message']
+        if 'revision_author_name' in params:
+            query_params['revision.authorName'] = params['revision_author_name']
+        if 'revision_author_email' in params:
+            query_params['revision.authorEmail'] = params['revision_author_email']
+        if 'revision_committer_name' in params:
+            query_params['revision.committerName'] = params['revision_committer_name']
+        if 'revision_committer_email' in params:
+            query_params['revision.committerEmail'] = params['revision_committer_email']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_status_webhooks(self, namespace, name, **kwargs):
+        """
+        connect POST requests to webhooks of Status
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_status_webhooks(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Status (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_status_webhooks_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.post_namespaced_status_webhooks_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def post_namespaced_status_webhooks_with_http_info(self, namespace, name, **kwargs):
+        """
+        connect POST requests to webhooks of Status
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_status_webhooks_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Status (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_status_webhooks" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_status_webhooks`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_status_webhooks`")
+
+        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def post_namespaced_status_webhooks_0(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to webhooks of Status
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_status_webhooks_0(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Status (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, **kwargs)
+        else:
+            (data) = self.post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, **kwargs)
+            return data
+
+    def post_namespaced_status_webhooks_0_with_http_info(self, namespace, name, path2, **kwargs):
+        """
+        connect POST requests to webhooks of Status
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_namespaced_status_webhooks_0_with_http_info(namespace, name, path2, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Status (required)
+        :param str path2: path to the resource (required)
+        :param str path: Path is the URL path to use for the current proxy request to pod.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'path2', 'path']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_namespaced_status_webhooks_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `post_namespaced_status_webhooks_0`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `post_namespaced_status_webhooks_0`")
+        # verify the required parameter 'path2' is set
+        if ('path2' not in params) or (params['path2'] is None):
+            raise ValueError("Missing the required parameter `path2` when calling `post_namespaced_status_webhooks_0`")
+
+        resource_path = '/oapi/v1/namespaces/{namespace}/buildconfigs/{name}/webhooks/{path}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'path2' in params:
+            path_params['path'] = params['path2']
+
+        query_params = {}
+        if 'path' in params:
+            query_params['path'] = params['path']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['*/*'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))

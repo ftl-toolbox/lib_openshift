@@ -42,30 +42,6 @@ class TestOapiv1Api(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_connect_post_namespaced_binary_build_request_options_instantiatebinary(self):
-        """
-        Test case for connect_post_namespaced_binary_build_request_options_instantiatebinary
-
-        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-        """
-        pass
-
-    def test_connect_post_namespaced_status_webhooks(self):
-        """
-        Test case for connect_post_namespaced_status_webhooks
-
-        connect POST requests to webhooks of Status
-        """
-        pass
-
-    def test_connect_post_namespaced_status_webhooks_0(self):
-        """
-        Test case for connect_post_namespaced_status_webhooks_0
-
-        connect POST requests to webhooks of Status
-        """
-        pass
-
     def test_create_build(self):
         """
         Test case for create_build
@@ -1423,6 +1399,30 @@ class TestOapiv1Api(unittest.TestCase):
         Test case for patch_namespaced_user_identity_mapping
 
         partially update the specified UserIdentityMapping
+        """
+        pass
+
+    def test_post_namespaced_binary_build_request_options_instantiatebinary(self):
+        """
+        Test case for post_namespaced_binary_build_request_options_instantiatebinary
+
+        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
+        """
+        pass
+
+    def test_post_namespaced_status_webhooks(self):
+        """
+        Test case for post_namespaced_status_webhooks
+
+        connect POST requests to webhooks of Status
+        """
+        pass
+
+    def test_post_namespaced_status_webhooks_0(self):
+        """
+        Test case for post_namespaced_status_webhooks_0
+
+        connect POST requests to webhooks of Status
         """
         pass
 

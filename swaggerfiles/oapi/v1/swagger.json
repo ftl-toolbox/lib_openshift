@@ -879,7 +879,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to instantiatebinary of BinaryBuildRequestOptions",
-      "nickname": "connectPostNamespacedBinaryBuildRequestOptionsInstantiatebinary",
+      "nickname": "PostNamespacedBinaryBuildRequestOptionsInstantiatebinary",
       "parameters": [
        {
         "type": "string",
@@ -971,7 +971,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to webhooks of Status",
-      "nickname": "connectPostNamespacedStatusWebhooks",
+      "nickname": "PostNamespacedStatusWebhooks",
       "parameters": [
        {
         "type": "string",
@@ -1015,7 +1015,7 @@
       "type": "string",
       "method": "POST",
       "summary": "connect POST requests to webhooks of Status",
-      "nickname": "connectPostNamespacedStatusWebhooks",
+      "nickname": "PostNamespacedStatusWebhooks",
       "parameters": [
        {
         "type": "string",
