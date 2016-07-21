@@ -51,7 +51,7 @@ class ApisExtensionsV1beta1(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_daemon_set(self, body, **kwargs):
+    def create_daemonset(self, body, **kwargs):
         """
         create a DaemonSet
         
@@ -62,7 +62,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_daemon_set(body, callback=callback_function)
+        >>> thread = api.create_daemonset(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -74,12 +74,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_daemon_set_with_http_info(body, **kwargs)
+            return self.create_daemonset_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_daemon_set_with_http_info(body, **kwargs)
+            (data) = self.create_daemonset_with_http_info(body, **kwargs)
             return data
 
-    def create_daemon_set_with_http_info(self, body, **kwargs):
+    def create_daemonset_with_http_info(self, body, **kwargs):
         """
         create a DaemonSet
         
@@ -90,7 +90,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_daemon_set_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_daemonset_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -110,13 +110,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_daemon_set" % key
+                    " to method create_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_daemon_set`")
+            raise ValueError("Missing the required parameter `body` when calling `create_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/daemonsets'.replace('{format}', 'json')
         path_params = {}
@@ -267,7 +267,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_horizontal_pod_autoscaler(self, body, **kwargs):
+    def create_horizontalpodautoscaler(self, body, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -278,7 +278,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_horizontal_pod_autoscaler(body, callback=callback_function)
+        >>> thread = api.create_horizontalpodautoscaler(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -290,12 +290,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_horizontal_pod_autoscaler_with_http_info(body, **kwargs)
+            return self.create_horizontalpodautoscaler_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_horizontal_pod_autoscaler_with_http_info(body, **kwargs)
+            (data) = self.create_horizontalpodautoscaler_with_http_info(body, **kwargs)
             return data
 
-    def create_horizontal_pod_autoscaler_with_http_info(self, body, **kwargs):
+    def create_horizontalpodautoscaler_with_http_info(self, body, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -306,7 +306,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_horizontal_pod_autoscaler_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_horizontalpodautoscaler_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -326,13 +326,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_horizontal_pod_autoscaler" % key
+                    " to method create_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `create_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -591,7 +591,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_namespaced_daemon_set(self, body, namespace, **kwargs):
+    def create_namespaced_daemonset(self, body, namespace, **kwargs):
         """
         create a DaemonSet
         
@@ -602,7 +602,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_daemon_set(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_daemonset(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -615,12 +615,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_daemon_set_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_daemonset_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_daemon_set_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_daemonset_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_daemon_set_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_daemonset_with_http_info(self, body, namespace, **kwargs):
         """
         create a DaemonSet
         
@@ -631,7 +631,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_daemon_set_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_daemonset_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -652,16 +652,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_daemon_set" % key
+                    " to method create_namespaced_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_daemonset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets'.replace('{format}', 'json')
         path_params = {}
@@ -821,7 +821,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_namespaced_deployment_rollback_rollback(self, body, namespace, name, **kwargs):
+    def create_namespaced_deployment_rollback(self, body, namespace, name, **kwargs):
         """
         create rollback of a DeploymentRollback
         
@@ -832,7 +832,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_deployment_rollback_rollback(body, namespace, name, callback=callback_function)
+        >>> thread = api.create_namespaced_deployment_rollback(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -846,12 +846,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_deployment_rollback_rollback_with_http_info(body, namespace, name, **kwargs)
+            return self.create_namespaced_deployment_rollback_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.create_namespaced_deployment_rollback_rollback_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.create_namespaced_deployment_rollback_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def create_namespaced_deployment_rollback_rollback_with_http_info(self, body, namespace, name, **kwargs):
+    def create_namespaced_deployment_rollback_with_http_info(self, body, namespace, name, **kwargs):
         """
         create rollback of a DeploymentRollback
         
@@ -862,7 +862,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_deployment_rollback_rollback_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.create_namespaced_deployment_rollback_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -884,19 +884,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_deployment_rollback_rollback" % key
+                    " to method create_namespaced_deployment_rollback" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_deployment_rollback_rollback`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_deployment_rollback`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_deployment_rollback_rollback`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_deployment_rollback`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `create_namespaced_deployment_rollback_rollback`")
+            raise ValueError("Missing the required parameter `name` when calling `create_namespaced_deployment_rollback`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/rollback'.replace('{format}', 'json')
         path_params = {}
@@ -943,7 +943,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_namespaced_horizontal_pod_autoscaler(self, body, namespace, **kwargs):
+    def create_namespaced_horizontalpodautoscaler(self, body, namespace, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -954,7 +954,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_horizontal_pod_autoscaler(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_horizontalpodautoscaler(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -967,12 +967,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -983,7 +983,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1004,16 +1004,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_horizontal_pod_autoscaler" % key
+                    " to method create_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -1288,7 +1288,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_namespaced_replica_set(self, body, namespace, **kwargs):
+    def create_namespaced_replicaset(self, body, namespace, **kwargs):
         """
         create a ReplicaSet
         
@@ -1299,7 +1299,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_replica_set(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_replicaset(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1312,12 +1312,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_replica_set_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_replicaset_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_replica_set_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_replicaset_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_replica_set_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_replicaset_with_http_info(self, body, namespace, **kwargs):
         """
         create a ReplicaSet
         
@@ -1328,7 +1328,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_replica_set_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_replicaset_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1349,16 +1349,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_replica_set" % key
+                    " to method create_namespaced_replicaset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_replicaset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_replicaset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets'.replace('{format}', 'json')
         path_params = {}
@@ -1403,7 +1403,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_replica_set(self, body, **kwargs):
+    def create_replicaset(self, body, **kwargs):
         """
         create a ReplicaSet
         
@@ -1414,7 +1414,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_replica_set(body, callback=callback_function)
+        >>> thread = api.create_replicaset(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1426,12 +1426,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_replica_set_with_http_info(body, **kwargs)
+            return self.create_replicaset_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_replica_set_with_http_info(body, **kwargs)
+            (data) = self.create_replicaset_with_http_info(body, **kwargs)
             return data
 
-    def create_replica_set_with_http_info(self, body, **kwargs):
+    def create_replicaset_with_http_info(self, body, **kwargs):
         """
         create a ReplicaSet
         
@@ -1442,7 +1442,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_replica_set_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_replicaset_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1462,13 +1462,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_replica_set" % key
+                    " to method create_replicaset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `create_replicaset`")
 
         resource_path = '/apis/extensions/v1beta1/replicasets'.replace('{format}', 'json')
         path_params = {}
@@ -1511,7 +1511,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def delete_namespaced_daemon_set(self, body, namespace, name, **kwargs):
+    def delete_namespaced_daemonset(self, body, namespace, name, **kwargs):
         """
         delete a DaemonSet
         
@@ -1522,7 +1522,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_daemon_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_daemonset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1536,12 +1536,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.delete_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def delete_namespaced_daemon_set_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_daemonset_with_http_info(self, body, namespace, name, **kwargs):
         """
         delete a DaemonSet
         
@@ -1552,7 +1552,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_daemon_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_daemonset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1574,19 +1574,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_daemon_set" % key
+                    " to method delete_namespaced_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_daemonset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_daemonset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1607,6 +1607,134 @@ class ApisExtensionsV1beta1(object):
         body_params = None
         if 'body' in params:
             body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_daemonsets(self, namespace, **kwargs):
+        """
+        delete collection of DaemonSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_daemonsets(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_daemonsets_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.delete_namespaced_daemonsets_with_http_info(namespace, **kwargs)
+            return data
+
+    def delete_namespaced_daemonsets_with_http_info(self, namespace, **kwargs):
+        """
+        delete collection of DaemonSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_daemonsets_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_daemonsets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_daemonsets`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
@@ -1755,7 +1883,135 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def delete_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
+    def delete_namespaced_deployments(self, namespace, **kwargs):
+        """
+        delete collection of Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_deployments(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_deployments_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.delete_namespaced_deployments_with_http_info(namespace, **kwargs)
+            return data
+
+    def delete_namespaced_deployments_with_http_info(self, namespace, **kwargs):
+        """
+        delete collection of Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_deployments_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_deployments" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_deployments`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
         """
         delete a HorizontalPodAutoscaler
         
@@ -1766,7 +2022,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1780,12 +2036,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def delete_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
         """
         delete a HorizontalPodAutoscaler
         
@@ -1796,7 +2052,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1818,19 +2074,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_horizontal_pod_autoscaler" % key
+                    " to method delete_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1851,6 +2107,134 @@ class ApisExtensionsV1beta1(object):
         body_params = None
         if 'body' in params:
             body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_horizontalpodautoscalers(self, namespace, **kwargs):
+        """
+        delete collection of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_horizontalpodautoscalers(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
+            return data
+
+    def delete_namespaced_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
+        """
+        delete collection of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_horizontalpodautoscalers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontalpodautoscalers`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
@@ -1999,6 +2383,134 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
+    def delete_namespaced_ingresses(self, namespace, **kwargs):
+        """
+        delete collection of Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_ingresses(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_ingresses_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.delete_namespaced_ingresses_with_http_info(namespace, **kwargs)
+            return data
+
+    def delete_namespaced_ingresses_with_http_info(self, namespace, **kwargs):
+        """
+        delete collection of Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_ingresses_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_ingresses" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_ingresses`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/ingresses'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
     def delete_namespaced_job(self, body, namespace, name, **kwargs):
         """
         delete a Job
@@ -2121,641 +2633,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def delete_namespaced_replica_set(self, body, namespace, name, **kwargs):
-        """
-        delete a ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.delete_namespaced_replica_set(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1DeleteOptions body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.delete_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.delete_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def delete_namespaced_replica_set_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        delete a ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.delete_namespaced_replica_set_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1DeleteOptions body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_replica_set" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_replica_set`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_replica_set`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_replica_set`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='UnversionedStatus',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def deletecollection_namespaced_daemon_set(self, namespace, **kwargs):
-        """
-        delete collection of DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_daemon_set(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.deletecollection_namespaced_daemon_set_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.deletecollection_namespaced_daemon_set_with_http_info(namespace, **kwargs)
-            return data
-
-    def deletecollection_namespaced_daemon_set_with_http_info(self, namespace, **kwargs):
-        """
-        delete collection of DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_daemon_set_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_daemon_set" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_daemon_set`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='UnversionedStatus',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def deletecollection_namespaced_deployment(self, namespace, **kwargs):
-        """
-        delete collection of Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_deployment(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.deletecollection_namespaced_deployment_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.deletecollection_namespaced_deployment_with_http_info(namespace, **kwargs)
-            return data
-
-    def deletecollection_namespaced_deployment_with_http_info(self, namespace, **kwargs):
-        """
-        delete collection of Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_deployment_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_deployment" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_deployment`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='UnversionedStatus',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def deletecollection_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
-        """
-        delete collection of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_horizontal_pod_autoscaler(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
-            return data
-
-    def deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, **kwargs):
-        """
-        delete collection of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_horizontal_pod_autoscaler" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_horizontal_pod_autoscaler`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='UnversionedStatus',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def deletecollection_namespaced_ingress(self, namespace, **kwargs):
-        """
-        delete collection of Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_ingress(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.deletecollection_namespaced_ingress_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.deletecollection_namespaced_ingress_with_http_info(namespace, **kwargs)
-            return data
-
-    def deletecollection_namespaced_ingress_with_http_info(self, namespace, **kwargs):
-        """
-        delete collection of Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.deletecollection_namespaced_ingress_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: UnversionedStatus
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_ingress" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_ingress`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/ingresses'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='UnversionedStatus',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def deletecollection_namespaced_job(self, namespace, **kwargs):
+    def delete_namespaced_jobs(self, namespace, **kwargs):
         """
         delete collection of Job
         
@@ -2766,7 +2644,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_job(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2783,12 +2661,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.deletecollection_namespaced_job_with_http_info(namespace, **kwargs)
+            return self.delete_namespaced_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.deletecollection_namespaced_job_with_http_info(namespace, **kwargs)
+            (data) = self.delete_namespaced_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def deletecollection_namespaced_job_with_http_info(self, namespace, **kwargs):
+    def delete_namespaced_jobs_with_http_info(self, namespace, **kwargs):
         """
         delete collection of Job
         
@@ -2799,7 +2677,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_job_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2824,13 +2702,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_job" % key
+                    " to method delete_namespaced_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_jobs`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
@@ -2883,7 +2761,129 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def deletecollection_namespaced_replica_set(self, namespace, **kwargs):
+    def delete_namespaced_replicaset(self, body, namespace, name, **kwargs):
+        """
+        delete a ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_replicaset(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1DeleteOptions body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.delete_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def delete_namespaced_replicaset_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        delete a ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_replicaset_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1DeleteOptions body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: UnversionedStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_replicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_replicaset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_replicaset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_replicaset`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='UnversionedStatus',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_namespaced_replicasets(self, namespace, **kwargs):
         """
         delete collection of ReplicaSet
         
@@ -2894,7 +2894,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_replica_set(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_replicasets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2911,12 +2911,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.deletecollection_namespaced_replica_set_with_http_info(namespace, **kwargs)
+            return self.delete_namespaced_replicasets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.deletecollection_namespaced_replica_set_with_http_info(namespace, **kwargs)
+            (data) = self.delete_namespaced_replicasets_with_http_info(namespace, **kwargs)
             return data
 
-    def deletecollection_namespaced_replica_set_with_http_info(self, namespace, **kwargs):
+    def delete_namespaced_replicasets_with_http_info(self, namespace, **kwargs):
         """
         delete collection of ReplicaSet
         
@@ -2927,7 +2927,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_replica_set_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_replicasets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2952,13 +2952,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_replica_set" % key
+                    " to method delete_namespaced_replicasets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_replicasets`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets'.replace('{format}', 'json')
         path_params = {}
@@ -3011,7 +3011,1090 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def get_api_resources(self, **kwargs):
+    def get_namespaced_daemonset(self, namespace, name, **kwargs):
+        """
+        read the specified DaemonSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_daemonset(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the DaemonSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1DaemonSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_daemonset_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_daemonset_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_daemonset_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified DaemonSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_daemonset_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the DaemonSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1DaemonSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_daemonset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_daemonset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_daemonset`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1DaemonSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_deployment(self, namespace, name, **kwargs):
+        """
+        read the specified Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_deployment(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Deployment (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Deployment
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_deployment_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_deployment_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_deployment_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_deployment_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Deployment (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Deployment
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_deployment" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_deployment`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_deployment`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Deployment',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_deployment_scale(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_deployment_scale(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_deployment_scale_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_deployment_scale_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_deployment_scale_with_http_info(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_deployment_scale_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_deployment_scale" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_deployment_scale`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_deployment_scale`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Scale',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_horizontalpodautoscaler(self, namespace, name, **kwargs):
+        """
+        read the specified HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_horizontalpodautoscaler(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the HorizontalPodAutoscaler (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1HorizontalPodAutoscaler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_horizontalpodautoscaler_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the HorizontalPodAutoscaler (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1HorizontalPodAutoscaler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_horizontalpodautoscaler" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_horizontalpodautoscaler`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_horizontalpodautoscaler`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1HorizontalPodAutoscaler',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_ingress(self, namespace, name, **kwargs):
+        """
+        read the specified Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_ingress(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Ingress (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Ingress
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_ingress_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_ingress_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_ingress_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_ingress_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Ingress (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Ingress
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_ingress" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_ingress`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_ingress`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Ingress',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_job(self, namespace, name, **kwargs):
+        """
+        read the specified Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_job(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_job_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_job_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_job_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_job_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_job" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_job`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_job`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Job',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_replicaset(self, namespace, name, **kwargs):
+        """
+        read the specified ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicaset(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1ReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_replicaset_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_replicaset_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_replicaset_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicaset_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1beta1ReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_replicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_replicaset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_replicaset`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1ReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_replicaset_scale(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicaset_scale(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_replicaset_scale_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_replicaset_scale_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_replicaset_scale_with_http_info(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicaset_scale_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_replicaset_scale" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_replicaset_scale`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_replicaset_scale`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Scale',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def get_namespaced_replicationcontroller_scale(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicationcontroller_scale(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_replicationcontroller_scale_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_replicationcontroller_scale_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_replicationcontroller_scale_with_http_info(self, namespace, name, **kwargs):
+        """
+        read scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_replicationcontroller_scale_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_replicationcontroller_scale" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_replicationcontroller_scale`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_replicationcontroller_scale`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Scale',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list(self, **kwargs):
         """
         get available resources
         
@@ -3022,7 +4105,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources(callback=callback_function)
+        >>> thread = api.list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3032,12 +4115,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_api_resources_with_http_info(**kwargs)
+            return self.list_with_http_info(**kwargs)
         else:
-            (data) = self.get_api_resources_with_http_info(**kwargs)
+            (data) = self.list_with_http_info(**kwargs)
             return data
 
-    def get_api_resources_with_http_info(self, **kwargs):
+    def list_with_http_info(self, **kwargs):
         """
         get available resources
         
@@ -3048,7 +4131,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
+        >>> thread = api.list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3066,7 +4149,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources" % key
+                    " to method list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3108,7 +4191,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_daemon_set(self, **kwargs):
+    def list_daemonsets(self, **kwargs):
         """
         list or watch objects of kind DaemonSet
         
@@ -3119,7 +4202,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_daemon_set(callback=callback_function)
+        >>> thread = api.list_daemonsets(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3135,12 +4218,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_daemon_set_with_http_info(**kwargs)
+            return self.list_daemonsets_with_http_info(**kwargs)
         else:
-            (data) = self.list_daemon_set_with_http_info(**kwargs)
+            (data) = self.list_daemonsets_with_http_info(**kwargs)
             return data
 
-    def list_daemon_set_with_http_info(self, **kwargs):
+    def list_daemonsets_with_http_info(self, **kwargs):
         """
         list or watch objects of kind DaemonSet
         
@@ -3151,7 +4234,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_daemon_set_with_http_info(callback=callback_function)
+        >>> thread = api.list_daemonsets_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3175,7 +4258,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_daemon_set" % key
+                    " to method list_daemonsets" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3229,7 +4312,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_deployment(self, **kwargs):
+    def list_deployments(self, **kwargs):
         """
         list or watch objects of kind Deployment
         
@@ -3240,7 +4323,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_deployment(callback=callback_function)
+        >>> thread = api.list_deployments(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3256,12 +4339,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_deployment_with_http_info(**kwargs)
+            return self.list_deployments_with_http_info(**kwargs)
         else:
-            (data) = self.list_deployment_with_http_info(**kwargs)
+            (data) = self.list_deployments_with_http_info(**kwargs)
             return data
 
-    def list_deployment_with_http_info(self, **kwargs):
+    def list_deployments_with_http_info(self, **kwargs):
         """
         list or watch objects of kind Deployment
         
@@ -3272,7 +4355,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_deployment_with_http_info(callback=callback_function)
+        >>> thread = api.list_deployments_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3296,7 +4379,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_deployment" % key
+                    " to method list_deployments" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3350,7 +4433,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_horizontal_pod_autoscaler(self, **kwargs):
+    def list_horizontalpodautoscalers(self, **kwargs):
         """
         list or watch objects of kind HorizontalPodAutoscaler
         
@@ -3361,7 +4444,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_horizontal_pod_autoscaler(callback=callback_function)
+        >>> thread = api.list_horizontalpodautoscalers(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3377,12 +4460,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_horizontal_pod_autoscaler_with_http_info(**kwargs)
+            return self.list_horizontalpodautoscalers_with_http_info(**kwargs)
         else:
-            (data) = self.list_horizontal_pod_autoscaler_with_http_info(**kwargs)
+            (data) = self.list_horizontalpodautoscalers_with_http_info(**kwargs)
             return data
 
-    def list_horizontal_pod_autoscaler_with_http_info(self, **kwargs):
+    def list_horizontalpodautoscalers_with_http_info(self, **kwargs):
         """
         list or watch objects of kind HorizontalPodAutoscaler
         
@@ -3393,7 +4476,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_horizontal_pod_autoscaler_with_http_info(callback=callback_function)
+        >>> thread = api.list_horizontalpodautoscalers_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3417,7 +4500,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_horizontal_pod_autoscaler" % key
+                    " to method list_horizontalpodautoscalers" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3471,7 +4554,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_ingress(self, **kwargs):
+    def list_ingresses(self, **kwargs):
         """
         list or watch objects of kind Ingress
         
@@ -3482,7 +4565,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_ingress(callback=callback_function)
+        >>> thread = api.list_ingresses(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3498,12 +4581,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_ingress_with_http_info(**kwargs)
+            return self.list_ingresses_with_http_info(**kwargs)
         else:
-            (data) = self.list_ingress_with_http_info(**kwargs)
+            (data) = self.list_ingresses_with_http_info(**kwargs)
             return data
 
-    def list_ingress_with_http_info(self, **kwargs):
+    def list_ingresses_with_http_info(self, **kwargs):
         """
         list or watch objects of kind Ingress
         
@@ -3514,7 +4597,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_ingress_with_http_info(callback=callback_function)
+        >>> thread = api.list_ingresses_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3538,7 +4621,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_ingress" % key
+                    " to method list_ingresses" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3592,7 +4675,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_job(self, **kwargs):
+    def list_jobs(self, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -3603,7 +4686,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_job(callback=callback_function)
+        >>> thread = api.list_jobs(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3619,12 +4702,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_job_with_http_info(**kwargs)
+            return self.list_jobs_with_http_info(**kwargs)
         else:
-            (data) = self.list_job_with_http_info(**kwargs)
+            (data) = self.list_jobs_with_http_info(**kwargs)
             return data
 
-    def list_job_with_http_info(self, **kwargs):
+    def list_jobs_with_http_info(self, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -3635,7 +4718,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_job_with_http_info(callback=callback_function)
+        >>> thread = api.list_jobs_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3659,7 +4742,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_job" % key
+                    " to method list_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3713,7 +4796,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_daemon_set(self, namespace, **kwargs):
+    def list_namespaced_daemonsets(self, namespace, **kwargs):
         """
         list or watch objects of kind DaemonSet
         
@@ -3724,7 +4807,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_daemon_set(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_daemonsets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3741,12 +4824,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_daemon_set_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_daemonsets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_daemon_set_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_daemonsets_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_daemon_set_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_daemonsets_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind DaemonSet
         
@@ -3757,7 +4840,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_daemon_set_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_daemonsets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3782,13 +4865,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_daemon_set" % key
+                    " to method list_namespaced_daemonsets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_daemonsets`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets'.replace('{format}', 'json')
         path_params = {}
@@ -3841,7 +4924,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_deployment(self, namespace, **kwargs):
+    def list_namespaced_deployments(self, namespace, **kwargs):
         """
         list or watch objects of kind Deployment
         
@@ -3852,7 +4935,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_deployment(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_deployments(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3869,12 +4952,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_deployment_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_deployments_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_deployment_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_deployments_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_deployment_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_deployments_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind Deployment
         
@@ -3885,7 +4968,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_deployment_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_deployments_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3910,13 +4993,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_deployment" % key
+                    " to method list_namespaced_deployments" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_deployment`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_deployments`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments'.replace('{format}', 'json')
         path_params = {}
@@ -3969,7 +5052,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
+    def list_namespaced_horizontalpodautoscalers(self, namespace, **kwargs):
         """
         list or watch objects of kind HorizontalPodAutoscaler
         
@@ -3980,7 +5063,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_horizontal_pod_autoscaler(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_horizontalpodautoscalers(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3997,12 +5080,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind HorizontalPodAutoscaler
         
@@ -4013,7 +5096,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4038,13 +5121,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_horizontal_pod_autoscaler" % key
+                    " to method list_namespaced_horizontalpodautoscalers" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_horizontalpodautoscalers`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -4097,7 +5180,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_ingress(self, namespace, **kwargs):
+    def list_namespaced_ingresses(self, namespace, **kwargs):
         """
         list or watch objects of kind Ingress
         
@@ -4108,7 +5191,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_ingress(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_ingresses(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4125,12 +5208,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_ingress_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_ingresses_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_ingress_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_ingresses_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_ingress_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_ingresses_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind Ingress
         
@@ -4141,7 +5224,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_ingress_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_ingresses_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4166,13 +5249,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_ingress" % key
+                    " to method list_namespaced_ingresses" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_ingress`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_ingresses`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/ingresses'.replace('{format}', 'json')
         path_params = {}
@@ -4225,7 +5308,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_job(self, namespace, **kwargs):
+    def list_namespaced_jobs(self, namespace, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -4236,7 +5319,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_job(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4253,12 +5336,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_job_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_job_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_job_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_jobs_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -4269,7 +5352,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_job_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4294,13 +5377,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_job" % key
+                    " to method list_namespaced_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_jobs`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
@@ -4353,7 +5436,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_replica_set(self, namespace, **kwargs):
+    def list_namespaced_replicasets(self, namespace, **kwargs):
         """
         list or watch objects of kind ReplicaSet
         
@@ -4364,7 +5447,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_replica_set(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_replicasets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4381,12 +5464,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_replica_set_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_replicasets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_replica_set_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_replicasets_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_replica_set_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_replicasets_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind ReplicaSet
         
@@ -4397,7 +5480,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_replica_set_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_replicasets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4422,13 +5505,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_replica_set" % key
+                    " to method list_namespaced_replicasets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_replicasets`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets'.replace('{format}', 'json')
         path_params = {}
@@ -4481,7 +5564,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_replica_set(self, **kwargs):
+    def list_replicasets(self, **kwargs):
         """
         list or watch objects of kind ReplicaSet
         
@@ -4492,7 +5575,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_replica_set(callback=callback_function)
+        >>> thread = api.list_replicasets(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4508,12 +5591,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_replica_set_with_http_info(**kwargs)
+            return self.list_replicasets_with_http_info(**kwargs)
         else:
-            (data) = self.list_replica_set_with_http_info(**kwargs)
+            (data) = self.list_replicasets_with_http_info(**kwargs)
             return data
 
-    def list_replica_set_with_http_info(self, **kwargs):
+    def list_replicasets_with_http_info(self, **kwargs):
         """
         list or watch objects of kind ReplicaSet
         
@@ -4524,7 +5607,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_replica_set_with_http_info(callback=callback_function)
+        >>> thread = api.list_replicasets_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4548,7 +5631,7 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_replica_set" % key
+                    " to method list_replicasets" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -4602,7 +5685,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def patch_namespaced_daemon_set(self, body, namespace, name, **kwargs):
+    def patch_namespaced_daemonset(self, body, namespace, name, **kwargs):
         """
         partially update the specified DaemonSet
         
@@ -4613,7 +5696,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_daemon_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_daemonset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4627,12 +5710,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_daemon_set_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_daemonset_with_http_info(self, body, namespace, name, **kwargs):
         """
         partially update the specified DaemonSet
         
@@ -4643,7 +5726,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_daemon_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_daemonset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4665,19 +5748,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_daemon_set" % key
+                    " to method patch_namespaced_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_daemonset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_daemonset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -4846,7 +5929,129 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def patch_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
+    def patch_namespaced_deployment_scale(self, body, namespace, name, **kwargs):
+        """
+        partially update scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_namespaced_deployment_scale(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param UnversionedPatch body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_namespaced_deployment_scale_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.patch_namespaced_deployment_scale_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def patch_namespaced_deployment_scale_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        partially update scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_namespaced_deployment_scale_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param UnversionedPatch body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_namespaced_deployment_scale" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_deployment_scale`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_deployment_scale`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_deployment_scale`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PATCH',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Scale',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def patch_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
         """
         partially update the specified HorizontalPodAutoscaler
         
@@ -4857,7 +6062,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4871,12 +6076,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
         """
         partially update the specified HorizontalPodAutoscaler
         
@@ -4887,7 +6092,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4909,19 +6114,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_horizontal_pod_autoscaler" % key
+                    " to method patch_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -5212,7 +6417,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def patch_namespaced_replica_set(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicaset(self, body, namespace, name, **kwargs):
         """
         partially update the specified ReplicaSet
         
@@ -5223,7 +6428,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicaset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5237,12 +6442,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicaset_with_http_info(self, body, namespace, name, **kwargs):
         """
         partially update the specified ReplicaSet
         
@@ -5253,7 +6458,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicaset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5275,19 +6480,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_replica_set" % key
+                    " to method patch_namespaced_replicaset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replicaset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replicaset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replicaset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -5334,7 +6539,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def patch_namespaced_scale_scale(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicaset_scale(self, body, namespace, name, **kwargs):
         """
         partially update scale of the specified Scale
         
@@ -5345,7 +6550,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_scale_scale(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicaset_scale(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5359,12 +6564,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_scale_scale_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_replicaset_scale_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_scale_scale_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_replicaset_scale_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_scale_scale_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicaset_scale_with_http_info(self, body, namespace, name, **kwargs):
         """
         partially update scale of the specified Scale
         
@@ -5375,7 +6580,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_scale_scale_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicaset_scale_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5397,141 +6602,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_scale_scale" % key
+                    " to method patch_namespaced_replicaset_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replicaset_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replicaset_scale`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_scale_scale`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PATCH',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Scale',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def patch_namespaced_scale_scale_0(self, body, namespace, name, **kwargs):
-        """
-        partially update scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.patch_namespaced_scale_scale_0(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param UnversionedPatch body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.patch_namespaced_scale_scale_0_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.patch_namespaced_scale_scale_0_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def patch_namespaced_scale_scale_0_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        partially update scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.patch_namespaced_scale_scale_0_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param UnversionedPatch body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_scale_scale_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_scale_scale_0`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_scale_scale_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_scale_scale_0`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replicaset_scale`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale'.replace('{format}', 'json')
         path_params = {}
@@ -5578,7 +6661,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def patch_namespaced_scale_scale_1(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicationcontroller_scale(self, body, namespace, name, **kwargs):
         """
         partially update scale of the specified Scale
         
@@ -5589,7 +6672,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_scale_scale_1(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicationcontroller_scale(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5603,12 +6686,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_scale_scale_1_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_scale_scale_1_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_scale_scale_1_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_replicationcontroller_scale_with_http_info(self, body, namespace, name, **kwargs):
         """
         partially update scale of the specified Scale
         
@@ -5619,7 +6702,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_scale_scale_1_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5641,19 +6724,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_scale_scale_1" % key
+                    " to method patch_namespaced_replicationcontroller_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_replicationcontroller_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_replicationcontroller_scale`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_replicationcontroller_scale`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale'.replace('{format}', 'json')
         path_params = {}
@@ -5700,1090 +6783,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def read_namespaced_daemon_set(self, namespace, name, **kwargs):
-        """
-        read the specified DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_daemon_set(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the DaemonSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1DaemonSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_daemon_set_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_daemon_set_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_daemon_set_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_daemon_set_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the DaemonSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1DaemonSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_daemon_set" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_daemon_set`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_daemon_set`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1DaemonSet',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_deployment(self, namespace, name, **kwargs):
-        """
-        read the specified Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_deployment(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Deployment (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Deployment
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_deployment_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_deployment_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_deployment_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_deployment_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Deployment (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Deployment
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_deployment" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_deployment`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_deployment`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Deployment',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_horizontal_pod_autoscaler(self, namespace, name, **kwargs):
-        """
-        read the specified HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_horizontal_pod_autoscaler(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the HorizontalPodAutoscaler (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1HorizontalPodAutoscaler
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the HorizontalPodAutoscaler (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1HorizontalPodAutoscaler
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_horizontal_pod_autoscaler" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_horizontal_pod_autoscaler`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_horizontal_pod_autoscaler`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1HorizontalPodAutoscaler',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_ingress(self, namespace, name, **kwargs):
-        """
-        read the specified Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_ingress(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Ingress (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Ingress
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_ingress_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_ingress_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_ingress_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_ingress_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Ingress (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Ingress
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_ingress" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_ingress`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_ingress`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Ingress',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_job(self, namespace, name, **kwargs):
-        """
-        read the specified Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_job(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Job (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Job
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_job_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_job_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_job_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_job_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Job (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1Job
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_job" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_job`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_job`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Job',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_replica_set(self, namespace, name, **kwargs):
-        """
-        read the specified ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_replica_set(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1ReplicaSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_replica_set_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_replica_set_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_replica_set_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_replica_set_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1beta1ReplicaSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_replica_set" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_replica_set`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_replica_set`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1ReplicaSet',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_scale_scale(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_scale_scale_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_scale_scale_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_scale_scale_with_http_info(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_scale_scale" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_scale_scale`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_scale_scale`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Scale',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_scale_scale_0(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale_0(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_scale_scale_0_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_scale_scale_0_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_scale_scale_0_with_http_info(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale_0_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_scale_scale_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_scale_scale_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_scale_scale_0`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Scale',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_scale_scale_1(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale_1(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_scale_scale_1_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_scale_scale_1_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_scale_scale_1_with_http_info(self, namespace, name, **kwargs):
-        """
-        read scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_scale_scale_1_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_scale_scale_1" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_scale_scale_1`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_scale_scale_1`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Scale',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def replace_namespaced_daemon_set(self, body, namespace, name, **kwargs):
+    def replace_namespaced_daemonset(self, body, namespace, name, **kwargs):
         """
         replace the specified DaemonSet
         
@@ -6794,7 +6794,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_daemon_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_daemonset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6808,12 +6808,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_daemon_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_daemonset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_daemon_set_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_daemonset_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace the specified DaemonSet
         
@@ -6824,7 +6824,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_daemon_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_daemonset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6846,19 +6846,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_daemon_set" % key
+                    " to method replace_namespaced_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_daemonset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_daemonset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -6905,7 +6905,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_daemon_set_status(self, body, namespace, name, **kwargs):
+    def replace_namespaced_daemonset_status(self, body, namespace, name, **kwargs):
         """
         replace status of the specified DaemonSet
         
@@ -6916,7 +6916,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_daemon_set_status(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_daemonset_status(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6930,12 +6930,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_daemon_set_status_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_daemonset_status_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_daemon_set_status_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_daemonset_status_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_daemon_set_status_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_daemonset_status_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace status of the specified DaemonSet
         
@@ -6946,7 +6946,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_daemon_set_status_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_daemonset_status_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6968,19 +6968,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_daemon_set_status" % key
+                    " to method replace_namespaced_daemonset_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_daemon_set_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_daemonset_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_daemon_set_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_daemonset_status`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_daemon_set_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_daemonset_status`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}/status'.replace('{format}', 'json')
         path_params = {}
@@ -7149,6 +7149,128 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
+    def replace_namespaced_deployment_scale(self, body, namespace, name, **kwargs):
+        """
+        replace scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_deployment_scale(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1beta1Scale body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.replace_namespaced_deployment_scale_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.replace_namespaced_deployment_scale_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def replace_namespaced_deployment_scale_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        replace scale of the specified Scale
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_deployment_scale_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1beta1Scale body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Scale (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1Scale
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_namespaced_deployment_scale" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_deployment_scale`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_deployment_scale`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_deployment_scale`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1Scale',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
     def replace_namespaced_deployment_status(self, body, namespace, name, **kwargs):
         """
         replace status of the specified Deployment
@@ -7271,7 +7393,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
         """
         replace the specified HorizontalPodAutoscaler
         
@@ -7282,7 +7404,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7296,12 +7418,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace the specified HorizontalPodAutoscaler
         
@@ -7312,7 +7434,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7334,19 +7456,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_horizontal_pod_autoscaler" % key
+                    " to method replace_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -7393,7 +7515,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_horizontal_pod_autoscaler_status(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_status(self, body, namespace, name, **kwargs):
         """
         replace status of the specified HorizontalPodAutoscaler
         
@@ -7404,7 +7526,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_status(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7418,12 +7540,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_status_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace status of the specified HorizontalPodAutoscaler
         
@@ -7434,7 +7556,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7456,19 +7578,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_horizontal_pod_autoscaler_status" % key
+                    " to method replace_namespaced_horizontalpodautoscaler_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontalpodautoscaler_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontalpodautoscaler_status`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontalpodautoscaler_status`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status'.replace('{format}', 'json')
         path_params = {}
@@ -8003,7 +8125,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_replica_set(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicaset(self, body, namespace, name, **kwargs):
         """
         replace the specified ReplicaSet
         
@@ -8014,7 +8136,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicaset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8028,12 +8150,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_replicaset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicaset_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace the specified ReplicaSet
         
@@ -8044,7 +8166,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicaset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8066,19 +8188,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_replica_set" % key
+                    " to method replace_namespaced_replicaset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replicaset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replicaset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replicaset`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -8125,129 +8247,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_replica_set_status(self, body, namespace, name, **kwargs):
-        """
-        replace status of the specified ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replace_namespaced_replica_set_status(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1beta1ReplicaSet body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1ReplicaSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.replace_namespaced_replica_set_status_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.replace_namespaced_replica_set_status_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def replace_namespaced_replica_set_status_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        replace status of the specified ReplicaSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replace_namespaced_replica_set_status_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1beta1ReplicaSet body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the ReplicaSet (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1ReplicaSet
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_replica_set_status" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replica_set_status`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replica_set_status`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replica_set_status`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/status'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1ReplicaSet',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def replace_namespaced_scale_scale(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicaset_scale(self, body, namespace, name, **kwargs):
         """
         replace scale of the specified Scale
         
@@ -8258,7 +8258,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_scale_scale(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicaset_scale(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8272,12 +8272,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_scale_scale_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_replicaset_scale_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_scale_scale_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_replicaset_scale_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_scale_scale_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicaset_scale_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace scale of the specified Scale
         
@@ -8288,7 +8288,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_scale_scale_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicaset_scale_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8310,141 +8310,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_scale_scale" % key
+                    " to method replace_namespaced_replicaset_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replicaset_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_scale_scale`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replicaset_scale`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_scale_scale`")
-
-        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1beta1Scale',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def replace_namespaced_scale_scale_0(self, body, namespace, name, **kwargs):
-        """
-        replace scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replace_namespaced_scale_scale_0(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1beta1Scale body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.replace_namespaced_scale_scale_0_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.replace_namespaced_scale_scale_0_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def replace_namespaced_scale_scale_0_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        replace scale of the specified Scale
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replace_namespaced_scale_scale_0_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1beta1Scale body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Scale (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1beta1Scale
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_scale_scale_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_scale_scale_0`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_scale_scale_0`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_scale_scale_0`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replicaset_scale`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale'.replace('{format}', 'json')
         path_params = {}
@@ -8491,7 +8369,129 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_scale_scale_1(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicaset_status(self, body, namespace, name, **kwargs):
+        """
+        replace status of the specified ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_replicaset_status(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1beta1ReplicaSet body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1ReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.replace_namespaced_replicaset_status_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.replace_namespaced_replicaset_status_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def replace_namespaced_replicaset_status_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        replace status of the specified ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_replicaset_status_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1beta1ReplicaSet body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the ReplicaSet (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1beta1ReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_namespaced_replicaset_status" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replicaset_status`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replicaset_status`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replicaset_status`")
+
+        resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/status'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1beta1ReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def replace_namespaced_replicationcontroller_scale(self, body, namespace, name, **kwargs):
         """
         replace scale of the specified Scale
         
@@ -8502,7 +8502,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_scale_scale_1(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicationcontroller_scale(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8516,12 +8516,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_scale_scale_1_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_scale_scale_1_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_scale_scale_1_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_replicationcontroller_scale_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace scale of the specified Scale
         
@@ -8532,7 +8532,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_scale_scale_1_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_replicationcontroller_scale_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -8554,19 +8554,19 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_scale_scale_1" % key
+                    " to method replace_namespaced_replicationcontroller_scale" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_replicationcontroller_scale`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_replicationcontroller_scale`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_scale_scale_1`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_replicationcontroller_scale`")
 
         resource_path = '/apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale'.replace('{format}', 'json')
         path_params = {}
@@ -8613,612 +8613,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_daemon_set_list(self, **kwargs):
-        """
-        watch individual changes to a list of DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_daemon_set_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_daemon_set_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_daemon_set_list_with_http_info(**kwargs)
-            return data
-
-    def watch_daemon_set_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of DaemonSet
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_daemon_set_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_daemon_set_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/extensions/v1beta1/watch/daemonsets'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_deployment_list(self, **kwargs):
-        """
-        watch individual changes to a list of Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_deployment_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_deployment_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_deployment_list_with_http_info(**kwargs)
-            return data
-
-    def watch_deployment_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of Deployment
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_deployment_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_deployment_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/extensions/v1beta1/watch/deployments'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_horizontal_pod_autoscaler_list(self, **kwargs):
-        """
-        watch individual changes to a list of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_horizontal_pod_autoscaler_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_horizontal_pod_autoscaler_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_horizontal_pod_autoscaler_list_with_http_info(**kwargs)
-            return data
-
-    def watch_horizontal_pod_autoscaler_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_horizontal_pod_autoscaler_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_horizontal_pod_autoscaler_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/extensions/v1beta1/watch/horizontalpodautoscalers'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_ingress_list(self, **kwargs):
-        """
-        watch individual changes to a list of Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_ingress_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_ingress_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_ingress_list_with_http_info(**kwargs)
-            return data
-
-    def watch_ingress_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of Ingress
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_ingress_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_ingress_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/extensions/v1beta1/watch/ingresses'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_job_list(self, **kwargs):
-        """
-        watch individual changes to a list of Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_job_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_job_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_job_list_with_http_info(**kwargs)
-            return data
-
-    def watch_job_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_job_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_job_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/extensions/v1beta1/watch/jobs'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_namespaced_daemon_set(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_daemonset(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind DaemonSet
         
@@ -9229,7 +8624,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_daemon_set(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_daemonset(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9247,12 +8642,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_daemon_set_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_daemonset_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_daemon_set_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_daemonset_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_daemon_set_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_daemonset_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind DaemonSet
         
@@ -9263,7 +8658,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_daemon_set_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_daemonset_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9289,16 +8684,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_daemon_set" % key
+                    " to method watch_namespaced_watch_daemonset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_daemonset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_daemon_set`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_daemonset`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -9353,7 +8748,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_daemon_set_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_daemonsets(self, namespace, **kwargs):
         """
         watch individual changes to a list of DaemonSet
         
@@ -9364,7 +8759,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_daemon_set_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_daemonsets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9381,12 +8776,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_daemon_set_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_daemonsets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_daemon_set_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_daemonsets_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_daemon_set_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_daemonsets_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of DaemonSet
         
@@ -9397,7 +8792,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_daemon_set_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_daemonsets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9422,13 +8817,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_daemon_set_list" % key
+                    " to method watch_namespaced_watch_daemonsets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_daemon_set_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_daemonsets`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets'.replace('{format}', 'json')
         path_params = {}
@@ -9481,7 +8876,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_deployment(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_deployment(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Deployment
         
@@ -9492,7 +8887,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_deployment(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_deployment(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9510,12 +8905,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_deployment_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_deployment_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_deployment_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_deployment_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_deployment_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_deployment_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Deployment
         
@@ -9526,7 +8921,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_deployment_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_deployment_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9552,16 +8947,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_deployment" % key
+                    " to method watch_namespaced_watch_deployment" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_deployment`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_deployment`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_deployment`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_deployment`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -9616,7 +9011,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_deployment_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_deployments(self, namespace, **kwargs):
         """
         watch individual changes to a list of Deployment
         
@@ -9627,7 +9022,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_deployment_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_deployments(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9644,12 +9039,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_deployment_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_deployments_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_deployment_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_deployments_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_deployment_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_deployments_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of Deployment
         
@@ -9660,7 +9055,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_deployment_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_deployments_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9685,13 +9080,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_deployment_list" % key
+                    " to method watch_namespaced_watch_deployments" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_deployment_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_deployments`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments'.replace('{format}', 'json')
         path_params = {}
@@ -9744,7 +9139,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_horizontal_pod_autoscaler(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscaler(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind HorizontalPodAutoscaler
         
@@ -9755,7 +9150,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscaler(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9773,12 +9168,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscaler_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind HorizontalPodAutoscaler
         
@@ -9789,7 +9184,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9815,16 +9210,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_horizontal_pod_autoscaler" % key
+                    " to method watch_namespaced_watch_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_horizontalpodautoscaler`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -9879,7 +9274,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_horizontal_pod_autoscaler_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscalers(self, namespace, **kwargs):
         """
         watch individual changes to a list of HorizontalPodAutoscaler
         
@@ -9890,7 +9285,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscalers(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9907,12 +9302,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of HorizontalPodAutoscaler
         
@@ -9923,7 +9318,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -9948,13 +9343,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_horizontal_pod_autoscaler_list" % key
+                    " to method watch_namespaced_watch_horizontalpodautoscalers" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_horizontal_pod_autoscaler_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_horizontalpodautoscalers`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -10007,7 +9402,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_ingress(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_ingress(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Ingress
         
@@ -10018,7 +9413,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_ingress(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_ingress(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10036,12 +9431,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_ingress_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_ingress_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_ingress_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_ingress_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_ingress_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_ingress_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Ingress
         
@@ -10052,7 +9447,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_ingress_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_ingress_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10078,16 +9473,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_ingress" % key
+                    " to method watch_namespaced_watch_ingress" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_ingress`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_ingress`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_ingress`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_ingress`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -10142,7 +9537,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_ingress_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_ingresses(self, namespace, **kwargs):
         """
         watch individual changes to a list of Ingress
         
@@ -10153,7 +9548,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_ingress_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_ingresses(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10170,12 +9565,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_ingress_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_ingresses_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_ingress_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_ingresses_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_ingress_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_ingresses_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of Ingress
         
@@ -10186,7 +9581,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_ingress_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_ingresses_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10211,13 +9606,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_ingress_list" % key
+                    " to method watch_namespaced_watch_ingresses" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_ingress_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_ingresses`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/ingresses'.replace('{format}', 'json')
         path_params = {}
@@ -10270,7 +9665,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_job(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_job(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Job
         
@@ -10281,7 +9676,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_job(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10299,12 +9694,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_job_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_job_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_job_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_job_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_job_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_job_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Job
         
@@ -10315,7 +9710,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_job_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10341,16 +9736,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_job" % key
+                    " to method watch_namespaced_watch_job" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_job`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_job`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_job`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -10405,7 +9800,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_job_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_jobs(self, namespace, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -10416,7 +9811,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10433,12 +9828,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_job_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_job_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_job_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_jobs_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -10449,7 +9844,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10474,13 +9869,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_job_list" % key
+                    " to method watch_namespaced_watch_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_jobs`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
@@ -10533,7 +9928,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_replica_set(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_replicaset(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind ReplicaSet
         
@@ -10544,7 +9939,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_replica_set(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_replicaset(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10562,12 +9957,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_replica_set_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_replicaset_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_replica_set_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_replicaset_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_replica_set_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_replicaset_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind ReplicaSet
         
@@ -10578,7 +9973,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_replica_set_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_replicaset_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10604,16 +9999,16 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_replica_set" % key
+                    " to method watch_namespaced_watch_replicaset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_replicaset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_replicaset`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -10668,7 +10063,7 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_replica_set_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_replicasets(self, namespace, **kwargs):
         """
         watch individual changes to a list of ReplicaSet
         
@@ -10679,7 +10074,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_replica_set_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_replicasets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10696,12 +10091,12 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_replica_set_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_replicasets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_replica_set_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_replicasets_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_replica_set_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_replicasets_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of ReplicaSet
         
@@ -10712,7 +10107,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_replica_set_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_replicasets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10737,13 +10132,13 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_replica_set_list" % key
+                    " to method watch_namespaced_watch_replicasets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_replica_set_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_replicasets`")
 
         resource_path = '/apis/extensions/v1beta1/watch/namespaces/{namespace}/replicasets'.replace('{format}', 'json')
         path_params = {}
@@ -10796,9 +10191,9 @@ class ApisExtensionsV1beta1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_replica_set_list(self, **kwargs):
+    def watch_watch_daemonsets(self, **kwargs):
         """
-        watch individual changes to a list of ReplicaSet
+        watch individual changes to a list of DaemonSet
         
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10807,7 +10202,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_replica_set_list(callback=callback_function)
+        >>> thread = api.watch_watch_daemonsets(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10823,14 +10218,14 @@ class ApisExtensionsV1beta1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_replica_set_list_with_http_info(**kwargs)
+            return self.watch_watch_daemonsets_with_http_info(**kwargs)
         else:
-            (data) = self.watch_replica_set_list_with_http_info(**kwargs)
+            (data) = self.watch_watch_daemonsets_with_http_info(**kwargs)
             return data
 
-    def watch_replica_set_list_with_http_info(self, **kwargs):
+    def watch_watch_daemonsets_with_http_info(self, **kwargs):
         """
-        watch individual changes to a list of ReplicaSet
+        watch individual changes to a list of DaemonSet
         
 
         This method makes a synchronous HTTP request by default. To make an
@@ -10839,7 +10234,7 @@ class ApisExtensionsV1beta1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_replica_set_list_with_http_info(callback=callback_function)
+        >>> thread = api.watch_watch_daemonsets_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -10863,7 +10258,612 @@ class ApisExtensionsV1beta1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_replica_set_list" % key
+                    " to method watch_watch_daemonsets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/extensions/v1beta1/watch/daemonsets'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_deployments(self, **kwargs):
+        """
+        watch individual changes to a list of Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_deployments(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_deployments_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_deployments_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_deployments_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of Deployment
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_deployments_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_deployments" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/extensions/v1beta1/watch/deployments'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_horizontalpodautoscalers(self, **kwargs):
+        """
+        watch individual changes to a list of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_horizontalpodautoscalers(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_horizontalpodautoscalers_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_horizontalpodautoscalers_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_horizontalpodautoscalers_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_horizontalpodautoscalers_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_horizontalpodautoscalers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/extensions/v1beta1/watch/horizontalpodautoscalers'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_ingresses(self, **kwargs):
+        """
+        watch individual changes to a list of Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_ingresses(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_ingresses_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_ingresses_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_ingresses_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of Ingress
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_ingresses_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_ingresses" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/extensions/v1beta1/watch/ingresses'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_jobs(self, **kwargs):
+        """
+        watch individual changes to a list of Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_jobs(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_jobs_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_jobs_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_jobs_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_jobs_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_jobs" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/extensions/v1beta1/watch/jobs'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_replicasets(self, **kwargs):
+        """
+        watch individual changes to a list of ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_replicasets(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_replicasets_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_replicasets_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_replicasets_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of ReplicaSet
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_replicasets_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_replicasets" % key
                 )
             params[key] = val
         del params['kwargs']

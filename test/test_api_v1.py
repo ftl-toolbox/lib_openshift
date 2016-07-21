@@ -42,25 +42,17 @@ class TestApiV1(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_binding(self):
+    def test_create_configmap(self):
         """
-        Test case for create_binding
-
-        create a Binding
-        """
-        pass
-
-    def test_create_config_map(self):
-        """
-        Test case for create_config_map
+        Test case for create_configmap
 
         create a ConfigMap
         """
         pass
 
-    def test_create_endpoints(self):
+    def test_create_endpoint(self):
         """
-        Test case for create_endpoints
+        Test case for create_endpoint
 
         create a Endpoints
         """
@@ -74,41 +66,33 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_limit_range(self):
+    def test_create_limitrange(self):
         """
-        Test case for create_limit_range
+        Test case for create_limitrange
 
         create a LimitRange
         """
         pass
 
-    def test_create_namespaced_binding(self):
+    def test_create_namespace(self):
         """
-        Test case for create_namespaced_binding
+        Test case for create_namespace
 
-        create a Binding
+        create a Namespace
         """
         pass
 
-    def test_create_namespaced_binding_binding(self):
+    def test_create_namespaced_configmap(self):
         """
-        Test case for create_namespaced_binding_binding
-
-        create binding of a Binding
-        """
-        pass
-
-    def test_create_namespaced_config_map(self):
-        """
-        Test case for create_namespaced_config_map
+        Test case for create_namespaced_configmap
 
         create a ConfigMap
         """
         pass
 
-    def test_create_namespaced_endpoints(self):
+    def test_create_namespaced_endpoint(self):
         """
-        Test case for create_namespaced_endpoints
+        Test case for create_namespaced_endpoint
 
         create a Endpoints
         """
@@ -122,41 +106,17 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_limit_range(self):
+    def test_create_namespaced_limitrange(self):
         """
-        Test case for create_namespaced_limit_range
+        Test case for create_namespaced_limitrange
 
         create a LimitRange
         """
         pass
 
-    def test_create_namespaced_namespace(self):
+    def test_create_namespaced_persistentvolumeclaim(self):
         """
-        Test case for create_namespaced_namespace
-
-        create a Namespace
-        """
-        pass
-
-    def test_create_namespaced_node(self):
-        """
-        Test case for create_namespaced_node
-
-        create a Node
-        """
-        pass
-
-    def test_create_namespaced_persistent_volume(self):
-        """
-        Test case for create_namespaced_persistent_volume
-
-        create a PersistentVolume
-        """
-        pass
-
-    def test_create_namespaced_persistent_volume_claim(self):
-        """
-        Test case for create_namespaced_persistent_volume_claim
+        Test case for create_namespaced_persistentvolumeclaim
 
         create a PersistentVolumeClaim
         """
@@ -170,25 +130,25 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_pod_template(self):
+    def test_create_namespaced_podtemplate(self):
         """
-        Test case for create_namespaced_pod_template
+        Test case for create_namespaced_podtemplate
 
         create a PodTemplate
         """
         pass
 
-    def test_create_namespaced_replication_controller(self):
+    def test_create_namespaced_replicationcontroller(self):
         """
-        Test case for create_namespaced_replication_controller
+        Test case for create_namespaced_replicationcontroller
 
         create a ReplicationController
         """
         pass
 
-    def test_create_namespaced_resource_quota(self):
+    def test_create_namespaced_resourcequota(self):
         """
-        Test case for create_namespaced_resource_quota
+        Test case for create_namespaced_resourcequota
 
         create a ResourceQuota
         """
@@ -202,14 +162,6 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_security_context_constraints(self):
-        """
-        Test case for create_namespaced_security_context_constraints
-
-        create a SecurityContextConstraints
-        """
-        pass
-
     def test_create_namespaced_service(self):
         """
         Test case for create_namespaced_service
@@ -218,17 +170,33 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_service_account(self):
+    def test_create_namespaced_serviceaccount(self):
         """
-        Test case for create_namespaced_service_account
+        Test case for create_namespaced_serviceaccount
 
         create a ServiceAccount
         """
         pass
 
-    def test_create_persistent_volume_claim(self):
+    def test_create_node(self):
         """
-        Test case for create_persistent_volume_claim
+        Test case for create_node
+
+        create a Node
+        """
+        pass
+
+    def test_create_persistentvolume(self):
+        """
+        Test case for create_persistentvolume
+
+        create a PersistentVolume
+        """
+        pass
+
+    def test_create_persistentvolumeclaim(self):
+        """
+        Test case for create_persistentvolumeclaim
 
         create a PersistentVolumeClaim
         """
@@ -242,25 +210,25 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_pod_template(self):
+    def test_create_podtemplate(self):
         """
-        Test case for create_pod_template
+        Test case for create_podtemplate
 
         create a PodTemplate
         """
         pass
 
-    def test_create_replication_controller(self):
+    def test_create_replicationcontroller(self):
         """
-        Test case for create_replication_controller
+        Test case for create_replicationcontroller
 
         create a ReplicationController
         """
         pass
 
-    def test_create_resource_quota(self):
+    def test_create_resourcequota(self):
         """
-        Test case for create_resource_quota
+        Test case for create_resourcequota
 
         create a ResourceQuota
         """
@@ -274,6 +242,14 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
+    def test_create_securitycontextconstraint(self):
+        """
+        Test case for create_securitycontextconstraint
+
+        create a SecurityContextConstraints
+        """
+        pass
+
     def test_create_service(self):
         """
         Test case for create_service
@@ -282,19 +258,43 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_service_account(self):
+    def test_create_serviceaccount(self):
         """
-        Test case for create_service_account
+        Test case for create_serviceaccount
 
         create a ServiceAccount
         """
         pass
 
-    def test_delete_namespaced_config_map(self):
+    def test_delete_namespace(self):
         """
-        Test case for delete_namespaced_config_map
+        Test case for delete_namespace
+
+        delete a Namespace
+        """
+        pass
+
+    def test_delete_namespaced_configmap(self):
+        """
+        Test case for delete_namespaced_configmap
 
         delete a ConfigMap
+        """
+        pass
+
+    def test_delete_namespaced_configmaps(self):
+        """
+        Test case for delete_namespaced_configmaps
+
+        delete collection of ConfigMap
+        """
+        pass
+
+    def test_delete_namespaced_endpoint(self):
+        """
+        Test case for delete_namespaced_endpoint
+
+        delete a Endpoints
         """
         pass
 
@@ -302,7 +302,7 @@ class TestApiV1(unittest.TestCase):
         """
         Test case for delete_namespaced_endpoints
 
-        delete a Endpoints
+        delete collection of Endpoints
         """
         pass
 
@@ -314,59 +314,43 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_limit_range(self):
+    def test_delete_namespaced_events(self):
         """
-        Test case for delete_namespaced_limit_range
+        Test case for delete_namespaced_events
+
+        delete collection of Event
+        """
+        pass
+
+    def test_delete_namespaced_limitrange(self):
+        """
+        Test case for delete_namespaced_limitrange
 
         delete a LimitRange
         """
         pass
 
-    def test_delete_namespaced_namespace(self):
+    def test_delete_namespaced_limitranges(self):
         """
-        Test case for delete_namespaced_namespace
+        Test case for delete_namespaced_limitranges
 
-        delete a Namespace
+        delete collection of LimitRange
         """
         pass
 
-    def test_delete_namespaced_node(self):
+    def test_delete_namespaced_persistentvolumeclaim(self):
         """
-        Test case for delete_namespaced_node
-
-        delete a Node
-        """
-        pass
-
-    def test_delete_namespaced_node_proxy(self):
-        """
-        Test case for delete_namespaced_node_proxy
-
-        connect DELETE requests to proxy of Node
-        """
-        pass
-
-    def test_delete_namespaced_node_proxy_0(self):
-        """
-        Test case for delete_namespaced_node_proxy_0
-
-        connect DELETE requests to proxy of Node
-        """
-        pass
-
-    def test_delete_namespaced_persistent_volume(self):
-        """
-        Test case for delete_namespaced_persistent_volume
-
-        delete a PersistentVolume
-        """
-        pass
-
-    def test_delete_namespaced_persistent_volume_claim(self):
-        """
-        Test case for delete_namespaced_persistent_volume_claim
+        Test case for delete_namespaced_persistentvolumeclaim
 
         delete a PersistentVolumeClaim
+        """
+        pass
+
+    def test_delete_namespaced_persistentvolumeclaims(self):
+        """
+        Test case for delete_namespaced_persistentvolumeclaims
+
+        delete collection of PersistentVolumeClaim
         """
         pass
 
@@ -378,43 +362,59 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_pod_proxy(self):
+    def test_delete_namespaced_pods(self):
         """
-        Test case for delete_namespaced_pod_proxy
+        Test case for delete_namespaced_pods
 
-        connect DELETE requests to proxy of Pod
+        delete collection of Pod
         """
         pass
 
-    def test_delete_namespaced_pod_proxy_0(self):
+    def test_delete_namespaced_podtemplate(self):
         """
-        Test case for delete_namespaced_pod_proxy_0
-
-        connect DELETE requests to proxy of Pod
-        """
-        pass
-
-    def test_delete_namespaced_pod_template(self):
-        """
-        Test case for delete_namespaced_pod_template
+        Test case for delete_namespaced_podtemplate
 
         delete a PodTemplate
         """
         pass
 
-    def test_delete_namespaced_replication_controller(self):
+    def test_delete_namespaced_podtemplates(self):
         """
-        Test case for delete_namespaced_replication_controller
+        Test case for delete_namespaced_podtemplates
+
+        delete collection of PodTemplate
+        """
+        pass
+
+    def test_delete_namespaced_replicationcontroller(self):
+        """
+        Test case for delete_namespaced_replicationcontroller
 
         delete a ReplicationController
         """
         pass
 
-    def test_delete_namespaced_resource_quota(self):
+    def test_delete_namespaced_replicationcontrollers(self):
         """
-        Test case for delete_namespaced_resource_quota
+        Test case for delete_namespaced_replicationcontrollers
+
+        delete collection of ReplicationController
+        """
+        pass
+
+    def test_delete_namespaced_resourcequota(self):
+        """
+        Test case for delete_namespaced_resourcequota
 
         delete a ResourceQuota
+        """
+        pass
+
+    def test_delete_namespaced_resourcequotas(self):
+        """
+        Test case for delete_namespaced_resourcequotas
+
+        delete collection of ResourceQuota
         """
         pass
 
@@ -426,11 +426,11 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_security_context_constraints(self):
+    def test_delete_namespaced_secrets(self):
         """
-        Test case for delete_namespaced_security_context_constraints
+        Test case for delete_namespaced_secrets
 
-        delete a SecurityContextConstraints
+        delete collection of Secret
         """
         pass
 
@@ -442,281 +442,249 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_service_account(self):
+    def test_delete_namespaced_serviceaccount(self):
         """
-        Test case for delete_namespaced_service_account
+        Test case for delete_namespaced_serviceaccount
 
         delete a ServiceAccount
         """
         pass
 
-    def test_delete_namespaced_service_proxy(self):
+    def test_delete_namespaced_serviceaccounts(self):
         """
-        Test case for delete_namespaced_service_proxy
-
-        connect DELETE requests to proxy of Service
-        """
-        pass
-
-    def test_delete_namespaced_service_proxy_0(self):
-        """
-        Test case for delete_namespaced_service_proxy_0
-
-        connect DELETE requests to proxy of Service
-        """
-        pass
-
-    def test_deletecollection_namespaced_config_map(self):
-        """
-        Test case for deletecollection_namespaced_config_map
-
-        delete collection of ConfigMap
-        """
-        pass
-
-    def test_deletecollection_namespaced_endpoints(self):
-        """
-        Test case for deletecollection_namespaced_endpoints
-
-        delete collection of Endpoints
-        """
-        pass
-
-    def test_deletecollection_namespaced_event(self):
-        """
-        Test case for deletecollection_namespaced_event
-
-        delete collection of Event
-        """
-        pass
-
-    def test_deletecollection_namespaced_limit_range(self):
-        """
-        Test case for deletecollection_namespaced_limit_range
-
-        delete collection of LimitRange
-        """
-        pass
-
-    def test_deletecollection_namespaced_namespace(self):
-        """
-        Test case for deletecollection_namespaced_namespace
-
-        delete collection of Namespace
-        """
-        pass
-
-    def test_deletecollection_namespaced_node(self):
-        """
-        Test case for deletecollection_namespaced_node
-
-        delete collection of Node
-        """
-        pass
-
-    def test_deletecollection_namespaced_persistent_volume(self):
-        """
-        Test case for deletecollection_namespaced_persistent_volume
-
-        delete collection of PersistentVolume
-        """
-        pass
-
-    def test_deletecollection_namespaced_persistent_volume_claim(self):
-        """
-        Test case for deletecollection_namespaced_persistent_volume_claim
-
-        delete collection of PersistentVolumeClaim
-        """
-        pass
-
-    def test_deletecollection_namespaced_pod(self):
-        """
-        Test case for deletecollection_namespaced_pod
-
-        delete collection of Pod
-        """
-        pass
-
-    def test_deletecollection_namespaced_pod_template(self):
-        """
-        Test case for deletecollection_namespaced_pod_template
-
-        delete collection of PodTemplate
-        """
-        pass
-
-    def test_deletecollection_namespaced_replication_controller(self):
-        """
-        Test case for deletecollection_namespaced_replication_controller
-
-        delete collection of ReplicationController
-        """
-        pass
-
-    def test_deletecollection_namespaced_resource_quota(self):
-        """
-        Test case for deletecollection_namespaced_resource_quota
-
-        delete collection of ResourceQuota
-        """
-        pass
-
-    def test_deletecollection_namespaced_secret(self):
-        """
-        Test case for deletecollection_namespaced_secret
-
-        delete collection of Secret
-        """
-        pass
-
-    def test_deletecollection_namespaced_security_context_constraints(self):
-        """
-        Test case for deletecollection_namespaced_security_context_constraints
-
-        delete collection of SecurityContextConstraints
-        """
-        pass
-
-    def test_deletecollection_namespaced_service_account(self):
-        """
-        Test case for deletecollection_namespaced_service_account
+        Test case for delete_namespaced_serviceaccounts
 
         delete collection of ServiceAccount
         """
         pass
 
-    def test_get_api_resources(self):
+    def test_delete_namespaces(self):
         """
-        Test case for get_api_resources
+        Test case for delete_namespaces
+
+        delete collection of Namespace
+        """
+        pass
+
+    def test_delete_node(self):
+        """
+        Test case for delete_node
+
+        delete a Node
+        """
+        pass
+
+    def test_delete_nodes(self):
+        """
+        Test case for delete_nodes
+
+        delete collection of Node
+        """
+        pass
+
+    def test_delete_persistentvolume(self):
+        """
+        Test case for delete_persistentvolume
+
+        delete a PersistentVolume
+        """
+        pass
+
+    def test_delete_persistentvolumes(self):
+        """
+        Test case for delete_persistentvolumes
+
+        delete collection of PersistentVolume
+        """
+        pass
+
+    def test_delete_securitycontextconstraint(self):
+        """
+        Test case for delete_securitycontextconstraint
+
+        delete a SecurityContextConstraints
+        """
+        pass
+
+    def test_delete_securitycontextconstraints(self):
+        """
+        Test case for delete_securitycontextconstraints
+
+        delete collection of SecurityContextConstraints
+        """
+        pass
+
+    def test_get_componentstatus(self):
+        """
+        Test case for get_componentstatus
+
+        read the specified ComponentStatus
+        """
+        pass
+
+    def test_get_namespace(self):
+        """
+        Test case for get_namespace
+
+        read the specified Namespace
+        """
+        pass
+
+    def test_get_namespaced_configmap(self):
+        """
+        Test case for get_namespaced_configmap
+
+        read the specified ConfigMap
+        """
+        pass
+
+    def test_get_namespaced_endpoint(self):
+        """
+        Test case for get_namespaced_endpoint
+
+        read the specified Endpoints
+        """
+        pass
+
+    def test_get_namespaced_event(self):
+        """
+        Test case for get_namespaced_event
+
+        read the specified Event
+        """
+        pass
+
+    def test_get_namespaced_limitrange(self):
+        """
+        Test case for get_namespaced_limitrange
+
+        read the specified LimitRange
+        """
+        pass
+
+    def test_get_namespaced_persistentvolumeclaim(self):
+        """
+        Test case for get_namespaced_persistentvolumeclaim
+
+        read the specified PersistentVolumeClaim
+        """
+        pass
+
+    def test_get_namespaced_pod(self):
+        """
+        Test case for get_namespaced_pod
+
+        read the specified Pod
+        """
+        pass
+
+    def test_get_namespaced_pod_log(self):
+        """
+        Test case for get_namespaced_pod_log
+
+        read log of the specified Pod
+        """
+        pass
+
+    def test_get_namespaced_podtemplate(self):
+        """
+        Test case for get_namespaced_podtemplate
+
+        read the specified PodTemplate
+        """
+        pass
+
+    def test_get_namespaced_replicationcontroller(self):
+        """
+        Test case for get_namespaced_replicationcontroller
+
+        read the specified ReplicationController
+        """
+        pass
+
+    def test_get_namespaced_replicationcontroller_scale(self):
+        """
+        Test case for get_namespaced_replicationcontroller_scale
+
+        read scale of the specified Scale
+        """
+        pass
+
+    def test_get_namespaced_resourcequota(self):
+        """
+        Test case for get_namespaced_resourcequota
+
+        read the specified ResourceQuota
+        """
+        pass
+
+    def test_get_namespaced_secret(self):
+        """
+        Test case for get_namespaced_secret
+
+        read the specified Secret
+        """
+        pass
+
+    def test_get_namespaced_service(self):
+        """
+        Test case for get_namespaced_service
+
+        read the specified Service
+        """
+        pass
+
+    def test_get_namespaced_serviceaccount(self):
+        """
+        Test case for get_namespaced_serviceaccount
+
+        read the specified ServiceAccount
+        """
+        pass
+
+    def test_get_node(self):
+        """
+        Test case for get_node
+
+        read the specified Node
+        """
+        pass
+
+    def test_get_persistentvolume(self):
+        """
+        Test case for get_persistentvolume
+
+        read the specified PersistentVolume
+        """
+        pass
+
+    def test_get_securitycontextconstraint(self):
+        """
+        Test case for get_securitycontextconstraint
+
+        read the specified SecurityContextConstraints
+        """
+        pass
+
+    def test_list(self):
+        """
+        Test case for list
 
         get available resources
         """
         pass
 
-    def test_get_namespaced_node_proxy(self):
+    def test_list_componentstatuses(self):
         """
-        Test case for get_namespaced_node_proxy
+        Test case for list_componentstatuses
 
-        connect GET requests to proxy of Node
+        list objects of kind ComponentStatus
         """
         pass
 
-    def test_get_namespaced_node_proxy_0(self):
+    def test_list_configmaps(self):
         """
-        Test case for get_namespaced_node_proxy_0
-
-        connect GET requests to proxy of Node
-        """
-        pass
-
-    def test_get_namespaced_pod_attach(self):
-        """
-        Test case for get_namespaced_pod_attach
-
-        connect GET requests to attach of Pod
-        """
-        pass
-
-    def test_get_namespaced_pod_exec(self):
-        """
-        Test case for get_namespaced_pod_exec
-
-        connect GET requests to exec of Pod
-        """
-        pass
-
-    def test_get_namespaced_pod_portforward(self):
-        """
-        Test case for get_namespaced_pod_portforward
-
-        connect GET requests to portforward of Pod
-        """
-        pass
-
-    def test_get_namespaced_pod_proxy(self):
-        """
-        Test case for get_namespaced_pod_proxy
-
-        connect GET requests to proxy of Pod
-        """
-        pass
-
-    def test_get_namespaced_pod_proxy_0(self):
-        """
-        Test case for get_namespaced_pod_proxy_0
-
-        connect GET requests to proxy of Pod
-        """
-        pass
-
-    def test_get_namespaced_service_proxy(self):
-        """
-        Test case for get_namespaced_service_proxy
-
-        connect GET requests to proxy of Service
-        """
-        pass
-
-    def test_get_namespaced_service_proxy_0(self):
-        """
-        Test case for get_namespaced_service_proxy_0
-
-        connect GET requests to proxy of Service
-        """
-        pass
-
-    def test_head_namespaced_node_proxy(self):
-        """
-        Test case for head_namespaced_node_proxy
-
-        connect HEAD requests to proxy of Node
-        """
-        pass
-
-    def test_head_namespaced_node_proxy_0(self):
-        """
-        Test case for head_namespaced_node_proxy_0
-
-        connect HEAD requests to proxy of Node
-        """
-        pass
-
-    def test_head_namespaced_pod_proxy(self):
-        """
-        Test case for head_namespaced_pod_proxy
-
-        connect HEAD requests to proxy of Pod
-        """
-        pass
-
-    def test_head_namespaced_pod_proxy_0(self):
-        """
-        Test case for head_namespaced_pod_proxy_0
-
-        connect HEAD requests to proxy of Pod
-        """
-        pass
-
-    def test_head_namespaced_service_proxy(self):
-        """
-        Test case for head_namespaced_service_proxy
-
-        connect HEAD requests to proxy of Service
-        """
-        pass
-
-    def test_head_namespaced_service_proxy_0(self):
-        """
-        Test case for head_namespaced_service_proxy_0
-
-        connect HEAD requests to proxy of Service
-        """
-        pass
-
-    def test_list_config_map(self):
-        """
-        Test case for list_config_map
+        Test case for list_configmaps
 
         list or watch objects of kind ConfigMap
         """
@@ -730,33 +698,25 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_list_event(self):
+    def test_list_events(self):
         """
-        Test case for list_event
+        Test case for list_events
 
         list or watch objects of kind Event
         """
         pass
 
-    def test_list_limit_range(self):
+    def test_list_limitranges(self):
         """
-        Test case for list_limit_range
+        Test case for list_limitranges
 
         list or watch objects of kind LimitRange
         """
         pass
 
-    def test_list_namespaced_component_status(self):
+    def test_list_namespaced_configmaps(self):
         """
-        Test case for list_namespaced_component_status
-
-        list objects of kind ComponentStatus
-        """
-        pass
-
-    def test_list_namespaced_config_map(self):
-        """
-        Test case for list_namespaced_config_map
+        Test case for list_namespaced_configmaps
 
         list or watch objects of kind ConfigMap
         """
@@ -770,241 +730,201 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_event(self):
+    def test_list_namespaced_events(self):
         """
-        Test case for list_namespaced_event
+        Test case for list_namespaced_events
 
         list or watch objects of kind Event
         """
         pass
 
-    def test_list_namespaced_limit_range(self):
+    def test_list_namespaced_limitranges(self):
         """
-        Test case for list_namespaced_limit_range
+        Test case for list_namespaced_limitranges
 
         list or watch objects of kind LimitRange
         """
         pass
 
-    def test_list_namespaced_namespace(self):
+    def test_list_namespaced_persistentvolumeclaims(self):
         """
-        Test case for list_namespaced_namespace
+        Test case for list_namespaced_persistentvolumeclaims
+
+        list or watch objects of kind PersistentVolumeClaim
+        """
+        pass
+
+    def test_list_namespaced_pods(self):
+        """
+        Test case for list_namespaced_pods
+
+        list or watch objects of kind Pod
+        """
+        pass
+
+    def test_list_namespaced_podtemplates(self):
+        """
+        Test case for list_namespaced_podtemplates
+
+        list or watch objects of kind PodTemplate
+        """
+        pass
+
+    def test_list_namespaced_replicationcontrollers(self):
+        """
+        Test case for list_namespaced_replicationcontrollers
+
+        list or watch objects of kind ReplicationController
+        """
+        pass
+
+    def test_list_namespaced_resourcequotas(self):
+        """
+        Test case for list_namespaced_resourcequotas
+
+        list or watch objects of kind ResourceQuota
+        """
+        pass
+
+    def test_list_namespaced_secrets(self):
+        """
+        Test case for list_namespaced_secrets
+
+        list or watch objects of kind Secret
+        """
+        pass
+
+    def test_list_namespaced_serviceaccounts(self):
+        """
+        Test case for list_namespaced_serviceaccounts
+
+        list or watch objects of kind ServiceAccount
+        """
+        pass
+
+    def test_list_namespaced_services(self):
+        """
+        Test case for list_namespaced_services
+
+        list or watch objects of kind Service
+        """
+        pass
+
+    def test_list_namespaces(self):
+        """
+        Test case for list_namespaces
 
         list or watch objects of kind Namespace
         """
         pass
 
-    def test_list_namespaced_node(self):
+    def test_list_nodes(self):
         """
-        Test case for list_namespaced_node
+        Test case for list_nodes
 
         list or watch objects of kind Node
         """
         pass
 
-    def test_list_namespaced_persistent_volume(self):
+    def test_list_persistentvolumeclaims(self):
         """
-        Test case for list_namespaced_persistent_volume
+        Test case for list_persistentvolumeclaims
+
+        list or watch objects of kind PersistentVolumeClaim
+        """
+        pass
+
+    def test_list_persistentvolumes(self):
+        """
+        Test case for list_persistentvolumes
 
         list or watch objects of kind PersistentVolume
         """
         pass
 
-    def test_list_namespaced_persistent_volume_claim(self):
+    def test_list_pods(self):
         """
-        Test case for list_namespaced_persistent_volume_claim
-
-        list or watch objects of kind PersistentVolumeClaim
-        """
-        pass
-
-    def test_list_namespaced_pod(self):
-        """
-        Test case for list_namespaced_pod
+        Test case for list_pods
 
         list or watch objects of kind Pod
         """
         pass
 
-    def test_list_namespaced_pod_template(self):
+    def test_list_podtemplates(self):
         """
-        Test case for list_namespaced_pod_template
+        Test case for list_podtemplates
 
         list or watch objects of kind PodTemplate
         """
         pass
 
-    def test_list_namespaced_replication_controller(self):
+    def test_list_replicationcontrollers(self):
         """
-        Test case for list_namespaced_replication_controller
+        Test case for list_replicationcontrollers
 
         list or watch objects of kind ReplicationController
         """
         pass
 
-    def test_list_namespaced_resource_quota(self):
+    def test_list_resourcequotas(self):
         """
-        Test case for list_namespaced_resource_quota
+        Test case for list_resourcequotas
 
         list or watch objects of kind ResourceQuota
         """
         pass
 
-    def test_list_namespaced_secret(self):
+    def test_list_secrets(self):
         """
-        Test case for list_namespaced_secret
+        Test case for list_secrets
 
         list or watch objects of kind Secret
         """
         pass
 
-    def test_list_namespaced_security_context_constraints(self):
+    def test_list_securitycontextconstraints(self):
         """
-        Test case for list_namespaced_security_context_constraints
+        Test case for list_securitycontextconstraints
 
         list or watch objects of kind SecurityContextConstraints
         """
         pass
 
-    def test_list_namespaced_service(self):
+    def test_list_serviceaccounts(self):
         """
-        Test case for list_namespaced_service
-
-        list or watch objects of kind Service
-        """
-        pass
-
-    def test_list_namespaced_service_account(self):
-        """
-        Test case for list_namespaced_service_account
+        Test case for list_serviceaccounts
 
         list or watch objects of kind ServiceAccount
         """
         pass
 
-    def test_list_persistent_volume_claim(self):
+    def test_list_services(self):
         """
-        Test case for list_persistent_volume_claim
-
-        list or watch objects of kind PersistentVolumeClaim
-        """
-        pass
-
-    def test_list_pod(self):
-        """
-        Test case for list_pod
-
-        list or watch objects of kind Pod
-        """
-        pass
-
-    def test_list_pod_template(self):
-        """
-        Test case for list_pod_template
-
-        list or watch objects of kind PodTemplate
-        """
-        pass
-
-    def test_list_replication_controller(self):
-        """
-        Test case for list_replication_controller
-
-        list or watch objects of kind ReplicationController
-        """
-        pass
-
-    def test_list_resource_quota(self):
-        """
-        Test case for list_resource_quota
-
-        list or watch objects of kind ResourceQuota
-        """
-        pass
-
-    def test_list_secret(self):
-        """
-        Test case for list_secret
-
-        list or watch objects of kind Secret
-        """
-        pass
-
-    def test_list_service(self):
-        """
-        Test case for list_service
+        Test case for list_services
 
         list or watch objects of kind Service
         """
         pass
 
-    def test_list_service_account(self):
+    def test_patch_namespace(self):
         """
-        Test case for list_service_account
+        Test case for patch_namespace
 
-        list or watch objects of kind ServiceAccount
+        partially update the specified Namespace
         """
         pass
 
-    def test_options_namespaced_node_proxy(self):
+    def test_patch_namespaced_configmap(self):
         """
-        Test case for options_namespaced_node_proxy
-
-        connect OPTIONS requests to proxy of Node
-        """
-        pass
-
-    def test_options_namespaced_node_proxy_0(self):
-        """
-        Test case for options_namespaced_node_proxy_0
-
-        connect OPTIONS requests to proxy of Node
-        """
-        pass
-
-    def test_options_namespaced_pod_proxy(self):
-        """
-        Test case for options_namespaced_pod_proxy
-
-        connect OPTIONS requests to proxy of Pod
-        """
-        pass
-
-    def test_options_namespaced_pod_proxy_0(self):
-        """
-        Test case for options_namespaced_pod_proxy_0
-
-        connect OPTIONS requests to proxy of Pod
-        """
-        pass
-
-    def test_options_namespaced_service_proxy(self):
-        """
-        Test case for options_namespaced_service_proxy
-
-        connect OPTIONS requests to proxy of Service
-        """
-        pass
-
-    def test_options_namespaced_service_proxy_0(self):
-        """
-        Test case for options_namespaced_service_proxy_0
-
-        connect OPTIONS requests to proxy of Service
-        """
-        pass
-
-    def test_patch_namespaced_config_map(self):
-        """
-        Test case for patch_namespaced_config_map
+        Test case for patch_namespaced_configmap
 
         partially update the specified ConfigMap
         """
         pass
 
-    def test_patch_namespaced_endpoints(self):
+    def test_patch_namespaced_endpoint(self):
         """
-        Test case for patch_namespaced_endpoints
+        Test case for patch_namespaced_endpoint
 
         partially update the specified Endpoints
         """
@@ -1018,41 +938,17 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_limit_range(self):
+    def test_patch_namespaced_limitrange(self):
         """
-        Test case for patch_namespaced_limit_range
+        Test case for patch_namespaced_limitrange
 
         partially update the specified LimitRange
         """
         pass
 
-    def test_patch_namespaced_namespace(self):
+    def test_patch_namespaced_persistentvolumeclaim(self):
         """
-        Test case for patch_namespaced_namespace
-
-        partially update the specified Namespace
-        """
-        pass
-
-    def test_patch_namespaced_node(self):
-        """
-        Test case for patch_namespaced_node
-
-        partially update the specified Node
-        """
-        pass
-
-    def test_patch_namespaced_persistent_volume(self):
-        """
-        Test case for patch_namespaced_persistent_volume
-
-        partially update the specified PersistentVolume
-        """
-        pass
-
-    def test_patch_namespaced_persistent_volume_claim(self):
-        """
-        Test case for patch_namespaced_persistent_volume_claim
+        Test case for patch_namespaced_persistentvolumeclaim
 
         partially update the specified PersistentVolumeClaim
         """
@@ -1066,35 +962,35 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_pod_template(self):
+    def test_patch_namespaced_podtemplate(self):
         """
-        Test case for patch_namespaced_pod_template
+        Test case for patch_namespaced_podtemplate
 
         partially update the specified PodTemplate
         """
         pass
 
-    def test_patch_namespaced_replication_controller(self):
+    def test_patch_namespaced_replicationcontroller(self):
         """
-        Test case for patch_namespaced_replication_controller
+        Test case for patch_namespaced_replicationcontroller
 
         partially update the specified ReplicationController
         """
         pass
 
-    def test_patch_namespaced_resource_quota(self):
+    def test_patch_namespaced_replicationcontroller_scale(self):
         """
-        Test case for patch_namespaced_resource_quota
+        Test case for patch_namespaced_replicationcontroller_scale
 
-        partially update the specified ResourceQuota
+        partially update scale of the specified Scale
         """
         pass
 
-    def test_patch_namespaced_scale_scale(self):
+    def test_patch_namespaced_resourcequota(self):
         """
-        Test case for patch_namespaced_scale_scale
+        Test case for patch_namespaced_resourcequota
 
-        partially update scale of the specified Scale
+        partially update the specified ResourceQuota
         """
         pass
 
@@ -1106,14 +1002,6 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_security_context_constraints(self):
-        """
-        Test case for patch_namespaced_security_context_constraints
-
-        partially update the specified SecurityContextConstraints
-        """
-        pass
-
     def test_patch_namespaced_service(self):
         """
         Test case for patch_namespaced_service
@@ -1122,585 +1010,73 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_service_account(self):
+    def test_patch_namespaced_serviceaccount(self):
         """
-        Test case for patch_namespaced_service_account
+        Test case for patch_namespaced_serviceaccount
 
         partially update the specified ServiceAccount
         """
         pass
 
-    def test_post_namespaced_node_proxy(self):
+    def test_patch_node(self):
         """
-        Test case for post_namespaced_node_proxy
+        Test case for patch_node
 
-        connect POST requests to proxy of Node
+        partially update the specified Node
         """
         pass
 
-    def test_post_namespaced_node_proxy_0(self):
+    def test_patch_persistentvolume(self):
         """
-        Test case for post_namespaced_node_proxy_0
+        Test case for patch_persistentvolume
 
-        connect POST requests to proxy of Node
+        partially update the specified PersistentVolume
         """
         pass
 
-    def test_post_namespaced_pod_attach(self):
+    def test_patch_securitycontextconstraint(self):
         """
-        Test case for post_namespaced_pod_attach
+        Test case for patch_securitycontextconstraint
 
-        connect POST requests to attach of Pod
+        partially update the specified SecurityContextConstraints
         """
         pass
 
-    def test_post_namespaced_pod_exec(self):
+    def test_replace_namespace(self):
         """
-        Test case for post_namespaced_pod_exec
+        Test case for replace_namespace
 
-        connect POST requests to exec of Pod
+        replace the specified Namespace
         """
         pass
 
-    def test_post_namespaced_pod_portforward(self):
+    def test_replace_namespace_finalize(self):
         """
-        Test case for post_namespaced_pod_portforward
+        Test case for replace_namespace_finalize
 
-        connect POST requests to portforward of Pod
+        replace finalize of the specified Namespace
         """
         pass
 
-    def test_post_namespaced_pod_proxy(self):
+    def test_replace_namespace_status(self):
         """
-        Test case for post_namespaced_pod_proxy
+        Test case for replace_namespace_status
 
-        connect POST requests to proxy of Pod
+        replace status of the specified Namespace
         """
         pass
 
-    def test_post_namespaced_pod_proxy_0(self):
+    def test_replace_namespaced_configmap(self):
         """
-        Test case for post_namespaced_pod_proxy_0
-
-        connect POST requests to proxy of Pod
-        """
-        pass
-
-    def test_post_namespaced_service_proxy(self):
-        """
-        Test case for post_namespaced_service_proxy
-
-        connect POST requests to proxy of Service
-        """
-        pass
-
-    def test_post_namespaced_service_proxy_0(self):
-        """
-        Test case for post_namespaced_service_proxy_0
-
-        connect POST requests to proxy of Service
-        """
-        pass
-
-    def test_proxy_delete_namespaced_node(self):
-        """
-        Test case for proxy_delete_namespaced_node
-
-        proxy DELETE requests to Node
-        """
-        pass
-
-    def test_proxy_delete_namespaced_node_0(self):
-        """
-        Test case for proxy_delete_namespaced_node_0
-
-        proxy DELETE requests to Node
-        """
-        pass
-
-    def test_proxy_delete_namespaced_pod(self):
-        """
-        Test case for proxy_delete_namespaced_pod
-
-        proxy DELETE requests to Pod
-        """
-        pass
-
-    def test_proxy_delete_namespaced_pod_0(self):
-        """
-        Test case for proxy_delete_namespaced_pod_0
-
-        proxy DELETE requests to Pod
-        """
-        pass
-
-    def test_proxy_delete_namespaced_service(self):
-        """
-        Test case for proxy_delete_namespaced_service
-
-        proxy DELETE requests to Service
-        """
-        pass
-
-    def test_proxy_delete_namespaced_service_0(self):
-        """
-        Test case for proxy_delete_namespaced_service_0
-
-        proxy DELETE requests to Service
-        """
-        pass
-
-    def test_proxy_get_namespaced_node(self):
-        """
-        Test case for proxy_get_namespaced_node
-
-        proxy GET requests to Node
-        """
-        pass
-
-    def test_proxy_get_namespaced_node_0(self):
-        """
-        Test case for proxy_get_namespaced_node_0
-
-        proxy GET requests to Node
-        """
-        pass
-
-    def test_proxy_get_namespaced_pod(self):
-        """
-        Test case for proxy_get_namespaced_pod
-
-        proxy GET requests to Pod
-        """
-        pass
-
-    def test_proxy_get_namespaced_pod_0(self):
-        """
-        Test case for proxy_get_namespaced_pod_0
-
-        proxy GET requests to Pod
-        """
-        pass
-
-    def test_proxy_get_namespaced_service(self):
-        """
-        Test case for proxy_get_namespaced_service
-
-        proxy GET requests to Service
-        """
-        pass
-
-    def test_proxy_get_namespaced_service_0(self):
-        """
-        Test case for proxy_get_namespaced_service_0
-
-        proxy GET requests to Service
-        """
-        pass
-
-    def test_proxy_head_namespaced_node(self):
-        """
-        Test case for proxy_head_namespaced_node
-
-        proxy HEAD requests to Node
-        """
-        pass
-
-    def test_proxy_head_namespaced_node_0(self):
-        """
-        Test case for proxy_head_namespaced_node_0
-
-        proxy HEAD requests to Node
-        """
-        pass
-
-    def test_proxy_head_namespaced_pod(self):
-        """
-        Test case for proxy_head_namespaced_pod
-
-        proxy HEAD requests to Pod
-        """
-        pass
-
-    def test_proxy_head_namespaced_pod_0(self):
-        """
-        Test case for proxy_head_namespaced_pod_0
-
-        proxy HEAD requests to Pod
-        """
-        pass
-
-    def test_proxy_head_namespaced_service(self):
-        """
-        Test case for proxy_head_namespaced_service
-
-        proxy HEAD requests to Service
-        """
-        pass
-
-    def test_proxy_head_namespaced_service_0(self):
-        """
-        Test case for proxy_head_namespaced_service_0
-
-        proxy HEAD requests to Service
-        """
-        pass
-
-    def test_proxy_options_namespaced_node(self):
-        """
-        Test case for proxy_options_namespaced_node
-
-        proxy OPTIONS requests to Node
-        """
-        pass
-
-    def test_proxy_options_namespaced_node_0(self):
-        """
-        Test case for proxy_options_namespaced_node_0
-
-        proxy OPTIONS requests to Node
-        """
-        pass
-
-    def test_proxy_options_namespaced_pod(self):
-        """
-        Test case for proxy_options_namespaced_pod
-
-        proxy OPTIONS requests to Pod
-        """
-        pass
-
-    def test_proxy_options_namespaced_pod_0(self):
-        """
-        Test case for proxy_options_namespaced_pod_0
-
-        proxy OPTIONS requests to Pod
-        """
-        pass
-
-    def test_proxy_options_namespaced_service(self):
-        """
-        Test case for proxy_options_namespaced_service
-
-        proxy OPTIONS requests to Service
-        """
-        pass
-
-    def test_proxy_options_namespaced_service_0(self):
-        """
-        Test case for proxy_options_namespaced_service_0
-
-        proxy OPTIONS requests to Service
-        """
-        pass
-
-    def test_proxy_post_namespaced_node(self):
-        """
-        Test case for proxy_post_namespaced_node
-
-        proxy POST requests to Node
-        """
-        pass
-
-    def test_proxy_post_namespaced_node_0(self):
-        """
-        Test case for proxy_post_namespaced_node_0
-
-        proxy POST requests to Node
-        """
-        pass
-
-    def test_proxy_post_namespaced_pod(self):
-        """
-        Test case for proxy_post_namespaced_pod
-
-        proxy POST requests to Pod
-        """
-        pass
-
-    def test_proxy_post_namespaced_pod_0(self):
-        """
-        Test case for proxy_post_namespaced_pod_0
-
-        proxy POST requests to Pod
-        """
-        pass
-
-    def test_proxy_post_namespaced_service(self):
-        """
-        Test case for proxy_post_namespaced_service
-
-        proxy POST requests to Service
-        """
-        pass
-
-    def test_proxy_post_namespaced_service_0(self):
-        """
-        Test case for proxy_post_namespaced_service_0
-
-        proxy POST requests to Service
-        """
-        pass
-
-    def test_proxy_put_namespaced_node(self):
-        """
-        Test case for proxy_put_namespaced_node
-
-        proxy PUT requests to Node
-        """
-        pass
-
-    def test_proxy_put_namespaced_node_0(self):
-        """
-        Test case for proxy_put_namespaced_node_0
-
-        proxy PUT requests to Node
-        """
-        pass
-
-    def test_proxy_put_namespaced_pod(self):
-        """
-        Test case for proxy_put_namespaced_pod
-
-        proxy PUT requests to Pod
-        """
-        pass
-
-    def test_proxy_put_namespaced_pod_0(self):
-        """
-        Test case for proxy_put_namespaced_pod_0
-
-        proxy PUT requests to Pod
-        """
-        pass
-
-    def test_proxy_put_namespaced_service(self):
-        """
-        Test case for proxy_put_namespaced_service
-
-        proxy PUT requests to Service
-        """
-        pass
-
-    def test_proxy_put_namespaced_service_0(self):
-        """
-        Test case for proxy_put_namespaced_service_0
-
-        proxy PUT requests to Service
-        """
-        pass
-
-    def test_put_namespaced_node_proxy(self):
-        """
-        Test case for put_namespaced_node_proxy
-
-        connect PUT requests to proxy of Node
-        """
-        pass
-
-    def test_put_namespaced_node_proxy_0(self):
-        """
-        Test case for put_namespaced_node_proxy_0
-
-        connect PUT requests to proxy of Node
-        """
-        pass
-
-    def test_put_namespaced_pod_proxy(self):
-        """
-        Test case for put_namespaced_pod_proxy
-
-        connect PUT requests to proxy of Pod
-        """
-        pass
-
-    def test_put_namespaced_pod_proxy_0(self):
-        """
-        Test case for put_namespaced_pod_proxy_0
-
-        connect PUT requests to proxy of Pod
-        """
-        pass
-
-    def test_put_namespaced_service_proxy(self):
-        """
-        Test case for put_namespaced_service_proxy
-
-        connect PUT requests to proxy of Service
-        """
-        pass
-
-    def test_put_namespaced_service_proxy_0(self):
-        """
-        Test case for put_namespaced_service_proxy_0
-
-        connect PUT requests to proxy of Service
-        """
-        pass
-
-    def test_read_namespaced_component_status(self):
-        """
-        Test case for read_namespaced_component_status
-
-        read the specified ComponentStatus
-        """
-        pass
-
-    def test_read_namespaced_config_map(self):
-        """
-        Test case for read_namespaced_config_map
-
-        read the specified ConfigMap
-        """
-        pass
-
-    def test_read_namespaced_endpoints(self):
-        """
-        Test case for read_namespaced_endpoints
-
-        read the specified Endpoints
-        """
-        pass
-
-    def test_read_namespaced_event(self):
-        """
-        Test case for read_namespaced_event
-
-        read the specified Event
-        """
-        pass
-
-    def test_read_namespaced_limit_range(self):
-        """
-        Test case for read_namespaced_limit_range
-
-        read the specified LimitRange
-        """
-        pass
-
-    def test_read_namespaced_namespace(self):
-        """
-        Test case for read_namespaced_namespace
-
-        read the specified Namespace
-        """
-        pass
-
-    def test_read_namespaced_node(self):
-        """
-        Test case for read_namespaced_node
-
-        read the specified Node
-        """
-        pass
-
-    def test_read_namespaced_persistent_volume(self):
-        """
-        Test case for read_namespaced_persistent_volume
-
-        read the specified PersistentVolume
-        """
-        pass
-
-    def test_read_namespaced_persistent_volume_claim(self):
-        """
-        Test case for read_namespaced_persistent_volume_claim
-
-        read the specified PersistentVolumeClaim
-        """
-        pass
-
-    def test_read_namespaced_pod(self):
-        """
-        Test case for read_namespaced_pod
-
-        read the specified Pod
-        """
-        pass
-
-    def test_read_namespaced_pod_log(self):
-        """
-        Test case for read_namespaced_pod_log
-
-        read log of the specified Pod
-        """
-        pass
-
-    def test_read_namespaced_pod_template(self):
-        """
-        Test case for read_namespaced_pod_template
-
-        read the specified PodTemplate
-        """
-        pass
-
-    def test_read_namespaced_replication_controller(self):
-        """
-        Test case for read_namespaced_replication_controller
-
-        read the specified ReplicationController
-        """
-        pass
-
-    def test_read_namespaced_resource_quota(self):
-        """
-        Test case for read_namespaced_resource_quota
-
-        read the specified ResourceQuota
-        """
-        pass
-
-    def test_read_namespaced_scale_scale(self):
-        """
-        Test case for read_namespaced_scale_scale
-
-        read scale of the specified Scale
-        """
-        pass
-
-    def test_read_namespaced_secret(self):
-        """
-        Test case for read_namespaced_secret
-
-        read the specified Secret
-        """
-        pass
-
-    def test_read_namespaced_security_context_constraints(self):
-        """
-        Test case for read_namespaced_security_context_constraints
-
-        read the specified SecurityContextConstraints
-        """
-        pass
-
-    def test_read_namespaced_service(self):
-        """
-        Test case for read_namespaced_service
-
-        read the specified Service
-        """
-        pass
-
-    def test_read_namespaced_service_account(self):
-        """
-        Test case for read_namespaced_service_account
-
-        read the specified ServiceAccount
-        """
-        pass
-
-    def test_replace_namespaced_config_map(self):
-        """
-        Test case for replace_namespaced_config_map
+        Test case for replace_namespaced_configmap
 
         replace the specified ConfigMap
         """
         pass
 
-    def test_replace_namespaced_endpoints(self):
+    def test_replace_namespaced_endpoint(self):
         """
-        Test case for replace_namespaced_endpoints
+        Test case for replace_namespaced_endpoint
 
         replace the specified Endpoints
         """
@@ -1714,83 +1090,27 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_limit_range(self):
+    def test_replace_namespaced_limitrange(self):
         """
-        Test case for replace_namespaced_limit_range
+        Test case for replace_namespaced_limitrange
 
         replace the specified LimitRange
         """
         pass
 
-    def test_replace_namespaced_namespace(self):
+    def test_replace_namespaced_persistentvolumeclaim(self):
         """
-        Test case for replace_namespaced_namespace
-
-        replace the specified Namespace
-        """
-        pass
-
-    def test_replace_namespaced_namespace_finalize(self):
-        """
-        Test case for replace_namespaced_namespace_finalize
-
-        replace finalize of the specified Namespace
-        """
-        pass
-
-    def test_replace_namespaced_namespace_status(self):
-        """
-        Test case for replace_namespaced_namespace_status
-
-        replace status of the specified Namespace
-        """
-        pass
-
-    def test_replace_namespaced_node(self):
-        """
-        Test case for replace_namespaced_node
-
-        replace the specified Node
-        """
-        pass
-
-    def test_replace_namespaced_node_status(self):
-        """
-        Test case for replace_namespaced_node_status
-
-        replace status of the specified Node
-        """
-        pass
-
-    def test_replace_namespaced_persistent_volume(self):
-        """
-        Test case for replace_namespaced_persistent_volume
-
-        replace the specified PersistentVolume
-        """
-        pass
-
-    def test_replace_namespaced_persistent_volume_claim(self):
-        """
-        Test case for replace_namespaced_persistent_volume_claim
+        Test case for replace_namespaced_persistentvolumeclaim
 
         replace the specified PersistentVolumeClaim
         """
         pass
 
-    def test_replace_namespaced_persistent_volume_claim_status(self):
+    def test_replace_namespaced_persistentvolumeclaim_status(self):
         """
-        Test case for replace_namespaced_persistent_volume_claim_status
+        Test case for replace_namespaced_persistentvolumeclaim_status
 
         replace status of the specified PersistentVolumeClaim
-        """
-        pass
-
-    def test_replace_namespaced_persistent_volume_status(self):
-        """
-        Test case for replace_namespaced_persistent_volume_status
-
-        replace status of the specified PersistentVolume
         """
         pass
 
@@ -1810,51 +1130,51 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_pod_template(self):
+    def test_replace_namespaced_podtemplate(self):
         """
-        Test case for replace_namespaced_pod_template
+        Test case for replace_namespaced_podtemplate
 
         replace the specified PodTemplate
         """
         pass
 
-    def test_replace_namespaced_replication_controller(self):
+    def test_replace_namespaced_replicationcontroller(self):
         """
-        Test case for replace_namespaced_replication_controller
+        Test case for replace_namespaced_replicationcontroller
 
         replace the specified ReplicationController
         """
         pass
 
-    def test_replace_namespaced_replication_controller_status(self):
+    def test_replace_namespaced_replicationcontroller_scale(self):
         """
-        Test case for replace_namespaced_replication_controller_status
+        Test case for replace_namespaced_replicationcontroller_scale
+
+        replace scale of the specified Scale
+        """
+        pass
+
+    def test_replace_namespaced_replicationcontroller_status(self):
+        """
+        Test case for replace_namespaced_replicationcontroller_status
 
         replace status of the specified ReplicationController
         """
         pass
 
-    def test_replace_namespaced_resource_quota(self):
+    def test_replace_namespaced_resourcequota(self):
         """
-        Test case for replace_namespaced_resource_quota
+        Test case for replace_namespaced_resourcequota
 
         replace the specified ResourceQuota
         """
         pass
 
-    def test_replace_namespaced_resource_quota_status(self):
+    def test_replace_namespaced_resourcequota_status(self):
         """
-        Test case for replace_namespaced_resource_quota_status
+        Test case for replace_namespaced_resourcequota_status
 
         replace status of the specified ResourceQuota
-        """
-        pass
-
-    def test_replace_namespaced_scale_scale(self):
-        """
-        Test case for replace_namespaced_scale_scale
-
-        replace scale of the specified Scale
         """
         pass
 
@@ -1866,27 +1186,11 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_security_context_constraints(self):
-        """
-        Test case for replace_namespaced_security_context_constraints
-
-        replace the specified SecurityContextConstraints
-        """
-        pass
-
     def test_replace_namespaced_service(self):
         """
         Test case for replace_namespaced_service
 
         replace the specified Service
-        """
-        pass
-
-    def test_replace_namespaced_service_account(self):
-        """
-        Test case for replace_namespaced_service_account
-
-        replace the specified ServiceAccount
         """
         pass
 
@@ -1898,353 +1202,401 @@ class TestApiV1(unittest.TestCase):
         """
         pass
 
-    def test_watch_config_map_list(self):
+    def test_replace_namespaced_serviceaccount(self):
         """
-        Test case for watch_config_map_list
+        Test case for replace_namespaced_serviceaccount
 
-        watch individual changes to a list of ConfigMap
+        replace the specified ServiceAccount
         """
         pass
 
-    def test_watch_endpoints_list(self):
+    def test_replace_node(self):
         """
-        Test case for watch_endpoints_list
+        Test case for replace_node
 
-        watch individual changes to a list of Endpoints
+        replace the specified Node
         """
         pass
 
-    def test_watch_event_list(self):
+    def test_replace_node_status(self):
         """
-        Test case for watch_event_list
+        Test case for replace_node_status
 
-        watch individual changes to a list of Event
+        replace status of the specified Node
         """
         pass
 
-    def test_watch_limit_range_list(self):
+    def test_replace_persistentvolume(self):
         """
-        Test case for watch_limit_range_list
+        Test case for replace_persistentvolume
 
-        watch individual changes to a list of LimitRange
+        replace the specified PersistentVolume
         """
         pass
 
-    def test_watch_namespaced_config_map(self):
+    def test_replace_persistentvolume_status(self):
         """
-        Test case for watch_namespaced_config_map
+        Test case for replace_persistentvolume_status
+
+        replace status of the specified PersistentVolume
+        """
+        pass
+
+    def test_replace_securitycontextconstraint(self):
+        """
+        Test case for replace_securitycontextconstraint
+
+        replace the specified SecurityContextConstraints
+        """
+        pass
+
+    def test_watch_namespaced_watch_configmap(self):
+        """
+        Test case for watch_namespaced_watch_configmap
 
         watch changes to an object of kind ConfigMap
         """
         pass
 
-    def test_watch_namespaced_config_map_list(self):
+    def test_watch_namespaced_watch_configmaps(self):
         """
-        Test case for watch_namespaced_config_map_list
+        Test case for watch_namespaced_watch_configmaps
 
         watch individual changes to a list of ConfigMap
         """
         pass
 
-    def test_watch_namespaced_endpoints(self):
+    def test_watch_namespaced_watch_endpoint(self):
         """
-        Test case for watch_namespaced_endpoints
+        Test case for watch_namespaced_watch_endpoint
 
         watch changes to an object of kind Endpoints
         """
         pass
 
-    def test_watch_namespaced_endpoints_list(self):
+    def test_watch_namespaced_watch_endpoints(self):
         """
-        Test case for watch_namespaced_endpoints_list
+        Test case for watch_namespaced_watch_endpoints
 
         watch individual changes to a list of Endpoints
         """
         pass
 
-    def test_watch_namespaced_event(self):
+    def test_watch_namespaced_watch_event(self):
         """
-        Test case for watch_namespaced_event
+        Test case for watch_namespaced_watch_event
 
         watch changes to an object of kind Event
         """
         pass
 
-    def test_watch_namespaced_event_list(self):
+    def test_watch_namespaced_watch_events(self):
         """
-        Test case for watch_namespaced_event_list
+        Test case for watch_namespaced_watch_events
 
         watch individual changes to a list of Event
         """
         pass
 
-    def test_watch_namespaced_limit_range(self):
+    def test_watch_namespaced_watch_limitrange(self):
         """
-        Test case for watch_namespaced_limit_range
+        Test case for watch_namespaced_watch_limitrange
 
         watch changes to an object of kind LimitRange
         """
         pass
 
-    def test_watch_namespaced_limit_range_list(self):
+    def test_watch_namespaced_watch_limitranges(self):
         """
-        Test case for watch_namespaced_limit_range_list
+        Test case for watch_namespaced_watch_limitranges
 
         watch individual changes to a list of LimitRange
         """
         pass
 
-    def test_watch_namespaced_namespace(self):
+    def test_watch_namespaced_watch_persistentvolumeclaim(self):
         """
-        Test case for watch_namespaced_namespace
-
-        watch changes to an object of kind Namespace
-        """
-        pass
-
-    def test_watch_namespaced_namespace_list(self):
-        """
-        Test case for watch_namespaced_namespace_list
-
-        watch individual changes to a list of Namespace
-        """
-        pass
-
-    def test_watch_namespaced_node(self):
-        """
-        Test case for watch_namespaced_node
-
-        watch changes to an object of kind Node
-        """
-        pass
-
-    def test_watch_namespaced_node_list(self):
-        """
-        Test case for watch_namespaced_node_list
-
-        watch individual changes to a list of Node
-        """
-        pass
-
-    def test_watch_namespaced_persistent_volume(self):
-        """
-        Test case for watch_namespaced_persistent_volume
-
-        watch changes to an object of kind PersistentVolume
-        """
-        pass
-
-    def test_watch_namespaced_persistent_volume_claim(self):
-        """
-        Test case for watch_namespaced_persistent_volume_claim
+        Test case for watch_namespaced_watch_persistentvolumeclaim
 
         watch changes to an object of kind PersistentVolumeClaim
         """
         pass
 
-    def test_watch_namespaced_persistent_volume_claim_list(self):
+    def test_watch_namespaced_watch_persistentvolumeclaims(self):
         """
-        Test case for watch_namespaced_persistent_volume_claim_list
+        Test case for watch_namespaced_watch_persistentvolumeclaims
 
         watch individual changes to a list of PersistentVolumeClaim
         """
         pass
 
-    def test_watch_namespaced_persistent_volume_list(self):
+    def test_watch_namespaced_watch_pod(self):
         """
-        Test case for watch_namespaced_persistent_volume_list
-
-        watch individual changes to a list of PersistentVolume
-        """
-        pass
-
-    def test_watch_namespaced_pod(self):
-        """
-        Test case for watch_namespaced_pod
+        Test case for watch_namespaced_watch_pod
 
         watch changes to an object of kind Pod
         """
         pass
 
-    def test_watch_namespaced_pod_list(self):
+    def test_watch_namespaced_watch_pods(self):
         """
-        Test case for watch_namespaced_pod_list
+        Test case for watch_namespaced_watch_pods
 
         watch individual changes to a list of Pod
         """
         pass
 
-    def test_watch_namespaced_pod_template(self):
+    def test_watch_namespaced_watch_podtemplate(self):
         """
-        Test case for watch_namespaced_pod_template
+        Test case for watch_namespaced_watch_podtemplate
 
         watch changes to an object of kind PodTemplate
         """
         pass
 
-    def test_watch_namespaced_pod_template_list(self):
+    def test_watch_namespaced_watch_podtemplates(self):
         """
-        Test case for watch_namespaced_pod_template_list
+        Test case for watch_namespaced_watch_podtemplates
 
         watch individual changes to a list of PodTemplate
         """
         pass
 
-    def test_watch_namespaced_replication_controller(self):
+    def test_watch_namespaced_watch_replicationcontroller(self):
         """
-        Test case for watch_namespaced_replication_controller
+        Test case for watch_namespaced_watch_replicationcontroller
 
         watch changes to an object of kind ReplicationController
         """
         pass
 
-    def test_watch_namespaced_replication_controller_list(self):
+    def test_watch_namespaced_watch_replicationcontrollers(self):
         """
-        Test case for watch_namespaced_replication_controller_list
+        Test case for watch_namespaced_watch_replicationcontrollers
 
         watch individual changes to a list of ReplicationController
         """
         pass
 
-    def test_watch_namespaced_resource_quota(self):
+    def test_watch_namespaced_watch_resourcequota(self):
         """
-        Test case for watch_namespaced_resource_quota
+        Test case for watch_namespaced_watch_resourcequota
 
         watch changes to an object of kind ResourceQuota
         """
         pass
 
-    def test_watch_namespaced_resource_quota_list(self):
+    def test_watch_namespaced_watch_resourcequotas(self):
         """
-        Test case for watch_namespaced_resource_quota_list
+        Test case for watch_namespaced_watch_resourcequotas
 
         watch individual changes to a list of ResourceQuota
         """
         pass
 
-    def test_watch_namespaced_secret(self):
+    def test_watch_namespaced_watch_secret(self):
         """
-        Test case for watch_namespaced_secret
+        Test case for watch_namespaced_watch_secret
 
         watch changes to an object of kind Secret
         """
         pass
 
-    def test_watch_namespaced_secret_list(self):
+    def test_watch_namespaced_watch_secrets(self):
         """
-        Test case for watch_namespaced_secret_list
+        Test case for watch_namespaced_watch_secrets
 
         watch individual changes to a list of Secret
         """
         pass
 
-    def test_watch_namespaced_security_context_constraints(self):
+    def test_watch_namespaced_watch_service(self):
         """
-        Test case for watch_namespaced_security_context_constraints
-
-        watch changes to an object of kind SecurityContextConstraints
-        """
-        pass
-
-    def test_watch_namespaced_security_context_constraints_list(self):
-        """
-        Test case for watch_namespaced_security_context_constraints_list
-
-        watch individual changes to a list of SecurityContextConstraints
-        """
-        pass
-
-    def test_watch_namespaced_service(self):
-        """
-        Test case for watch_namespaced_service
+        Test case for watch_namespaced_watch_service
 
         watch changes to an object of kind Service
         """
         pass
 
-    def test_watch_namespaced_service_account(self):
+    def test_watch_namespaced_watch_serviceaccount(self):
         """
-        Test case for watch_namespaced_service_account
+        Test case for watch_namespaced_watch_serviceaccount
 
         watch changes to an object of kind ServiceAccount
         """
         pass
 
-    def test_watch_namespaced_service_account_list(self):
+    def test_watch_namespaced_watch_serviceaccounts(self):
         """
-        Test case for watch_namespaced_service_account_list
+        Test case for watch_namespaced_watch_serviceaccounts
 
         watch individual changes to a list of ServiceAccount
         """
         pass
 
-    def test_watch_namespaced_service_list(self):
+    def test_watch_namespaced_watch_services(self):
         """
-        Test case for watch_namespaced_service_list
+        Test case for watch_namespaced_watch_services
 
         watch individual changes to a list of Service
         """
         pass
 
-    def test_watch_persistent_volume_claim_list(self):
+    def test_watch_watch_configmaps(self):
         """
-        Test case for watch_persistent_volume_claim_list
+        Test case for watch_watch_configmaps
+
+        watch individual changes to a list of ConfigMap
+        """
+        pass
+
+    def test_watch_watch_endpoints(self):
+        """
+        Test case for watch_watch_endpoints
+
+        watch individual changes to a list of Endpoints
+        """
+        pass
+
+    def test_watch_watch_events(self):
+        """
+        Test case for watch_watch_events
+
+        watch individual changes to a list of Event
+        """
+        pass
+
+    def test_watch_watch_limitranges(self):
+        """
+        Test case for watch_watch_limitranges
+
+        watch individual changes to a list of LimitRange
+        """
+        pass
+
+    def test_watch_watch_namespace(self):
+        """
+        Test case for watch_watch_namespace
+
+        watch changes to an object of kind Namespace
+        """
+        pass
+
+    def test_watch_watch_namespaces(self):
+        """
+        Test case for watch_watch_namespaces
+
+        watch individual changes to a list of Namespace
+        """
+        pass
+
+    def test_watch_watch_node(self):
+        """
+        Test case for watch_watch_node
+
+        watch changes to an object of kind Node
+        """
+        pass
+
+    def test_watch_watch_nodes(self):
+        """
+        Test case for watch_watch_nodes
+
+        watch individual changes to a list of Node
+        """
+        pass
+
+    def test_watch_watch_persistentvolume(self):
+        """
+        Test case for watch_watch_persistentvolume
+
+        watch changes to an object of kind PersistentVolume
+        """
+        pass
+
+    def test_watch_watch_persistentvolumeclaims(self):
+        """
+        Test case for watch_watch_persistentvolumeclaims
 
         watch individual changes to a list of PersistentVolumeClaim
         """
         pass
 
-    def test_watch_pod_list(self):
+    def test_watch_watch_persistentvolumes(self):
         """
-        Test case for watch_pod_list
+        Test case for watch_watch_persistentvolumes
+
+        watch individual changes to a list of PersistentVolume
+        """
+        pass
+
+    def test_watch_watch_pods(self):
+        """
+        Test case for watch_watch_pods
 
         watch individual changes to a list of Pod
         """
         pass
 
-    def test_watch_pod_template_list(self):
+    def test_watch_watch_podtemplates(self):
         """
-        Test case for watch_pod_template_list
+        Test case for watch_watch_podtemplates
 
         watch individual changes to a list of PodTemplate
         """
         pass
 
-    def test_watch_replication_controller_list(self):
+    def test_watch_watch_replicationcontrollers(self):
         """
-        Test case for watch_replication_controller_list
+        Test case for watch_watch_replicationcontrollers
 
         watch individual changes to a list of ReplicationController
         """
         pass
 
-    def test_watch_resource_quota_list(self):
+    def test_watch_watch_resourcequotas(self):
         """
-        Test case for watch_resource_quota_list
+        Test case for watch_watch_resourcequotas
 
         watch individual changes to a list of ResourceQuota
         """
         pass
 
-    def test_watch_secret_list(self):
+    def test_watch_watch_secrets(self):
         """
-        Test case for watch_secret_list
+        Test case for watch_watch_secrets
 
         watch individual changes to a list of Secret
         """
         pass
 
-    def test_watch_service_account_list(self):
+    def test_watch_watch_securitycontextconstraint(self):
         """
-        Test case for watch_service_account_list
+        Test case for watch_watch_securitycontextconstraint
+
+        watch changes to an object of kind SecurityContextConstraints
+        """
+        pass
+
+    def test_watch_watch_securitycontextconstraints(self):
+        """
+        Test case for watch_watch_securitycontextconstraints
+
+        watch individual changes to a list of SecurityContextConstraints
+        """
+        pass
+
+    def test_watch_watch_serviceaccounts(self):
+        """
+        Test case for watch_watch_serviceaccounts
 
         watch individual changes to a list of ServiceAccount
         """
         pass
 
-    def test_watch_service_list(self):
+    def test_watch_watch_services(self):
         """
-        Test case for watch_service_list
+        Test case for watch_watch_services
 
         watch individual changes to a list of Service
         """

@@ -42,113 +42,113 @@ class TestApisAutoscalingV1(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_horizontal_pod_autoscaler(self):
+    def test_create_horizontalpodautoscaler(self):
         """
-        Test case for create_horizontal_pod_autoscaler
+        Test case for create_horizontalpodautoscaler
 
         create a HorizontalPodAutoscaler
         """
         pass
 
-    def test_create_namespaced_horizontal_pod_autoscaler(self):
+    def test_create_namespaced_horizontalpodautoscaler(self):
         """
-        Test case for create_namespaced_horizontal_pod_autoscaler
+        Test case for create_namespaced_horizontalpodautoscaler
 
         create a HorizontalPodAutoscaler
         """
         pass
 
-    def test_delete_namespaced_horizontal_pod_autoscaler(self):
+    def test_delete_namespaced_horizontalpodautoscaler(self):
         """
-        Test case for delete_namespaced_horizontal_pod_autoscaler
+        Test case for delete_namespaced_horizontalpodautoscaler
 
         delete a HorizontalPodAutoscaler
         """
         pass
 
-    def test_deletecollection_namespaced_horizontal_pod_autoscaler(self):
+    def test_delete_namespaced_horizontalpodautoscalers(self):
         """
-        Test case for deletecollection_namespaced_horizontal_pod_autoscaler
+        Test case for delete_namespaced_horizontalpodautoscalers
 
         delete collection of HorizontalPodAutoscaler
         """
         pass
 
-    def test_get_api_resources(self):
+    def test_get_namespaced_horizontalpodautoscaler(self):
         """
-        Test case for get_api_resources
-
-        get available resources
-        """
-        pass
-
-    def test_list_horizontal_pod_autoscaler(self):
-        """
-        Test case for list_horizontal_pod_autoscaler
-
-        list or watch objects of kind HorizontalPodAutoscaler
-        """
-        pass
-
-    def test_list_namespaced_horizontal_pod_autoscaler(self):
-        """
-        Test case for list_namespaced_horizontal_pod_autoscaler
-
-        list or watch objects of kind HorizontalPodAutoscaler
-        """
-        pass
-
-    def test_patch_namespaced_horizontal_pod_autoscaler(self):
-        """
-        Test case for patch_namespaced_horizontal_pod_autoscaler
-
-        partially update the specified HorizontalPodAutoscaler
-        """
-        pass
-
-    def test_read_namespaced_horizontal_pod_autoscaler(self):
-        """
-        Test case for read_namespaced_horizontal_pod_autoscaler
+        Test case for get_namespaced_horizontalpodautoscaler
 
         read the specified HorizontalPodAutoscaler
         """
         pass
 
-    def test_replace_namespaced_horizontal_pod_autoscaler(self):
+    def test_list(self):
         """
-        Test case for replace_namespaced_horizontal_pod_autoscaler
+        Test case for list
+
+        get available resources
+        """
+        pass
+
+    def test_list_horizontalpodautoscalers(self):
+        """
+        Test case for list_horizontalpodautoscalers
+
+        list or watch objects of kind HorizontalPodAutoscaler
+        """
+        pass
+
+    def test_list_namespaced_horizontalpodautoscalers(self):
+        """
+        Test case for list_namespaced_horizontalpodautoscalers
+
+        list or watch objects of kind HorizontalPodAutoscaler
+        """
+        pass
+
+    def test_patch_namespaced_horizontalpodautoscaler(self):
+        """
+        Test case for patch_namespaced_horizontalpodautoscaler
+
+        partially update the specified HorizontalPodAutoscaler
+        """
+        pass
+
+    def test_replace_namespaced_horizontalpodautoscaler(self):
+        """
+        Test case for replace_namespaced_horizontalpodautoscaler
 
         replace the specified HorizontalPodAutoscaler
         """
         pass
 
-    def test_replace_namespaced_horizontal_pod_autoscaler_status(self):
+    def test_replace_namespaced_horizontalpodautoscaler_status(self):
         """
-        Test case for replace_namespaced_horizontal_pod_autoscaler_status
+        Test case for replace_namespaced_horizontalpodautoscaler_status
 
         replace status of the specified HorizontalPodAutoscaler
         """
         pass
 
-    def test_watch_horizontal_pod_autoscaler_list(self):
+    def test_watch_namespaced_watch_horizontalpodautoscaler(self):
         """
-        Test case for watch_horizontal_pod_autoscaler_list
-
-        watch individual changes to a list of HorizontalPodAutoscaler
-        """
-        pass
-
-    def test_watch_namespaced_horizontal_pod_autoscaler(self):
-        """
-        Test case for watch_namespaced_horizontal_pod_autoscaler
+        Test case for watch_namespaced_watch_horizontalpodautoscaler
 
         watch changes to an object of kind HorizontalPodAutoscaler
         """
         pass
 
-    def test_watch_namespaced_horizontal_pod_autoscaler_list(self):
+    def test_watch_namespaced_watch_horizontalpodautoscalers(self):
         """
-        Test case for watch_namespaced_horizontal_pod_autoscaler_list
+        Test case for watch_namespaced_watch_horizontalpodautoscalers
+
+        watch individual changes to a list of HorizontalPodAutoscaler
+        """
+        pass
+
+    def test_watch_watch_horizontalpodautoscalers(self):
+        """
+        Test case for watch_watch_horizontalpodautoscalers
 
         watch individual changes to a list of HorizontalPodAutoscaler
         """

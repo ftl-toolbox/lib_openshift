@@ -51,7 +51,7 @@ class ApisAutoscalingV1(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def create_horizontal_pod_autoscaler(self, body, **kwargs):
+    def create_horizontalpodautoscaler(self, body, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -62,7 +62,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_horizontal_pod_autoscaler(body, callback=callback_function)
+        >>> thread = api.create_horizontalpodautoscaler(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -74,12 +74,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_horizontal_pod_autoscaler_with_http_info(body, **kwargs)
+            return self.create_horizontalpodautoscaler_with_http_info(body, **kwargs)
         else:
-            (data) = self.create_horizontal_pod_autoscaler_with_http_info(body, **kwargs)
+            (data) = self.create_horizontalpodautoscaler_with_http_info(body, **kwargs)
             return data
 
-    def create_horizontal_pod_autoscaler_with_http_info(self, body, **kwargs):
+    def create_horizontalpodautoscaler_with_http_info(self, body, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -90,7 +90,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_horizontal_pod_autoscaler_with_http_info(body, callback=callback_function)
+        >>> thread = api.create_horizontalpodautoscaler_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -110,13 +110,13 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_horizontal_pod_autoscaler" % key
+                    " to method create_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `create_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -159,7 +159,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def create_namespaced_horizontal_pod_autoscaler(self, body, namespace, **kwargs):
+    def create_namespaced_horizontalpodautoscaler(self, body, namespace, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -170,7 +170,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_horizontal_pod_autoscaler(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_horizontalpodautoscaler(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -183,12 +183,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, **kwargs):
         """
         create a HorizontalPodAutoscaler
         
@@ -199,7 +199,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -220,16 +220,16 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_horizontal_pod_autoscaler" % key
+                    " to method create_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -274,7 +274,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def delete_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
+    def delete_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
         """
         delete a HorizontalPodAutoscaler
         
@@ -285,7 +285,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -299,12 +299,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def delete_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
         """
         delete a HorizontalPodAutoscaler
         
@@ -315,7 +315,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -337,19 +337,19 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_horizontal_pod_autoscaler" % key
+                    " to method delete_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -396,7 +396,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def deletecollection_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
+    def delete_namespaced_horizontalpodautoscalers(self, namespace, **kwargs):
         """
         delete collection of HorizontalPodAutoscaler
         
@@ -407,7 +407,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_horizontal_pod_autoscaler(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscalers(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -424,12 +424,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
+            return self.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
+            (data) = self.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
             return data
 
-    def deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, **kwargs):
+    def delete_namespaced_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
         """
         delete collection of HorizontalPodAutoscaler
         
@@ -440,7 +440,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -465,13 +465,13 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_horizontal_pod_autoscaler" % key
+                    " to method delete_namespaced_horizontalpodautoscalers" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_horizontalpodautoscalers`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
@@ -524,475 +524,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def get_api_resources(self, **kwargs):
-        """
-        get available resources
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_api_resources(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_api_resources_with_http_info(**kwargs)
-        else:
-            (data) = self.get_api_resources_with_http_info(**kwargs)
-            return data
-
-    def get_api_resources_with_http_info(self, **kwargs):
-        """
-        get available resources
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/autoscaling/v1'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def list_horizontal_pod_autoscaler(self, **kwargs):
-        """
-        list or watch objects of kind HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_horizontal_pod_autoscaler(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: V1HorizontalPodAutoscalerList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.list_horizontal_pod_autoscaler_with_http_info(**kwargs)
-        else:
-            (data) = self.list_horizontal_pod_autoscaler_with_http_info(**kwargs)
-            return data
-
-    def list_horizontal_pod_autoscaler_with_http_info(self, **kwargs):
-        """
-        list or watch objects of kind HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_horizontal_pod_autoscaler_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: V1HorizontalPodAutoscalerList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method list_horizontal_pod_autoscaler" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/autoscaling/v1/horizontalpodautoscalers'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1HorizontalPodAutoscalerList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def list_namespaced_horizontal_pod_autoscaler(self, namespace, **kwargs):
-        """
-        list or watch objects of kind HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_namespaced_horizontal_pod_autoscaler(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: V1HorizontalPodAutoscalerList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, **kwargs)
-            return data
-
-    def list_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, **kwargs):
-        """
-        list or watch objects of kind HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: V1HorizontalPodAutoscalerList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_horizontal_pod_autoscaler" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_horizontal_pod_autoscaler`")
-
-        resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1HorizontalPodAutoscalerList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def patch_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
-        """
-        partially update the specified HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.patch_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param UnversionedPatch body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the HorizontalPodAutoscaler (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1HorizontalPodAutoscaler
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def patch_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        partially update the specified HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.patch_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param UnversionedPatch body:  (required)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the HorizontalPodAutoscaler (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :return: V1HorizontalPodAutoscaler
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name', 'pretty']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_horizontal_pod_autoscaler" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_horizontal_pod_autoscaler`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_horizontal_pod_autoscaler`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_horizontal_pod_autoscaler`")
-
-        resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PATCH',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1HorizontalPodAutoscaler',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_horizontal_pod_autoscaler(self, namespace, name, **kwargs):
+    def get_namespaced_horizontalpodautoscaler(self, namespace, name, **kwargs):
         """
         read the specified HorizontalPodAutoscaler
         
@@ -1003,7 +535,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_horizontal_pod_autoscaler(namespace, name, callback=callback_function)
+        >>> thread = api.get_namespaced_horizontalpodautoscaler(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1018,12 +550,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            return self.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            (data) = self.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
             return data
 
-    def read_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, name, **kwargs):
+    def get_namespaced_horizontalpodautoscaler_with_http_info(self, namespace, name, **kwargs):
         """
         read the specified HorizontalPodAutoscaler
         
@@ -1034,7 +566,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.get_namespaced_horizontalpodautoscaler_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1057,16 +589,16 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_horizontal_pod_autoscaler" % key
+                    " to method get_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1115,7 +647,475 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_horizontal_pod_autoscaler(self, body, namespace, name, **kwargs):
+    def list(self, **kwargs):
+        """
+        get available resources
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_with_http_info(**kwargs)
+        else:
+            (data) = self.list_with_http_info(**kwargs)
+            return data
+
+    def list_with_http_info(self, **kwargs):
+        """
+        get available resources
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/autoscaling/v1'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type=None,
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_horizontalpodautoscalers(self, **kwargs):
+        """
+        list or watch objects of kind HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_horizontalpodautoscalers(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: V1HorizontalPodAutoscalerList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_horizontalpodautoscalers_with_http_info(**kwargs)
+        else:
+            (data) = self.list_horizontalpodautoscalers_with_http_info(**kwargs)
+            return data
+
+    def list_horizontalpodautoscalers_with_http_info(self, **kwargs):
+        """
+        list or watch objects of kind HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_horizontalpodautoscalers_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: V1HorizontalPodAutoscalerList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_horizontalpodautoscalers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/autoscaling/v1/horizontalpodautoscalers'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1HorizontalPodAutoscalerList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_namespaced_horizontalpodautoscalers(self, namespace, **kwargs):
+        """
+        list or watch objects of kind HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_namespaced_horizontalpodautoscalers(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: V1HorizontalPodAutoscalerList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
+            return data
+
+    def list_namespaced_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
+        """
+        list or watch objects of kind HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_namespaced_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: V1HorizontalPodAutoscalerList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_namespaced_horizontalpodautoscalers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_horizontalpodautoscalers`")
+
+        resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1HorizontalPodAutoscalerList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def patch_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
+        """
+        partially update the specified HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param UnversionedPatch body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the HorizontalPodAutoscaler (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1HorizontalPodAutoscaler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def patch_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        partially update the specified HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param UnversionedPatch body:  (required)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the HorizontalPodAutoscaler (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :return: V1HorizontalPodAutoscaler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'pretty']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_namespaced_horizontalpodautoscaler" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_horizontalpodautoscaler`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_horizontalpodautoscaler`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_horizontalpodautoscaler`")
+
+        resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json', 'application/strategic-merge-patch+json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PATCH',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1HorizontalPodAutoscaler',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def replace_namespaced_horizontalpodautoscaler(self, body, namespace, name, **kwargs):
         """
         replace the specified HorizontalPodAutoscaler
         
@@ -1126,7 +1126,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1140,12 +1140,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_horizontal_pod_autoscaler_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace the specified HorizontalPodAutoscaler
         
@@ -1156,7 +1156,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1178,19 +1178,19 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_horizontal_pod_autoscaler" % key
+                    " to method replace_namespaced_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1237,7 +1237,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def replace_namespaced_horizontal_pod_autoscaler_status(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_status(self, body, namespace, name, **kwargs):
         """
         replace status of the specified HorizontalPodAutoscaler
         
@@ -1248,7 +1248,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_status(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1262,12 +1262,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_horizontalpodautoscaler_status_with_http_info(self, body, namespace, name, **kwargs):
         """
         replace status of the specified HorizontalPodAutoscaler
         
@@ -1278,7 +1278,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_horizontal_pod_autoscaler_status_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_horizontalpodautoscaler_status_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1300,19 +1300,19 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_horizontal_pod_autoscaler_status" % key
+                    " to method replace_namespaced_horizontalpodautoscaler_status" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_horizontalpodautoscaler_status`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_horizontalpodautoscaler_status`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontal_pod_autoscaler_status`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_horizontalpodautoscaler_status`")
 
         resource_path = '/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status'.replace('{format}', 'json')
         path_params = {}
@@ -1359,128 +1359,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_horizontal_pod_autoscaler_list(self, **kwargs):
-        """
-        watch individual changes to a list of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_horizontal_pod_autoscaler_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_horizontal_pod_autoscaler_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_horizontal_pod_autoscaler_list_with_http_info(**kwargs)
-            return data
-
-    def watch_horizontal_pod_autoscaler_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of HorizontalPodAutoscaler
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_horizontal_pod_autoscaler_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_horizontal_pod_autoscaler_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/autoscaling/v1/watch/horizontalpodautoscalers'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_namespaced_horizontal_pod_autoscaler(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscaler(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind HorizontalPodAutoscaler
         
@@ -1491,7 +1370,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscaler(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1509,12 +1388,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_horizontal_pod_autoscaler_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscaler_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind HorizontalPodAutoscaler
         
@@ -1525,7 +1404,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscaler_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1551,16 +1430,16 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_horizontal_pod_autoscaler" % key
+                    " to method watch_namespaced_watch_horizontalpodautoscaler" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_horizontalpodautoscaler`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_horizontal_pod_autoscaler`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_horizontalpodautoscaler`")
 
         resource_path = '/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1615,7 +1494,7 @@ class ApisAutoscalingV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_horizontal_pod_autoscaler_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscalers(self, namespace, **kwargs):
         """
         watch individual changes to a list of HorizontalPodAutoscaler
         
@@ -1626,7 +1505,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscalers(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1643,12 +1522,12 @@ class ApisAutoscalingV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_horizontalpodautoscalers_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of HorizontalPodAutoscaler
         
@@ -1659,7 +1538,7 @@ class ApisAutoscalingV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_horizontal_pod_autoscaler_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_horizontalpodautoscalers_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1684,18 +1563,139 @@ class ApisAutoscalingV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_horizontal_pod_autoscaler_list" % key
+                    " to method watch_namespaced_watch_horizontalpodautoscalers" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_horizontal_pod_autoscaler_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_horizontalpodautoscalers`")
 
         resource_path = '/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_horizontalpodautoscalers(self, **kwargs):
+        """
+        watch individual changes to a list of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_horizontalpodautoscalers(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_horizontalpodautoscalers_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_horizontalpodautoscalers_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_horizontalpodautoscalers_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of HorizontalPodAutoscaler
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_horizontalpodautoscalers_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_horizontalpodautoscalers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/autoscaling/v1/watch/horizontalpodautoscalers'.replace('{format}', 'json')
+        path_params = {}
 
         query_params = {}
         if 'pretty' in params:

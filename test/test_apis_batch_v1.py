@@ -66,33 +66,41 @@ class TestApisBatchV1(unittest.TestCase):
         """
         pass
 
-    def test_deletecollection_namespaced_job(self):
+    def test_delete_namespaced_jobs(self):
         """
-        Test case for deletecollection_namespaced_job
+        Test case for delete_namespaced_jobs
 
         delete collection of Job
         """
         pass
 
-    def test_get_api_resources(self):
+    def test_get_namespaced_job(self):
         """
-        Test case for get_api_resources
+        Test case for get_namespaced_job
+
+        read the specified Job
+        """
+        pass
+
+    def test_list(self):
+        """
+        Test case for list
 
         get available resources
         """
         pass
 
-    def test_list_job(self):
+    def test_list_jobs(self):
         """
-        Test case for list_job
+        Test case for list_jobs
 
         list or watch objects of kind Job
         """
         pass
 
-    def test_list_namespaced_job(self):
+    def test_list_namespaced_jobs(self):
         """
-        Test case for list_namespaced_job
+        Test case for list_namespaced_jobs
 
         list or watch objects of kind Job
         """
@@ -103,14 +111,6 @@ class TestApisBatchV1(unittest.TestCase):
         Test case for patch_namespaced_job
 
         partially update the specified Job
-        """
-        pass
-
-    def test_read_namespaced_job(self):
-        """
-        Test case for read_namespaced_job
-
-        read the specified Job
         """
         pass
 
@@ -130,25 +130,25 @@ class TestApisBatchV1(unittest.TestCase):
         """
         pass
 
-    def test_watch_job_list(self):
+    def test_watch_namespaced_watch_job(self):
         """
-        Test case for watch_job_list
-
-        watch individual changes to a list of Job
-        """
-        pass
-
-    def test_watch_namespaced_job(self):
-        """
-        Test case for watch_namespaced_job
+        Test case for watch_namespaced_watch_job
 
         watch changes to an object of kind Job
         """
         pass
 
-    def test_watch_namespaced_job_list(self):
+    def test_watch_namespaced_watch_jobs(self):
         """
-        Test case for watch_namespaced_job_list
+        Test case for watch_namespaced_watch_jobs
+
+        watch individual changes to a list of Job
+        """
+        pass
+
+    def test_watch_watch_jobs(self):
+        """
+        Test case for watch_watch_jobs
 
         watch individual changes to a list of Job
         """

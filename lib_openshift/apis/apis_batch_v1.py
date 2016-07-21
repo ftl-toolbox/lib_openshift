@@ -396,7 +396,7 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def deletecollection_namespaced_job(self, namespace, **kwargs):
+    def delete_namespaced_jobs(self, namespace, **kwargs):
         """
         delete collection of Job
         
@@ -407,7 +407,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_job(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -424,12 +424,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.deletecollection_namespaced_job_with_http_info(namespace, **kwargs)
+            return self.delete_namespaced_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.deletecollection_namespaced_job_with_http_info(namespace, **kwargs)
+            (data) = self.delete_namespaced_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def deletecollection_namespaced_job_with_http_info(self, namespace, **kwargs):
+    def delete_namespaced_jobs_with_http_info(self, namespace, **kwargs):
         """
         delete collection of Job
         
@@ -440,7 +440,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.deletecollection_namespaced_job_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.delete_namespaced_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -465,13 +465,13 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method deletecollection_namespaced_job" % key
+                    " to method delete_namespaced_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `deletecollection_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_jobs`")
 
         resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
@@ -524,7 +524,130 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def get_api_resources(self, **kwargs):
+    def get_namespaced_job(self, namespace, name, **kwargs):
+        """
+        read the specified Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_job(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_namespaced_job_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.get_namespaced_job_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def get_namespaced_job_with_http_info(self, namespace, name, **kwargs):
+        """
+        read the specified Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_namespaced_job_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: object name and auth scope, such as for teams and projects (required)
+        :param str name: name of the Job (required)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1Job
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_namespaced_job" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `get_namespaced_job`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_namespaced_job`")
+
+        resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Job',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list(self, **kwargs):
         """
         get available resources
         
@@ -535,7 +658,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources(callback=callback_function)
+        >>> thread = api.list(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -545,12 +668,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_api_resources_with_http_info(**kwargs)
+            return self.list_with_http_info(**kwargs)
         else:
-            (data) = self.get_api_resources_with_http_info(**kwargs)
+            (data) = self.list_with_http_info(**kwargs)
             return data
 
-    def get_api_resources_with_http_info(self, **kwargs):
+    def list_with_http_info(self, **kwargs):
         """
         get available resources
         
@@ -561,7 +684,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_with_http_info(callback=callback_function)
+        >>> thread = api.list_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -579,7 +702,7 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources" % key
+                    " to method list" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -621,7 +744,7 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_job(self, **kwargs):
+    def list_jobs(self, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -632,7 +755,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_job(callback=callback_function)
+        >>> thread = api.list_jobs(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -648,12 +771,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_job_with_http_info(**kwargs)
+            return self.list_jobs_with_http_info(**kwargs)
         else:
-            (data) = self.list_job_with_http_info(**kwargs)
+            (data) = self.list_jobs_with_http_info(**kwargs)
             return data
 
-    def list_job_with_http_info(self, **kwargs):
+    def list_jobs_with_http_info(self, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -664,7 +787,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_job_with_http_info(callback=callback_function)
+        >>> thread = api.list_jobs_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -688,7 +811,7 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_job" % key
+                    " to method list_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -742,7 +865,7 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def list_namespaced_job(self, namespace, **kwargs):
+    def list_namespaced_jobs(self, namespace, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -753,7 +876,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_job(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -770,12 +893,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_job_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_job_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_job_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_jobs_with_http_info(self, namespace, **kwargs):
         """
         list or watch objects of kind Job
         
@@ -786,7 +909,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_job_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -811,13 +934,13 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_job" % key
+                    " to method list_namespaced_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_jobs`")
 
         resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
@@ -981,129 +1104,6 @@ class ApisBatchV1(object):
         auth_settings = []
 
         return self.api_client.call_api(resource_path, 'PATCH',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Job',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def read_namespaced_job(self, namespace, name, **kwargs):
-        """
-        read the specified Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_job(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Job (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1Job
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.read_namespaced_job_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.read_namespaced_job_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def read_namespaced_job_with_http_info(self, namespace, name, **kwargs):
-        """
-        read the specified Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.read_namespaced_job_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: object name and auth scope, such as for teams and projects (required)
-        :param str name: name of the Job (required)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param bool export: Should this value be exported.  Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact.  Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1Job
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'pretty', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_job" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_job`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_job`")
-
-        resource_path = '/apis/batch/v1/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
                                             query_params,
                                             header_params,
@@ -1359,128 +1359,7 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_job_list(self, **kwargs):
-        """
-        watch individual changes to a list of Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_job_list(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_job_list_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_job_list_with_http_info(**kwargs)
-            return data
-
-    def watch_job_list_with_http_info(self, **kwargs):
-        """
-        watch individual changes to a list of Job
-        
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_job_list_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str pretty: If 'true', then the output is pretty printed.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: Timeout for the list/watch call.
-        :return: JsonWatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_job_list" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/batch/v1/watch/jobs'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'pretty' in params:
-            query_params['pretty'] = params['pretty']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'watch' in params:
-            query_params['watch'] = params['watch']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='JsonWatchEvent',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def watch_namespaced_job(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_job(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Job
         
@@ -1491,7 +1370,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_job(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1509,12 +1388,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_job_with_http_info(namespace, name, **kwargs)
+            return self.watch_namespaced_watch_job_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.watch_namespaced_job_with_http_info(namespace, name, **kwargs)
+            (data) = self.watch_namespaced_watch_job_with_http_info(namespace, name, **kwargs)
             return data
 
-    def watch_namespaced_job_with_http_info(self, namespace, name, **kwargs):
+    def watch_namespaced_watch_job_with_http_info(self, namespace, name, **kwargs):
         """
         watch changes to an object of kind Job
         
@@ -1525,7 +1404,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_job_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1551,16 +1430,16 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_job" % key
+                    " to method watch_namespaced_watch_job" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_job`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_job`")
+            raise ValueError("Missing the required parameter `name` when calling `watch_namespaced_watch_job`")
 
         resource_path = '/apis/batch/v1/watch/namespaces/{namespace}/jobs/{name}'.replace('{format}', 'json')
         path_params = {}
@@ -1615,7 +1494,7 @@ class ApisBatchV1(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def watch_namespaced_job_list(self, namespace, **kwargs):
+    def watch_namespaced_watch_jobs(self, namespace, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -1626,7 +1505,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_list(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_jobs(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1643,12 +1522,12 @@ class ApisBatchV1(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_job_list_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_watch_jobs_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_job_list_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_watch_jobs_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_job_list_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_watch_jobs_with_http_info(self, namespace, **kwargs):
         """
         watch individual changes to a list of Job
         
@@ -1659,7 +1538,7 @@ class ApisBatchV1(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_job_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_watch_jobs_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1684,18 +1563,139 @@ class ApisBatchV1(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_job_list" % key
+                    " to method watch_namespaced_watch_jobs" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_job_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_watch_jobs`")
 
         resource_path = '/apis/batch/v1/watch/namespaces/{namespace}/jobs'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'pretty' in params:
+            query_params['pretty'] = params['pretty']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'watch' in params:
+            query_params['watch'] = params['watch']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='JsonWatchEvent',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_watch_jobs(self, **kwargs):
+        """
+        watch individual changes to a list of Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_jobs(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_watch_jobs_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_watch_jobs_with_http_info(**kwargs)
+            return data
+
+    def watch_watch_jobs_with_http_info(self, **kwargs):
+        """
+        watch individual changes to a list of Job
+        
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_watch_jobs_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str pretty: If 'true', then the output is pretty printed.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: Timeout for the list/watch call.
+        :return: JsonWatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['pretty', 'label_selector', 'field_selector', 'watch', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_watch_jobs" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/batch/v1/watch/jobs'.replace('{format}', 'json')
+        path_params = {}
 
         query_params = {}
         if 'pretty' in params:

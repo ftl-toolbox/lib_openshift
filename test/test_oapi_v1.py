@@ -50,65 +50,137 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_build_config(self):
+    def test_create_buildconfig(self):
         """
-        Test case for create_build_config
+        Test case for create_buildconfig
 
         create a BuildConfig
         """
         pass
 
-    def test_create_deployment_config(self):
+    def test_create_clusternetwork(self):
         """
-        Test case for create_deployment_config
+        Test case for create_clusternetwork
+
+        create a ClusterNetwork
+        """
+        pass
+
+    def test_create_clusterpolicie(self):
+        """
+        Test case for create_clusterpolicie
+
+        create a ClusterPolicy
+        """
+        pass
+
+    def test_create_clusterpolicybinding(self):
+        """
+        Test case for create_clusterpolicybinding
+
+        create a ClusterPolicyBinding
+        """
+        pass
+
+    def test_create_clusterrole(self):
+        """
+        Test case for create_clusterrole
+
+        create a ClusterRole
+        """
+        pass
+
+    def test_create_clusterrolebinding(self):
+        """
+        Test case for create_clusterrolebinding
+
+        create a ClusterRoleBinding
+        """
+        pass
+
+    def test_create_deploymentconfig(self):
+        """
+        Test case for create_deploymentconfig
 
         create a DeploymentConfig
         """
         pass
 
-    def test_create_deployment_config_rollback(self):
+    def test_create_deploymentconfigrollback(self):
         """
-        Test case for create_deployment_config_rollback
+        Test case for create_deploymentconfigrollback
 
         create a DeploymentConfigRollback
         """
         pass
 
-    def test_create_image_stream(self):
+    def test_create_group(self):
         """
-        Test case for create_image_stream
+        Test case for create_group
+
+        create a Group
+        """
+        pass
+
+    def test_create_hostsubnet(self):
+        """
+        Test case for create_hostsubnet
+
+        create a HostSubnet
+        """
+        pass
+
+    def test_create_identitie(self):
+        """
+        Test case for create_identitie
+
+        create a Identity
+        """
+        pass
+
+    def test_create_image(self):
+        """
+        Test case for create_image
+
+        create a Image
+        """
+        pass
+
+    def test_create_imagestream(self):
+        """
+        Test case for create_imagestream
 
         create a ImageStream
         """
         pass
 
-    def test_create_image_stream_import(self):
+    def test_create_imagestreamimport(self):
         """
-        Test case for create_image_stream_import
+        Test case for create_imagestreamimport
 
         create a ImageStreamImport
         """
         pass
 
-    def test_create_image_stream_mapping(self):
+    def test_create_imagestreammapping(self):
         """
-        Test case for create_image_stream_mapping
+        Test case for create_imagestreammapping
 
         create a ImageStreamMapping
         """
         pass
 
-    def test_create_local_resource_access_review(self):
+    def test_create_localresourceaccessreview(self):
         """
-        Test case for create_local_resource_access_review
+        Test case for create_localresourceaccessreview
 
         create a LocalResourceAccessReview
         """
         pass
 
-    def test_create_local_subject_access_review(self):
+    def test_create_localsubjectaccessreview(self):
         """
-        Test case for create_local_subject_access_review
+        Test case for create_localsubjectaccessreview
 
         create a LocalSubjectAccessReview
         """
@@ -122,233 +194,137 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_build_config(self):
+    def test_create_namespaced_build_clone(self):
         """
-        Test case for create_namespaced_build_config
-
-        create a BuildConfig
-        """
-        pass
-
-    def test_create_namespaced_build_request_clone(self):
-        """
-        Test case for create_namespaced_build_request_clone
+        Test case for create_namespaced_build_clone
 
         create clone of a BuildRequest
         """
         pass
 
-    def test_create_namespaced_build_request_instantiate(self):
+    def test_create_namespaced_buildconfig(self):
         """
-        Test case for create_namespaced_build_request_instantiate
+        Test case for create_namespaced_buildconfig
+
+        create a BuildConfig
+        """
+        pass
+
+    def test_create_namespaced_buildconfig_instantiate(self):
+        """
+        Test case for create_namespaced_buildconfig_instantiate
 
         create instantiate of a BuildRequest
         """
         pass
 
-    def test_create_namespaced_cluster_network(self):
+    def test_create_namespaced_buildconfig_instantiatebinary(self):
         """
-        Test case for create_namespaced_cluster_network
+        Test case for create_namespaced_buildconfig_instantiatebinary
 
-        create a ClusterNetwork
+        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
         """
         pass
 
-    def test_create_namespaced_cluster_policy(self):
+    def test_create_namespaced_buildconfig_webhook(self):
         """
-        Test case for create_namespaced_cluster_policy
+        Test case for create_namespaced_buildconfig_webhook
 
-        create a ClusterPolicy
+        connect POST requests to webhooks of Status
         """
         pass
 
-    def test_create_namespaced_cluster_policy_binding(self):
+    def test_create_namespaced_buildconfig_webhookspath(self):
         """
-        Test case for create_namespaced_cluster_policy_binding
+        Test case for create_namespaced_buildconfig_webhookspath
 
-        create a ClusterPolicyBinding
+        connect POST requests to webhooks of Status
         """
         pass
 
-    def test_create_namespaced_cluster_role(self):
+    def test_create_namespaced_deploymentconfig(self):
         """
-        Test case for create_namespaced_cluster_role
-
-        create a ClusterRole
-        """
-        pass
-
-    def test_create_namespaced_cluster_role_binding(self):
-        """
-        Test case for create_namespaced_cluster_role_binding
-
-        create a ClusterRoleBinding
-        """
-        pass
-
-    def test_create_namespaced_deployment_config(self):
-        """
-        Test case for create_namespaced_deployment_config
+        Test case for create_namespaced_deploymentconfig
 
         create a DeploymentConfig
         """
         pass
 
-    def test_create_namespaced_deployment_config_rollback(self):
+    def test_create_namespaced_deploymentconfigrollback(self):
         """
-        Test case for create_namespaced_deployment_config_rollback
+        Test case for create_namespaced_deploymentconfigrollback
 
         create a DeploymentConfigRollback
         """
         pass
 
-    def test_create_namespaced_group(self):
+    def test_create_namespaced_imagestream(self):
         """
-        Test case for create_namespaced_group
-
-        create a Group
-        """
-        pass
-
-    def test_create_namespaced_host_subnet(self):
-        """
-        Test case for create_namespaced_host_subnet
-
-        create a HostSubnet
-        """
-        pass
-
-    def test_create_namespaced_identity(self):
-        """
-        Test case for create_namespaced_identity
-
-        create a Identity
-        """
-        pass
-
-    def test_create_namespaced_image(self):
-        """
-        Test case for create_namespaced_image
-
-        create a Image
-        """
-        pass
-
-    def test_create_namespaced_image_stream(self):
-        """
-        Test case for create_namespaced_image_stream
+        Test case for create_namespaced_imagestream
 
         create a ImageStream
         """
         pass
 
-    def test_create_namespaced_image_stream_import(self):
+    def test_create_namespaced_imagestreamimport(self):
         """
-        Test case for create_namespaced_image_stream_import
+        Test case for create_namespaced_imagestreamimport
 
         create a ImageStreamImport
         """
         pass
 
-    def test_create_namespaced_image_stream_mapping(self):
+    def test_create_namespaced_imagestreammapping(self):
         """
-        Test case for create_namespaced_image_stream_mapping
+        Test case for create_namespaced_imagestreammapping
 
         create a ImageStreamMapping
         """
         pass
 
-    def test_create_namespaced_local_resource_access_review(self):
+    def test_create_namespaced_localresourceaccessreview(self):
         """
-        Test case for create_namespaced_local_resource_access_review
+        Test case for create_namespaced_localresourceaccessreview
 
         create a LocalResourceAccessReview
         """
         pass
 
-    def test_create_namespaced_local_subject_access_review(self):
+    def test_create_namespaced_localsubjectaccessreview(self):
         """
-        Test case for create_namespaced_local_subject_access_review
+        Test case for create_namespaced_localsubjectaccessreview
 
         create a LocalSubjectAccessReview
         """
         pass
 
-    def test_create_namespaced_net_namespace(self):
+    def test_create_namespaced_policie(self):
         """
-        Test case for create_namespaced_net_namespace
-
-        create a NetNamespace
-        """
-        pass
-
-    def test_create_namespaced_o_auth_access_token(self):
-        """
-        Test case for create_namespaced_o_auth_access_token
-
-        create a OAuthAccessToken
-        """
-        pass
-
-    def test_create_namespaced_o_auth_authorize_token(self):
-        """
-        Test case for create_namespaced_o_auth_authorize_token
-
-        create a OAuthAuthorizeToken
-        """
-        pass
-
-    def test_create_namespaced_o_auth_client(self):
-        """
-        Test case for create_namespaced_o_auth_client
-
-        create a OAuthClient
-        """
-        pass
-
-    def test_create_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for create_namespaced_o_auth_client_authorization
-
-        create a OAuthClientAuthorization
-        """
-        pass
-
-    def test_create_namespaced_policy(self):
-        """
-        Test case for create_namespaced_policy
+        Test case for create_namespaced_policie
 
         create a Policy
         """
         pass
 
-    def test_create_namespaced_policy_binding(self):
+    def test_create_namespaced_policybinding(self):
         """
-        Test case for create_namespaced_policy_binding
+        Test case for create_namespaced_policybinding
 
         create a PolicyBinding
         """
         pass
 
-    def test_create_namespaced_project(self):
+    def test_create_namespaced_processedtemplate(self):
         """
-        Test case for create_namespaced_project
+        Test case for create_namespaced_processedtemplate
 
-        create a Project
+        create a Template
         """
         pass
 
-    def test_create_namespaced_project_request(self):
+    def test_create_namespaced_resourceaccessreview(self):
         """
-        Test case for create_namespaced_project_request
-
-        create a ProjectRequest
-        """
-        pass
-
-    def test_create_namespaced_resource_access_review(self):
-        """
-        Test case for create_namespaced_resource_access_review
+        Test case for create_namespaced_resourceaccessreview
 
         create a ResourceAccessReview
         """
@@ -362,9 +338,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_role_binding(self):
+    def test_create_namespaced_rolebinding(self):
         """
-        Test case for create_namespaced_role_binding
+        Test case for create_namespaced_rolebinding
 
         create a RoleBinding
         """
@@ -378,9 +354,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_subject_access_review(self):
+    def test_create_namespaced_subjectaccessreview(self):
         """
-        Test case for create_namespaced_subject_access_review
+        Test case for create_namespaced_subjectaccessreview
 
         create a SubjectAccessReview
         """
@@ -394,49 +370,89 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_template_0(self):
+    def test_create_netnamespace(self):
         """
-        Test case for create_namespaced_template_0
+        Test case for create_netnamespace
 
-        create a Template
+        create a NetNamespace
         """
         pass
 
-    def test_create_namespaced_user(self):
+    def test_create_oauthaccesstoken(self):
         """
-        Test case for create_namespaced_user
+        Test case for create_oauthaccesstoken
 
-        create a User
+        create a OAuthAccessToken
         """
         pass
 
-    def test_create_namespaced_user_identity_mapping(self):
+    def test_create_oauthauthorizetoken(self):
         """
-        Test case for create_namespaced_user_identity_mapping
+        Test case for create_oauthauthorizetoken
 
-        create a UserIdentityMapping
+        create a OAuthAuthorizeToken
         """
         pass
 
-    def test_create_policy(self):
+    def test_create_oauthclient(self):
         """
-        Test case for create_policy
+        Test case for create_oauthclient
+
+        create a OAuthClient
+        """
+        pass
+
+    def test_create_oauthclientauthorization(self):
+        """
+        Test case for create_oauthclientauthorization
+
+        create a OAuthClientAuthorization
+        """
+        pass
+
+    def test_create_policie(self):
+        """
+        Test case for create_policie
 
         create a Policy
         """
         pass
 
-    def test_create_policy_binding(self):
+    def test_create_policybinding(self):
         """
-        Test case for create_policy_binding
+        Test case for create_policybinding
 
         create a PolicyBinding
         """
         pass
 
-    def test_create_resource_access_review(self):
+    def test_create_processedtemplate(self):
         """
-        Test case for create_resource_access_review
+        Test case for create_processedtemplate
+
+        create a Template
+        """
+        pass
+
+    def test_create_project(self):
+        """
+        Test case for create_project
+
+        create a Project
+        """
+        pass
+
+    def test_create_projectrequest(self):
+        """
+        Test case for create_projectrequest
+
+        create a ProjectRequest
+        """
+        pass
+
+    def test_create_resourceaccessreview(self):
+        """
+        Test case for create_resourceaccessreview
 
         create a ResourceAccessReview
         """
@@ -450,9 +466,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_role_binding(self):
+    def test_create_rolebinding(self):
         """
-        Test case for create_role_binding
+        Test case for create_rolebinding
 
         create a RoleBinding
         """
@@ -466,9 +482,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_subject_access_review(self):
+    def test_create_subjectaccessreview(self):
         """
-        Test case for create_subject_access_review
+        Test case for create_subjectaccessreview
 
         create a SubjectAccessReview
         """
@@ -482,11 +498,147 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_create_template_0(self):
+    def test_create_user(self):
         """
-        Test case for create_template_0
+        Test case for create_user
 
-        create a Template
+        create a User
+        """
+        pass
+
+    def test_create_useridentitymapping(self):
+        """
+        Test case for create_useridentitymapping
+
+        create a UserIdentityMapping
+        """
+        pass
+
+    def test_delete_clusternetwork(self):
+        """
+        Test case for delete_clusternetwork
+
+        delete a ClusterNetwork
+        """
+        pass
+
+    def test_delete_clusternetworks(self):
+        """
+        Test case for delete_clusternetworks
+
+        delete collection of ClusterNetwork
+        """
+        pass
+
+    def test_delete_clusterpolicie(self):
+        """
+        Test case for delete_clusterpolicie
+
+        delete a ClusterPolicy
+        """
+        pass
+
+    def test_delete_clusterpolicies(self):
+        """
+        Test case for delete_clusterpolicies
+
+        delete collection of ClusterPolicy
+        """
+        pass
+
+    def test_delete_clusterpolicybinding(self):
+        """
+        Test case for delete_clusterpolicybinding
+
+        delete a ClusterPolicyBinding
+        """
+        pass
+
+    def test_delete_clusterpolicybindings(self):
+        """
+        Test case for delete_clusterpolicybindings
+
+        delete collection of ClusterPolicyBinding
+        """
+        pass
+
+    def test_delete_clusterrole(self):
+        """
+        Test case for delete_clusterrole
+
+        delete a ClusterRole
+        """
+        pass
+
+    def test_delete_clusterrolebinding(self):
+        """
+        Test case for delete_clusterrolebinding
+
+        delete a ClusterRoleBinding
+        """
+        pass
+
+    def test_delete_group(self):
+        """
+        Test case for delete_group
+
+        delete a Group
+        """
+        pass
+
+    def test_delete_groups(self):
+        """
+        Test case for delete_groups
+
+        delete collection of Group
+        """
+        pass
+
+    def test_delete_hostsubnet(self):
+        """
+        Test case for delete_hostsubnet
+
+        delete a HostSubnet
+        """
+        pass
+
+    def test_delete_hostsubnets(self):
+        """
+        Test case for delete_hostsubnets
+
+        delete collection of HostSubnet
+        """
+        pass
+
+    def test_delete_identitie(self):
+        """
+        Test case for delete_identitie
+
+        delete a Identity
+        """
+        pass
+
+    def test_delete_identities(self):
+        """
+        Test case for delete_identities
+
+        delete collection of Identity
+        """
+        pass
+
+    def test_delete_image(self):
+        """
+        Test case for delete_image
+
+        delete a Image
+        """
+        pass
+
+    def test_delete_images(self):
+        """
+        Test case for delete_images
+
+        delete collection of Image
         """
         pass
 
@@ -498,171 +650,99 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_build_config(self):
+    def test_delete_namespaced_buildconfig(self):
         """
-        Test case for delete_namespaced_build_config
+        Test case for delete_namespaced_buildconfig
 
         delete a BuildConfig
         """
         pass
 
-    def test_delete_namespaced_cluster_network(self):
+    def test_delete_namespaced_buildconfigs(self):
         """
-        Test case for delete_namespaced_cluster_network
+        Test case for delete_namespaced_buildconfigs
 
-        delete a ClusterNetwork
+        delete collection of BuildConfig
         """
         pass
 
-    def test_delete_namespaced_cluster_policy(self):
+    def test_delete_namespaced_builds(self):
         """
-        Test case for delete_namespaced_cluster_policy
+        Test case for delete_namespaced_builds
 
-        delete a ClusterPolicy
+        delete collection of Build
         """
         pass
 
-    def test_delete_namespaced_cluster_policy_binding(self):
+    def test_delete_namespaced_deploymentconfig(self):
         """
-        Test case for delete_namespaced_cluster_policy_binding
-
-        delete a ClusterPolicyBinding
-        """
-        pass
-
-    def test_delete_namespaced_cluster_role(self):
-        """
-        Test case for delete_namespaced_cluster_role
-
-        delete a ClusterRole
-        """
-        pass
-
-    def test_delete_namespaced_cluster_role_binding(self):
-        """
-        Test case for delete_namespaced_cluster_role_binding
-
-        delete a ClusterRoleBinding
-        """
-        pass
-
-    def test_delete_namespaced_deployment_config(self):
-        """
-        Test case for delete_namespaced_deployment_config
+        Test case for delete_namespaced_deploymentconfig
 
         delete a DeploymentConfig
         """
         pass
 
-    def test_delete_namespaced_group(self):
+    def test_delete_namespaced_deploymentconfigs(self):
         """
-        Test case for delete_namespaced_group
+        Test case for delete_namespaced_deploymentconfigs
 
-        delete a Group
+        delete collection of DeploymentConfig
         """
         pass
 
-    def test_delete_namespaced_host_subnet(self):
+    def test_delete_namespaced_imagestream(self):
         """
-        Test case for delete_namespaced_host_subnet
-
-        delete a HostSubnet
-        """
-        pass
-
-    def test_delete_namespaced_identity(self):
-        """
-        Test case for delete_namespaced_identity
-
-        delete a Identity
-        """
-        pass
-
-    def test_delete_namespaced_image(self):
-        """
-        Test case for delete_namespaced_image
-
-        delete a Image
-        """
-        pass
-
-    def test_delete_namespaced_image_stream(self):
-        """
-        Test case for delete_namespaced_image_stream
+        Test case for delete_namespaced_imagestream
 
         delete a ImageStream
         """
         pass
 
-    def test_delete_namespaced_image_stream_tag(self):
+    def test_delete_namespaced_imagestreams(self):
         """
-        Test case for delete_namespaced_image_stream_tag
+        Test case for delete_namespaced_imagestreams
+
+        delete collection of ImageStream
+        """
+        pass
+
+    def test_delete_namespaced_imagestreamtag(self):
+        """
+        Test case for delete_namespaced_imagestreamtag
 
         delete a ImageStreamTag
         """
         pass
 
-    def test_delete_namespaced_net_namespace(self):
+    def test_delete_namespaced_policie(self):
         """
-        Test case for delete_namespaced_net_namespace
-
-        delete a NetNamespace
-        """
-        pass
-
-    def test_delete_namespaced_o_auth_access_token(self):
-        """
-        Test case for delete_namespaced_o_auth_access_token
-
-        delete a OAuthAccessToken
-        """
-        pass
-
-    def test_delete_namespaced_o_auth_authorize_token(self):
-        """
-        Test case for delete_namespaced_o_auth_authorize_token
-
-        delete a OAuthAuthorizeToken
-        """
-        pass
-
-    def test_delete_namespaced_o_auth_client(self):
-        """
-        Test case for delete_namespaced_o_auth_client
-
-        delete a OAuthClient
-        """
-        pass
-
-    def test_delete_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for delete_namespaced_o_auth_client_authorization
-
-        delete a OAuthClientAuthorization
-        """
-        pass
-
-    def test_delete_namespaced_policy(self):
-        """
-        Test case for delete_namespaced_policy
+        Test case for delete_namespaced_policie
 
         delete a Policy
         """
         pass
 
-    def test_delete_namespaced_policy_binding(self):
+    def test_delete_namespaced_policies(self):
         """
-        Test case for delete_namespaced_policy_binding
+        Test case for delete_namespaced_policies
+
+        delete collection of Policy
+        """
+        pass
+
+    def test_delete_namespaced_policybinding(self):
+        """
+        Test case for delete_namespaced_policybinding
 
         delete a PolicyBinding
         """
         pass
 
-    def test_delete_namespaced_project(self):
+    def test_delete_namespaced_policybindings(self):
         """
-        Test case for delete_namespaced_project
+        Test case for delete_namespaced_policybindings
 
-        delete a Project
+        delete collection of PolicyBinding
         """
         pass
 
@@ -674,9 +754,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_role_binding(self):
+    def test_delete_namespaced_rolebinding(self):
         """
-        Test case for delete_namespaced_role_binding
+        Test case for delete_namespaced_rolebinding
 
         delete a RoleBinding
         """
@@ -690,6 +770,14 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
+    def test_delete_namespaced_routes(self):
+        """
+        Test case for delete_namespaced_routes
+
+        delete collection of Route
+        """
+        pass
+
     def test_delete_namespaced_template(self):
         """
         Test case for delete_namespaced_template
@@ -698,491 +786,771 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_user(self):
+    def test_delete_namespaced_templates(self):
         """
-        Test case for delete_namespaced_user
-
-        delete a User
-        """
-        pass
-
-    def test_delete_namespaced_user_identity_mapping(self):
-        """
-        Test case for delete_namespaced_user_identity_mapping
-
-        delete a UserIdentityMapping
-        """
-        pass
-
-    def test_deletecollection_namespaced_build(self):
-        """
-        Test case for deletecollection_namespaced_build
-
-        delete collection of Build
-        """
-        pass
-
-    def test_deletecollection_namespaced_build_config(self):
-        """
-        Test case for deletecollection_namespaced_build_config
-
-        delete collection of BuildConfig
-        """
-        pass
-
-    def test_deletecollection_namespaced_cluster_network(self):
-        """
-        Test case for deletecollection_namespaced_cluster_network
-
-        delete collection of ClusterNetwork
-        """
-        pass
-
-    def test_deletecollection_namespaced_cluster_policy(self):
-        """
-        Test case for deletecollection_namespaced_cluster_policy
-
-        delete collection of ClusterPolicy
-        """
-        pass
-
-    def test_deletecollection_namespaced_cluster_policy_binding(self):
-        """
-        Test case for deletecollection_namespaced_cluster_policy_binding
-
-        delete collection of ClusterPolicyBinding
-        """
-        pass
-
-    def test_deletecollection_namespaced_deployment_config(self):
-        """
-        Test case for deletecollection_namespaced_deployment_config
-
-        delete collection of DeploymentConfig
-        """
-        pass
-
-    def test_deletecollection_namespaced_group(self):
-        """
-        Test case for deletecollection_namespaced_group
-
-        delete collection of Group
-        """
-        pass
-
-    def test_deletecollection_namespaced_host_subnet(self):
-        """
-        Test case for deletecollection_namespaced_host_subnet
-
-        delete collection of HostSubnet
-        """
-        pass
-
-    def test_deletecollection_namespaced_identity(self):
-        """
-        Test case for deletecollection_namespaced_identity
-
-        delete collection of Identity
-        """
-        pass
-
-    def test_deletecollection_namespaced_image(self):
-        """
-        Test case for deletecollection_namespaced_image
-
-        delete collection of Image
-        """
-        pass
-
-    def test_deletecollection_namespaced_image_stream(self):
-        """
-        Test case for deletecollection_namespaced_image_stream
-
-        delete collection of ImageStream
-        """
-        pass
-
-    def test_deletecollection_namespaced_net_namespace(self):
-        """
-        Test case for deletecollection_namespaced_net_namespace
-
-        delete collection of NetNamespace
-        """
-        pass
-
-    def test_deletecollection_namespaced_o_auth_client(self):
-        """
-        Test case for deletecollection_namespaced_o_auth_client
-
-        delete collection of OAuthClient
-        """
-        pass
-
-    def test_deletecollection_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for deletecollection_namespaced_o_auth_client_authorization
-
-        delete collection of OAuthClientAuthorization
-        """
-        pass
-
-    def test_deletecollection_namespaced_policy(self):
-        """
-        Test case for deletecollection_namespaced_policy
-
-        delete collection of Policy
-        """
-        pass
-
-    def test_deletecollection_namespaced_policy_binding(self):
-        """
-        Test case for deletecollection_namespaced_policy_binding
-
-        delete collection of PolicyBinding
-        """
-        pass
-
-    def test_deletecollection_namespaced_route(self):
-        """
-        Test case for deletecollection_namespaced_route
-
-        delete collection of Route
-        """
-        pass
-
-    def test_deletecollection_namespaced_template(self):
-        """
-        Test case for deletecollection_namespaced_template
+        Test case for delete_namespaced_templates
 
         delete collection of Template
         """
         pass
 
-    def test_deletecollection_namespaced_user(self):
+    def test_delete_netnamespace(self):
         """
-        Test case for deletecollection_namespaced_user
+        Test case for delete_netnamespace
+
+        delete a NetNamespace
+        """
+        pass
+
+    def test_delete_netnamespaces(self):
+        """
+        Test case for delete_netnamespaces
+
+        delete collection of NetNamespace
+        """
+        pass
+
+    def test_delete_oauthaccesstoken(self):
+        """
+        Test case for delete_oauthaccesstoken
+
+        delete a OAuthAccessToken
+        """
+        pass
+
+    def test_delete_oauthauthorizetoken(self):
+        """
+        Test case for delete_oauthauthorizetoken
+
+        delete a OAuthAuthorizeToken
+        """
+        pass
+
+    def test_delete_oauthclient(self):
+        """
+        Test case for delete_oauthclient
+
+        delete a OAuthClient
+        """
+        pass
+
+    def test_delete_oauthclientauthorization(self):
+        """
+        Test case for delete_oauthclientauthorization
+
+        delete a OAuthClientAuthorization
+        """
+        pass
+
+    def test_delete_oauthclientauthorizations(self):
+        """
+        Test case for delete_oauthclientauthorizations
+
+        delete collection of OAuthClientAuthorization
+        """
+        pass
+
+    def test_delete_oauthclients(self):
+        """
+        Test case for delete_oauthclients
+
+        delete collection of OAuthClient
+        """
+        pass
+
+    def test_delete_project(self):
+        """
+        Test case for delete_project
+
+        delete a Project
+        """
+        pass
+
+    def test_delete_user(self):
+        """
+        Test case for delete_user
+
+        delete a User
+        """
+        pass
+
+    def test_delete_useridentitymapping(self):
+        """
+        Test case for delete_useridentitymapping
+
+        delete a UserIdentityMapping
+        """
+        pass
+
+    def test_delete_users(self):
+        """
+        Test case for delete_users
 
         delete collection of User
         """
         pass
 
-    def test_get_api_resources(self):
+    def test_get_clusternetwork(self):
         """
-        Test case for get_api_resources
+        Test case for get_clusternetwork
+
+        read the specified ClusterNetwork
+        """
+        pass
+
+    def test_get_clusterpolicie(self):
+        """
+        Test case for get_clusterpolicie
+
+        read the specified ClusterPolicy
+        """
+        pass
+
+    def test_get_clusterpolicybinding(self):
+        """
+        Test case for get_clusterpolicybinding
+
+        read the specified ClusterPolicyBinding
+        """
+        pass
+
+    def test_get_clusterrole(self):
+        """
+        Test case for get_clusterrole
+
+        read the specified ClusterRole
+        """
+        pass
+
+    def test_get_clusterrolebinding(self):
+        """
+        Test case for get_clusterrolebinding
+
+        read the specified ClusterRoleBinding
+        """
+        pass
+
+    def test_get_group(self):
+        """
+        Test case for get_group
+
+        read the specified Group
+        """
+        pass
+
+    def test_get_hostsubnet(self):
+        """
+        Test case for get_hostsubnet
+
+        read the specified HostSubnet
+        """
+        pass
+
+    def test_get_identitie(self):
+        """
+        Test case for get_identitie
+
+        read the specified Identity
+        """
+        pass
+
+    def test_get_image(self):
+        """
+        Test case for get_image
+
+        read the specified Image
+        """
+        pass
+
+    def test_get_namespaced_build(self):
+        """
+        Test case for get_namespaced_build
+
+        read the specified Build
+        """
+        pass
+
+    def test_get_namespaced_build_log(self):
+        """
+        Test case for get_namespaced_build_log
+
+        read log of the specified BuildLog
+        """
+        pass
+
+    def test_get_namespaced_buildconfig(self):
+        """
+        Test case for get_namespaced_buildconfig
+
+        read the specified BuildConfig
+        """
+        pass
+
+    def test_get_namespaced_deploymentconfig(self):
+        """
+        Test case for get_namespaced_deploymentconfig
+
+        read the specified DeploymentConfig
+        """
+        pass
+
+    def test_get_namespaced_deploymentconfig_log(self):
+        """
+        Test case for get_namespaced_deploymentconfig_log
+
+        read log of the specified DeploymentLog
+        """
+        pass
+
+    def test_get_namespaced_deploymentconfig_scale(self):
+        """
+        Test case for get_namespaced_deploymentconfig_scale
+
+        read scale of the specified Scale
+        """
+        pass
+
+    def test_get_namespaced_generatedeploymentconfig(self):
+        """
+        Test case for get_namespaced_generatedeploymentconfig
+
+        read the specified DeploymentConfig
+        """
+        pass
+
+    def test_get_namespaced_imagestream(self):
+        """
+        Test case for get_namespaced_imagestream
+
+        read the specified ImageStream
+        """
+        pass
+
+    def test_get_namespaced_imagestream_secrets(self):
+        """
+        Test case for get_namespaced_imagestream_secrets
+
+        read secrets of the specified SecretList
+        """
+        pass
+
+    def test_get_namespaced_imagestreamimage(self):
+        """
+        Test case for get_namespaced_imagestreamimage
+
+        read the specified ImageStreamImage
+        """
+        pass
+
+    def test_get_namespaced_imagestreamtag(self):
+        """
+        Test case for get_namespaced_imagestreamtag
+
+        read the specified ImageStreamTag
+        """
+        pass
+
+    def test_get_namespaced_policie(self):
+        """
+        Test case for get_namespaced_policie
+
+        read the specified Policy
+        """
+        pass
+
+    def test_get_namespaced_policybinding(self):
+        """
+        Test case for get_namespaced_policybinding
+
+        read the specified PolicyBinding
+        """
+        pass
+
+    def test_get_namespaced_role(self):
+        """
+        Test case for get_namespaced_role
+
+        read the specified Role
+        """
+        pass
+
+    def test_get_namespaced_rolebinding(self):
+        """
+        Test case for get_namespaced_rolebinding
+
+        read the specified RoleBinding
+        """
+        pass
+
+    def test_get_namespaced_route(self):
+        """
+        Test case for get_namespaced_route
+
+        read the specified Route
+        """
+        pass
+
+    def test_get_namespaced_template(self):
+        """
+        Test case for get_namespaced_template
+
+        read the specified Template
+        """
+        pass
+
+    def test_get_netnamespace(self):
+        """
+        Test case for get_netnamespace
+
+        read the specified NetNamespace
+        """
+        pass
+
+    def test_get_oauthaccesstoken(self):
+        """
+        Test case for get_oauthaccesstoken
+
+        read the specified OAuthAccessToken
+        """
+        pass
+
+    def test_get_oauthauthorizetoken(self):
+        """
+        Test case for get_oauthauthorizetoken
+
+        read the specified OAuthAuthorizeToken
+        """
+        pass
+
+    def test_get_oauthclient(self):
+        """
+        Test case for get_oauthclient
+
+        read the specified OAuthClient
+        """
+        pass
+
+    def test_get_oauthclientauthorization(self):
+        """
+        Test case for get_oauthclientauthorization
+
+        read the specified OAuthClientAuthorization
+        """
+        pass
+
+    def test_get_project(self):
+        """
+        Test case for get_project
+
+        read the specified Project
+        """
+        pass
+
+    def test_get_user(self):
+        """
+        Test case for get_user
+
+        read the specified User
+        """
+        pass
+
+    def test_get_useridentitymapping(self):
+        """
+        Test case for get_useridentitymapping
+
+        read the specified UserIdentityMapping
+        """
+        pass
+
+    def test_list(self):
+        """
+        Test case for list
 
         get available resources
         """
         pass
 
-    def test_list_build(self):
+    def test_list_buildconfigs(self):
         """
-        Test case for list_build
-
-        list or watch objects of kind Build
-        """
-        pass
-
-    def test_list_build_config(self):
-        """
-        Test case for list_build_config
+        Test case for list_buildconfigs
 
         list or watch objects of kind BuildConfig
         """
         pass
 
-    def test_list_deployment_config(self):
+    def test_list_builds(self):
         """
-        Test case for list_deployment_config
-
-        list or watch objects of kind DeploymentConfig
-        """
-        pass
-
-    def test_list_image_stream(self):
-        """
-        Test case for list_image_stream
-
-        list or watch objects of kind ImageStream
-        """
-        pass
-
-    def test_list_image_stream_tag(self):
-        """
-        Test case for list_image_stream_tag
-
-        list objects of kind ImageStreamTag
-        """
-        pass
-
-    def test_list_namespaced_build(self):
-        """
-        Test case for list_namespaced_build
+        Test case for list_builds
 
         list or watch objects of kind Build
         """
         pass
 
-    def test_list_namespaced_build_config(self):
+    def test_list_clusternetworks(self):
         """
-        Test case for list_namespaced_build_config
-
-        list or watch objects of kind BuildConfig
-        """
-        pass
-
-    def test_list_namespaced_cluster_network(self):
-        """
-        Test case for list_namespaced_cluster_network
+        Test case for list_clusternetworks
 
         list or watch objects of kind ClusterNetwork
         """
         pass
 
-    def test_list_namespaced_cluster_policy(self):
+    def test_list_clusterpolicies(self):
         """
-        Test case for list_namespaced_cluster_policy
+        Test case for list_clusterpolicies
 
         list or watch objects of kind ClusterPolicy
         """
         pass
 
-    def test_list_namespaced_cluster_policy_binding(self):
+    def test_list_clusterpolicybindings(self):
         """
-        Test case for list_namespaced_cluster_policy_binding
+        Test case for list_clusterpolicybindings
 
         list or watch objects of kind ClusterPolicyBinding
         """
         pass
 
-    def test_list_namespaced_cluster_role(self):
+    def test_list_clusterrolebindings(self):
         """
-        Test case for list_namespaced_cluster_role
-
-        list objects of kind ClusterRole
-        """
-        pass
-
-    def test_list_namespaced_cluster_role_binding(self):
-        """
-        Test case for list_namespaced_cluster_role_binding
+        Test case for list_clusterrolebindings
 
         list objects of kind ClusterRoleBinding
         """
         pass
 
-    def test_list_namespaced_deployment_config(self):
+    def test_list_clusterroles(self):
         """
-        Test case for list_namespaced_deployment_config
+        Test case for list_clusterroles
+
+        list objects of kind ClusterRole
+        """
+        pass
+
+    def test_list_deploymentconfigs(self):
+        """
+        Test case for list_deploymentconfigs
 
         list or watch objects of kind DeploymentConfig
         """
         pass
 
-    def test_list_namespaced_group(self):
+    def test_list_groups(self):
         """
-        Test case for list_namespaced_group
+        Test case for list_groups
 
         list or watch objects of kind Group
         """
         pass
 
-    def test_list_namespaced_host_subnet(self):
+    def test_list_hostsubnets(self):
         """
-        Test case for list_namespaced_host_subnet
+        Test case for list_hostsubnets
 
         list or watch objects of kind HostSubnet
         """
         pass
 
-    def test_list_namespaced_identity(self):
+    def test_list_identities(self):
         """
-        Test case for list_namespaced_identity
+        Test case for list_identities
 
         list or watch objects of kind Identity
         """
         pass
 
-    def test_list_namespaced_image(self):
+    def test_list_images(self):
         """
-        Test case for list_namespaced_image
+        Test case for list_images
 
         list or watch objects of kind Image
         """
         pass
 
-    def test_list_namespaced_image_stream(self):
+    def test_list_imagestreams(self):
         """
-        Test case for list_namespaced_image_stream
+        Test case for list_imagestreams
 
         list or watch objects of kind ImageStream
         """
         pass
 
-    def test_list_namespaced_image_stream_tag(self):
+    def test_list_imagestreamtags(self):
         """
-        Test case for list_namespaced_image_stream_tag
+        Test case for list_imagestreamtags
 
         list objects of kind ImageStreamTag
         """
         pass
 
-    def test_list_namespaced_net_namespace(self):
+    def test_list_namespaced_buildconfigs(self):
         """
-        Test case for list_namespaced_net_namespace
+        Test case for list_namespaced_buildconfigs
+
+        list or watch objects of kind BuildConfig
+        """
+        pass
+
+    def test_list_namespaced_builds(self):
+        """
+        Test case for list_namespaced_builds
+
+        list or watch objects of kind Build
+        """
+        pass
+
+    def test_list_namespaced_deploymentconfigs(self):
+        """
+        Test case for list_namespaced_deploymentconfigs
+
+        list or watch objects of kind DeploymentConfig
+        """
+        pass
+
+    def test_list_namespaced_imagestreams(self):
+        """
+        Test case for list_namespaced_imagestreams
+
+        list or watch objects of kind ImageStream
+        """
+        pass
+
+    def test_list_namespaced_imagestreamtags(self):
+        """
+        Test case for list_namespaced_imagestreamtags
+
+        list objects of kind ImageStreamTag
+        """
+        pass
+
+    def test_list_namespaced_policies(self):
+        """
+        Test case for list_namespaced_policies
+
+        list or watch objects of kind Policy
+        """
+        pass
+
+    def test_list_namespaced_policybindings(self):
+        """
+        Test case for list_namespaced_policybindings
+
+        list or watch objects of kind PolicyBinding
+        """
+        pass
+
+    def test_list_namespaced_rolebindings(self):
+        """
+        Test case for list_namespaced_rolebindings
+
+        list objects of kind RoleBinding
+        """
+        pass
+
+    def test_list_namespaced_roles(self):
+        """
+        Test case for list_namespaced_roles
+
+        list objects of kind Role
+        """
+        pass
+
+    def test_list_namespaced_routes(self):
+        """
+        Test case for list_namespaced_routes
+
+        list or watch objects of kind Route
+        """
+        pass
+
+    def test_list_namespaced_templates(self):
+        """
+        Test case for list_namespaced_templates
+
+        list or watch objects of kind Template
+        """
+        pass
+
+    def test_list_netnamespaces(self):
+        """
+        Test case for list_netnamespaces
 
         list or watch objects of kind NetNamespace
         """
         pass
 
-    def test_list_namespaced_o_auth_access_token(self):
+    def test_list_oauthaccesstokens(self):
         """
-        Test case for list_namespaced_o_auth_access_token
+        Test case for list_oauthaccesstokens
 
         list objects of kind OAuthAccessToken
         """
         pass
 
-    def test_list_namespaced_o_auth_authorize_token(self):
+    def test_list_oauthauthorizetokens(self):
         """
-        Test case for list_namespaced_o_auth_authorize_token
+        Test case for list_oauthauthorizetokens
 
         list objects of kind OAuthAuthorizeToken
         """
         pass
 
-    def test_list_namespaced_o_auth_client(self):
+    def test_list_oauthclientauthorizations(self):
         """
-        Test case for list_namespaced_o_auth_client
-
-        list or watch objects of kind OAuthClient
-        """
-        pass
-
-    def test_list_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for list_namespaced_o_auth_client_authorization
+        Test case for list_oauthclientauthorizations
 
         list or watch objects of kind OAuthClientAuthorization
         """
         pass
 
-    def test_list_namespaced_policy(self):
+    def test_list_oauthclients(self):
         """
-        Test case for list_namespaced_policy
+        Test case for list_oauthclients
+
+        list or watch objects of kind OAuthClient
+        """
+        pass
+
+    def test_list_policies(self):
+        """
+        Test case for list_policies
 
         list or watch objects of kind Policy
         """
         pass
 
-    def test_list_namespaced_policy_binding(self):
+    def test_list_policybindings(self):
         """
-        Test case for list_namespaced_policy_binding
+        Test case for list_policybindings
 
         list or watch objects of kind PolicyBinding
         """
         pass
 
-    def test_list_namespaced_project(self):
+    def test_list_projectrequests(self):
         """
-        Test case for list_namespaced_project
-
-        list objects of kind Project
-        """
-        pass
-
-    def test_list_namespaced_project_request(self):
-        """
-        Test case for list_namespaced_project_request
+        Test case for list_projectrequests
 
         list objects of kind ProjectRequest
         """
         pass
 
-    def test_list_namespaced_role(self):
+    def test_list_projects(self):
         """
-        Test case for list_namespaced_role
+        Test case for list_projects
 
-        list objects of kind Role
+        list objects of kind Project
         """
         pass
 
-    def test_list_namespaced_role_binding(self):
+    def test_list_rolebindings(self):
         """
-        Test case for list_namespaced_role_binding
+        Test case for list_rolebindings
 
         list objects of kind RoleBinding
         """
         pass
 
-    def test_list_namespaced_route(self):
+    def test_list_roles(self):
         """
-        Test case for list_namespaced_route
+        Test case for list_roles
+
+        list objects of kind Role
+        """
+        pass
+
+    def test_list_routes(self):
+        """
+        Test case for list_routes
 
         list or watch objects of kind Route
         """
         pass
 
-    def test_list_namespaced_template(self):
+    def test_list_templates(self):
         """
-        Test case for list_namespaced_template
+        Test case for list_templates
 
         list or watch objects of kind Template
         """
         pass
 
-    def test_list_namespaced_user(self):
+    def test_list_users(self):
         """
-        Test case for list_namespaced_user
+        Test case for list_users
 
         list or watch objects of kind User
         """
         pass
 
-    def test_list_policy(self):
+    def test_patch_clusternetwork(self):
         """
-        Test case for list_policy
+        Test case for patch_clusternetwork
 
-        list or watch objects of kind Policy
-        """
-        pass
-
-    def test_list_policy_binding(self):
-        """
-        Test case for list_policy_binding
-
-        list or watch objects of kind PolicyBinding
+        partially update the specified ClusterNetwork
         """
         pass
 
-    def test_list_role(self):
+    def test_patch_clusterpolicie(self):
         """
-        Test case for list_role
+        Test case for patch_clusterpolicie
 
-        list objects of kind Role
-        """
-        pass
-
-    def test_list_role_binding(self):
-        """
-        Test case for list_role_binding
-
-        list objects of kind RoleBinding
+        partially update the specified ClusterPolicy
         """
         pass
 
-    def test_list_route(self):
+    def test_patch_clusterpolicybinding(self):
         """
-        Test case for list_route
+        Test case for patch_clusterpolicybinding
 
-        list or watch objects of kind Route
+        partially update the specified ClusterPolicyBinding
         """
         pass
 
-    def test_list_template(self):
+    def test_patch_clusterrole(self):
         """
-        Test case for list_template
+        Test case for patch_clusterrole
 
-        list or watch objects of kind Template
+        partially update the specified ClusterRole
+        """
+        pass
+
+    def test_patch_clusterrolebinding(self):
+        """
+        Test case for patch_clusterrolebinding
+
+        partially update the specified ClusterRoleBinding
+        """
+        pass
+
+    def test_patch_group(self):
+        """
+        Test case for patch_group
+
+        partially update the specified Group
+        """
+        pass
+
+    def test_patch_hostsubnet(self):
+        """
+        Test case for patch_hostsubnet
+
+        partially update the specified HostSubnet
+        """
+        pass
+
+    def test_patch_identitie(self):
+        """
+        Test case for patch_identitie
+
+        partially update the specified Identity
+        """
+        pass
+
+    def test_patch_image(self):
+        """
+        Test case for patch_image
+
+        partially update the specified Image
         """
         pass
 
@@ -1194,155 +1562,59 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_build_config(self):
+    def test_patch_namespaced_buildconfig(self):
         """
-        Test case for patch_namespaced_build_config
+        Test case for patch_namespaced_buildconfig
 
         partially update the specified BuildConfig
         """
         pass
 
-    def test_patch_namespaced_cluster_network(self):
+    def test_patch_namespaced_deploymentconfig(self):
         """
-        Test case for patch_namespaced_cluster_network
-
-        partially update the specified ClusterNetwork
-        """
-        pass
-
-    def test_patch_namespaced_cluster_policy(self):
-        """
-        Test case for patch_namespaced_cluster_policy
-
-        partially update the specified ClusterPolicy
-        """
-        pass
-
-    def test_patch_namespaced_cluster_policy_binding(self):
-        """
-        Test case for patch_namespaced_cluster_policy_binding
-
-        partially update the specified ClusterPolicyBinding
-        """
-        pass
-
-    def test_patch_namespaced_cluster_role(self):
-        """
-        Test case for patch_namespaced_cluster_role
-
-        partially update the specified ClusterRole
-        """
-        pass
-
-    def test_patch_namespaced_cluster_role_binding(self):
-        """
-        Test case for patch_namespaced_cluster_role_binding
-
-        partially update the specified ClusterRoleBinding
-        """
-        pass
-
-    def test_patch_namespaced_deployment_config(self):
-        """
-        Test case for patch_namespaced_deployment_config
+        Test case for patch_namespaced_deploymentconfig
 
         partially update the specified DeploymentConfig
         """
         pass
 
-    def test_patch_namespaced_group(self):
+    def test_patch_namespaced_deploymentconfig_scale(self):
         """
-        Test case for patch_namespaced_group
+        Test case for patch_namespaced_deploymentconfig_scale
 
-        partially update the specified Group
+        partially update scale of the specified Scale
         """
         pass
 
-    def test_patch_namespaced_host_subnet(self):
+    def test_patch_namespaced_imagestream(self):
         """
-        Test case for patch_namespaced_host_subnet
-
-        partially update the specified HostSubnet
-        """
-        pass
-
-    def test_patch_namespaced_identity(self):
-        """
-        Test case for patch_namespaced_identity
-
-        partially update the specified Identity
-        """
-        pass
-
-    def test_patch_namespaced_image(self):
-        """
-        Test case for patch_namespaced_image
-
-        partially update the specified Image
-        """
-        pass
-
-    def test_patch_namespaced_image_stream(self):
-        """
-        Test case for patch_namespaced_image_stream
+        Test case for patch_namespaced_imagestream
 
         partially update the specified ImageStream
         """
         pass
 
-    def test_patch_namespaced_image_stream_tag(self):
+    def test_patch_namespaced_imagestreamtag(self):
         """
-        Test case for patch_namespaced_image_stream_tag
+        Test case for patch_namespaced_imagestreamtag
 
         partially update the specified ImageStreamTag
         """
         pass
 
-    def test_patch_namespaced_net_namespace(self):
+    def test_patch_namespaced_policie(self):
         """
-        Test case for patch_namespaced_net_namespace
-
-        partially update the specified NetNamespace
-        """
-        pass
-
-    def test_patch_namespaced_o_auth_client(self):
-        """
-        Test case for patch_namespaced_o_auth_client
-
-        partially update the specified OAuthClient
-        """
-        pass
-
-    def test_patch_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for patch_namespaced_o_auth_client_authorization
-
-        partially update the specified OAuthClientAuthorization
-        """
-        pass
-
-    def test_patch_namespaced_policy(self):
-        """
-        Test case for patch_namespaced_policy
+        Test case for patch_namespaced_policie
 
         partially update the specified Policy
         """
         pass
 
-    def test_patch_namespaced_policy_binding(self):
+    def test_patch_namespaced_policybinding(self):
         """
-        Test case for patch_namespaced_policy_binding
+        Test case for patch_namespaced_policybinding
 
         partially update the specified PolicyBinding
-        """
-        pass
-
-    def test_patch_namespaced_project(self):
-        """
-        Test case for patch_namespaced_project
-
-        partially update the specified Project
         """
         pass
 
@@ -1354,9 +1626,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_role_binding(self):
+    def test_patch_namespaced_rolebinding(self):
         """
-        Test case for patch_namespaced_role_binding
+        Test case for patch_namespaced_rolebinding
 
         partially update the specified RoleBinding
         """
@@ -1370,14 +1642,6 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_scale_scale(self):
-        """
-        Test case for patch_namespaced_scale_scale
-
-        partially update scale of the specified Scale
-        """
-        pass
-
     def test_patch_namespaced_template(self):
         """
         Test case for patch_namespaced_template
@@ -1386,315 +1650,123 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_user(self):
+    def test_patch_netnamespace(self):
         """
-        Test case for patch_namespaced_user
+        Test case for patch_netnamespace
+
+        partially update the specified NetNamespace
+        """
+        pass
+
+    def test_patch_oauthclient(self):
+        """
+        Test case for patch_oauthclient
+
+        partially update the specified OAuthClient
+        """
+        pass
+
+    def test_patch_oauthclientauthorization(self):
+        """
+        Test case for patch_oauthclientauthorization
+
+        partially update the specified OAuthClientAuthorization
+        """
+        pass
+
+    def test_patch_project(self):
+        """
+        Test case for patch_project
+
+        partially update the specified Project
+        """
+        pass
+
+    def test_patch_user(self):
+        """
+        Test case for patch_user
 
         partially update the specified User
         """
         pass
 
-    def test_patch_namespaced_user_identity_mapping(self):
+    def test_patch_useridentitymapping(self):
         """
-        Test case for patch_namespaced_user_identity_mapping
+        Test case for patch_useridentitymapping
 
         partially update the specified UserIdentityMapping
         """
         pass
 
-    def test_post_namespaced_binary_build_request_options_instantiatebinary(self):
+    def test_replace_clusternetwork(self):
         """
-        Test case for post_namespaced_binary_build_request_options_instantiatebinary
+        Test case for replace_clusternetwork
 
-        connect POST requests to instantiatebinary of BinaryBuildRequestOptions
-        """
-        pass
-
-    def test_post_namespaced_status_webhooks(self):
-        """
-        Test case for post_namespaced_status_webhooks
-
-        connect POST requests to webhooks of Status
+        replace the specified ClusterNetwork
         """
         pass
 
-    def test_post_namespaced_status_webhooks_0(self):
+    def test_replace_clusterpolicie(self):
         """
-        Test case for post_namespaced_status_webhooks_0
+        Test case for replace_clusterpolicie
 
-        connect POST requests to webhooks of Status
-        """
-        pass
-
-    def test_read_namespaced_build(self):
-        """
-        Test case for read_namespaced_build
-
-        read the specified Build
+        replace the specified ClusterPolicy
         """
         pass
 
-    def test_read_namespaced_build_config(self):
+    def test_replace_clusterpolicybinding(self):
         """
-        Test case for read_namespaced_build_config
+        Test case for replace_clusterpolicybinding
 
-        read the specified BuildConfig
-        """
-        pass
-
-    def test_read_namespaced_build_log_log(self):
-        """
-        Test case for read_namespaced_build_log_log
-
-        read log of the specified BuildLog
+        replace the specified ClusterPolicyBinding
         """
         pass
 
-    def test_read_namespaced_cluster_network(self):
+    def test_replace_clusterrole(self):
         """
-        Test case for read_namespaced_cluster_network
+        Test case for replace_clusterrole
 
-        read the specified ClusterNetwork
-        """
-        pass
-
-    def test_read_namespaced_cluster_policy(self):
-        """
-        Test case for read_namespaced_cluster_policy
-
-        read the specified ClusterPolicy
+        replace the specified ClusterRole
         """
         pass
 
-    def test_read_namespaced_cluster_policy_binding(self):
+    def test_replace_clusterrolebinding(self):
         """
-        Test case for read_namespaced_cluster_policy_binding
+        Test case for replace_clusterrolebinding
 
-        read the specified ClusterPolicyBinding
-        """
-        pass
-
-    def test_read_namespaced_cluster_role(self):
-        """
-        Test case for read_namespaced_cluster_role
-
-        read the specified ClusterRole
+        replace the specified ClusterRoleBinding
         """
         pass
 
-    def test_read_namespaced_cluster_role_binding(self):
+    def test_replace_group(self):
         """
-        Test case for read_namespaced_cluster_role_binding
+        Test case for replace_group
 
-        read the specified ClusterRoleBinding
-        """
-        pass
-
-    def test_read_namespaced_deployment_config(self):
-        """
-        Test case for read_namespaced_deployment_config
-
-        read the specified DeploymentConfig
+        replace the specified Group
         """
         pass
 
-    def test_read_namespaced_deployment_config_0(self):
+    def test_replace_hostsubnet(self):
         """
-        Test case for read_namespaced_deployment_config_0
+        Test case for replace_hostsubnet
 
-        read the specified DeploymentConfig
-        """
-        pass
-
-    def test_read_namespaced_deployment_log_log(self):
-        """
-        Test case for read_namespaced_deployment_log_log
-
-        read log of the specified DeploymentLog
+        replace the specified HostSubnet
         """
         pass
 
-    def test_read_namespaced_group(self):
+    def test_replace_identitie(self):
         """
-        Test case for read_namespaced_group
+        Test case for replace_identitie
 
-        read the specified Group
-        """
-        pass
-
-    def test_read_namespaced_host_subnet(self):
-        """
-        Test case for read_namespaced_host_subnet
-
-        read the specified HostSubnet
+        replace the specified Identity
         """
         pass
 
-    def test_read_namespaced_identity(self):
+    def test_replace_image(self):
         """
-        Test case for read_namespaced_identity
+        Test case for replace_image
 
-        read the specified Identity
-        """
-        pass
-
-    def test_read_namespaced_image(self):
-        """
-        Test case for read_namespaced_image
-
-        read the specified Image
-        """
-        pass
-
-    def test_read_namespaced_image_stream(self):
-        """
-        Test case for read_namespaced_image_stream
-
-        read the specified ImageStream
-        """
-        pass
-
-    def test_read_namespaced_image_stream_image(self):
-        """
-        Test case for read_namespaced_image_stream_image
-
-        read the specified ImageStreamImage
-        """
-        pass
-
-    def test_read_namespaced_image_stream_tag(self):
-        """
-        Test case for read_namespaced_image_stream_tag
-
-        read the specified ImageStreamTag
-        """
-        pass
-
-    def test_read_namespaced_net_namespace(self):
-        """
-        Test case for read_namespaced_net_namespace
-
-        read the specified NetNamespace
-        """
-        pass
-
-    def test_read_namespaced_o_auth_access_token(self):
-        """
-        Test case for read_namespaced_o_auth_access_token
-
-        read the specified OAuthAccessToken
-        """
-        pass
-
-    def test_read_namespaced_o_auth_authorize_token(self):
-        """
-        Test case for read_namespaced_o_auth_authorize_token
-
-        read the specified OAuthAuthorizeToken
-        """
-        pass
-
-    def test_read_namespaced_o_auth_client(self):
-        """
-        Test case for read_namespaced_o_auth_client
-
-        read the specified OAuthClient
-        """
-        pass
-
-    def test_read_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for read_namespaced_o_auth_client_authorization
-
-        read the specified OAuthClientAuthorization
-        """
-        pass
-
-    def test_read_namespaced_policy(self):
-        """
-        Test case for read_namespaced_policy
-
-        read the specified Policy
-        """
-        pass
-
-    def test_read_namespaced_policy_binding(self):
-        """
-        Test case for read_namespaced_policy_binding
-
-        read the specified PolicyBinding
-        """
-        pass
-
-    def test_read_namespaced_project(self):
-        """
-        Test case for read_namespaced_project
-
-        read the specified Project
-        """
-        pass
-
-    def test_read_namespaced_role(self):
-        """
-        Test case for read_namespaced_role
-
-        read the specified Role
-        """
-        pass
-
-    def test_read_namespaced_role_binding(self):
-        """
-        Test case for read_namespaced_role_binding
-
-        read the specified RoleBinding
-        """
-        pass
-
-    def test_read_namespaced_route(self):
-        """
-        Test case for read_namespaced_route
-
-        read the specified Route
-        """
-        pass
-
-    def test_read_namespaced_scale_scale(self):
-        """
-        Test case for read_namespaced_scale_scale
-
-        read scale of the specified Scale
-        """
-        pass
-
-    def test_read_namespaced_secret_list_secrets(self):
-        """
-        Test case for read_namespaced_secret_list_secrets
-
-        read secrets of the specified SecretList
-        """
-        pass
-
-    def test_read_namespaced_template(self):
-        """
-        Test case for read_namespaced_template
-
-        read the specified Template
-        """
-        pass
-
-    def test_read_namespaced_user(self):
-        """
-        Test case for read_namespaced_user
-
-        read the specified User
-        """
-        pass
-
-    def test_read_namespaced_user_identity_mapping(self):
-        """
-        Test case for read_namespaced_user_identity_mapping
-
-        read the specified UserIdentityMapping
+        replace the specified Image
         """
         pass
 
@@ -1706,14 +1778,6 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_build_config(self):
-        """
-        Test case for replace_namespaced_build_config
-
-        replace the specified BuildConfig
-        """
-        pass
-
     def test_replace_namespaced_build_details(self):
         """
         Test case for replace_namespaced_build_details
@@ -1722,155 +1786,67 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_cluster_network(self):
+    def test_replace_namespaced_buildconfig(self):
         """
-        Test case for replace_namespaced_cluster_network
+        Test case for replace_namespaced_buildconfig
 
-        replace the specified ClusterNetwork
+        replace the specified BuildConfig
         """
         pass
 
-    def test_replace_namespaced_cluster_policy(self):
+    def test_replace_namespaced_deploymentconfig(self):
         """
-        Test case for replace_namespaced_cluster_policy
-
-        replace the specified ClusterPolicy
-        """
-        pass
-
-    def test_replace_namespaced_cluster_policy_binding(self):
-        """
-        Test case for replace_namespaced_cluster_policy_binding
-
-        replace the specified ClusterPolicyBinding
-        """
-        pass
-
-    def test_replace_namespaced_cluster_role(self):
-        """
-        Test case for replace_namespaced_cluster_role
-
-        replace the specified ClusterRole
-        """
-        pass
-
-    def test_replace_namespaced_cluster_role_binding(self):
-        """
-        Test case for replace_namespaced_cluster_role_binding
-
-        replace the specified ClusterRoleBinding
-        """
-        pass
-
-    def test_replace_namespaced_deployment_config(self):
-        """
-        Test case for replace_namespaced_deployment_config
+        Test case for replace_namespaced_deploymentconfig
 
         replace the specified DeploymentConfig
         """
         pass
 
-    def test_replace_namespaced_group(self):
+    def test_replace_namespaced_deploymentconfig_scale(self):
         """
-        Test case for replace_namespaced_group
+        Test case for replace_namespaced_deploymentconfig_scale
 
-        replace the specified Group
+        replace scale of the specified Scale
         """
         pass
 
-    def test_replace_namespaced_host_subnet(self):
+    def test_replace_namespaced_imagestream(self):
         """
-        Test case for replace_namespaced_host_subnet
-
-        replace the specified HostSubnet
-        """
-        pass
-
-    def test_replace_namespaced_identity(self):
-        """
-        Test case for replace_namespaced_identity
-
-        replace the specified Identity
-        """
-        pass
-
-    def test_replace_namespaced_image(self):
-        """
-        Test case for replace_namespaced_image
-
-        replace the specified Image
-        """
-        pass
-
-    def test_replace_namespaced_image_stream(self):
-        """
-        Test case for replace_namespaced_image_stream
+        Test case for replace_namespaced_imagestream
 
         replace the specified ImageStream
         """
         pass
 
-    def test_replace_namespaced_image_stream_status(self):
+    def test_replace_namespaced_imagestream_status(self):
         """
-        Test case for replace_namespaced_image_stream_status
+        Test case for replace_namespaced_imagestream_status
 
         replace status of the specified ImageStream
         """
         pass
 
-    def test_replace_namespaced_image_stream_tag(self):
+    def test_replace_namespaced_imagestreamtag(self):
         """
-        Test case for replace_namespaced_image_stream_tag
+        Test case for replace_namespaced_imagestreamtag
 
         replace the specified ImageStreamTag
         """
         pass
 
-    def test_replace_namespaced_net_namespace(self):
+    def test_replace_namespaced_policie(self):
         """
-        Test case for replace_namespaced_net_namespace
-
-        replace the specified NetNamespace
-        """
-        pass
-
-    def test_replace_namespaced_o_auth_client(self):
-        """
-        Test case for replace_namespaced_o_auth_client
-
-        replace the specified OAuthClient
-        """
-        pass
-
-    def test_replace_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for replace_namespaced_o_auth_client_authorization
-
-        replace the specified OAuthClientAuthorization
-        """
-        pass
-
-    def test_replace_namespaced_policy(self):
-        """
-        Test case for replace_namespaced_policy
+        Test case for replace_namespaced_policie
 
         replace the specified Policy
         """
         pass
 
-    def test_replace_namespaced_policy_binding(self):
+    def test_replace_namespaced_policybinding(self):
         """
-        Test case for replace_namespaced_policy_binding
+        Test case for replace_namespaced_policybinding
 
         replace the specified PolicyBinding
-        """
-        pass
-
-    def test_replace_namespaced_project(self):
-        """
-        Test case for replace_namespaced_project
-
-        replace the specified Project
         """
         pass
 
@@ -1882,9 +1858,9 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_role_binding(self):
+    def test_replace_namespaced_rolebinding(self):
         """
-        Test case for replace_namespaced_role_binding
+        Test case for replace_namespaced_rolebinding
 
         replace the specified RoleBinding
         """
@@ -1906,14 +1882,6 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_scale_scale(self):
-        """
-        Test case for replace_namespaced_scale_scale
-
-        replace scale of the specified Scale
-        """
-        pass
-
     def test_replace_namespaced_template(self):
         """
         Test case for replace_namespaced_template
@@ -1922,387 +1890,419 @@ class TestOapiV1(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_user(self):
+    def test_replace_netnamespace(self):
         """
-        Test case for replace_namespaced_user
+        Test case for replace_netnamespace
+
+        replace the specified NetNamespace
+        """
+        pass
+
+    def test_replace_oauthclient(self):
+        """
+        Test case for replace_oauthclient
+
+        replace the specified OAuthClient
+        """
+        pass
+
+    def test_replace_oauthclientauthorization(self):
+        """
+        Test case for replace_oauthclientauthorization
+
+        replace the specified OAuthClientAuthorization
+        """
+        pass
+
+    def test_replace_project(self):
+        """
+        Test case for replace_project
+
+        replace the specified Project
+        """
+        pass
+
+    def test_replace_user(self):
+        """
+        Test case for replace_user
 
         replace the specified User
         """
         pass
 
-    def test_replace_namespaced_user_identity_mapping(self):
+    def test_replace_useridentitymapping(self):
         """
-        Test case for replace_namespaced_user_identity_mapping
+        Test case for replace_useridentitymapping
 
         replace the specified UserIdentityMapping
         """
         pass
 
-    def test_watch_build_config_list(self):
+    def test_watch_namespaced_watch_build(self):
         """
-        Test case for watch_build_config_list
-
-        watch individual changes to a list of BuildConfig
-        """
-        pass
-
-    def test_watch_build_list(self):
-        """
-        Test case for watch_build_list
-
-        watch individual changes to a list of Build
-        """
-        pass
-
-    def test_watch_deployment_config_list(self):
-        """
-        Test case for watch_deployment_config_list
-
-        watch individual changes to a list of DeploymentConfig
-        """
-        pass
-
-    def test_watch_image_stream_list(self):
-        """
-        Test case for watch_image_stream_list
-
-        watch individual changes to a list of ImageStream
-        """
-        pass
-
-    def test_watch_namespaced_build(self):
-        """
-        Test case for watch_namespaced_build
+        Test case for watch_namespaced_watch_build
 
         watch changes to an object of kind Build
         """
         pass
 
-    def test_watch_namespaced_build_config(self):
+    def test_watch_namespaced_watch_buildconfig(self):
         """
-        Test case for watch_namespaced_build_config
+        Test case for watch_namespaced_watch_buildconfig
 
         watch changes to an object of kind BuildConfig
         """
         pass
 
-    def test_watch_namespaced_build_config_list(self):
+    def test_watch_namespaced_watch_buildconfigs(self):
         """
-        Test case for watch_namespaced_build_config_list
+        Test case for watch_namespaced_watch_buildconfigs
 
         watch individual changes to a list of BuildConfig
         """
         pass
 
-    def test_watch_namespaced_build_list(self):
+    def test_watch_namespaced_watch_builds(self):
         """
-        Test case for watch_namespaced_build_list
+        Test case for watch_namespaced_watch_builds
 
         watch individual changes to a list of Build
         """
         pass
 
-    def test_watch_namespaced_cluster_network(self):
+    def test_watch_namespaced_watch_deploymentconfig(self):
         """
-        Test case for watch_namespaced_cluster_network
-
-        watch changes to an object of kind ClusterNetwork
-        """
-        pass
-
-    def test_watch_namespaced_cluster_network_list(self):
-        """
-        Test case for watch_namespaced_cluster_network_list
-
-        watch individual changes to a list of ClusterNetwork
-        """
-        pass
-
-    def test_watch_namespaced_cluster_policy(self):
-        """
-        Test case for watch_namespaced_cluster_policy
-
-        watch changes to an object of kind ClusterPolicy
-        """
-        pass
-
-    def test_watch_namespaced_cluster_policy_binding(self):
-        """
-        Test case for watch_namespaced_cluster_policy_binding
-
-        watch changes to an object of kind ClusterPolicyBinding
-        """
-        pass
-
-    def test_watch_namespaced_cluster_policy_binding_list(self):
-        """
-        Test case for watch_namespaced_cluster_policy_binding_list
-
-        watch individual changes to a list of ClusterPolicyBinding
-        """
-        pass
-
-    def test_watch_namespaced_cluster_policy_list(self):
-        """
-        Test case for watch_namespaced_cluster_policy_list
-
-        watch individual changes to a list of ClusterPolicy
-        """
-        pass
-
-    def test_watch_namespaced_deployment_config(self):
-        """
-        Test case for watch_namespaced_deployment_config
+        Test case for watch_namespaced_watch_deploymentconfig
 
         watch changes to an object of kind DeploymentConfig
         """
         pass
 
-    def test_watch_namespaced_deployment_config_list(self):
+    def test_watch_namespaced_watch_deploymentconfigs(self):
         """
-        Test case for watch_namespaced_deployment_config_list
+        Test case for watch_namespaced_watch_deploymentconfigs
 
         watch individual changes to a list of DeploymentConfig
         """
         pass
 
-    def test_watch_namespaced_group(self):
+    def test_watch_namespaced_watch_imagestream(self):
         """
-        Test case for watch_namespaced_group
-
-        watch changes to an object of kind Group
-        """
-        pass
-
-    def test_watch_namespaced_group_list(self):
-        """
-        Test case for watch_namespaced_group_list
-
-        watch individual changes to a list of Group
-        """
-        pass
-
-    def test_watch_namespaced_host_subnet(self):
-        """
-        Test case for watch_namespaced_host_subnet
-
-        watch changes to an object of kind HostSubnet
-        """
-        pass
-
-    def test_watch_namespaced_host_subnet_list(self):
-        """
-        Test case for watch_namespaced_host_subnet_list
-
-        watch individual changes to a list of HostSubnet
-        """
-        pass
-
-    def test_watch_namespaced_identity(self):
-        """
-        Test case for watch_namespaced_identity
-
-        watch changes to an object of kind Identity
-        """
-        pass
-
-    def test_watch_namespaced_identity_list(self):
-        """
-        Test case for watch_namespaced_identity_list
-
-        watch individual changes to a list of Identity
-        """
-        pass
-
-    def test_watch_namespaced_image(self):
-        """
-        Test case for watch_namespaced_image
-
-        watch changes to an object of kind Image
-        """
-        pass
-
-    def test_watch_namespaced_image_list(self):
-        """
-        Test case for watch_namespaced_image_list
-
-        watch individual changes to a list of Image
-        """
-        pass
-
-    def test_watch_namespaced_image_stream(self):
-        """
-        Test case for watch_namespaced_image_stream
+        Test case for watch_namespaced_watch_imagestream
 
         watch changes to an object of kind ImageStream
         """
         pass
 
-    def test_watch_namespaced_image_stream_list(self):
+    def test_watch_namespaced_watch_imagestreams(self):
         """
-        Test case for watch_namespaced_image_stream_list
+        Test case for watch_namespaced_watch_imagestreams
 
         watch individual changes to a list of ImageStream
         """
         pass
 
-    def test_watch_namespaced_net_namespace(self):
+    def test_watch_namespaced_watch_policie(self):
         """
-        Test case for watch_namespaced_net_namespace
-
-        watch changes to an object of kind NetNamespace
-        """
-        pass
-
-    def test_watch_namespaced_net_namespace_list(self):
-        """
-        Test case for watch_namespaced_net_namespace_list
-
-        watch individual changes to a list of NetNamespace
-        """
-        pass
-
-    def test_watch_namespaced_o_auth_client(self):
-        """
-        Test case for watch_namespaced_o_auth_client
-
-        watch changes to an object of kind OAuthClient
-        """
-        pass
-
-    def test_watch_namespaced_o_auth_client_authorization(self):
-        """
-        Test case for watch_namespaced_o_auth_client_authorization
-
-        watch changes to an object of kind OAuthClientAuthorization
-        """
-        pass
-
-    def test_watch_namespaced_o_auth_client_authorization_list(self):
-        """
-        Test case for watch_namespaced_o_auth_client_authorization_list
-
-        watch individual changes to a list of OAuthClientAuthorization
-        """
-        pass
-
-    def test_watch_namespaced_o_auth_client_list(self):
-        """
-        Test case for watch_namespaced_o_auth_client_list
-
-        watch individual changes to a list of OAuthClient
-        """
-        pass
-
-    def test_watch_namespaced_policy(self):
-        """
-        Test case for watch_namespaced_policy
+        Test case for watch_namespaced_watch_policie
 
         watch changes to an object of kind Policy
         """
         pass
 
-    def test_watch_namespaced_policy_binding(self):
+    def test_watch_namespaced_watch_policies(self):
         """
-        Test case for watch_namespaced_policy_binding
+        Test case for watch_namespaced_watch_policies
+
+        watch individual changes to a list of Policy
+        """
+        pass
+
+    def test_watch_namespaced_watch_policybinding(self):
+        """
+        Test case for watch_namespaced_watch_policybinding
 
         watch changes to an object of kind PolicyBinding
         """
         pass
 
-    def test_watch_namespaced_policy_binding_list(self):
+    def test_watch_namespaced_watch_policybindings(self):
         """
-        Test case for watch_namespaced_policy_binding_list
+        Test case for watch_namespaced_watch_policybindings
 
         watch individual changes to a list of PolicyBinding
         """
         pass
 
-    def test_watch_namespaced_policy_list(self):
+    def test_watch_namespaced_watch_route(self):
         """
-        Test case for watch_namespaced_policy_list
-
-        watch individual changes to a list of Policy
-        """
-        pass
-
-    def test_watch_namespaced_route(self):
-        """
-        Test case for watch_namespaced_route
+        Test case for watch_namespaced_watch_route
 
         watch changes to an object of kind Route
         """
         pass
 
-    def test_watch_namespaced_route_list(self):
+    def test_watch_namespaced_watch_routes(self):
         """
-        Test case for watch_namespaced_route_list
+        Test case for watch_namespaced_watch_routes
 
         watch individual changes to a list of Route
         """
         pass
 
-    def test_watch_namespaced_template(self):
+    def test_watch_namespaced_watch_template(self):
         """
-        Test case for watch_namespaced_template
+        Test case for watch_namespaced_watch_template
 
         watch changes to an object of kind Template
         """
         pass
 
-    def test_watch_namespaced_template_list(self):
+    def test_watch_namespaced_watch_templates(self):
         """
-        Test case for watch_namespaced_template_list
+        Test case for watch_namespaced_watch_templates
 
         watch individual changes to a list of Template
         """
         pass
 
-    def test_watch_namespaced_user(self):
+    def test_watch_watch_buildconfigs(self):
         """
-        Test case for watch_namespaced_user
+        Test case for watch_watch_buildconfigs
 
-        watch changes to an object of kind User
+        watch individual changes to a list of BuildConfig
         """
         pass
 
-    def test_watch_namespaced_user_list(self):
+    def test_watch_watch_builds(self):
         """
-        Test case for watch_namespaced_user_list
+        Test case for watch_watch_builds
 
-        watch individual changes to a list of User
+        watch individual changes to a list of Build
         """
         pass
 
-    def test_watch_policy_binding_list(self):
+    def test_watch_watch_clusternetwork(self):
         """
-        Test case for watch_policy_binding_list
+        Test case for watch_watch_clusternetwork
 
-        watch individual changes to a list of PolicyBinding
+        watch changes to an object of kind ClusterNetwork
         """
         pass
 
-    def test_watch_policy_list(self):
+    def test_watch_watch_clusternetworks(self):
         """
-        Test case for watch_policy_list
+        Test case for watch_watch_clusternetworks
+
+        watch individual changes to a list of ClusterNetwork
+        """
+        pass
+
+    def test_watch_watch_clusterpolicie(self):
+        """
+        Test case for watch_watch_clusterpolicie
+
+        watch changes to an object of kind ClusterPolicy
+        """
+        pass
+
+    def test_watch_watch_clusterpolicies(self):
+        """
+        Test case for watch_watch_clusterpolicies
+
+        watch individual changes to a list of ClusterPolicy
+        """
+        pass
+
+    def test_watch_watch_clusterpolicybinding(self):
+        """
+        Test case for watch_watch_clusterpolicybinding
+
+        watch changes to an object of kind ClusterPolicyBinding
+        """
+        pass
+
+    def test_watch_watch_clusterpolicybindings(self):
+        """
+        Test case for watch_watch_clusterpolicybindings
+
+        watch individual changes to a list of ClusterPolicyBinding
+        """
+        pass
+
+    def test_watch_watch_deploymentconfigs(self):
+        """
+        Test case for watch_watch_deploymentconfigs
+
+        watch individual changes to a list of DeploymentConfig
+        """
+        pass
+
+    def test_watch_watch_group(self):
+        """
+        Test case for watch_watch_group
+
+        watch changes to an object of kind Group
+        """
+        pass
+
+    def test_watch_watch_groups(self):
+        """
+        Test case for watch_watch_groups
+
+        watch individual changes to a list of Group
+        """
+        pass
+
+    def test_watch_watch_hostsubnet(self):
+        """
+        Test case for watch_watch_hostsubnet
+
+        watch changes to an object of kind HostSubnet
+        """
+        pass
+
+    def test_watch_watch_hostsubnets(self):
+        """
+        Test case for watch_watch_hostsubnets
+
+        watch individual changes to a list of HostSubnet
+        """
+        pass
+
+    def test_watch_watch_identitie(self):
+        """
+        Test case for watch_watch_identitie
+
+        watch changes to an object of kind Identity
+        """
+        pass
+
+    def test_watch_watch_identities(self):
+        """
+        Test case for watch_watch_identities
+
+        watch individual changes to a list of Identity
+        """
+        pass
+
+    def test_watch_watch_image(self):
+        """
+        Test case for watch_watch_image
+
+        watch changes to an object of kind Image
+        """
+        pass
+
+    def test_watch_watch_images(self):
+        """
+        Test case for watch_watch_images
+
+        watch individual changes to a list of Image
+        """
+        pass
+
+    def test_watch_watch_imagestreams(self):
+        """
+        Test case for watch_watch_imagestreams
+
+        watch individual changes to a list of ImageStream
+        """
+        pass
+
+    def test_watch_watch_netnamespace(self):
+        """
+        Test case for watch_watch_netnamespace
+
+        watch changes to an object of kind NetNamespace
+        """
+        pass
+
+    def test_watch_watch_netnamespaces(self):
+        """
+        Test case for watch_watch_netnamespaces
+
+        watch individual changes to a list of NetNamespace
+        """
+        pass
+
+    def test_watch_watch_oauthclient(self):
+        """
+        Test case for watch_watch_oauthclient
+
+        watch changes to an object of kind OAuthClient
+        """
+        pass
+
+    def test_watch_watch_oauthclientauthorization(self):
+        """
+        Test case for watch_watch_oauthclientauthorization
+
+        watch changes to an object of kind OAuthClientAuthorization
+        """
+        pass
+
+    def test_watch_watch_oauthclientauthorizations(self):
+        """
+        Test case for watch_watch_oauthclientauthorizations
+
+        watch individual changes to a list of OAuthClientAuthorization
+        """
+        pass
+
+    def test_watch_watch_oauthclients(self):
+        """
+        Test case for watch_watch_oauthclients
+
+        watch individual changes to a list of OAuthClient
+        """
+        pass
+
+    def test_watch_watch_policies(self):
+        """
+        Test case for watch_watch_policies
 
         watch individual changes to a list of Policy
         """
         pass
 
-    def test_watch_route_list(self):
+    def test_watch_watch_policybindings(self):
         """
-        Test case for watch_route_list
+        Test case for watch_watch_policybindings
+
+        watch individual changes to a list of PolicyBinding
+        """
+        pass
+
+    def test_watch_watch_routes(self):
+        """
+        Test case for watch_watch_routes
 
         watch individual changes to a list of Route
         """
         pass
 
-    def test_watch_template_list(self):
+    def test_watch_watch_templates(self):
         """
-        Test case for watch_template_list
+        Test case for watch_watch_templates
 
         watch individual changes to a list of Template
+        """
+        pass
+
+    def test_watch_watch_user(self):
+        """
+        Test case for watch_watch_user
+
+        watch changes to an object of kind User
+        """
+        pass
+
+    def test_watch_watch_users(self):
+        """
+        Test case for watch_watch_users
+
+        watch individual changes to a list of User
         """
         pass
 
