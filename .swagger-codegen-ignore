@@ -1,0 +1,3 @@
+.swagger-codegen-ignore
+git_push.sh
+tox.ini
