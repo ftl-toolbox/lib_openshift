@@ -107,28 +107,28 @@ class {{classname}}(object):
 
 
     def create(self, api, namespace):
-	api.{{method}}(self, namespace)
+        api.{{method}}(self, namespace)
 {{/namespaced_create}}
 {{^namespaced_create}}
 {{#create}}
 
 
     def create(self, api):
-	api.{{method}}(self)
+        api.{{method}}(self)
 {{/create}}
 {{/namespaced_create}}
 {{#namespaced_replace}}
 
 
     def replace(self, api, namespace):
-	api.{{method}}(self, namespace)
+        api.{{method}}(self, namespace)
 {{/namespaced_replace}}
 {{^namespaced_replace}}
 {{#replace}}
 
 
     def replace(self, api):
-	api.{{method}}(self)
+        api.{{method}}(self)
 {{/replace}}
 {{/namespaced_replace}}
 {{#namespaced_delete}}
