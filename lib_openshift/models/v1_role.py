@@ -152,6 +152,18 @@ class V1Role(object):
 
         self._rules = rules
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_role(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_role(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_role(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

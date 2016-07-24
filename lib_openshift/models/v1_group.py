@@ -152,6 +152,19 @@ class V1Group(object):
 
         self._users = users
 
+
+
+    def create(self, api):
+	api.create_group(self)
+
+
+    def replace(self, api):
+	api.replace_group(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_group(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

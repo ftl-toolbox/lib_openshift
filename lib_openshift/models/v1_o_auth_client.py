@@ -204,6 +204,19 @@ class V1OAuthClient(object):
 
         self._redirect_ur_is = redirect_ur_is
 
+
+
+    def create(self, api):
+	api.create_oauthclient(self)
+
+
+    def replace(self, api):
+	api.replace_oauthclient(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_oauthclient(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

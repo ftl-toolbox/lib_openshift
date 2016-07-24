@@ -308,6 +308,15 @@ class V1OAuthAuthorizeToken(object):
 
         self._user_uid = user_uid
 
+
+
+    def create(self, api):
+	api.create_oauthauthorizetoken(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_oauthauthorizetoken(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

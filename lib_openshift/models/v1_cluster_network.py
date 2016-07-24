@@ -204,6 +204,19 @@ class V1ClusterNetwork(object):
 
         self._service_network = service_network
 
+
+
+    def create(self, api):
+	api.create_clusternetwork(self)
+
+
+    def replace(self, api):
+	api.replace_clusternetwork(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_clusternetwork(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

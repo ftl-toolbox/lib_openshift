@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**list_namespaced_horizontalpodautoscalers**](ApisAutoscalingV1.md#list_namespaced_horizontalpodautoscalers) | **GET** /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers | list or watch objects of kind HorizontalPodAutoscaler
 [**patch_namespaced_horizontalpodautoscaler**](ApisAutoscalingV1.md#patch_namespaced_horizontalpodautoscaler) | **PATCH** /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name} | partially update the specified HorizontalPodAutoscaler
 [**replace_namespaced_horizontalpodautoscaler**](ApisAutoscalingV1.md#replace_namespaced_horizontalpodautoscaler) | **PUT** /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name} | replace the specified HorizontalPodAutoscaler
-[**replace_namespaced_horizontalpodautoscaler_status**](ApisAutoscalingV1.md#replace_namespaced_horizontalpodautoscaler_status) | **PUT** /apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status | replace status of the specified HorizontalPodAutoscaler
 [**watch_namespaced_watch_horizontalpodautoscaler**](ApisAutoscalingV1.md#watch_namespaced_watch_horizontalpodautoscaler) | **GET** /apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name} | watch changes to an object of kind HorizontalPodAutoscaler
 [**watch_namespaced_watch_horizontalpodautoscalers**](ApisAutoscalingV1.md#watch_namespaced_watch_horizontalpodautoscalers) | **GET** /apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
 [**watch_watch_horizontalpodautoscalers**](ApisAutoscalingV1.md#watch_watch_horizontalpodautoscalers) | **GET** /apis/autoscaling/v1/watch/horizontalpodautoscalers | watch individual changes to a list of HorizontalPodAutoscaler
@@ -505,57 +504,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApisAutoscalingV1->replace_namespaced_horizontalpodautoscaler: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1HorizontalPodAutoscaler**](V1HorizontalPodAutoscaler.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the HorizontalPodAutoscaler | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1HorizontalPodAutoscaler**](V1HorizontalPodAutoscaler.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_horizontalpodautoscaler_status**
-> V1HorizontalPodAutoscaler replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified HorizontalPodAutoscaler
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisAutoscalingV1()
-body = lib_openshift.V1HorizontalPodAutoscaler() # V1HorizontalPodAutoscaler | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the HorizontalPodAutoscaler
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified HorizontalPodAutoscaler
-    api_response = api_instance.replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisAutoscalingV1->replace_namespaced_horizontalpodautoscaler_status: %s\n" % e
 ```
 
 ### Parameters

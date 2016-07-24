@@ -178,6 +178,10 @@ class V1ImageStreamMapping(object):
 
         self._tag = tag
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_imagestreammapping(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

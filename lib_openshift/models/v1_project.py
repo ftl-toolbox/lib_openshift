@@ -178,6 +178,19 @@ class V1Project(object):
 
         self._status = status
 
+
+
+    def create(self, api):
+	api.create_project(self)
+
+
+    def replace(self, api):
+	api.replace_project(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_project(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

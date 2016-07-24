@@ -178,6 +178,10 @@ class V1ImageStreamImport(object):
 
         self._status = status
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_imagestreamimport(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

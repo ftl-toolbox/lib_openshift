@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**list_namespaced_jobs**](ApisBatchV1.md#list_namespaced_jobs) | **GET** /apis/batch/v1/namespaces/{namespace}/jobs | list or watch objects of kind Job
 [**patch_namespaced_job**](ApisBatchV1.md#patch_namespaced_job) | **PATCH** /apis/batch/v1/namespaces/{namespace}/jobs/{name} | partially update the specified Job
 [**replace_namespaced_job**](ApisBatchV1.md#replace_namespaced_job) | **PUT** /apis/batch/v1/namespaces/{namespace}/jobs/{name} | replace the specified Job
-[**replace_namespaced_job_status**](ApisBatchV1.md#replace_namespaced_job_status) | **PUT** /apis/batch/v1/namespaces/{namespace}/jobs/{name}/status | replace status of the specified Job
 [**watch_namespaced_watch_job**](ApisBatchV1.md#watch_namespaced_watch_job) | **GET** /apis/batch/v1/watch/namespaces/{namespace}/jobs/{name} | watch changes to an object of kind Job
 [**watch_namespaced_watch_jobs**](ApisBatchV1.md#watch_namespaced_watch_jobs) | **GET** /apis/batch/v1/watch/namespaces/{namespace}/jobs | watch individual changes to a list of Job
 [**watch_watch_jobs**](ApisBatchV1.md#watch_watch_jobs) | **GET** /apis/batch/v1/watch/jobs | watch individual changes to a list of Job
@@ -505,57 +504,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApisBatchV1->replace_namespaced_job: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Job**](V1Job.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Job | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Job**](V1Job.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_job_status**
-> V1Job replace_namespaced_job_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Job
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisBatchV1()
-body = lib_openshift.V1Job() # V1Job | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Job
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Job
-    api_response = api_instance.replace_namespaced_job_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisBatchV1->replace_namespaced_job_status: %s\n" % e
 ```
 
 ### Parameters

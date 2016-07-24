@@ -230,6 +230,19 @@ class V1ClusterRoleBinding(object):
 
         self._role_ref = role_ref
 
+
+
+    def create(self, api):
+	api.create_clusterrolebinding(self)
+
+
+    def replace(self, api):
+	api.replace_clusterrolebinding(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_clusterrolebinding(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

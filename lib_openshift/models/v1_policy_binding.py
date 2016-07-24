@@ -204,6 +204,18 @@ class V1PolicyBinding(object):
 
         self._role_bindings = role_bindings
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_policybinding(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_policybinding(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_policybinding(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

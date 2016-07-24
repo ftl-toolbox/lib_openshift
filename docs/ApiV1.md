@@ -131,29 +131,21 @@ Method | HTTP request | Description
 [**patch_securitycontextconstraint**](ApiV1.md#patch_securitycontextconstraint) | **PATCH** /api/v1/securitycontextconstraints/{name} | partially update the specified SecurityContextConstraints
 [**replace_namespace**](ApiV1.md#replace_namespace) | **PUT** /api/v1/namespaces/{name} | replace the specified Namespace
 [**replace_namespace_finalize**](ApiV1.md#replace_namespace_finalize) | **PUT** /api/v1/namespaces/{name}/finalize | replace finalize of the specified Namespace
-[**replace_namespace_status**](ApiV1.md#replace_namespace_status) | **PUT** /api/v1/namespaces/{name}/status | replace status of the specified Namespace
 [**replace_namespaced_configmap**](ApiV1.md#replace_namespaced_configmap) | **PUT** /api/v1/namespaces/{namespace}/configmaps/{name} | replace the specified ConfigMap
 [**replace_namespaced_endpoint**](ApiV1.md#replace_namespaced_endpoint) | **PUT** /api/v1/namespaces/{namespace}/endpoints/{name} | replace the specified Endpoints
 [**replace_namespaced_event**](ApiV1.md#replace_namespaced_event) | **PUT** /api/v1/namespaces/{namespace}/events/{name} | replace the specified Event
 [**replace_namespaced_limitrange**](ApiV1.md#replace_namespaced_limitrange) | **PUT** /api/v1/namespaces/{namespace}/limitranges/{name} | replace the specified LimitRange
 [**replace_namespaced_persistentvolumeclaim**](ApiV1.md#replace_namespaced_persistentvolumeclaim) | **PUT** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | replace the specified PersistentVolumeClaim
-[**replace_namespaced_persistentvolumeclaim_status**](ApiV1.md#replace_namespaced_persistentvolumeclaim_status) | **PUT** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status | replace status of the specified PersistentVolumeClaim
 [**replace_namespaced_pod**](ApiV1.md#replace_namespaced_pod) | **PUT** /api/v1/namespaces/{namespace}/pods/{name} | replace the specified Pod
-[**replace_namespaced_pod_status**](ApiV1.md#replace_namespaced_pod_status) | **PUT** /api/v1/namespaces/{namespace}/pods/{name}/status | replace status of the specified Pod
 [**replace_namespaced_podtemplate**](ApiV1.md#replace_namespaced_podtemplate) | **PUT** /api/v1/namespaces/{namespace}/podtemplates/{name} | replace the specified PodTemplate
 [**replace_namespaced_replicationcontroller**](ApiV1.md#replace_namespaced_replicationcontroller) | **PUT** /api/v1/namespaces/{namespace}/replicationcontrollers/{name} | replace the specified ReplicationController
 [**replace_namespaced_replicationcontroller_scale**](ApiV1.md#replace_namespaced_replicationcontroller_scale) | **PUT** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale | replace scale of the specified Scale
-[**replace_namespaced_replicationcontroller_status**](ApiV1.md#replace_namespaced_replicationcontroller_status) | **PUT** /api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status | replace status of the specified ReplicationController
 [**replace_namespaced_resourcequota**](ApiV1.md#replace_namespaced_resourcequota) | **PUT** /api/v1/namespaces/{namespace}/resourcequotas/{name} | replace the specified ResourceQuota
-[**replace_namespaced_resourcequota_status**](ApiV1.md#replace_namespaced_resourcequota_status) | **PUT** /api/v1/namespaces/{namespace}/resourcequotas/{name}/status | replace status of the specified ResourceQuota
 [**replace_namespaced_secret**](ApiV1.md#replace_namespaced_secret) | **PUT** /api/v1/namespaces/{namespace}/secrets/{name} | replace the specified Secret
 [**replace_namespaced_service**](ApiV1.md#replace_namespaced_service) | **PUT** /api/v1/namespaces/{namespace}/services/{name} | replace the specified Service
-[**replace_namespaced_service_status**](ApiV1.md#replace_namespaced_service_status) | **PUT** /api/v1/namespaces/{namespace}/services/{name}/status | replace status of the specified Service
 [**replace_namespaced_serviceaccount**](ApiV1.md#replace_namespaced_serviceaccount) | **PUT** /api/v1/namespaces/{namespace}/serviceaccounts/{name} | replace the specified ServiceAccount
 [**replace_node**](ApiV1.md#replace_node) | **PUT** /api/v1/nodes/{name} | replace the specified Node
-[**replace_node_status**](ApiV1.md#replace_node_status) | **PUT** /api/v1/nodes/{name}/status | replace status of the specified Node
 [**replace_persistentvolume**](ApiV1.md#replace_persistentvolume) | **PUT** /api/v1/persistentvolumes/{name} | replace the specified PersistentVolume
-[**replace_persistentvolume_status**](ApiV1.md#replace_persistentvolume_status) | **PUT** /api/v1/persistentvolumes/{name}/status | replace status of the specified PersistentVolume
 [**replace_securitycontextconstraint**](ApiV1.md#replace_securitycontextconstraint) | **PUT** /api/v1/securitycontextconstraints/{name} | replace the specified SecurityContextConstraints
 [**watch_namespaced_watch_configmap**](ApiV1.md#watch_namespaced_watch_configmap) | **GET** /api/v1/watch/namespaces/{namespace}/configmaps/{name} | watch changes to an object of kind ConfigMap
 [**watch_namespaced_watch_configmaps**](ApiV1.md#watch_namespaced_watch_configmaps) | **GET** /api/v1/watch/namespaces/{namespace}/configmaps | watch individual changes to a list of ConfigMap
@@ -6811,55 +6803,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespace_status**
-> V1Namespace replace_namespace_status(body, name, pretty=pretty)
-
-replace status of the specified Namespace
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1Namespace() # V1Namespace | 
-name = 'name_example' # str | name of the Namespace
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Namespace
-    api_response = api_instance.replace_namespace_status(body, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespace_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Namespace**](V1Namespace.md)|  | 
- **name** | **str**| name of the Namespace | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Namespace**](V1Namespace.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_configmap**
 > V1ConfigMap replace_namespaced_configmap(body, namespace, name, pretty=pretty)
 
@@ -7115,57 +7058,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_persistentvolumeclaim_status**
-> V1PersistentVolumeClaim replace_namespaced_persistentvolumeclaim_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified PersistentVolumeClaim
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the PersistentVolumeClaim
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified PersistentVolumeClaim
-    api_response = api_instance.replace_namespaced_persistentvolumeclaim_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespaced_persistentvolumeclaim_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1PersistentVolumeClaim**](V1PersistentVolumeClaim.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the PersistentVolumeClaim | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1PersistentVolumeClaim**](V1PersistentVolumeClaim.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_pod**
 > V1Pod replace_namespaced_pod(body, namespace, name, pretty=pretty)
 
@@ -7191,57 +7083,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApiV1->replace_namespaced_pod: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Pod**](V1Pod.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Pod | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Pod**](V1Pod.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_pod_status**
-> V1Pod replace_namespaced_pod_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Pod
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1Pod() # V1Pod | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Pod
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Pod
-    api_response = api_instance.replace_namespaced_pod_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespaced_pod_status: %s\n" % e
 ```
 
 ### Parameters
@@ -7421,57 +7262,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_replicationcontroller_status**
-> V1ReplicationController replace_namespaced_replicationcontroller_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified ReplicationController
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1ReplicationController() # V1ReplicationController | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the ReplicationController
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified ReplicationController
-    api_response = api_instance.replace_namespaced_replicationcontroller_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespaced_replicationcontroller_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1ReplicationController**](V1ReplicationController.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the ReplicationController | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1ReplicationController**](V1ReplicationController.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_resourcequota**
 > V1ResourceQuota replace_namespaced_resourcequota(body, namespace, name, pretty=pretty)
 
@@ -7497,57 +7287,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApiV1->replace_namespaced_resourcequota: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1ResourceQuota**](V1ResourceQuota.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the ResourceQuota | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1ResourceQuota**](V1ResourceQuota.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_resourcequota_status**
-> V1ResourceQuota replace_namespaced_resourcequota_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified ResourceQuota
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1ResourceQuota() # V1ResourceQuota | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the ResourceQuota
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified ResourceQuota
-    api_response = api_instance.replace_namespaced_resourcequota_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespaced_resourcequota_status: %s\n" % e
 ```
 
 ### Parameters
@@ -7676,57 +7415,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_service_status**
-> V1Service replace_namespaced_service_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Service
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1Service() # V1Service | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Service
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Service
-    api_response = api_instance.replace_namespaced_service_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_namespaced_service_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Service**](V1Service.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Service | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Service**](V1Service.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_serviceaccount**
 > V1ServiceAccount replace_namespaced_serviceaccount(body, namespace, name, pretty=pretty)
 
@@ -7827,55 +7515,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_node_status**
-> V1Node replace_node_status(body, name, pretty=pretty)
-
-replace status of the specified Node
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1Node() # V1Node | 
-name = 'name_example' # str | name of the Node
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Node
-    api_response = api_instance.replace_node_status(body, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_node_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Node**](V1Node.md)|  | 
- **name** | **str**| name of the Node | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Node**](V1Node.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_persistentvolume**
 > V1PersistentVolume replace_persistentvolume(body, name, pretty=pretty)
 
@@ -7900,55 +7539,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApiV1->replace_persistentvolume: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1PersistentVolume**](V1PersistentVolume.md)|  | 
- **name** | **str**| name of the PersistentVolume | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1PersistentVolume**](V1PersistentVolume.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_persistentvolume_status**
-> V1PersistentVolume replace_persistentvolume_status(body, name, pretty=pretty)
-
-replace status of the specified PersistentVolume
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApiV1()
-body = lib_openshift.V1PersistentVolume() # V1PersistentVolume | 
-name = 'name_example' # str | name of the PersistentVolume
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified PersistentVolume
-    api_response = api_instance.replace_persistentvolume_status(body, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApiV1->replace_persistentvolume_status: %s\n" % e
 ```
 
 ### Parameters

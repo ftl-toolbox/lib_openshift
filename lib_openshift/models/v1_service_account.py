@@ -178,6 +178,18 @@ class V1ServiceAccount(object):
 
         self._image_pull_secrets = image_pull_secrets
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_serviceaccount(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_serviceaccount(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_serviceaccount(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

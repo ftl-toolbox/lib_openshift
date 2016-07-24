@@ -204,6 +204,19 @@ class V1ClusterPolicyBinding(object):
 
         self._role_bindings = role_bindings
 
+
+
+    def create(self, api):
+	api.create_clusterpolicybinding(self)
+
+
+    def replace(self, api):
+	api.replace_clusterpolicybinding(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_clusterpolicybinding(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

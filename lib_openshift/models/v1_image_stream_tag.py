@@ -230,6 +230,14 @@ class V1ImageStreamTag(object):
 
         self._image = image
 
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_imagestreamtag(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_imagestreamtag(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

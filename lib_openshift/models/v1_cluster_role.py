@@ -152,6 +152,19 @@ class V1ClusterRole(object):
 
         self._rules = rules
 
+
+
+    def create(self, api):
+	api.create_clusterrole(self)
+
+
+    def replace(self, api):
+	api.replace_clusterrole(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_clusterrole(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -256,6 +256,19 @@ class V1Image(object):
 
         self._docker_image_layers = docker_image_layers
 
+
+
+    def create(self, api):
+	api.create_image(self)
+
+
+    def replace(self, api):
+	api.replace_image(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_image(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

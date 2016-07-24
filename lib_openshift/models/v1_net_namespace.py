@@ -178,6 +178,19 @@ class V1NetNamespace(object):
 
         self._netid = netid
 
+
+
+    def create(self, api):
+	api.create_netnamespace(self)
+
+
+    def replace(self, api):
+	api.replace_netnamespace(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_netnamespace(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -334,6 +334,15 @@ class V1OAuthAccessToken(object):
 
         self._refresh_token = refresh_token
 
+
+
+    def create(self, api):
+	api.create_oauthaccesstoken(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_oauthaccesstoken(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

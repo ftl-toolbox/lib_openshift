@@ -152,6 +152,18 @@ class V1PodTemplate(object):
 
         self._template = template
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_podtemplate(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_podtemplate(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_podtemplate(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -178,6 +178,19 @@ class V1UserIdentityMapping(object):
 
         self._user = user
 
+
+
+    def create(self, api):
+	api.create_useridentitymapping(self)
+
+
+    def replace(self, api):
+	api.replace_useridentitymapping(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_useridentitymapping(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

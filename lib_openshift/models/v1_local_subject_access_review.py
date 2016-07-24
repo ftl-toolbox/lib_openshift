@@ -334,6 +334,10 @@ class V1LocalSubjectAccessReview(object):
 
         self._groups = groups
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_localsubjectaccessreview(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

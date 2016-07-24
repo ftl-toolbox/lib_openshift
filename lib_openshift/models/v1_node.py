@@ -178,6 +178,19 @@ class V1Node(object):
 
         self._status = status
 
+
+
+    def create(self, api):
+	api.create_node(self)
+
+
+    def replace(self, api):
+	api.replace_node(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_node(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

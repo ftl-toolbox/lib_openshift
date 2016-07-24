@@ -594,6 +594,19 @@ class V1SecurityContextConstraints(object):
 
         self._groups = groups
 
+
+
+    def create(self, api):
+	api.create_securitycontextconstraint(self)
+
+
+    def replace(self, api):
+	api.replace_securitycontextconstraint(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_securitycontextconstraint(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

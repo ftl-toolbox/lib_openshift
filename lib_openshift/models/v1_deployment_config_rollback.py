@@ -126,6 +126,10 @@ class V1DeploymentConfigRollback(object):
 
         self._spec = spec
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_deploymentconfigrollback(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

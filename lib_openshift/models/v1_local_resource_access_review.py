@@ -282,6 +282,10 @@ class V1LocalResourceAccessReview(object):
 
         self._content = content
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_localresourceaccessreview(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

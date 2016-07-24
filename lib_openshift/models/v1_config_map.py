@@ -152,6 +152,18 @@ class V1ConfigMap(object):
 
         self._data = data
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_configmap(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_configmap(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_configmap(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

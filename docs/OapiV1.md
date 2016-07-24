@@ -226,14 +226,12 @@ Method | HTTP request | Description
 [**replace_namespaced_deploymentconfig**](OapiV1.md#replace_namespaced_deploymentconfig) | **PUT** /oapi/v1/namespaces/{namespace}/deploymentconfigs/{name} | replace the specified DeploymentConfig
 [**replace_namespaced_deploymentconfig_scale**](OapiV1.md#replace_namespaced_deploymentconfig_scale) | **PUT** /oapi/v1/namespaces/{namespace}/deploymentconfigs/{name}/scale | replace scale of the specified Scale
 [**replace_namespaced_imagestream**](OapiV1.md#replace_namespaced_imagestream) | **PUT** /oapi/v1/namespaces/{namespace}/imagestreams/{name} | replace the specified ImageStream
-[**replace_namespaced_imagestream_status**](OapiV1.md#replace_namespaced_imagestream_status) | **PUT** /oapi/v1/namespaces/{namespace}/imagestreams/{name}/status | replace status of the specified ImageStream
 [**replace_namespaced_imagestreamtag**](OapiV1.md#replace_namespaced_imagestreamtag) | **PUT** /oapi/v1/namespaces/{namespace}/imagestreamtags/{name} | replace the specified ImageStreamTag
 [**replace_namespaced_policie**](OapiV1.md#replace_namespaced_policie) | **PUT** /oapi/v1/namespaces/{namespace}/policies/{name} | replace the specified Policy
 [**replace_namespaced_policybinding**](OapiV1.md#replace_namespaced_policybinding) | **PUT** /oapi/v1/namespaces/{namespace}/policybindings/{name} | replace the specified PolicyBinding
 [**replace_namespaced_role**](OapiV1.md#replace_namespaced_role) | **PUT** /oapi/v1/namespaces/{namespace}/roles/{name} | replace the specified Role
 [**replace_namespaced_rolebinding**](OapiV1.md#replace_namespaced_rolebinding) | **PUT** /oapi/v1/namespaces/{namespace}/rolebindings/{name} | replace the specified RoleBinding
 [**replace_namespaced_route**](OapiV1.md#replace_namespaced_route) | **PUT** /oapi/v1/namespaces/{namespace}/routes/{name} | replace the specified Route
-[**replace_namespaced_route_status**](OapiV1.md#replace_namespaced_route_status) | **PUT** /oapi/v1/namespaces/{namespace}/routes/{name}/status | replace status of the specified Route
 [**replace_namespaced_template**](OapiV1.md#replace_namespaced_template) | **PUT** /oapi/v1/namespaces/{namespace}/templates/{name} | replace the specified Template
 [**replace_netnamespace**](OapiV1.md#replace_netnamespace) | **PUT** /oapi/v1/netnamespaces/{name} | replace the specified NetNamespace
 [**replace_oauthclient**](OapiV1.md#replace_oauthclient) | **PUT** /oapi/v1/oauthclients/{name} | replace the specified OAuthClient
@@ -11634,57 +11632,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_imagestream_status**
-> V1ImageStream replace_namespaced_imagestream_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified ImageStream
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.OapiV1()
-body = lib_openshift.V1ImageStream() # V1ImageStream | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the ImageStream
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified ImageStream
-    api_response = api_instance.replace_namespaced_imagestream_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling OapiV1->replace_namespaced_imagestream_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1ImageStream**](V1ImageStream.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the ImageStream | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1ImageStream**](V1ImageStream.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_imagestreamtag**
 > V1ImageStreamTag replace_namespaced_imagestreamtag(body, namespace, name, pretty=pretty)
 
@@ -11965,57 +11912,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling OapiV1->replace_namespaced_route: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1Route**](V1Route.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Route | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1Route**](V1Route.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_route_status**
-> V1Route replace_namespaced_route_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Route
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.OapiV1()
-body = lib_openshift.V1Route() # V1Route | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Route
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Route
-    api_response = api_instance.replace_namespaced_route_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling OapiV1->replace_namespaced_route_status: %s\n" % e
 ```
 
 ### Parameters

@@ -178,6 +178,10 @@ class V1ProjectRequest(object):
 
         self._description = description
 
+
+
+    def create(self, api):
+	api.create_projectrequest(self)
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -204,6 +204,19 @@ class V1HostSubnet(object):
 
         self._subnet = subnet
 
+
+
+    def create(self, api):
+	api.create_hostsubnet(self)
+
+
+    def replace(self, api):
+	api.replace_hostsubnet(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_hostsubnet(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

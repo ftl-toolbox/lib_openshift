@@ -178,6 +178,19 @@ class V1PersistentVolume(object):
 
         self._status = status
 
+
+
+    def create(self, api):
+	api.create_persistentvolume(self)
+
+
+    def replace(self, api):
+	api.replace_persistentvolume(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_persistentvolume(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

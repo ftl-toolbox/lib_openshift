@@ -61,19 +61,13 @@ Method | HTTP request | Description
 [**patch_namespaced_replicaset_scale**](ApisExtensionsV1beta1.md#patch_namespaced_replicaset_scale) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | partially update scale of the specified Scale
 [**patch_namespaced_replicationcontroller_scale**](ApisExtensionsV1beta1.md#patch_namespaced_replicationcontroller_scale) | **PATCH** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | partially update scale of the specified Scale
 [**replace_namespaced_daemonset**](ApisExtensionsV1beta1.md#replace_namespaced_daemonset) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name} | replace the specified DaemonSet
-[**replace_namespaced_daemonset_status**](ApisExtensionsV1beta1.md#replace_namespaced_daemonset_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/daemonsets/{name}/status | replace status of the specified DaemonSet
 [**replace_namespaced_deployment**](ApisExtensionsV1beta1.md#replace_namespaced_deployment) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name} | replace the specified Deployment
 [**replace_namespaced_deployment_scale**](ApisExtensionsV1beta1.md#replace_namespaced_deployment_scale) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale | replace scale of the specified Scale
-[**replace_namespaced_deployment_status**](ApisExtensionsV1beta1.md#replace_namespaced_deployment_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/status | replace status of the specified Deployment
 [**replace_namespaced_horizontalpodautoscaler**](ApisExtensionsV1beta1.md#replace_namespaced_horizontalpodautoscaler) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name} | replace the specified HorizontalPodAutoscaler
-[**replace_namespaced_horizontalpodautoscaler_status**](ApisExtensionsV1beta1.md#replace_namespaced_horizontalpodautoscaler_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status | replace status of the specified HorizontalPodAutoscaler
 [**replace_namespaced_ingress**](ApisExtensionsV1beta1.md#replace_namespaced_ingress) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name} | replace the specified Ingress
-[**replace_namespaced_ingress_status**](ApisExtensionsV1beta1.md#replace_namespaced_ingress_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/ingresses/{name}/status | replace status of the specified Ingress
 [**replace_namespaced_job**](ApisExtensionsV1beta1.md#replace_namespaced_job) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name} | replace the specified Job
-[**replace_namespaced_job_status**](ApisExtensionsV1beta1.md#replace_namespaced_job_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/jobs/{name}/status | replace status of the specified Job
 [**replace_namespaced_replicaset**](ApisExtensionsV1beta1.md#replace_namespaced_replicaset) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name} | replace the specified ReplicaSet
 [**replace_namespaced_replicaset_scale**](ApisExtensionsV1beta1.md#replace_namespaced_replicaset_scale) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/scale | replace scale of the specified Scale
-[**replace_namespaced_replicaset_status**](ApisExtensionsV1beta1.md#replace_namespaced_replicaset_status) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicasets/{name}/status | replace status of the specified ReplicaSet
 [**replace_namespaced_replicationcontroller_scale**](ApisExtensionsV1beta1.md#replace_namespaced_replicationcontroller_scale) | **PUT** /apis/extensions/v1beta1/namespaces/{namespace}/replicationcontrollers/{name}/scale | replace scale of the specified Scale
 [**watch_namespaced_watch_daemonset**](ApisExtensionsV1beta1.md#watch_namespaced_watch_daemonset) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets/{name} | watch changes to an object of kind DaemonSet
 [**watch_namespaced_watch_daemonsets**](ApisExtensionsV1beta1.md#watch_namespaced_watch_daemonsets) | **GET** /apis/extensions/v1beta1/watch/namespaces/{namespace}/daemonsets | watch individual changes to a list of DaemonSet
@@ -3057,57 +3051,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_daemonset_status**
-> V1beta1DaemonSet replace_namespaced_daemonset_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified DaemonSet
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1DaemonSet() # V1beta1DaemonSet | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the DaemonSet
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified DaemonSet
-    api_response = api_instance.replace_namespaced_daemonset_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_daemonset_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1DaemonSet**](V1beta1DaemonSet.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the DaemonSet | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1DaemonSet**](V1beta1DaemonSet.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_deployment**
 > V1beta1Deployment replace_namespaced_deployment(body, namespace, name, pretty=pretty)
 
@@ -3210,57 +3153,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_deployment_status**
-> V1beta1Deployment replace_namespaced_deployment_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Deployment
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1Deployment() # V1beta1Deployment | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Deployment
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Deployment
-    api_response = api_instance.replace_namespaced_deployment_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_deployment_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1Deployment**](V1beta1Deployment.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Deployment | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1Deployment**](V1beta1Deployment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_horizontalpodautoscaler**
 > V1beta1HorizontalPodAutoscaler replace_namespaced_horizontalpodautoscaler(body, namespace, name, pretty=pretty)
 
@@ -3286,57 +3178,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_horizontalpodautoscaler: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1HorizontalPodAutoscaler**](V1beta1HorizontalPodAutoscaler.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the HorizontalPodAutoscaler | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1HorizontalPodAutoscaler**](V1beta1HorizontalPodAutoscaler.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_horizontalpodautoscaler_status**
-> V1beta1HorizontalPodAutoscaler replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified HorizontalPodAutoscaler
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1HorizontalPodAutoscaler() # V1beta1HorizontalPodAutoscaler | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the HorizontalPodAutoscaler
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified HorizontalPodAutoscaler
-    api_response = api_instance.replace_namespaced_horizontalpodautoscaler_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_horizontalpodautoscaler_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3414,57 +3255,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_namespaced_ingress_status**
-> V1beta1Ingress replace_namespaced_ingress_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Ingress
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1Ingress() # V1beta1Ingress | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Ingress
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Ingress
-    api_response = api_instance.replace_namespaced_ingress_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_ingress_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1Ingress**](V1beta1Ingress.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Ingress | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1Ingress**](V1beta1Ingress.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_namespaced_job**
 > V1beta1Job replace_namespaced_job(body, namespace, name, pretty=pretty)
 
@@ -3490,57 +3280,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_job: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1Job**](V1beta1Job.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the Job | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1Job**](V1beta1Job.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_job_status**
-> V1beta1Job replace_namespaced_job_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified Job
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1Job() # V1beta1Job | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the Job
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified Job
-    api_response = api_instance.replace_namespaced_job_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_job_status: %s\n" % e
 ```
 
 ### Parameters
@@ -3657,57 +3396,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1beta1Scale**](V1beta1Scale.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: */*
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_replicaset_status**
-> V1beta1ReplicaSet replace_namespaced_replicaset_status(body, namespace, name, pretty=pretty)
-
-replace status of the specified ReplicaSet
-
-### Example 
-```python
-import time
-import lib_openshift
-from lib_openshift.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = lib_openshift.ApisExtensionsV1beta1()
-body = lib_openshift.V1beta1ReplicaSet() # V1beta1ReplicaSet | 
-namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-name = 'name_example' # str | name of the ReplicaSet
-pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. (optional)
-
-try: 
-    # replace status of the specified ReplicaSet
-    api_response = api_instance.replace_namespaced_replicaset_status(body, namespace, name, pretty=pretty)
-    pprint(api_response)
-except ApiException as e:
-    print "Exception when calling ApisExtensionsV1beta1->replace_namespaced_replicaset_status: %s\n" % e
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1beta1ReplicaSet**](V1beta1ReplicaSet.md)|  | 
- **namespace** | **str**| object name and auth scope, such as for teams and projects | 
- **name** | **str**| name of the ReplicaSet | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. | [optional] 
-
-### Return type
-
-[**V1beta1ReplicaSet**](V1beta1ReplicaSet.md)
 
 ### Authorization
 

@@ -178,6 +178,18 @@ class V1Secret(object):
 
         self._type = type
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_secret(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_secret(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_secret(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

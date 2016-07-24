@@ -178,6 +178,18 @@ class V1BuildConfig(object):
 
         self._status = status
 
+
+
+    def create(self, api, namespace):
+	api.create_namespaced_buildconfig(self, namespace)
+
+
+    def replace(self, api, namespace):
+	api.replace_namespaced_buildconfig(self, namespace)
+
+    @staticmethod
+    def delete(api, delete_options, namespace, name):
+        api.delete_namespaced_buildconfig(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

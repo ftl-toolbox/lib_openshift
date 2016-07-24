@@ -230,6 +230,19 @@ class V1OAuthClientAuthorization(object):
 
         self._scopes = scopes
 
+
+
+    def create(self, api):
+	api.create_oauthclientauthorization(self)
+
+
+    def replace(self, api):
+	api.replace_oauthclientauthorization(self)
+
+
+    @staticmethod
+    def delete(api, delete_options, name):
+        api.delete_oauthclientauthorization(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict
