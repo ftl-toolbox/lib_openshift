@@ -74,13 +74,13 @@ class V1LocalSubjectAccessReview(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_localsubjectaccessreview',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_localsubjectaccessreview',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

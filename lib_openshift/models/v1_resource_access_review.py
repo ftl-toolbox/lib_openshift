@@ -70,13 +70,13 @@ class V1ResourceAccessReview(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_resourceaccessreview',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_resourceaccessreview',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

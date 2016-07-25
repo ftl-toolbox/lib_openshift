@@ -60,31 +60,31 @@ class V1ClusterRole(object):
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_clusterrole',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_clusterrole',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_clusterrole',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_clusterrole',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_clusterrole',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

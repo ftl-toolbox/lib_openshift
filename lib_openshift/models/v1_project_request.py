@@ -62,7 +62,7 @@ class V1ProjectRequest(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_projectrequest',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

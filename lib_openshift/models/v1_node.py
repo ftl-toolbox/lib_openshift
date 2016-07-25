@@ -62,37 +62,37 @@ class V1Node(object):
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_watch_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_node',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

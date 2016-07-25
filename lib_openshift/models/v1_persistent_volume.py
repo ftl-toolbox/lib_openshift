@@ -62,37 +62,37 @@ class V1PersistentVolume(object):
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_watch_persistentvolume',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

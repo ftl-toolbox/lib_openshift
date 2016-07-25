@@ -60,7 +60,7 @@ class V1ImageStreamImage(object):
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_imagestreamimage',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

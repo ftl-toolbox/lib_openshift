@@ -62,43 +62,43 @@ class V1ImageStream(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_imagestream',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_imagestream',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

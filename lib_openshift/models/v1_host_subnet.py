@@ -64,37 +64,37 @@ class V1HostSubnet(object):
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_watch_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_hostsubnet',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

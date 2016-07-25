@@ -62,13 +62,13 @@ class V1ImageStreamImport(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_imagestreamimport',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_imagestreamimport',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

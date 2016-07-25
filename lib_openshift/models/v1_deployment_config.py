@@ -62,43 +62,43 @@ class V1DeploymentConfig(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_deploymentconfig',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_deploymentconfig',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

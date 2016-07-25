@@ -74,19 +74,19 @@ class V1OAuthAccessToken(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_oauthaccesstoken',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_oauthaccesstoken',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_oauthaccesstoken',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

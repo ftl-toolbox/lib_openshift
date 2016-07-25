@@ -68,37 +68,37 @@ class V1Image(object):
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_watch_image',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

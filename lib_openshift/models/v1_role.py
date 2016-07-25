@@ -60,37 +60,37 @@ class V1Role(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_role',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_role',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_role',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_role',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_role',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_role',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

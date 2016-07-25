@@ -62,37 +62,37 @@ class V1Namespace(object):
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_watch_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_namespace',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

@@ -94,37 +94,37 @@ class V1SecurityContextConstraints(object):
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_watch_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_securitycontextconstraint',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

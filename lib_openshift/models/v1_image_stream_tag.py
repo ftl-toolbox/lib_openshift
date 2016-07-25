@@ -66,25 +66,25 @@ class V1ImageStreamTag(object):
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_imagestreamtag',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_imagestreamtag',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_imagestreamtag',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_imagestreamtag',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

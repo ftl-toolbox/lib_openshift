@@ -62,43 +62,43 @@ class V1beta1DaemonSet(object):
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'update',
                 'method': 'replace_namespaced_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'delete',
                 'method': 'delete_namespaced_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'read',
                 'method': 'get_namespaced_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'patch',
                 'method': 'patch_namespaced_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'create',
                 'method': 'create_daemonset',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'create',
                 'method': 'create_namespaced_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_daemonset',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

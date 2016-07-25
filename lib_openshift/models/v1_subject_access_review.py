@@ -74,13 +74,13 @@ class V1SubjectAccessReview(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_subjectaccessreview',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_subjectaccessreview',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

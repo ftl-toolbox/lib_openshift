@@ -60,43 +60,43 @@ class V1LimitRange(object):
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_namespaced_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_namespaced_limitrange',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_limitrange',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

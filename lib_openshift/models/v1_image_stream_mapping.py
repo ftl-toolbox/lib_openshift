@@ -62,13 +62,13 @@ class V1ImageStreamMapping(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_imagestreammapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_imagestreammapping',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

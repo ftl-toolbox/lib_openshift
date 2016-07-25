@@ -64,43 +64,43 @@ class V1PolicyBinding(object):
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_namespaced_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_policybinding',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_policybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

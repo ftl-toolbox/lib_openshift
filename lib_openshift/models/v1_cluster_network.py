@@ -64,37 +64,37 @@ class V1ClusterNetwork(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_watch_clusternetwork',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

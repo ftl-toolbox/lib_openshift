@@ -64,37 +64,37 @@ class V1ClusterPolicyBinding(object):
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_watch_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_clusterpolicybinding',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

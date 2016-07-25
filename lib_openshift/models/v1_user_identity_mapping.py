@@ -62,31 +62,31 @@ class V1UserIdentityMapping(object):
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_useridentitymapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_useridentitymapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_useridentitymapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_useridentitymapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_useridentitymapping',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

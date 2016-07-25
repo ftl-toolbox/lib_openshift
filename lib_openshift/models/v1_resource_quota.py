@@ -62,43 +62,43 @@ class V1ResourceQuota(object):
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_resourcequota',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_namespaced_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_namespaced_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_resourcequota',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 

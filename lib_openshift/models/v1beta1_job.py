@@ -62,43 +62,43 @@ class V1beta1Job(object):
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'update',
                 'method': 'replace_namespaced_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'delete',
                 'method': 'delete_namespaced_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'read',
                 'method': 'get_namespaced_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'patch',
                 'method': 'patch_namespaced_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'create',
                 'method': 'create_namespaced_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_job',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApisExtensionsV1beta1',
                 'type': 'create',
                 'method': 'create_job',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

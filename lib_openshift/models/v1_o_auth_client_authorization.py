@@ -66,37 +66,37 @@ class V1OAuthClientAuthorization(object):
                 'class': 'OapiV1',
                 'type': 'update',
                 'method': 'replace_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'delete',
                 'method': 'delete_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'get_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'patch',
                 'method': 'patch_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'read',
                 'method': 'watch_watch_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_oauthclientauthorization',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

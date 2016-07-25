@@ -58,13 +58,13 @@ class V1DeploymentConfigRollback(object):
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_namespaced_deploymentconfigrollback',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'OapiV1',
                 'type': 'create',
                 'method': 'create_deploymentconfigrollback',
-                'namespaced': 'false'
+                'namespaced': False
             },
         ]
 

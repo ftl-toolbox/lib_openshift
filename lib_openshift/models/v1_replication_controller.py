@@ -62,43 +62,43 @@ class V1ReplicationController(object):
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_replicationcontroller',
-                'namespaced': 'false'
+                'namespaced': False
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'watch_namespaced_watch_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'update',
                 'method': 'replace_namespaced_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'delete',
                 'method': 'delete_namespaced_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'read',
                 'method': 'get_namespaced_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'patch',
                 'method': 'patch_namespaced_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
             {
                 'class': 'ApiV1',
                 'type': 'create',
                 'method': 'create_namespaced_replicationcontroller',
-                'namespaced': 'true'
+                'namespaced': True
             },
         ]
 
