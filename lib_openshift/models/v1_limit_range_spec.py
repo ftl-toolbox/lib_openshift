@@ -49,6 +49,8 @@ class V1LimitRangeSpec(object):
             'limits': 'limits'
         }
 
+        self.operations = [
+        ]
 
         self._limits = limits
 

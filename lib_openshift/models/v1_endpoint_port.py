@@ -53,6 +53,8 @@ class V1EndpointPort(object):
             'protocol': 'protocol'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._port = port

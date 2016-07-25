@@ -53,6 +53,8 @@ class V1EndpointSubset(object):
             'ports': 'ports'
         }
 
+        self.operations = [
+        ]
 
         self._addresses = addresses
         self._not_ready_addresses = not_ready_addresses

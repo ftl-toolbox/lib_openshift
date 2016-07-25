@@ -51,6 +51,8 @@ class V1EventSource(object):
             'host': 'host'
         }
 
+        self.operations = [
+        ]
 
         self._component = component
         self._host = host

@@ -55,24 +55,44 @@ class V1Group(object):
             'users': 'users'
         }
 
-	self.operations = {
-            {method&#x3D;replace_group, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_group, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_group, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_group, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_watch_group, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_group, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_group',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_group',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_group',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_group',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'watch_watch_group',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_group',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

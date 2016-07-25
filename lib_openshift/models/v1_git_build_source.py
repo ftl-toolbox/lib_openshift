@@ -55,6 +55,8 @@ class V1GitBuildSource(object):
             'https_proxy': 'httpsProxy'
         }
 
+        self.operations = [
+        ]
 
         self._uri = uri
         self._ref = ref

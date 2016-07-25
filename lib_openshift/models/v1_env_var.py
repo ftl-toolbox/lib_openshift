@@ -53,6 +53,8 @@ class V1EnvVar(object):
             'value_from': 'valueFrom'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._value = value

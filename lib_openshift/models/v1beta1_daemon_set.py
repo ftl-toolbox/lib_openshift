@@ -57,27 +57,50 @@ class V1beta1DaemonSet(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;replace_namespaced_daemonset, type&#x3D;update, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;delete_namespaced_daemonset, type&#x3D;delete, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;get_namespaced_daemonset, type&#x3D;read, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;patch_namespaced_daemonset, type&#x3D;patch, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_daemonset, type&#x3D;create, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_daemonset, type&#x3D;create, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;watch_namespaced_watch_daemonset, type&#x3D;read, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'update',
+                'method': 'replace_namespaced_daemonset',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'delete',
+                'method': 'delete_namespaced_daemonset',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'read',
+                'method': 'get_namespaced_daemonset',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'patch',
+                'method': 'patch_namespaced_daemonset',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'create',
+                'method': 'create_daemonset',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'create',
+                'method': 'create_namespaced_daemonset',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisExtensionsV1beta1',
+                'type': 'read',
+                'method': 'watch_namespaced_watch_daemonset',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

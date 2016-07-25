@@ -53,6 +53,8 @@ class V1ReplicationControllerStatus(object):
             'observed_generation': 'observedGeneration'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._fully_labeled_replicas = fully_labeled_replicas

@@ -49,6 +49,8 @@ class V1ServiceStatus(object):
             'load_balancer': 'loadBalancer'
         }
 
+        self.operations = [
+        ]
 
         self._load_balancer = load_balancer
 

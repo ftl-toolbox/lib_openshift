@@ -59,6 +59,8 @@ class V1CephFSVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._monitors = monitors
         self._path = path

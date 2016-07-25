@@ -57,6 +57,8 @@ class V1HTTPGetAction(object):
             'http_headers': 'httpHeaders'
         }
 
+        self.operations = [
+        ]
 
         self._path = path
         self._port = port

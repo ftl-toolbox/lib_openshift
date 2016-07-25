@@ -51,6 +51,8 @@ class V1HTTPHeader(object):
             'value': 'value'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._value = value

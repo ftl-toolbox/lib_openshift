@@ -55,6 +55,8 @@ class V1GitSourceRevision(object):
             'message': 'message'
         }
 
+        self.operations = [
+        ]
 
         self._commit = commit
         self._author = author

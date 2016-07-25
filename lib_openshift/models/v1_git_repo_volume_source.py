@@ -53,6 +53,8 @@ class V1GitRepoVolumeSource(object):
             'directory': 'directory'
         }
 
+        self.operations = [
+        ]
 
         self._repository = repository
         self._revision = revision

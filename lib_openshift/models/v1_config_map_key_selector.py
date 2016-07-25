@@ -51,6 +51,8 @@ class V1ConfigMapKeySelector(object):
             'key': 'key'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._key = key

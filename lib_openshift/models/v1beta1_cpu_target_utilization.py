@@ -49,6 +49,8 @@ class V1beta1CPUTargetUtilization(object):
             'target_percentage': 'targetPercentage'
         }
 
+        self.operations = [
+        ]
 
         self._target_percentage = target_percentage
 

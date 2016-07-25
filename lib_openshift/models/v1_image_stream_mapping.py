@@ -57,12 +57,20 @@ class V1ImageStreamMapping(object):
             'tag': 'tag'
         }
 
-	self.operations = {
-            {method&#x3D;create_imagestreammapping, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_imagestreammapping, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_imagestreammapping',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_imagestreammapping',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

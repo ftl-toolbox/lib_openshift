@@ -51,6 +51,8 @@ class V1MetadataFile(object):
             'field_ref': 'fieldRef'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._field_ref = field_ref

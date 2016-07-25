@@ -51,6 +51,8 @@ class V1beta1IngressTLS(object):
             'secret_name': 'secretName'
         }
 
+        self.operations = [
+        ]
 
         self._hosts = hosts
         self._secret_name = secret_name

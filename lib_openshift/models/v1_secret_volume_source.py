@@ -49,6 +49,8 @@ class V1SecretVolumeSource(object):
             'secret_name': 'secretName'
         }
 
+        self.operations = [
+        ]
 
         self._secret_name = secret_name
 

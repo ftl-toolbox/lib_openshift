@@ -51,6 +51,8 @@ class V1beta1DeploymentStrategy(object):
             'rolling_update': 'rollingUpdate'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._rolling_update = rolling_update

@@ -63,6 +63,8 @@ class V1PodStatus(object):
             'container_statuses': 'containerStatuses'
         }
 
+        self.operations = [
+        ]
 
         self._phase = phase
         self._conditions = conditions

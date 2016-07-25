@@ -57,6 +57,8 @@ class V1DeploymentConfigRollbackSpec(object):
             'include_strategy': 'includeStrategy'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._include_triggers = include_triggers

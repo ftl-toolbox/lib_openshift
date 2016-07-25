@@ -57,6 +57,8 @@ class V1beta1HorizontalPodAutoscalerStatus(object):
             'current_cpu_utilization_percentage': 'currentCPUUtilizationPercentage'
         }
 
+        self.operations = [
+        ]
 
         self._observed_generation = observed_generation
         self._last_scale_time = last_scale_time

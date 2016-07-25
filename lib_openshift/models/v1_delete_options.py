@@ -53,6 +53,8 @@ class V1DeleteOptions(object):
             'grace_period_seconds': 'gracePeriodSeconds'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

@@ -51,6 +51,8 @@ class V1beta1RollingUpdateDeployment(object):
             'max_surge': 'maxSurge'
         }
 
+        self.operations = [
+        ]
 
         self._max_unavailable = max_unavailable
         self._max_surge = max_surge

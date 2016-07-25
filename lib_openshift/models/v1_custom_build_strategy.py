@@ -61,6 +61,8 @@ class V1CustomBuildStrategy(object):
             'build_api_version': 'buildAPIVersion'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._pull_secret = pull_secret

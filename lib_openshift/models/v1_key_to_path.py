@@ -51,6 +51,8 @@ class V1KeyToPath(object):
             'path': 'path'
         }
 
+        self.operations = [
+        ]
 
         self._key = key
         self._path = path

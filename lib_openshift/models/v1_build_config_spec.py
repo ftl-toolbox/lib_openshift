@@ -65,6 +65,8 @@ class V1BuildConfigSpec(object):
             'completion_deadline_seconds': 'completionDeadlineSeconds'
         }
 
+        self.operations = [
+        ]
 
         self._triggers = triggers
         self._service_account = service_account

@@ -49,6 +49,8 @@ class V1ScaleSpec(object):
             'replicas': 'replicas'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
 

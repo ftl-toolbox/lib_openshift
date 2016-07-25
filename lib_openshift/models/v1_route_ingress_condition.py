@@ -57,6 +57,8 @@ class V1RouteIngressCondition(object):
             'last_transition_time': 'lastTransitionTime'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._status = status

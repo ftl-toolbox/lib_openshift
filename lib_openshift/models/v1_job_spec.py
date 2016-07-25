@@ -59,6 +59,8 @@ class V1JobSpec(object):
             'template': 'template'
         }
 
+        self.operations = [
+        ]
 
         self._parallelism = parallelism
         self._completions = completions

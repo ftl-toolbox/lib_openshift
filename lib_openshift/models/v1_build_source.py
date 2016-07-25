@@ -63,6 +63,8 @@ class V1BuildSource(object):
             'secrets': 'secrets'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._binary = binary

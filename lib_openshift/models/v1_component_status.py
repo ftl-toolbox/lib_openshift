@@ -55,6 +55,8 @@ class V1ComponentStatus(object):
             'conditions': 'conditions'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

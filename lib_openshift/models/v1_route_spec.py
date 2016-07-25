@@ -57,6 +57,8 @@ class V1RouteSpec(object):
             'tls': 'tls'
         }
 
+        self.operations = [
+        ]
 
         self._host = host
         self._path = path

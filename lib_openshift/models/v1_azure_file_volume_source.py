@@ -53,6 +53,8 @@ class V1AzureFileVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._secret_name = secret_name
         self._share_name = share_name

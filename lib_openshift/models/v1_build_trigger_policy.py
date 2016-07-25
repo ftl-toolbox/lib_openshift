@@ -55,6 +55,8 @@ class V1BuildTriggerPolicy(object):
             'image_change': 'imageChange'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._github = github

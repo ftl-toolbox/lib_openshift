@@ -51,6 +51,8 @@ class V1beta1IngressBackend(object):
             'service_port': 'servicePort'
         }
 
+        self.operations = [
+        ]
 
         self._service_name = service_name
         self._service_port = service_port

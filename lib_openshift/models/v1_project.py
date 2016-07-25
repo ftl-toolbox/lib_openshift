@@ -57,21 +57,38 @@ class V1Project(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;replace_project, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_project, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_project, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_project, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_project, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_project',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_project',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_project',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_project',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_project',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

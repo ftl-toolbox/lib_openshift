@@ -59,24 +59,44 @@ class V1OAuthClient(object):
             'redirect_ur_is': 'redirectURIs'
         }
 
-	self.operations = {
-            {method&#x3D;watch_watch_oauthclient, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_oauthclient, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;replace_oauthclient, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_oauthclient, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_oauthclient, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_oauthclient, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'watch_watch_oauthclient',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_oauthclient',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_oauthclient',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_oauthclient',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_oauthclient',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_oauthclient',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

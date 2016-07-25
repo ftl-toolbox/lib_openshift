@@ -49,6 +49,8 @@ class V1LoadBalancerStatus(object):
             'ingress': 'ingress'
         }
 
+        self.operations = [
+        ]
 
         self._ingress = ingress
 

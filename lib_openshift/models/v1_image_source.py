@@ -53,6 +53,8 @@ class V1ImageSource(object):
             'pull_secret': 'pullSecret'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._paths = paths

@@ -53,6 +53,8 @@ class V1RouteIngress(object):
             'conditions': 'conditions'
         }
 
+        self.operations = [
+        ]
 
         self._host = host
         self._router_name = router_name

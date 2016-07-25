@@ -53,6 +53,8 @@ class V1beta1LabelSelectorRequirement(object):
             'values': 'values'
         }
 
+        self.operations = [
+        ]
 
         self._key = key
         self._operator = operator

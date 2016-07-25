@@ -65,6 +65,8 @@ class V1BuildStatus(object):
             'config': 'config'
         }
 
+        self.operations = [
+        ]
 
         self._phase = phase
         self._cancelled = cancelled

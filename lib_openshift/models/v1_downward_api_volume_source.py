@@ -49,6 +49,8 @@ class V1DownwardAPIVolumeSource(object):
             'items': 'items'
         }
 
+        self.operations = [
+        ]
 
         self._items = items
 

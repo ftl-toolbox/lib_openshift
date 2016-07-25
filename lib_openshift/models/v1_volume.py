@@ -89,6 +89,8 @@ class V1Volume(object):
             'metadata': 'metadata'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._host_path = host_path

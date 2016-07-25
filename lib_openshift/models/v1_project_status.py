@@ -49,6 +49,8 @@ class V1ProjectStatus(object):
             'phase': 'phase'
         }
 
+        self.operations = [
+        ]
 
         self._phase = phase
 

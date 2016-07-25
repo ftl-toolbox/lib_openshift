@@ -57,27 +57,50 @@ class V1Job(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;replace_namespaced_job, type&#x3D;update, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;delete_namespaced_job, type&#x3D;delete, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;get_namespaced_job, type&#x3D;read, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;patch_namespaced_job, type&#x3D;patch, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_job, type&#x3D;create, class&#x3D;ApisBatchV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_namespaced_watch_job, type&#x3D;read, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_job, type&#x3D;create, class&#x3D;ApisBatchV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'ApisBatchV1',
+                'type': 'update',
+                'method': 'replace_namespaced_job',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'delete',
+                'method': 'delete_namespaced_job',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'read',
+                'method': 'get_namespaced_job',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'patch',
+                'method': 'patch_namespaced_job',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'create',
+                'method': 'create_job',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'read',
+                'method': 'watch_namespaced_watch_job',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApisBatchV1',
+                'type': 'create',
+                'method': 'create_namespaced_job',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

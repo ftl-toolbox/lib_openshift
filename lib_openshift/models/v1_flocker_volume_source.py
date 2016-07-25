@@ -49,6 +49,8 @@ class V1FlockerVolumeSource(object):
             'dataset_name': 'datasetName'
         }
 
+        self.operations = [
+        ]
 
         self._dataset_name = dataset_name
 

@@ -49,6 +49,8 @@ class V1TCPSocketAction(object):
             'port': 'port'
         }
 
+        self.operations = [
+        ]
 
         self._port = port
 

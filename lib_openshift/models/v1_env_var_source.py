@@ -53,6 +53,8 @@ class V1EnvVarSource(object):
             'secret_key_ref': 'secretKeyRef'
         }
 
+        self.operations = [
+        ]
 
         self._field_ref = field_ref
         self._config_map_key_ref = config_map_key_ref

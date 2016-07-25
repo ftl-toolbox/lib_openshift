@@ -49,6 +49,8 @@ class Integer(object):
             
         }
 
+        self.operations = [
+        ]
 
     def to_dict(self):
         """

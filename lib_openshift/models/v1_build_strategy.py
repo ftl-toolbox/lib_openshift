@@ -55,6 +55,8 @@ class V1BuildStrategy(object):
             'custom_strategy': 'customStrategy'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._docker_strategy = docker_strategy

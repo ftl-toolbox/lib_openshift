@@ -61,6 +61,8 @@ class V1ObjectReference(object):
             'field_path': 'fieldPath'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._namespace = namespace

@@ -53,6 +53,8 @@ class V1PersistentVolumeClaimSpec(object):
             'volume_name': 'volumeName'
         }
 
+        self.operations = [
+        ]
 
         self._access_modes = access_modes
         self._resources = resources

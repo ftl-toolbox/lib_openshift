@@ -53,6 +53,8 @@ class V1ContainerState(object):
             'terminated': 'terminated'
         }
 
+        self.operations = [
+        ]
 
         self._waiting = waiting
         self._running = running

@@ -51,6 +51,8 @@ class V1BuildLog(object):
             'api_version': 'apiVersion'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

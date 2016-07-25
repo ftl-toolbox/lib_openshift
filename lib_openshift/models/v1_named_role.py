@@ -51,6 +51,8 @@ class V1NamedRole(object):
             'role': 'role'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._role = role

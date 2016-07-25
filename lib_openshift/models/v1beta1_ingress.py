@@ -57,6 +57,8 @@ class V1beta1Ingress(object):
             'status': 'status'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

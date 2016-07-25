@@ -55,6 +55,8 @@ class V1DeploymentTriggerImageChangeParams(object):
             'last_triggered_image': 'lastTriggeredImage'
         }
 
+        self.operations = [
+        ]
 
         self._automatic = automatic
         self._container_names = container_names

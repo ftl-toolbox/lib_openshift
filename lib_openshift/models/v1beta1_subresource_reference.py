@@ -55,6 +55,8 @@ class V1beta1SubresourceReference(object):
             'subresource': 'subresource'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._name = name

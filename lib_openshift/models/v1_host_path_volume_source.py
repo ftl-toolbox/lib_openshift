@@ -49,6 +49,8 @@ class V1HostPathVolumeSource(object):
             'path': 'path'
         }
 
+        self.operations = [
+        ]
 
         self._path = path
 

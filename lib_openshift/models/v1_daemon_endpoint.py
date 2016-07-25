@@ -49,6 +49,8 @@ class V1DaemonEndpoint(object):
             'port': 'Port'
         }
 
+        self.operations = [
+        ]
 
         self._port = port
 

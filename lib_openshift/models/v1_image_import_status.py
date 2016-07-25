@@ -53,6 +53,8 @@ class V1ImageImportStatus(object):
             'tag': 'tag'
         }
 
+        self.operations = [
+        ]
 
         self._status = status
         self._image = image

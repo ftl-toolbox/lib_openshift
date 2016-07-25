@@ -63,6 +63,8 @@ class V1NodeSystemInfo(object):
             'kube_proxy_version': 'kubeProxyVersion'
         }
 
+        self.operations = [
+        ]
 
         self._machine_id = machine_id
         self._system_uuid = system_uuid

@@ -51,6 +51,8 @@ class V1ConfigMapVolumeSource(object):
             'items': 'items'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._items = items

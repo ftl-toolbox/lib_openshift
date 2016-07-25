@@ -81,6 +81,8 @@ class V1PersistentVolumeSpec(object):
             'persistent_volume_reclaim_policy': 'persistentVolumeReclaimPolicy'
         }
 
+        self.operations = [
+        ]
 
         self._capacity = capacity
         self._gce_persistent_disk = gce_persistent_disk

@@ -55,6 +55,8 @@ class V1ExecNewPodHook(object):
             'volumes': 'volumes'
         }
 
+        self.operations = [
+        ]
 
         self._command = command
         self._env = env

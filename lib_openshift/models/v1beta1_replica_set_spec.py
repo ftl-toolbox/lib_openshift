@@ -53,6 +53,8 @@ class V1beta1ReplicaSetSpec(object):
             'template': 'template'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._selector = selector

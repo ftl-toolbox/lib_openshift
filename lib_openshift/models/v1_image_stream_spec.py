@@ -51,6 +51,8 @@ class V1ImageStreamSpec(object):
             'tags': 'tags'
         }
 
+        self.operations = [
+        ]
 
         self._docker_image_repository = docker_image_repository
         self._tags = tags

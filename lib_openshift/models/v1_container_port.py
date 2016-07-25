@@ -57,6 +57,8 @@ class V1ContainerPort(object):
             'host_ip': 'hostIP'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._host_port = host_port

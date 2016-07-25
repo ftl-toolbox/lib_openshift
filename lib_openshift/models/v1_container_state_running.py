@@ -49,6 +49,8 @@ class V1ContainerStateRunning(object):
             'started_at': 'startedAt'
         }
 
+        self.operations = [
+        ]
 
         self._started_at = started_at
 

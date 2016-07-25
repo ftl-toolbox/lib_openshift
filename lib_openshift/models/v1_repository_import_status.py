@@ -53,6 +53,8 @@ class V1RepositoryImportStatus(object):
             'additional_tags': 'additionalTags'
         }
 
+        self.operations = [
+        ]
 
         self._status = status
         self._images = images

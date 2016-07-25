@@ -63,6 +63,8 @@ class V1beta1DeploymentSpec(object):
             'rollback_to': 'rollbackTo'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._selector = selector

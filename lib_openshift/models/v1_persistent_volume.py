@@ -57,24 +57,44 @@ class V1PersistentVolume(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;create_persistentvolume, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;replace_persistentvolume, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_persistentvolume, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_persistentvolume, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_persistentvolume, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_watch_persistentvolume, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'ApiV1',
+                'type': 'create',
+                'method': 'create_persistentvolume',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'update',
+                'method': 'replace_persistentvolume',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'delete',
+                'method': 'delete_persistentvolume',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'get_persistentvolume',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'patch',
+                'method': 'patch_persistentvolume',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'watch_watch_persistentvolume',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

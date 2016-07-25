@@ -55,27 +55,50 @@ class V1LimitRange(object):
             'spec': 'spec'
         }
 
-	self.operations = {
-            {method&#x3D;replace_namespaced_limitrange, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;delete_namespaced_limitrange, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;get_namespaced_limitrange, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;patch_namespaced_limitrange, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;watch_namespaced_watch_limitrange, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_limitrange, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_limitrange, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'ApiV1',
+                'type': 'update',
+                'method': 'replace_namespaced_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'delete',
+                'method': 'delete_namespaced_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'get_namespaced_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'patch',
+                'method': 'patch_namespaced_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'watch_namespaced_watch_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'create',
+                'method': 'create_namespaced_limitrange',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'create',
+                'method': 'create_limitrange',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

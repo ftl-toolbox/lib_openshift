@@ -79,6 +79,8 @@ class V1PodSpec(object):
             'image_pull_secrets': 'imagePullSecrets'
         }
 
+        self.operations = [
+        ]
 
         self._volumes = volumes
         self._containers = containers

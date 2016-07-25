@@ -51,6 +51,8 @@ class V1LoadBalancerIngress(object):
             'hostname': 'hostname'
         }
 
+        self.operations = [
+        ]
 
         self._ip = ip
         self._hostname = hostname

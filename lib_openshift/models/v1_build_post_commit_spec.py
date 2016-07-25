@@ -53,6 +53,8 @@ class V1BuildPostCommitSpec(object):
             'script': 'script'
         }
 
+        self.operations = [
+        ]
 
         self._command = command
         self._args = args

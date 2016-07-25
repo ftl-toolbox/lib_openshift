@@ -69,15 +69,26 @@ class V1OAuthAccessToken(object):
             'refresh_token': 'refreshToken'
         }
 
-	self.operations = {
-            {method&#x3D;create_oauthaccesstoken, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_oauthaccesstoken, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_oauthaccesstoken, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_oauthaccesstoken',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_oauthaccesstoken',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_oauthaccesstoken',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

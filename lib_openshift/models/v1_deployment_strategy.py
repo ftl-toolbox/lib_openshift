@@ -61,6 +61,8 @@ class V1DeploymentStrategy(object):
             'annotations': 'annotations'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._custom_params = custom_params

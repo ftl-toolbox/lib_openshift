@@ -51,6 +51,8 @@ class V1beta1DaemonSetSpec(object):
             'template': 'template'
         }
 
+        self.operations = [
+        ]
 
         self._selector = selector
         self._template = template

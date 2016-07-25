@@ -51,6 +51,8 @@ class JsonWatchEvent(object):
             'object': 'object'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._object = object

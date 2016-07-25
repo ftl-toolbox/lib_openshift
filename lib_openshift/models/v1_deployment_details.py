@@ -51,6 +51,8 @@ class V1DeploymentDetails(object):
             'causes': 'causes'
         }
 
+        self.operations = [
+        ]
 
         self._message = message
         self._causes = causes

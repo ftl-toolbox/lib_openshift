@@ -61,6 +61,8 @@ class V1ContainerStateTerminated(object):
             'container_id': 'containerID'
         }
 
+        self.operations = [
+        ]
 
         self._exit_code = exit_code
         self._signal = signal

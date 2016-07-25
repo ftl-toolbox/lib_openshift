@@ -83,6 +83,8 @@ class V1Container(object):
             'tty': 'tty'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._image = image

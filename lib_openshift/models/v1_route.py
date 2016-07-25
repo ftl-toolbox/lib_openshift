@@ -57,27 +57,50 @@ class V1Route(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;create_route, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_namespaced_watch_route, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;replace_namespaced_route, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;delete_namespaced_route, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;get_namespaced_route, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;patch_namespaced_route, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_route, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_route',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'watch_namespaced_watch_route',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_namespaced_route',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_namespaced_route',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_namespaced_route',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_namespaced_route',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_route',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

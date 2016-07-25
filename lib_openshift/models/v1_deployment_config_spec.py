@@ -59,6 +59,8 @@ class V1DeploymentConfigSpec(object):
             'template': 'template'
         }
 
+        self.operations = [
+        ]
 
         self._strategy = strategy
         self._triggers = triggers

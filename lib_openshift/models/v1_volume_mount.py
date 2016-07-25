@@ -53,6 +53,8 @@ class V1VolumeMount(object):
             'mount_path': 'mountPath'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._read_only = read_only

@@ -53,6 +53,8 @@ class V1CustomDeploymentStrategyParams(object):
             'command': 'command'
         }
 
+        self.operations = [
+        ]
 
         self._image = image
         self._environment = environment

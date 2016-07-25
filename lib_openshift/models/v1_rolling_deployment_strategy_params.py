@@ -63,6 +63,8 @@ class V1RollingDeploymentStrategyParams(object):
             'post': 'post'
         }
 
+        self.operations = [
+        ]
 
         self._update_period_seconds = update_period_seconds
         self._interval_seconds = interval_seconds

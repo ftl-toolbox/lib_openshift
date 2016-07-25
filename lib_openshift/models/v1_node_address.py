@@ -51,6 +51,8 @@ class V1NodeAddress(object):
             'address': 'address'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._address = address

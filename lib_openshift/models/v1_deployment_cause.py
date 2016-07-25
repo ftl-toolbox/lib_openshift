@@ -51,6 +51,8 @@ class V1DeploymentCause(object):
             'image_trigger': 'imageTrigger'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._image_trigger = image_trigger

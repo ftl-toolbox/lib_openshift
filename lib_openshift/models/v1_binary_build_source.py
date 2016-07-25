@@ -49,6 +49,8 @@ class V1BinaryBuildSource(object):
             'as_file': 'asFile'
         }
 
+        self.operations = [
+        ]
 
         self._as_file = as_file
 

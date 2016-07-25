@@ -55,6 +55,8 @@ class V1RunAsUserStrategyOptions(object):
             'uid_range_max': 'uidRangeMax'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._uid = uid

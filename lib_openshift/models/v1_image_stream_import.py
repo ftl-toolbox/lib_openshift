@@ -57,12 +57,20 @@ class V1ImageStreamImport(object):
             'status': 'status'
         }
 
-	self.operations = {
-            {method&#x3D;create_namespaced_imagestreamimport, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_imagestreamimport, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_imagestreamimport',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_imagestreamimport',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

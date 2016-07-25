@@ -53,6 +53,8 @@ class V1GlusterfsVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._endpoints = endpoints
         self._path = path

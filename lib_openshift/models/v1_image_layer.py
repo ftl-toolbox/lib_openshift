@@ -51,6 +51,8 @@ class V1ImageLayer(object):
             'size': 'size'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._size = size

@@ -51,6 +51,8 @@ class V1ResourceQuotaStatus(object):
             'used': 'used'
         }
 
+        self.operations = [
+        ]
 
         self._hard = hard
         self._used = used

@@ -65,6 +65,8 @@ class V1BuildRequest(object):
             'env': 'env'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

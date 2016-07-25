@@ -59,6 +59,8 @@ class V1LimitRangeItem(object):
             'max_limit_request_ratio': 'maxLimitRequestRatio'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._max = max

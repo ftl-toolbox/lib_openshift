@@ -51,6 +51,8 @@ class V1SourceControlUser(object):
             'email': 'email'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._email = email

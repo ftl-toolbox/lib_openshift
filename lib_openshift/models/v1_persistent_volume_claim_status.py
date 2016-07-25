@@ -53,6 +53,8 @@ class V1PersistentVolumeClaimStatus(object):
             'capacity': 'capacity'
         }
 
+        self.operations = [
+        ]
 
         self._phase = phase
         self._access_modes = access_modes

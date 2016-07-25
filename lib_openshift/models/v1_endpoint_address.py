@@ -51,6 +51,8 @@ class V1EndpointAddress(object):
             'target_ref': 'targetRef'
         }
 
+        self.operations = [
+        ]
 
         self._ip = ip
         self._target_ref = target_ref

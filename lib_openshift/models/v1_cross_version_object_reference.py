@@ -53,6 +53,8 @@ class V1CrossVersionObjectReference(object):
             'api_version': 'apiVersion'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._name = name

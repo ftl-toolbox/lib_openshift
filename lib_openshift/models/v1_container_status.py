@@ -63,6 +63,8 @@ class V1ContainerStatus(object):
             'container_id': 'containerID'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._state = state

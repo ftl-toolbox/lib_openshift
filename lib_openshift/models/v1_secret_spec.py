@@ -51,6 +51,8 @@ class V1SecretSpec(object):
             'mount_path': 'mountPath'
         }
 
+        self.operations = [
+        ]
 
         self._secret_source = secret_source
         self._mount_path = mount_path

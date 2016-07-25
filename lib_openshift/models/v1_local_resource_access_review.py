@@ -65,12 +65,20 @@ class V1LocalResourceAccessReview(object):
             'content': 'content'
         }
 
-	self.operations = {
-            {method&#x3D;create_localresourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_localresourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_localresourceaccessreview',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_localresourceaccessreview',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

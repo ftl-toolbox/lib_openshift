@@ -51,6 +51,8 @@ class V1FSGroupStrategyOptions(object):
             'ranges': 'ranges'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._ranges = ranges

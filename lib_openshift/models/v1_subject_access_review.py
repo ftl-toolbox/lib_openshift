@@ -69,12 +69,20 @@ class V1SubjectAccessReview(object):
             'groups': 'groups'
         }
 
-	self.operations = {
-            {method&#x3D;create_subjectaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_subjectaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_subjectaccessreview',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_subjectaccessreview',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

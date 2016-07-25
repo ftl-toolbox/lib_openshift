@@ -33,13 +33,16 @@ class {{classname}}(object):
             {{/hasMore}}{{/vars}}
         }
 
+        self.operations = [
 {{#vendorExtensions.operations}}
-
-	self.operations = {
-            {{.}}
-	}
-
+            {
+                'class': '{{class}}',
+                'type': '{{type}}',
+                'method': '{{method}}',
+                'namespaced': '{{namespaced}}'
+            },
 {{/vendorExtensions.operations}}
+        ]
 
 {{#readOnlyVars}}
         self._{{name}} = {{#defaultValue}}{{{defaultValue}}}{{/defaultValue}}{{^defaultValue}}None{{/defaultValue}}

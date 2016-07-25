@@ -51,6 +51,8 @@ class V1ContainerStateWaiting(object):
             'message': 'message'
         }
 
+        self.operations = [
+        ]
 
         self._reason = reason
         self._message = message

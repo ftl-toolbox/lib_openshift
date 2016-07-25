@@ -59,24 +59,44 @@ class V1ClusterNetwork(object):
             'service_network': 'serviceNetwork'
         }
 
-	self.operations = {
-            {method&#x3D;create_clusternetwork, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;replace_clusternetwork, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_clusternetwork, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_clusternetwork, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_clusternetwork, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_watch_clusternetwork, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_clusternetwork',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_clusternetwork',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_clusternetwork',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_clusternetwork',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_clusternetwork',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'watch_watch_clusternetwork',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

@@ -51,6 +51,8 @@ class V1SecretBuildSource(object):
             'destination_dir': 'destinationDir'
         }
 
+        self.operations = [
+        ]
 
         self._secret = secret
         self._destination_dir = destination_dir

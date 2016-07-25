@@ -51,6 +51,8 @@ class V1Capabilities(object):
             'drop': 'drop'
         }
 
+        self.operations = [
+        ]
 
         self._add = add
         self._drop = drop

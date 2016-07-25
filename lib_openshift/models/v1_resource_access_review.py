@@ -65,12 +65,20 @@ class V1ResourceAccessReview(object):
             'content': 'content'
         }
 
-	self.operations = {
-            {method&#x3D;create_resourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_resourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_resourceaccessreview',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_resourceaccessreview',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

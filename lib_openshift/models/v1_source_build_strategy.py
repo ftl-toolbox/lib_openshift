@@ -59,6 +59,8 @@ class V1SourceBuildStrategy(object):
             'force_pull': 'forcePull'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._pull_secret = pull_secret

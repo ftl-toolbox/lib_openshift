@@ -59,6 +59,8 @@ class V1TagEventCondition(object):
             'generation': 'generation'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._status = status

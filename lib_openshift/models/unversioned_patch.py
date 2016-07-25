@@ -49,6 +49,8 @@ class UnversionedPatch(object):
             
         }
 
+        self.operations = [
+        ]
 
     def to_dict(self):
         """

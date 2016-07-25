@@ -51,6 +51,8 @@ class V1SELinuxContextStrategyOptions(object):
             'se_linux_options': 'seLinuxOptions'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._se_linux_options = se_linux_options

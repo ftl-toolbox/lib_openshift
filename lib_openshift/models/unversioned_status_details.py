@@ -57,6 +57,8 @@ class UnversionedStatusDetails(object):
             'retry_after_seconds': 'retryAfterSeconds'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._group = group

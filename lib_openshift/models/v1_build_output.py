@@ -51,6 +51,8 @@ class V1BuildOutput(object):
             'push_secret': 'pushSecret'
         }
 
+        self.operations = [
+        ]
 
         self._to = to
         self._push_secret = push_secret

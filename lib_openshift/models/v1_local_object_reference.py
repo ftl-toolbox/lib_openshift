@@ -49,6 +49,8 @@ class V1LocalObjectReference(object):
             'name': 'name'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
 

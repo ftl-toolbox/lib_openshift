@@ -51,6 +51,8 @@ class V1TagImageHook(object):
             'to': 'to'
         }
 
+        self.operations = [
+        ]
 
         self._container_name = container_name
         self._to = to

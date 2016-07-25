@@ -89,24 +89,44 @@ class V1SecurityContextConstraints(object):
             'groups': 'groups'
         }
 
-	self.operations = {
-            {method&#x3D;replace_securitycontextconstraint, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;delete_securitycontextconstraint, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;get_securitycontextconstraint, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;patch_securitycontextconstraint, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;watch_watch_securitycontextconstraint, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_securitycontextconstraint, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'ApiV1',
+                'type': 'update',
+                'method': 'replace_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'delete',
+                'method': 'delete_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'get_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'patch',
+                'method': 'patch_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'read',
+                'method': 'watch_watch_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'ApiV1',
+                'type': 'create',
+                'method': 'create_securitycontextconstraint',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

@@ -53,6 +53,8 @@ class V1beta1ScaleStatus(object):
             'target_selector': 'targetSelector'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._selector = selector

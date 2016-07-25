@@ -49,6 +49,8 @@ class V1DeploymentCauseImageTrigger(object):
             '_from': 'from'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
 

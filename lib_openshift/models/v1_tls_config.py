@@ -59,6 +59,8 @@ class V1TLSConfig(object):
             'insecure_edge_termination_policy': 'insecureEdgeTerminationPolicy'
         }
 
+        self.operations = [
+        ]
 
         self._termination = termination
         self._certificate = certificate

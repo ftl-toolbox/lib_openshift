@@ -51,6 +51,8 @@ class V1DeploymentConfigStatus(object):
             'details': 'details'
         }
 
+        self.operations = [
+        ]
 
         self._latest_version = latest_version
         self._details = details

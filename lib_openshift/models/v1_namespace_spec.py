@@ -49,6 +49,8 @@ class V1NamespaceSpec(object):
             'finalizers': 'finalizers'
         }
 
+        self.operations = [
+        ]
 
         self._finalizers = finalizers
 

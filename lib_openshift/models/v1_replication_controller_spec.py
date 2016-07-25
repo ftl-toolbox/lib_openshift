@@ -53,6 +53,8 @@ class V1ReplicationControllerSpec(object):
             'template': 'template'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._selector = selector

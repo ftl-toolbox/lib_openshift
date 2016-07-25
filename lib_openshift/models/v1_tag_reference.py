@@ -59,6 +59,8 @@ class V1TagReference(object):
             'import_policy': 'importPolicy'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._annotations = annotations

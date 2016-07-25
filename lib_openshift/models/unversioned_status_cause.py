@@ -53,6 +53,8 @@ class UnversionedStatusCause(object):
             'field': 'field'
         }
 
+        self.operations = [
+        ]
 
         self._reason = reason
         self._message = message

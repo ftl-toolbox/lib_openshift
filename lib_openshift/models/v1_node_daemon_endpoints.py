@@ -49,6 +49,8 @@ class V1NodeDaemonEndpoints(object):
             'kubelet_endpoint': 'kubeletEndpoint'
         }
 
+        self.operations = [
+        ]
 
         self._kubelet_endpoint = kubelet_endpoint
 

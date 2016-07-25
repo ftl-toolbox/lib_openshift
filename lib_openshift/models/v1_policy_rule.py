@@ -59,6 +59,8 @@ class V1PolicyRule(object):
             'non_resource_ur_ls': 'nonResourceURLs'
         }
 
+        self.operations = [
+        ]
 
         self._verbs = verbs
         self._attribute_restrictions = attribute_restrictions

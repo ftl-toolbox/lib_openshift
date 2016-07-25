@@ -51,6 +51,8 @@ class V1ResourceQuotaSpec(object):
             'scopes': 'scopes'
         }
 
+        self.operations = [
+        ]
 
         self._hard = hard
         self._scopes = scopes

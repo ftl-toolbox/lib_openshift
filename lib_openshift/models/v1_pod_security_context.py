@@ -57,6 +57,8 @@ class V1PodSecurityContext(object):
             'fs_group': 'fsGroup'
         }
 
+        self.operations = [
+        ]
 
         self._se_linux_options = se_linux_options
         self._run_as_user = run_as_user

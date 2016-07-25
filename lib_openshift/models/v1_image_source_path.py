@@ -51,6 +51,8 @@ class V1ImageSourcePath(object):
             'destination_dir': 'destinationDir'
         }
 
+        self.operations = [
+        ]
 
         self._source_path = source_path
         self._destination_dir = destination_dir

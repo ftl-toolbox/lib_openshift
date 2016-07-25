@@ -53,6 +53,8 @@ class V1beta1IngressSpec(object):
             'rules': 'rules'
         }
 
+        self.operations = [
+        ]
 
         self._backend = backend
         self._tls = tls

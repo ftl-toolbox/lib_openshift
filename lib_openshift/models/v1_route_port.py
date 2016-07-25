@@ -49,6 +49,8 @@ class V1RoutePort(object):
             'target_port': 'targetPort'
         }
 
+        self.operations = [
+        ]
 
         self._target_port = target_port
 

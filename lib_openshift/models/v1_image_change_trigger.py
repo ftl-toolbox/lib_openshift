@@ -51,6 +51,8 @@ class V1ImageChangeTrigger(object):
             '_from': 'from'
         }
 
+        self.operations = [
+        ]
 
         self._last_triggered_image_id = last_triggered_image_id
         self.__from = _from

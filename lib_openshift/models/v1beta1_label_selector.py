@@ -51,6 +51,8 @@ class V1beta1LabelSelector(object):
             'match_expressions': 'matchExpressions'
         }
 
+        self.operations = [
+        ]
 
         self._match_labels = match_labels
         self._match_expressions = match_expressions

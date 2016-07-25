@@ -57,9 +57,14 @@ class V1ProjectRequest(object):
             'description': 'description'
         }
 
-	self.operations = {
-            {method&#x3D;create_projectrequest, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_projectrequest',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

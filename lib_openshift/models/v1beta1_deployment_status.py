@@ -57,6 +57,8 @@ class V1beta1DeploymentStatus(object):
             'unavailable_replicas': 'unavailableReplicas'
         }
 
+        self.operations = [
+        ]
 
         self._observed_generation = observed_generation
         self._replicas = replicas

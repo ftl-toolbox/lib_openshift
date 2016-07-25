@@ -55,6 +55,8 @@ class V1NodeSpec(object):
             'unschedulable': 'unschedulable'
         }
 
+        self.operations = [
+        ]
 
         self._pod_cidr = pod_cidr
         self._external_id = external_id

@@ -53,6 +53,8 @@ class V1ImageStreamImportStatus(object):
             'images': 'images'
         }
 
+        self.operations = [
+        ]
 
         self.__import = _import
         self._repository = repository

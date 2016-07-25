@@ -55,6 +55,8 @@ class V1ComponentCondition(object):
             'error': 'error'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._status = status

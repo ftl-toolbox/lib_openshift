@@ -49,6 +49,8 @@ class V1beta1RollbackConfig(object):
             'revision': 'revision'
         }
 
+        self.operations = [
+        ]
 
         self._revision = revision
 

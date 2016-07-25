@@ -51,6 +51,8 @@ class V1ObjectFieldSelector(object):
             'field_path': 'fieldPath'
         }
 
+        self.operations = [
+        ]
 
         self._api_version = api_version
         self._field_path = field_path

@@ -61,24 +61,44 @@ class V1RoleBinding(object):
             'role_ref': 'roleRef'
         }
 
-	self.operations = {
-            {method&#x3D;create_rolebinding, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
-	self.operations = {
-            {method&#x3D;create_namespaced_rolebinding, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;replace_namespaced_rolebinding, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;delete_namespaced_rolebinding, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;get_namespaced_rolebinding, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;patch_namespaced_rolebinding, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_rolebinding',
+                'namespaced': 'false'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_rolebinding',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'update',
+                'method': 'replace_namespaced_rolebinding',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'delete',
+                'method': 'delete_namespaced_rolebinding',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'read',
+                'method': 'get_namespaced_rolebinding',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'patch',
+                'method': 'patch_namespaced_rolebinding',
+                'namespaced': 'true'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

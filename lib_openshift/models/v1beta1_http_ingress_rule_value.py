@@ -49,6 +49,8 @@ class V1beta1HTTPIngressRuleValue(object):
             'paths': 'paths'
         }
 
+        self.operations = [
+        ]
 
         self._paths = paths
 

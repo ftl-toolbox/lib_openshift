@@ -53,6 +53,8 @@ class V1beta1DaemonSetStatus(object):
             'desired_number_scheduled': 'desiredNumberScheduled'
         }
 
+        self.operations = [
+        ]
 
         self._current_number_scheduled = current_number_scheduled
         self._number_misscheduled = number_misscheduled

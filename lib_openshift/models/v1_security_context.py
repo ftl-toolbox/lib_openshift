@@ -59,6 +59,8 @@ class V1SecurityContext(object):
             'read_only_root_filesystem': 'readOnlyRootFilesystem'
         }
 
+        self.operations = [
+        ]
 
         self._capabilities = capabilities
         self._privileged = privileged

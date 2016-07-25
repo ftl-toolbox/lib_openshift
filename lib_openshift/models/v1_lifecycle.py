@@ -51,6 +51,8 @@ class V1Lifecycle(object):
             'pre_stop': 'preStop'
         }
 
+        self.operations = [
+        ]
 
         self._post_start = post_start
         self._pre_stop = pre_stop

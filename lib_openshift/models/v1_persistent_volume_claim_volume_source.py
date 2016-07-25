@@ -51,6 +51,8 @@ class V1PersistentVolumeClaimVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._claim_name = claim_name
         self._read_only = read_only

@@ -51,6 +51,8 @@ class V1SourceRevision(object):
             'git': 'git'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._git = git

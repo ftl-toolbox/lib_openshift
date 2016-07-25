@@ -53,6 +53,8 @@ class V1LifecycleHook(object):
             'tag_images': 'tagImages'
         }
 
+        self.operations = [
+        ]
 
         self._failure_policy = failure_policy
         self._exec_new_pod = exec_new_pod

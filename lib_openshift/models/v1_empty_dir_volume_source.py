@@ -49,6 +49,8 @@ class V1EmptyDirVolumeSource(object):
             'medium': 'medium'
         }
 
+        self.operations = [
+        ]
 
         self._medium = medium
 

@@ -51,6 +51,8 @@ class V1ScaleStatus(object):
             'selector': 'selector'
         }
 
+        self.operations = [
+        ]
 
         self._replicas = replicas
         self._selector = selector

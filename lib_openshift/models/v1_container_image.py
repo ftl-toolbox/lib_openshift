@@ -51,6 +51,8 @@ class V1ContainerImage(object):
             'size_bytes': 'sizeBytes'
         }
 
+        self.operations = [
+        ]
 
         self._names = names
         self._size_bytes = size_bytes

@@ -59,6 +59,8 @@ class V1NodeCondition(object):
             'message': 'message'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._status = status

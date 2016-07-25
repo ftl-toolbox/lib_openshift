@@ -51,6 +51,8 @@ class V1PodTemplateSpec(object):
             'spec': 'spec'
         }
 
+        self.operations = [
+        ]
 
         self._metadata = metadata
         self._spec = spec

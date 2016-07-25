@@ -55,6 +55,8 @@ class V1TagEvent(object):
             'generation': 'generation'
         }
 
+        self.operations = [
+        ]
 
         self._created = created
         self._docker_image_reference = docker_image_reference

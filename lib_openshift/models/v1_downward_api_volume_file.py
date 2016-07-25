@@ -51,6 +51,8 @@ class V1DownwardAPIVolumeFile(object):
             'field_ref': 'fieldRef'
         }
 
+        self.operations = [
+        ]
 
         self._path = path
         self._field_ref = field_ref

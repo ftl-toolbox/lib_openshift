@@ -57,6 +57,8 @@ class V1ServicePort(object):
             'node_port': 'nodePort'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._protocol = protocol

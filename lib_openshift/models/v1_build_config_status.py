@@ -49,6 +49,8 @@ class V1BuildConfigStatus(object):
             'last_version': 'lastVersion'
         }
 
+        self.operations = [
+        ]
 
         self._last_version = last_version
 

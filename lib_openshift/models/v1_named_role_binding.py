@@ -51,6 +51,8 @@ class V1NamedRoleBinding(object):
             'role_binding': 'roleBinding'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._role_binding = role_binding

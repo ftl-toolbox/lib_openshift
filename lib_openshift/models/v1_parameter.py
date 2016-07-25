@@ -61,6 +61,8 @@ class V1Parameter(object):
             'required': 'required'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._display_name = display_name

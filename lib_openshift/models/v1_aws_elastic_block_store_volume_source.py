@@ -55,6 +55,8 @@ class V1AWSElasticBlockStoreVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._volume_id = volume_id
         self._fs_type = fs_type

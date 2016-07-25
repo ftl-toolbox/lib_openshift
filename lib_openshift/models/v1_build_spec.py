@@ -63,6 +63,8 @@ class V1BuildSpec(object):
             'completion_deadline_seconds': 'completionDeadlineSeconds'
         }
 
+        self.operations = [
+        ]
 
         self._service_account = service_account
         self._source = source

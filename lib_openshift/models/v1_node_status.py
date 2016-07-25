@@ -63,6 +63,8 @@ class V1NodeStatus(object):
             'images': 'images'
         }
 
+        self.operations = [
+        ]
 
         self._capacity = capacity
         self._allocatable = allocatable

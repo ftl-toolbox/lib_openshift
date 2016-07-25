@@ -57,6 +57,8 @@ class V1FlexVolumeSource(object):
             'options': 'options'
         }
 
+        self.operations = [
+        ]
 
         self._driver = driver
         self._fs_type = fs_type

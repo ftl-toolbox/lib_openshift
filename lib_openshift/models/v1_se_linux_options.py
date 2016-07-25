@@ -55,6 +55,8 @@ class V1SELinuxOptions(object):
             'level': 'level'
         }
 
+        self.operations = [
+        ]
 
         self._user = user
         self._role = role

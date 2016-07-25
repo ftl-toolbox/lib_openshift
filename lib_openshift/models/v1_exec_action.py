@@ -49,6 +49,8 @@ class V1ExecAction(object):
             'command': 'command'
         }
 
+        self.operations = [
+        ]
 
         self._command = command
 

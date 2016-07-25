@@ -53,6 +53,8 @@ class V1NFSVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._server = server
         self._path = path

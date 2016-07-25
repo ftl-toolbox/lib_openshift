@@ -53,6 +53,8 @@ class V1PersistentVolumeStatus(object):
             'reason': 'reason'
         }
 
+        self.operations = [
+        ]
 
         self._phase = phase
         self._message = message

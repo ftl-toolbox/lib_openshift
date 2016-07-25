@@ -55,6 +55,8 @@ class V1ImageImportSpec(object):
             'include_manifest': 'includeManifest'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._to = to

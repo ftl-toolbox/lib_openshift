@@ -49,6 +49,8 @@ class V1FinalizerName(object):
             
         }
 
+        self.operations = [
+        ]
 
     def to_dict(self):
         """

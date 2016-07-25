@@ -59,6 +59,8 @@ class V1JobStatus(object):
             'failed': 'failed'
         }
 
+        self.operations = [
+        ]
 
         self._conditions = conditions
         self._start_time = start_time

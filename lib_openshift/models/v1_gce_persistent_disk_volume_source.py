@@ -55,6 +55,8 @@ class V1GCEPersistentDiskVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._pd_name = pd_name
         self._fs_type = fs_type

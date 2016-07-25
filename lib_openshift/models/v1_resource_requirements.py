@@ -51,6 +51,8 @@ class V1ResourceRequirements(object):
             'requests': 'requests'
         }
 
+        self.operations = [
+        ]
 
         self._limits = limits
         self._requests = requests

@@ -49,6 +49,8 @@ class PatchObject(object):
             
         }
 
+        self.operations = [
+        ]
 
     def to_dict(self):
         """

@@ -51,6 +51,8 @@ class V1beta1HTTPIngressPath(object):
             'backend': 'backend'
         }
 
+        self.operations = [
+        ]
 
         self._path = path
         self._backend = backend

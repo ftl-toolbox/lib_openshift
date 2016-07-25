@@ -63,6 +63,8 @@ class V1Probe(object):
             'failure_threshold': 'failureThreshold'
         }
 
+        self.operations = [
+        ]
 
         self.__exec = _exec
         self._http_get = http_get

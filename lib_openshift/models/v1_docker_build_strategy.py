@@ -59,6 +59,8 @@ class V1DockerBuildStrategy(object):
             'dockerfile_path': 'dockerfilePath'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._pull_secret = pull_secret

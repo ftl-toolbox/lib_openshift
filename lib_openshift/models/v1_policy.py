@@ -57,6 +57,8 @@ class V1Policy(object):
             'roles': 'roles'
         }
 
+        self.operations = [
+        ]
 
         self._kind = kind
         self._api_version = api_version

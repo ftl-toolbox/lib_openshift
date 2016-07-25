@@ -51,6 +51,8 @@ class UnversionedListMeta(object):
             'resource_version': 'resourceVersion'
         }
 
+        self.operations = [
+        ]
 
         self._self_link = self_link
         self._resource_version = resource_version

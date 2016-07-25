@@ -71,6 +71,8 @@ class V1ObjectMeta(object):
             'annotations': 'annotations'
         }
 
+        self.operations = [
+        ]
 
         self._name = name
         self._generate_name = generate_name

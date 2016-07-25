@@ -53,6 +53,8 @@ class V1NamedTagEventList(object):
             'conditions': 'conditions'
         }
 
+        self.operations = [
+        ]
 
         self._tag = tag
         self._items = items

@@ -65,6 +65,8 @@ class V1ServiceSpec(object):
             'load_balancer_ip': 'loadBalancerIP'
         }
 
+        self.operations = [
+        ]
 
         self._ports = ports
         self._selector = selector

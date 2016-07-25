@@ -59,6 +59,8 @@ class V1ISCSIVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._target_portal = target_portal
         self._iqn = iqn

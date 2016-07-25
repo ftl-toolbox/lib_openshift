@@ -51,6 +51,8 @@ class V1TagImportPolicy(object):
             'scheduled': 'scheduled'
         }
 
+        self.operations = [
+        ]
 
         self._insecure = insecure
         self._scheduled = scheduled

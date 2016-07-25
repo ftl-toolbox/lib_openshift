@@ -63,6 +63,8 @@ class V1RBDVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+        self.operations = [
+        ]
 
         self._monitors = monitors
         self._image = image

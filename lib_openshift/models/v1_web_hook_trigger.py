@@ -49,6 +49,8 @@ class V1WebHookTrigger(object):
             'secret': 'secret'
         }
 
+        self.operations = [
+        ]
 
         self._secret = secret
 

@@ -51,6 +51,8 @@ class V1beta1IngressRule(object):
             'http': 'http'
         }
 
+        self.operations = [
+        ]
 
         self._host = host
         self._http = http

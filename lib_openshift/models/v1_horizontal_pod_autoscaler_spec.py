@@ -55,6 +55,8 @@ class V1HorizontalPodAutoscalerSpec(object):
             'target_cpu_utilization_percentage': 'targetCPUUtilizationPercentage'
         }
 
+        self.operations = [
+        ]
 
         self._scale_target_ref = scale_target_ref
         self._min_replicas = min_replicas

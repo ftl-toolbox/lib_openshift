@@ -51,6 +51,8 @@ class V1DeploymentTriggerPolicy(object):
             'image_change_params': 'imageChangeParams'
         }
 
+        self.operations = [
+        ]
 
         self._type = type
         self._image_change_params = image_change_params

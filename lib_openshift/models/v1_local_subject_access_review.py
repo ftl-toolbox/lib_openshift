@@ -69,12 +69,20 @@ class V1LocalSubjectAccessReview(object):
             'groups': 'groups'
         }
 
-	self.operations = {
-            {method&#x3D;create_namespaced_localsubjectaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
-	}
-	self.operations = {
-            {method&#x3D;create_localsubjectaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
-	}
+        self.operations = [
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_namespaced_localsubjectaccessreview',
+                'namespaced': 'true'
+            },
+            {
+                'class': 'OapiV1',
+                'type': 'create',
+                'method': 'create_localsubjectaccessreview',
+                'namespaced': 'false'
+            },
+        ]
 
         self._kind = kind
         self._api_version = api_version

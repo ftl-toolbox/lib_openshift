@@ -55,6 +55,8 @@ class V1RecreateDeploymentStrategyParams(object):
             'post': 'post'
         }
 
+        self.operations = [
+        ]
 
         self._timeout_seconds = timeout_seconds
         self._pre = pre

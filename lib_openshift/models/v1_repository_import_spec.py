@@ -53,6 +53,8 @@ class V1RepositoryImportSpec(object):
             'include_manifest': 'includeManifest'
         }
 
+        self.operations = [
+        ]
 
         self.__from = _from
         self._import_policy = import_policy

@@ -51,6 +51,8 @@ class V1IDRange(object):
             'max': 'max'
         }
 
+        self.operations = [
+        ]
 
         self._min = min
         self._max = max
