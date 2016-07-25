@@ -49,6 +49,7 @@ class V1DeploymentCauseImageTrigger(object):
             '_from': 'from'
         }
 
+
         self.__from = _from
 
     @property
@@ -73,9 +74,6 @@ class V1DeploymentCauseImageTrigger(object):
         """
 
         self.__from = _from
-
-
-#{}"
 
     def to_dict(self):
         """

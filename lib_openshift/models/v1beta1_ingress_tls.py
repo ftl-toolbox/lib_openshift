@@ -51,6 +51,7 @@ class V1beta1IngressTLS(object):
             'secret_name': 'secretName'
         }
 
+
         self._hosts = hosts
         self._secret_name = secret_name
 
@@ -99,9 +100,6 @@ class V1beta1IngressTLS(object):
         """
 
         self._secret_name = secret_name
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -61,6 +61,7 @@ class V1DeploymentStrategy(object):
             'annotations': 'annotations'
         }
 
+
         self._type = type
         self._custom_params = custom_params
         self._recreate_params = recreate_params
@@ -229,9 +230,6 @@ class V1DeploymentStrategy(object):
         """
 
         self._annotations = annotations
-
-
-#{}"
 
     def to_dict(self):
         """

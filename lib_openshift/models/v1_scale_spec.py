@@ -49,6 +49,7 @@ class V1ScaleSpec(object):
             'replicas': 'replicas'
         }
 
+
         self._replicas = replicas
 
     @property
@@ -73,9 +74,6 @@ class V1ScaleSpec(object):
         """
 
         self._replicas = replicas
-
-
-#{}"
 
     def to_dict(self):
         """

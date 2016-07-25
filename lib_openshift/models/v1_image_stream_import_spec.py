@@ -53,6 +53,7 @@ class V1ImageStreamImportSpec(object):
             'images': 'images'
         }
 
+
         self.__import = _import
         self._repository = repository
         self._images = images
@@ -125,9 +126,6 @@ class V1ImageStreamImportSpec(object):
         """
 
         self._images = images
-
-
-#{}"
 
     def to_dict(self):
         """

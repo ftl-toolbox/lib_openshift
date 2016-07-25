@@ -51,6 +51,7 @@ class V1SecretSpec(object):
             'mount_path': 'mountPath'
         }
 
+
         self._secret_source = secret_source
         self._mount_path = mount_path
 
@@ -99,9 +100,6 @@ class V1SecretSpec(object):
         """
 
         self._mount_path = mount_path
-
-
-#{}"
 
     def to_dict(self):
         """

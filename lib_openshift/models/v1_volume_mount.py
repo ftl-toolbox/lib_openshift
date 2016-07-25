@@ -53,6 +53,7 @@ class V1VolumeMount(object):
             'mount_path': 'mountPath'
         }
 
+
         self._name = name
         self._read_only = read_only
         self._mount_path = mount_path
@@ -125,9 +126,6 @@ class V1VolumeMount(object):
         """
 
         self._mount_path = mount_path
-
-
-#{}"
 
     def to_dict(self):
         """

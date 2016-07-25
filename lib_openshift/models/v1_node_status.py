@@ -63,6 +63,7 @@ class V1NodeStatus(object):
             'images': 'images'
         }
 
+
         self._capacity = capacity
         self._allocatable = allocatable
         self._phase = phase
@@ -255,9 +256,6 @@ class V1NodeStatus(object):
         """
 
         self._images = images
-
-
-#{}"
 
     def to_dict(self):
         """

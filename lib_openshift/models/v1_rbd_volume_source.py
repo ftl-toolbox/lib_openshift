@@ -63,6 +63,7 @@ class V1RBDVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._monitors = monitors
         self._image = image
         self._fs_type = fs_type
@@ -255,9 +256,6 @@ class V1RBDVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

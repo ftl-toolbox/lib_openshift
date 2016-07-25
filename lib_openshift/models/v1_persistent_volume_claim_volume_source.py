@@ -51,6 +51,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._claim_name = claim_name
         self._read_only = read_only
 
@@ -99,9 +100,6 @@ class V1PersistentVolumeClaimVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

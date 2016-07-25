@@ -57,6 +57,7 @@ class V1PodSecurityContext(object):
             'fs_group': 'fsGroup'
         }
 
+
         self._se_linux_options = se_linux_options
         self._run_as_user = run_as_user
         self._run_as_non_root = run_as_non_root
@@ -177,9 +178,6 @@ class V1PodSecurityContext(object):
         """
 
         self._fs_group = fs_group
-
-
-#{}"
 
     def to_dict(self):
         """

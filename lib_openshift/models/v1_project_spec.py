@@ -49,6 +49,7 @@ class V1ProjectSpec(object):
             'finalizers': 'finalizers'
         }
 
+
         self._finalizers = finalizers
 
     @property
@@ -73,9 +74,6 @@ class V1ProjectSpec(object):
         """
 
         self._finalizers = finalizers
-
-
-#{}"
 
     def to_dict(self):
         """

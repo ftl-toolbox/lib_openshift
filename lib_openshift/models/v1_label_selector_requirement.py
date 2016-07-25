@@ -53,6 +53,7 @@ class V1LabelSelectorRequirement(object):
             'values': 'values'
         }
 
+
         self._key = key
         self._operator = operator
         self._values = values
@@ -125,9 +126,6 @@ class V1LabelSelectorRequirement(object):
         """
 
         self._values = values
-
-
-#{}"
 
     def to_dict(self):
         """

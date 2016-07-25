@@ -49,6 +49,7 @@ class V1ExecAction(object):
             'command': 'command'
         }
 
+
         self._command = command
 
     @property
@@ -73,9 +74,6 @@ class V1ExecAction(object):
         """
 
         self._command = command
-
-
-#{}"
 
     def to_dict(self):
         """

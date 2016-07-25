@@ -53,6 +53,7 @@ class V1ImageSource(object):
             'pull_secret': 'pullSecret'
         }
 
+
         self.__from = _from
         self._paths = paths
         self._pull_secret = pull_secret
@@ -125,9 +126,6 @@ class V1ImageSource(object):
         """
 
         self._pull_secret = pull_secret
-
-
-#{}"
 
     def to_dict(self):
         """

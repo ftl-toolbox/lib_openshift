@@ -57,6 +57,7 @@ class V1HorizontalPodAutoscalerStatus(object):
             'current_cpu_utilization_percentage': 'currentCPUUtilizationPercentage'
         }
 
+
         self._observed_generation = observed_generation
         self._last_scale_time = last_scale_time
         self._current_replicas = current_replicas
@@ -177,9 +178,6 @@ class V1HorizontalPodAutoscalerStatus(object):
         """
 
         self._current_cpu_utilization_percentage = current_cpu_utilization_percentage
-
-
-#{}"
 
     def to_dict(self):
         """

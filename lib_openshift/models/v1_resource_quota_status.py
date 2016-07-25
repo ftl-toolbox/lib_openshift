@@ -51,6 +51,7 @@ class V1ResourceQuotaStatus(object):
             'used': 'used'
         }
 
+
         self._hard = hard
         self._used = used
 
@@ -99,9 +100,6 @@ class V1ResourceQuotaStatus(object):
         """
 
         self._used = used
-
-
-#{}"
 
     def to_dict(self):
         """

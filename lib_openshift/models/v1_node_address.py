@@ -51,6 +51,7 @@ class V1NodeAddress(object):
             'address': 'address'
         }
 
+
         self._type = type
         self._address = address
 
@@ -99,9 +100,6 @@ class V1NodeAddress(object):
         """
 
         self._address = address
-
-
-#{}"
 
     def to_dict(self):
         """

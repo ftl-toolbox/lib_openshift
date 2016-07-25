@@ -57,6 +57,7 @@ class V1beta1Ingress(object):
             'status': 'status'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +178,6 @@ class V1beta1Ingress(object):
         """
 
         self._status = status
-
-
-#{}"
 
     def to_dict(self):
         """

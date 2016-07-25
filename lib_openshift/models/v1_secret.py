@@ -57,6 +57,28 @@ class V1Secret(object):
             'type': 'type'
         }
 
+	self.operations = {
+            {method&#x3D;watch_namespaced_watch_secret, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_secret, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_namespaced_secret, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;replace_namespaced_secret, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;delete_namespaced_secret, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;get_namespaced_secret, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;patch_namespaced_secret, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +199,6 @@ class V1Secret(object):
         """
 
         self._type = type
-
-
-#{namespaced_replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_namespaced_secret, className&#x3D;ApiV1}, namespaced_patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_namespaced_secret, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_secret, className&#x3D;ApiV1}, namespaced_delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_namespaced_secret, className&#x3D;ApiV1}, namespaced_create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_namespaced_secret, className&#x3D;ApiV1}}"
 
     def to_dict(self):
         """

@@ -55,6 +55,7 @@ class V1TagEvent(object):
             'generation': 'generation'
         }
 
+
         self._created = created
         self._docker_image_reference = docker_image_reference
         self._image = image
@@ -151,9 +152,6 @@ class V1TagEvent(object):
         """
 
         self._generation = generation
-
-
-#{}"
 
     def to_dict(self):
         """

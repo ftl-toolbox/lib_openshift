@@ -51,6 +51,7 @@ class V1beta1DeploymentStrategy(object):
             'rolling_update': 'rollingUpdate'
         }
 
+
         self._type = type
         self._rolling_update = rolling_update
 
@@ -99,9 +100,6 @@ class V1beta1DeploymentStrategy(object):
         """
 
         self._rolling_update = rolling_update
-
-
-#{}"
 
     def to_dict(self):
         """

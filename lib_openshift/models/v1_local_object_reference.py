@@ -49,6 +49,7 @@ class V1LocalObjectReference(object):
             'name': 'name'
         }
 
+
         self._name = name
 
     @property
@@ -73,9 +74,6 @@ class V1LocalObjectReference(object):
         """
 
         self._name = name
-
-
-#{}"
 
     def to_dict(self):
         """

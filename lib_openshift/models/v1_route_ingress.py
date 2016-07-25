@@ -53,6 +53,7 @@ class V1RouteIngress(object):
             'conditions': 'conditions'
         }
 
+
         self._host = host
         self._router_name = router_name
         self._conditions = conditions
@@ -125,9 +126,6 @@ class V1RouteIngress(object):
         """
 
         self._conditions = conditions
-
-
-#{}"
 
     def to_dict(self):
         """

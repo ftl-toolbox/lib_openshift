@@ -51,6 +51,7 @@ class V1SourceRevision(object):
             'git': 'git'
         }
 
+
         self._type = type
         self._git = git
 
@@ -99,9 +100,6 @@ class V1SourceRevision(object):
         """
 
         self._git = git
-
-
-#{}"
 
     def to_dict(self):
         """

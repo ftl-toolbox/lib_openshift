@@ -55,6 +55,25 @@ class V1Group(object):
             'users': 'users'
         }
 
+	self.operations = {
+            {method&#x3D;replace_group, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_group, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_group, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;patch_group, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;watch_watch_group, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_group, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +170,6 @@ class V1Group(object):
         """
 
         self._users = users
-
-
-#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_group, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_group, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_group, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_group, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

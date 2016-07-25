@@ -59,6 +59,7 @@ class V1DeploymentConfigSpec(object):
             'template': 'template'
         }
 
+
         self._strategy = strategy
         self._triggers = triggers
         self._replicas = replicas
@@ -203,9 +204,6 @@ class V1DeploymentConfigSpec(object):
         """
 
         self._template = template
-
-
-#{}"
 
     def to_dict(self):
         """

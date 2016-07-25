@@ -63,6 +63,7 @@ class V1Probe(object):
             'failure_threshold': 'failureThreshold'
         }
 
+
         self.__exec = _exec
         self._http_get = http_get
         self._tcp_socket = tcp_socket
@@ -255,9 +256,6 @@ class V1Probe(object):
         """
 
         self._failure_threshold = failure_threshold
-
-
-#{}"
 
     def to_dict(self):
         """

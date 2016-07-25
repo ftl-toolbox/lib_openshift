@@ -89,6 +89,25 @@ class V1SecurityContextConstraints(object):
             'groups': 'groups'
         }
 
+	self.operations = {
+            {method&#x3D;replace_securitycontextconstraint, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_securitycontextconstraint, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_securitycontextconstraint, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;patch_securitycontextconstraint, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;watch_watch_securitycontextconstraint, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_securitycontextconstraint, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -593,9 +612,6 @@ class V1SecurityContextConstraints(object):
         """
 
         self._groups = groups
-
-
-#{patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_securitycontextconstraint, className&#x3D;ApiV1}, replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_securitycontextconstraint, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_securitycontextconstraint, className&#x3D;ApiV1}, delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_securitycontextconstraint, className&#x3D;ApiV1}}"
 
     def to_dict(self):
         """

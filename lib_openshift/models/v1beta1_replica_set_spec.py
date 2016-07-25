@@ -53,6 +53,7 @@ class V1beta1ReplicaSetSpec(object):
             'template': 'template'
         }
 
+
         self._replicas = replicas
         self._selector = selector
         self._template = template
@@ -125,9 +126,6 @@ class V1beta1ReplicaSetSpec(object):
         """
 
         self._template = template
-
-
-#{}"
 
     def to_dict(self):
         """

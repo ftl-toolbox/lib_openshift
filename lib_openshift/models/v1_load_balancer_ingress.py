@@ -51,6 +51,7 @@ class V1LoadBalancerIngress(object):
             'hostname': 'hostname'
         }
 
+
         self._ip = ip
         self._hostname = hostname
 
@@ -99,9 +100,6 @@ class V1LoadBalancerIngress(object):
         """
 
         self._hostname = hostname
-
-
-#{}"
 
     def to_dict(self):
         """

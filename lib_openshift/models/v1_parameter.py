@@ -61,6 +61,7 @@ class V1Parameter(object):
             'required': 'required'
         }
 
+
         self._name = name
         self._display_name = display_name
         self._description = description
@@ -229,9 +230,6 @@ class V1Parameter(object):
         """
 
         self._required = required
-
-
-#{}"
 
     def to_dict(self):
         """

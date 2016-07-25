@@ -61,6 +61,7 @@ class V1ObjectReference(object):
             'field_path': 'fieldPath'
         }
 
+
         self._kind = kind
         self._namespace = namespace
         self._name = name
@@ -229,9 +230,6 @@ class V1ObjectReference(object):
         """
 
         self._field_path = field_path
-
-
-#{}"
 
     def to_dict(self):
         """

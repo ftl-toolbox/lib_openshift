@@ -53,6 +53,7 @@ class V1EndpointSubset(object):
             'ports': 'ports'
         }
 
+
         self._addresses = addresses
         self._not_ready_addresses = not_ready_addresses
         self._ports = ports
@@ -125,9 +126,6 @@ class V1EndpointSubset(object):
         """
 
         self._ports = ports
-
-
-#{}"
 
     def to_dict(self):
         """

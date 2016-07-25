@@ -49,6 +49,7 @@ class V1NodeDaemonEndpoints(object):
             'kubelet_endpoint': 'kubeletEndpoint'
         }
 
+
         self._kubelet_endpoint = kubelet_endpoint
 
     @property
@@ -73,9 +74,6 @@ class V1NodeDaemonEndpoints(object):
         """
 
         self._kubelet_endpoint = kubelet_endpoint
-
-
-#{}"
 
     def to_dict(self):
         """

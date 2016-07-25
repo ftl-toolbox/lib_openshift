@@ -51,6 +51,7 @@ class V1DeploymentConfigStatus(object):
             'details': 'details'
         }
 
+
         self._latest_version = latest_version
         self._details = details
 
@@ -99,9 +100,6 @@ class V1DeploymentConfigStatus(object):
         """
 
         self._details = details
-
-
-#{}"
 
     def to_dict(self):
         """

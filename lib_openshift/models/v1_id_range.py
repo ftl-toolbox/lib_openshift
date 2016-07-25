@@ -51,6 +51,7 @@ class V1IDRange(object):
             'max': 'max'
         }
 
+
         self._min = min
         self._max = max
 
@@ -99,9 +100,6 @@ class V1IDRange(object):
         """
 
         self._max = max
-
-
-#{}"
 
     def to_dict(self):
         """

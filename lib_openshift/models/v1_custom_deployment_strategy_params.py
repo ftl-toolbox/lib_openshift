@@ -53,6 +53,7 @@ class V1CustomDeploymentStrategyParams(object):
             'command': 'command'
         }
 
+
         self._image = image
         self._environment = environment
         self._command = command
@@ -125,9 +126,6 @@ class V1CustomDeploymentStrategyParams(object):
         """
 
         self._command = command
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1Lifecycle(object):
             'pre_stop': 'preStop'
         }
 
+
         self._post_start = post_start
         self._pre_stop = pre_stop
 
@@ -99,9 +100,6 @@ class V1Lifecycle(object):
         """
 
         self._pre_stop = pre_stop
-
-
-#{}"
 
     def to_dict(self):
         """

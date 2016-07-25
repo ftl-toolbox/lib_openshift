@@ -51,6 +51,7 @@ class V1NamedRoleBinding(object):
             'role_binding': 'roleBinding'
         }
 
+
         self._name = name
         self._role_binding = role_binding
 
@@ -99,9 +100,6 @@ class V1NamedRoleBinding(object):
         """
 
         self._role_binding = role_binding
-
-
-#{}"
 
     def to_dict(self):
         """

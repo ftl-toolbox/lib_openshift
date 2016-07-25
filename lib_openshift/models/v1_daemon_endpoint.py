@@ -49,6 +49,7 @@ class V1DaemonEndpoint(object):
             'port': 'Port'
         }
 
+
         self._port = port
 
     @property
@@ -73,9 +74,6 @@ class V1DaemonEndpoint(object):
         """
 
         self._port = port
-
-
-#{}"
 
     def to_dict(self):
         """

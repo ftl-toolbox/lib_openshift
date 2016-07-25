@@ -63,6 +63,7 @@ class V1beta1DeploymentSpec(object):
             'rollback_to': 'rollbackTo'
         }
 
+
         self._replicas = replicas
         self._selector = selector
         self._template = template
@@ -255,9 +256,6 @@ class V1beta1DeploymentSpec(object):
         """
 
         self._rollback_to = rollback_to
-
-
-#{}"
 
     def to_dict(self):
         """

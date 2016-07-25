@@ -57,6 +57,7 @@ class V1DeploymentConfigRollbackSpec(object):
             'include_strategy': 'includeStrategy'
         }
 
+
         self.__from = _from
         self._include_triggers = include_triggers
         self._include_template = include_template
@@ -177,9 +178,6 @@ class V1DeploymentConfigRollbackSpec(object):
         """
 
         self._include_strategy = include_strategy
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1beta1DaemonSetSpec(object):
             'template': 'template'
         }
 
+
         self._selector = selector
         self._template = template
 
@@ -99,9 +100,6 @@ class V1beta1DaemonSetSpec(object):
         """
 
         self._template = template
-
-
-#{}"
 
     def to_dict(self):
         """

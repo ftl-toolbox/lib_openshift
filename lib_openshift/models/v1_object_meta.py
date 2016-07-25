@@ -71,6 +71,7 @@ class V1ObjectMeta(object):
             'annotations': 'annotations'
         }
 
+
         self._name = name
         self._generate_name = generate_name
         self._namespace = namespace
@@ -359,9 +360,6 @@ class V1ObjectMeta(object):
         """
 
         self._annotations = annotations
-
-
-#{}"
 
     def to_dict(self):
         """

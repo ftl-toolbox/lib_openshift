@@ -51,6 +51,7 @@ class V1beta1IngressRule(object):
             'http': 'http'
         }
 
+
         self._host = host
         self._http = http
 
@@ -99,9 +100,6 @@ class V1beta1IngressRule(object):
         """
 
         self._http = http
-
-
-#{}"
 
     def to_dict(self):
         """

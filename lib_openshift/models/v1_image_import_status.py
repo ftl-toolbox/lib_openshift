@@ -53,6 +53,7 @@ class V1ImageImportStatus(object):
             'tag': 'tag'
         }
 
+
         self._status = status
         self._image = image
         self._tag = tag
@@ -125,9 +126,6 @@ class V1ImageImportStatus(object):
         """
 
         self._tag = tag
-
-
-#{}"
 
     def to_dict(self):
         """

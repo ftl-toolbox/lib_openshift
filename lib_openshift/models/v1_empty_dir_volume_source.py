@@ -49,6 +49,7 @@ class V1EmptyDirVolumeSource(object):
             'medium': 'medium'
         }
 
+
         self._medium = medium
 
     @property
@@ -73,9 +74,6 @@ class V1EmptyDirVolumeSource(object):
         """
 
         self._medium = medium
-
-
-#{}"
 
     def to_dict(self):
         """

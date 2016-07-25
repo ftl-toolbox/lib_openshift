@@ -59,6 +59,7 @@ class V1JobCondition(object):
             'message': 'message'
         }
 
+
         self._type = type
         self._status = status
         self._last_probe_time = last_probe_time
@@ -203,9 +204,6 @@ class V1JobCondition(object):
         """
 
         self._message = message
-
-
-#{}"
 
     def to_dict(self):
         """

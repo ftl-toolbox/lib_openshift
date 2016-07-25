@@ -61,6 +61,25 @@ class V1OAuthClientAuthorization(object):
             'scopes': 'scopes'
         }
 
+	self.operations = {
+            {method&#x3D;replace_oauthclientauthorization, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_oauthclientauthorization, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_oauthclientauthorization, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;patch_oauthclientauthorization, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;watch_watch_oauthclientauthorization, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_oauthclientauthorization, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -229,9 +248,6 @@ class V1OAuthClientAuthorization(object):
         """
 
         self._scopes = scopes
-
-
-#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_oauthclientauthorization, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_oauthclientauthorization, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_oauthclientauthorization, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_oauthclientauthorization, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

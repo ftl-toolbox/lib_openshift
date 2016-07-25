@@ -51,6 +51,7 @@ class V1ObjectFieldSelector(object):
             'field_path': 'fieldPath'
         }
 
+
         self._api_version = api_version
         self._field_path = field_path
 
@@ -99,9 +100,6 @@ class V1ObjectFieldSelector(object):
         """
 
         self._field_path = field_path
-
-
-#{}"
 
     def to_dict(self):
         """

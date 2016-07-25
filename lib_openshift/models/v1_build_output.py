@@ -51,6 +51,7 @@ class V1BuildOutput(object):
             'push_secret': 'pushSecret'
         }
 
+
         self._to = to
         self._push_secret = push_secret
 
@@ -99,9 +100,6 @@ class V1BuildOutput(object):
         """
 
         self._push_secret = push_secret
-
-
-#{}"
 
     def to_dict(self):
         """

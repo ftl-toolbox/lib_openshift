@@ -49,6 +49,7 @@ class V1ServiceStatus(object):
             'load_balancer': 'loadBalancer'
         }
 
+
         self._load_balancer = load_balancer
 
     @property
@@ -73,9 +74,6 @@ class V1ServiceStatus(object):
         """
 
         self._load_balancer = load_balancer
-
-
-#{}"
 
     def to_dict(self):
         """

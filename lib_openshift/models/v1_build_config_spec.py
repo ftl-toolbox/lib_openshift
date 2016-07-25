@@ -65,6 +65,7 @@ class V1BuildConfigSpec(object):
             'completion_deadline_seconds': 'completionDeadlineSeconds'
         }
 
+
         self._triggers = triggers
         self._service_account = service_account
         self._source = source
@@ -281,9 +282,6 @@ class V1BuildConfigSpec(object):
         """
 
         self._completion_deadline_seconds = completion_deadline_seconds
-
-
-#{}"
 
     def to_dict(self):
         """

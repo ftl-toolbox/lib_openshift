@@ -57,6 +57,7 @@ class V1Policy(object):
             'roles': 'roles'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +178,6 @@ class V1Policy(object):
         """
 
         self._roles = roles
-
-
-#{}"
 
     def to_dict(self):
         """

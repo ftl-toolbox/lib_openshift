@@ -79,6 +79,7 @@ class V1PodSpec(object):
             'image_pull_secrets': 'imagePullSecrets'
         }
 
+
         self._volumes = volumes
         self._containers = containers
         self._restart_policy = restart_policy
@@ -463,9 +464,6 @@ class V1PodSpec(object):
         """
 
         self._image_pull_secrets = image_pull_secrets
-
-
-#{}"
 
     def to_dict(self):
         """

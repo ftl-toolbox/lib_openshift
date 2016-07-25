@@ -59,6 +59,7 @@ class V1beta1JobSpec(object):
             'template': 'template'
         }
 
+
         self._parallelism = parallelism
         self._completions = completions
         self._active_deadline_seconds = active_deadline_seconds
@@ -203,9 +204,6 @@ class V1beta1JobSpec(object):
         """
 
         self._template = template
-
-
-#{}"
 
     def to_dict(self):
         """

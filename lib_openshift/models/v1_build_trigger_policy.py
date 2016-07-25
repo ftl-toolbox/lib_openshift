@@ -55,6 +55,7 @@ class V1BuildTriggerPolicy(object):
             'image_change': 'imageChange'
         }
 
+
         self._type = type
         self._github = github
         self._generic = generic
@@ -151,9 +152,6 @@ class V1BuildTriggerPolicy(object):
         """
 
         self._image_change = image_change
-
-
-#{}"
 
     def to_dict(self):
         """

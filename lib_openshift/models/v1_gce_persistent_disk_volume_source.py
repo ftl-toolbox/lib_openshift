@@ -55,6 +55,7 @@ class V1GCEPersistentDiskVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._pd_name = pd_name
         self._fs_type = fs_type
         self._partition = partition
@@ -151,9 +152,6 @@ class V1GCEPersistentDiskVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

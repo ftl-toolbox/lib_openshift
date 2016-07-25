@@ -55,6 +55,28 @@ class V1ConfigMap(object):
             'data': 'data'
         }
 
+	self.operations = {
+            {method&#x3D;create_namespaced_configmap, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;replace_namespaced_configmap, type&#x3D;update, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;delete_namespaced_configmap, type&#x3D;delete, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;get_namespaced_configmap, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;patch_namespaced_configmap, type&#x3D;patch, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;watch_namespaced_watch_configmap, type&#x3D;read, class&#x3D;ApiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_configmap, type&#x3D;create, class&#x3D;ApiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +173,6 @@ class V1ConfigMap(object):
         """
 
         self._data = data
-
-
-#{namespaced_replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_namespaced_configmap, className&#x3D;ApiV1}, namespaced_patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_namespaced_configmap, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_configmap, className&#x3D;ApiV1}, namespaced_delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_namespaced_configmap, className&#x3D;ApiV1}, namespaced_create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_namespaced_configmap, className&#x3D;ApiV1}}"
 
     def to_dict(self):
         """

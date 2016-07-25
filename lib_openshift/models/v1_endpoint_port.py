@@ -53,6 +53,7 @@ class V1EndpointPort(object):
             'protocol': 'protocol'
         }
 
+
         self._name = name
         self._port = port
         self._protocol = protocol
@@ -125,9 +126,6 @@ class V1EndpointPort(object):
         """
 
         self._protocol = protocol
-
-
-#{}"
 
     def to_dict(self):
         """

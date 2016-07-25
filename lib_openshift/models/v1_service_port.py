@@ -57,6 +57,7 @@ class V1ServicePort(object):
             'node_port': 'nodePort'
         }
 
+
         self._name = name
         self._protocol = protocol
         self._port = port
@@ -177,9 +178,6 @@ class V1ServicePort(object):
         """
 
         self._node_port = node_port
-
-
-#{}"
 
     def to_dict(self):
         """

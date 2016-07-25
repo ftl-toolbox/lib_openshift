@@ -59,6 +59,28 @@ class V1Template(object):
             'labels': 'labels'
         }
 
+	self.operations = {
+            {method&#x3D;create_namespaced_template, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_template, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;watch_namespaced_watch_template, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;replace_namespaced_template, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;delete_namespaced_template, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;get_namespaced_template, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;patch_namespaced_template, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -203,9 +225,6 @@ class V1Template(object):
         """
 
         self._labels = labels
-
-
-#{namespaced_replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_namespaced_template, className&#x3D;OapiV1}, namespaced_patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_namespaced_template, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_template, className&#x3D;OapiV1}, namespaced_delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_namespaced_template, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_template, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

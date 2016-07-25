@@ -53,6 +53,7 @@ class V1AzureFileVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._secret_name = secret_name
         self._share_name = share_name
         self._read_only = read_only
@@ -125,9 +126,6 @@ class V1AzureFileVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

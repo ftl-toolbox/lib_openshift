@@ -51,6 +51,7 @@ class V1ImageChangeTrigger(object):
             '_from': 'from'
         }
 
+
         self._last_triggered_image_id = last_triggered_image_id
         self.__from = _from
 
@@ -99,9 +100,6 @@ class V1ImageChangeTrigger(object):
         """
 
         self.__from = _from
-
-
-#{}"
 
     def to_dict(self):
         """

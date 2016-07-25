@@ -81,6 +81,7 @@ class V1PersistentVolumeSpec(object):
             'persistent_volume_reclaim_policy': 'persistentVolumeReclaimPolicy'
         }
 
+
         self._capacity = capacity
         self._gce_persistent_disk = gce_persistent_disk
         self._aws_elastic_block_store = aws_elastic_block_store
@@ -489,9 +490,6 @@ class V1PersistentVolumeSpec(object):
         """
 
         self._persistent_volume_reclaim_policy = persistent_volume_reclaim_policy
-
-
-#{}"
 
     def to_dict(self):
         """

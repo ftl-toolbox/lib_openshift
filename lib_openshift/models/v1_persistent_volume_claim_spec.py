@@ -53,6 +53,7 @@ class V1PersistentVolumeClaimSpec(object):
             'volume_name': 'volumeName'
         }
 
+
         self._access_modes = access_modes
         self._resources = resources
         self._volume_name = volume_name
@@ -125,9 +126,6 @@ class V1PersistentVolumeClaimSpec(object):
         """
 
         self._volume_name = volume_name
-
-
-#{}"
 
     def to_dict(self):
         """

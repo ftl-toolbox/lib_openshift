@@ -53,6 +53,13 @@ class V1DeploymentConfigRollback(object):
             'spec': 'spec'
         }
 
+	self.operations = {
+            {method&#x3D;create_namespaced_deploymentconfigrollback, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_deploymentconfigrollback, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._spec = spec
@@ -125,9 +132,6 @@ class V1DeploymentConfigRollback(object):
         """
 
         self._spec = spec
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_deploymentconfigrollback, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_deploymentconfigrollback, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

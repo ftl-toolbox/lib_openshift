@@ -51,6 +51,7 @@ class V1SupplementalGroupsStrategyOptions(object):
             'ranges': 'ranges'
         }
 
+
         self._type = type
         self._ranges = ranges
 
@@ -99,9 +100,6 @@ class V1SupplementalGroupsStrategyOptions(object):
         """
 
         self._ranges = ranges
-
-
-#{}"
 
     def to_dict(self):
         """

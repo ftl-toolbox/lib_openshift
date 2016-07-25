@@ -57,6 +57,28 @@ class V1beta1Deployment(object):
             'status': 'status'
         }
 
+	self.operations = {
+            {method&#x3D;replace_namespaced_deployment, type&#x3D;update, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;delete_namespaced_deployment, type&#x3D;delete, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;get_namespaced_deployment, type&#x3D;read, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;patch_namespaced_deployment, type&#x3D;patch, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_namespaced_deployment, type&#x3D;create, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;watch_namespaced_watch_deployment, type&#x3D;read, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_deployment, type&#x3D;create, class&#x3D;ApisExtensionsV1beta1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +199,6 @@ class V1beta1Deployment(object):
         """
 
         self._status = status
-
-
-#{namespaced_replace&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;replace_namespaced_deployment, className&#x3D;ApisExtensionsV1beta1}, namespaced_patch&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;patch_namespaced_deployment, className&#x3D;ApisExtensionsV1beta1}, create&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;create_deployment, className&#x3D;ApisExtensionsV1beta1}, namespaced_delete&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;delete_namespaced_deployment, className&#x3D;ApisExtensionsV1beta1}, namespaced_create&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;create_namespaced_deployment, className&#x3D;ApisExtensionsV1beta1}}"
 
     def to_dict(self):
         """

@@ -49,6 +49,7 @@ class V1beta1CPUTargetUtilization(object):
             'target_percentage': 'targetPercentage'
         }
 
+
         self._target_percentage = target_percentage
 
     @property
@@ -73,9 +74,6 @@ class V1beta1CPUTargetUtilization(object):
         """
 
         self._target_percentage = target_percentage
-
-
-#{}"
 
     def to_dict(self):
         """

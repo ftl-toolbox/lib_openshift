@@ -51,6 +51,7 @@ class V1DownwardAPIVolumeFile(object):
             'field_ref': 'fieldRef'
         }
 
+
         self._path = path
         self._field_ref = field_ref
 
@@ -99,9 +100,6 @@ class V1DownwardAPIVolumeFile(object):
         """
 
         self._field_ref = field_ref
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1EndpointAddress(object):
             'target_ref': 'targetRef'
         }
 
+
         self._ip = ip
         self._target_ref = target_ref
 
@@ -99,9 +100,6 @@ class V1EndpointAddress(object):
         """
 
         self._target_ref = target_ref
-
-
-#{}"
 
     def to_dict(self):
         """

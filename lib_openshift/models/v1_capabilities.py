@@ -51,6 +51,7 @@ class V1Capabilities(object):
             'drop': 'drop'
         }
 
+
         self._add = add
         self._drop = drop
 
@@ -99,9 +100,6 @@ class V1Capabilities(object):
         """
 
         self._drop = drop
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -53,6 +53,7 @@ class UnversionedStatusCause(object):
             'field': 'field'
         }
 
+
         self._reason = reason
         self._message = message
         self._field = field
@@ -125,9 +126,6 @@ class UnversionedStatusCause(object):
         """
 
         self._field = field
-
-
-#{}"
 
     def to_dict(self):
         """

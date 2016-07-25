@@ -51,6 +51,7 @@ class V1SourceControlUser(object):
             'email': 'email'
         }
 
+
         self._name = name
         self._email = email
 
@@ -99,9 +100,6 @@ class V1SourceControlUser(object):
         """
 
         self._email = email
-
-
-#{}"
 
     def to_dict(self):
         """

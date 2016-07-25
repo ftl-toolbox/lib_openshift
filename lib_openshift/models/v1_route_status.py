@@ -49,6 +49,7 @@ class V1RouteStatus(object):
             'ingress': 'ingress'
         }
 
+
         self._ingress = ingress
 
     @property
@@ -73,9 +74,6 @@ class V1RouteStatus(object):
         """
 
         self._ingress = ingress
-
-
-#{}"
 
     def to_dict(self):
         """

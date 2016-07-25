@@ -61,6 +61,7 @@ class V1CustomBuildStrategy(object):
             'build_api_version': 'buildAPIVersion'
         }
 
+
         self.__from = _from
         self._pull_secret = pull_secret
         self._env = env
@@ -229,9 +230,6 @@ class V1CustomBuildStrategy(object):
         """
 
         self._build_api_version = build_api_version
-
-
-#{}"
 
     def to_dict(self):
         """

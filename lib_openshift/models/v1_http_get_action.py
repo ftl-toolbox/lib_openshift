@@ -57,6 +57,7 @@ class V1HTTPGetAction(object):
             'http_headers': 'httpHeaders'
         }
 
+
         self._path = path
         self._port = port
         self._host = host
@@ -177,9 +178,6 @@ class V1HTTPGetAction(object):
         """
 
         self._http_headers = http_headers
-
-
-#{}"
 
     def to_dict(self):
         """

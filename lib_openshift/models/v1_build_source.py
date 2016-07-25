@@ -63,6 +63,7 @@ class V1BuildSource(object):
             'secrets': 'secrets'
         }
 
+
         self._type = type
         self._binary = binary
         self._dockerfile = dockerfile
@@ -255,9 +256,6 @@ class V1BuildSource(object):
         """
 
         self._secrets = secrets
-
-
-#{}"
 
     def to_dict(self):
         """

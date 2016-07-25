@@ -65,6 +65,13 @@ class V1ResourceAccessReview(object):
             'content': 'content'
         }
 
+	self.operations = {
+            {method&#x3D;create_resourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_namespaced_resourceaccessreview, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._namespace = namespace
@@ -281,9 +288,6 @@ class V1ResourceAccessReview(object):
         """
 
         self._content = content
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_resourceaccessreview, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_resourceaccessreview, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

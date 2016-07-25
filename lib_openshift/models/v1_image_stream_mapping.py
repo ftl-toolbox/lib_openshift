@@ -57,6 +57,13 @@ class V1ImageStreamMapping(object):
             'tag': 'tag'
         }
 
+	self.operations = {
+            {method&#x3D;create_imagestreammapping, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_namespaced_imagestreammapping, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +184,6 @@ class V1ImageStreamMapping(object):
         """
 
         self._tag = tag
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_imagestreammapping, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_imagestreammapping, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

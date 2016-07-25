@@ -59,6 +59,7 @@ class V1DockerBuildStrategy(object):
             'dockerfile_path': 'dockerfilePath'
         }
 
+
         self.__from = _from
         self._pull_secret = pull_secret
         self._no_cache = no_cache
@@ -203,9 +204,6 @@ class V1DockerBuildStrategy(object):
         """
 
         self._dockerfile_path = dockerfile_path
-
-
-#{}"
 
     def to_dict(self):
         """

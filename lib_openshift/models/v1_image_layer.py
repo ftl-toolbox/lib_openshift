@@ -51,6 +51,7 @@ class V1ImageLayer(object):
             'size': 'size'
         }
 
+
         self._name = name
         self._size = size
 
@@ -99,9 +100,6 @@ class V1ImageLayer(object):
         """
 
         self._size = size
-
-
-#{}"
 
     def to_dict(self):
         """

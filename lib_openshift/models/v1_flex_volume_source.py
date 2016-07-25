@@ -57,6 +57,7 @@ class V1FlexVolumeSource(object):
             'options': 'options'
         }
 
+
         self._driver = driver
         self._fs_type = fs_type
         self._secret_ref = secret_ref
@@ -177,9 +178,6 @@ class V1FlexVolumeSource(object):
         """
 
         self._options = options
-
-
-#{}"
 
     def to_dict(self):
         """

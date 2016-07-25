@@ -51,6 +51,7 @@ class V1DeploymentLog(object):
             'api_version': 'apiVersion'
         }
 
+
         self._kind = kind
         self._api_version = api_version
 
@@ -99,9 +100,6 @@ class V1DeploymentLog(object):
         """
 
         self._api_version = api_version
-
-
-#{}"
 
     def to_dict(self):
         """

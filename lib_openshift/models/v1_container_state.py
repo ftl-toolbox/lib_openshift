@@ -53,6 +53,7 @@ class V1ContainerState(object):
             'terminated': 'terminated'
         }
 
+
         self._waiting = waiting
         self._running = running
         self._terminated = terminated
@@ -125,9 +126,6 @@ class V1ContainerState(object):
         """
 
         self._terminated = terminated
-
-
-#{}"
 
     def to_dict(self):
         """

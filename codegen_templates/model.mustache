@@ -33,6 +33,14 @@ class {{classname}}(object):
             {{/hasMore}}{{/vars}}
         }
 
+{{#vendorExtensions.operations}}
+
+	self.operations = {
+            {{.}}
+	}
+
+{{/vendorExtensions.operations}}
+
 {{#readOnlyVars}}
         self._{{name}} = {{#defaultValue}}{{{defaultValue}}}{{/defaultValue}}{{^defaultValue}}None{{/defaultValue}}
 {{/readOnlyVars}}
@@ -102,11 +110,6 @@ class {{classname}}(object):
 
 {{/isReadOnly}}
 {{/vars}}
-{{#vendorExtensions.operations}}
-
-#{{.}}"
-
-{{/vendorExtensions.operations}}
     def to_dict(self):
         """
         Returns the model properties as a dict

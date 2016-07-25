@@ -49,6 +49,7 @@ class V1LimitRangeSpec(object):
             'limits': 'limits'
         }
 
+
         self._limits = limits
 
     @property
@@ -73,9 +74,6 @@ class V1LimitRangeSpec(object):
         """
 
         self._limits = limits
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1ConfigMapKeySelector(object):
             'key': 'key'
         }
 
+
         self._name = name
         self._key = key
 
@@ -99,9 +100,6 @@ class V1ConfigMapKeySelector(object):
         """
 
         self._key = key
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -57,6 +57,7 @@ class V1beta1Scale(object):
             'status': 'status'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata

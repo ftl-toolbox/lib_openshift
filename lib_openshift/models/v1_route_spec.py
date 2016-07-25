@@ -57,6 +57,7 @@ class V1RouteSpec(object):
             'tls': 'tls'
         }
 
+
         self._host = host
         self._path = path
         self._to = to
@@ -177,9 +178,6 @@ class V1RouteSpec(object):
         """
 
         self._tls = tls
-
-
-#{}"
 
     def to_dict(self):
         """

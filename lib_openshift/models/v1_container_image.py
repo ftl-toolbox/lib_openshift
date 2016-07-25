@@ -51,6 +51,7 @@ class V1ContainerImage(object):
             'size_bytes': 'sizeBytes'
         }
 
+
         self._names = names
         self._size_bytes = size_bytes
 
@@ -99,9 +100,6 @@ class V1ContainerImage(object):
         """
 
         self._size_bytes = size_bytes
-
-
-#{}"
 
     def to_dict(self):
         """

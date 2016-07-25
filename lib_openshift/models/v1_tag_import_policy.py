@@ -51,6 +51,7 @@ class V1TagImportPolicy(object):
             'scheduled': 'scheduled'
         }
 
+
         self._insecure = insecure
         self._scheduled = scheduled
 
@@ -99,9 +100,6 @@ class V1TagImportPolicy(object):
         """
 
         self._scheduled = scheduled
-
-
-#{}"
 
     def to_dict(self):
         """

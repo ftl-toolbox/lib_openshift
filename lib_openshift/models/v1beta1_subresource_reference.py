@@ -55,6 +55,7 @@ class V1beta1SubresourceReference(object):
             'subresource': 'subresource'
         }
 
+
         self._kind = kind
         self._name = name
         self._api_version = api_version
@@ -151,9 +152,6 @@ class V1beta1SubresourceReference(object):
         """
 
         self._subresource = subresource
-
-
-#{}"
 
     def to_dict(self):
         """

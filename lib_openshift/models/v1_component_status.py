@@ -55,6 +55,7 @@ class V1ComponentStatus(object):
             'conditions': 'conditions'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +152,6 @@ class V1ComponentStatus(object):
         """
 
         self._conditions = conditions
-
-
-#{}"
 
     def to_dict(self):
         """

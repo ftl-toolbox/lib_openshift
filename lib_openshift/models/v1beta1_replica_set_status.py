@@ -53,6 +53,7 @@ class V1beta1ReplicaSetStatus(object):
             'observed_generation': 'observedGeneration'
         }
 
+
         self._replicas = replicas
         self._fully_labeled_replicas = fully_labeled_replicas
         self._observed_generation = observed_generation
@@ -125,9 +126,6 @@ class V1beta1ReplicaSetStatus(object):
         """
 
         self._observed_generation = observed_generation
-
-
-#{}"
 
     def to_dict(self):
         """

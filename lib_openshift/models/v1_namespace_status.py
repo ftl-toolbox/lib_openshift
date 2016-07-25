@@ -49,6 +49,7 @@ class V1NamespaceStatus(object):
             'phase': 'phase'
         }
 
+
         self._phase = phase
 
     @property
@@ -73,9 +74,6 @@ class V1NamespaceStatus(object):
         """
 
         self._phase = phase
-
-
-#{}"
 
     def to_dict(self):
         """

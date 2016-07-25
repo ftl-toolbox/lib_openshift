@@ -53,6 +53,7 @@ class V1Handler(object):
             'tcp_socket': 'tcpSocket'
         }
 
+
         self.__exec = _exec
         self._http_get = http_get
         self._tcp_socket = tcp_socket
@@ -125,9 +126,6 @@ class V1Handler(object):
         """
 
         self._tcp_socket = tcp_socket
-
-
-#{}"
 
     def to_dict(self):
         """

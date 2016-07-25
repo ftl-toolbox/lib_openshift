@@ -53,6 +53,7 @@ class V1CinderVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._volume_id = volume_id
         self._fs_type = fs_type
         self._read_only = read_only
@@ -125,9 +126,6 @@ class V1CinderVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

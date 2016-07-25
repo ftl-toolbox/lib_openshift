@@ -51,6 +51,7 @@ class V1DeploymentDetails(object):
             'causes': 'causes'
         }
 
+
         self._message = message
         self._causes = causes
 
@@ -99,9 +100,6 @@ class V1DeploymentDetails(object):
         """
 
         self._causes = causes
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -53,6 +53,7 @@ class V1NamedTagEventList(object):
             'conditions': 'conditions'
         }
 
+
         self._tag = tag
         self._items = items
         self._conditions = conditions
@@ -125,9 +126,6 @@ class V1NamedTagEventList(object):
         """
 
         self._conditions = conditions
-
-
-#{}"
 
     def to_dict(self):
         """

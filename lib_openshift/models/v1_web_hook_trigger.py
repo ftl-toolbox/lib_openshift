@@ -49,6 +49,7 @@ class V1WebHookTrigger(object):
             'secret': 'secret'
         }
 
+
         self._secret = secret
 
     @property
@@ -73,9 +74,6 @@ class V1WebHookTrigger(object):
         """
 
         self._secret = secret
-
-
-#{}"
 
     def to_dict(self):
         """

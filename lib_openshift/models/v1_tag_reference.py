@@ -59,6 +59,7 @@ class V1TagReference(object):
             'import_policy': 'importPolicy'
         }
 
+
         self._name = name
         self._annotations = annotations
         self.__from = _from
@@ -203,9 +204,6 @@ class V1TagReference(object):
         """
 
         self._import_policy = import_policy
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -55,6 +55,7 @@ class V1DeploymentTriggerImageChangeParams(object):
             'last_triggered_image': 'lastTriggeredImage'
         }
 
+
         self._automatic = automatic
         self._container_names = container_names
         self.__from = _from
@@ -151,9 +152,6 @@ class V1DeploymentTriggerImageChangeParams(object):
         """
 
         self._last_triggered_image = last_triggered_image
-
-
-#{}"
 
     def to_dict(self):
         """

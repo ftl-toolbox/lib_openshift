@@ -55,6 +55,7 @@ class V1NodeSpec(object):
             'unschedulable': 'unschedulable'
         }
 
+
         self._pod_cidr = pod_cidr
         self._external_id = external_id
         self._provider_id = provider_id
@@ -151,9 +152,6 @@ class V1NodeSpec(object):
         """
 
         self._unschedulable = unschedulable
-
-
-#{}"
 
     def to_dict(self):
         """

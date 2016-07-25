@@ -51,6 +51,7 @@ class V1beta1HTTPIngressPath(object):
             'backend': 'backend'
         }
 
+
         self._path = path
         self._backend = backend
 
@@ -99,9 +100,6 @@ class V1beta1HTTPIngressPath(object):
         """
 
         self._backend = backend
-
-
-#{}"
 
     def to_dict(self):
         """

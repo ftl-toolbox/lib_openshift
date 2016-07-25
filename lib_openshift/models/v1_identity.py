@@ -61,6 +61,7 @@ class V1Identity(object):
             'extra': 'extra'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -229,9 +230,6 @@ class V1Identity(object):
         """
 
         self._extra = extra
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -59,6 +59,7 @@ class V1ISCSIVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._target_portal = target_portal
         self._iqn = iqn
         self._lun = lun
@@ -203,9 +204,6 @@ class V1ISCSIVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

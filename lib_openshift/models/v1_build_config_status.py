@@ -49,6 +49,7 @@ class V1BuildConfigStatus(object):
             'last_version': 'lastVersion'
         }
 
+
         self._last_version = last_version
 
     @property
@@ -73,9 +74,6 @@ class V1BuildConfigStatus(object):
         """
 
         self._last_version = last_version
-
-
-#{}"
 
     def to_dict(self):
         """

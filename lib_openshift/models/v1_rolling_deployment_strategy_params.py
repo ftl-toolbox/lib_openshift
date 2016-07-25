@@ -63,6 +63,7 @@ class V1RollingDeploymentStrategyParams(object):
             'post': 'post'
         }
 
+
         self._update_period_seconds = update_period_seconds
         self._interval_seconds = interval_seconds
         self._timeout_seconds = timeout_seconds
@@ -255,9 +256,6 @@ class V1RollingDeploymentStrategyParams(object):
         """
 
         self._post = post
-
-
-#{}"
 
     def to_dict(self):
         """

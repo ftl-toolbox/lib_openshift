@@ -49,6 +49,7 @@ class V1ContainerStateRunning(object):
             'started_at': 'startedAt'
         }
 
+
         self._started_at = started_at
 
     @property
@@ -73,9 +74,6 @@ class V1ContainerStateRunning(object):
         """
 
         self._started_at = started_at
-
-
-#{}"
 
     def to_dict(self):
         """

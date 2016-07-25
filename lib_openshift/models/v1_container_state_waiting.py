@@ -51,6 +51,7 @@ class V1ContainerStateWaiting(object):
             'message': 'message'
         }
 
+
         self._reason = reason
         self._message = message
 
@@ -99,9 +100,6 @@ class V1ContainerStateWaiting(object):
         """
 
         self._message = message
-
-
-#{}"
 
     def to_dict(self):
         """

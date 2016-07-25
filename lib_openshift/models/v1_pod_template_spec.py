@@ -51,6 +51,7 @@ class V1PodTemplateSpec(object):
             'spec': 'spec'
         }
 
+
         self._metadata = metadata
         self._spec = spec
 
@@ -99,9 +100,6 @@ class V1PodTemplateSpec(object):
         """
 
         self._spec = spec
-
-
-#{}"
 
     def to_dict(self):
         """

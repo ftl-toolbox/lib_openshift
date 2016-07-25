@@ -55,6 +55,7 @@ class V1beta1HorizontalPodAutoscalerSpec(object):
             'cpu_utilization': 'cpuUtilization'
         }
 
+
         self._scale_ref = scale_ref
         self._min_replicas = min_replicas
         self._max_replicas = max_replicas
@@ -151,9 +152,6 @@ class V1beta1HorizontalPodAutoscalerSpec(object):
         """
 
         self._cpu_utilization = cpu_utilization
-
-
-#{}"
 
     def to_dict(self):
         """

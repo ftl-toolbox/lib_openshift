@@ -53,6 +53,7 @@ class V1RepositoryImportStatus(object):
             'additional_tags': 'additionalTags'
         }
 
+
         self._status = status
         self._images = images
         self._additional_tags = additional_tags
@@ -125,9 +126,6 @@ class V1RepositoryImportStatus(object):
         """
 
         self._additional_tags = additional_tags
-
-
-#{}"
 
     def to_dict(self):
         """

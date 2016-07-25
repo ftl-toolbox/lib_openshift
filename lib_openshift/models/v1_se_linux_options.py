@@ -55,6 +55,7 @@ class V1SELinuxOptions(object):
             'level': 'level'
         }
 
+
         self._user = user
         self._role = role
         self._type = type
@@ -151,9 +152,6 @@ class V1SELinuxOptions(object):
         """
 
         self._level = level
-
-
-#{}"
 
     def to_dict(self):
         """

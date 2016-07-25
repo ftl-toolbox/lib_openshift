@@ -59,6 +59,7 @@ class V1NodeCondition(object):
             'message': 'message'
         }
 
+
         self._type = type
         self._status = status
         self._last_heartbeat_time = last_heartbeat_time
@@ -203,9 +204,6 @@ class V1NodeCondition(object):
         """
 
         self._message = message
-
-
-#{}"
 
     def to_dict(self):
         """

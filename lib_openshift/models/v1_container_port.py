@@ -57,6 +57,7 @@ class V1ContainerPort(object):
             'host_ip': 'hostIP'
         }
 
+
         self._name = name
         self._host_port = host_port
         self._container_port = container_port
@@ -177,9 +178,6 @@ class V1ContainerPort(object):
         """
 
         self._host_ip = host_ip
-
-
-#{}"
 
     def to_dict(self):
         """

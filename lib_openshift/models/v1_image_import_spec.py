@@ -55,6 +55,7 @@ class V1ImageImportSpec(object):
             'include_manifest': 'includeManifest'
         }
 
+
         self.__from = _from
         self._to = to
         self._import_policy = import_policy
@@ -151,9 +152,6 @@ class V1ImageImportSpec(object):
         """
 
         self._include_manifest = include_manifest
-
-
-#{}"
 
     def to_dict(self):
         """

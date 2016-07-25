@@ -53,6 +53,7 @@ class V1GitRepoVolumeSource(object):
             'directory': 'directory'
         }
 
+
         self._repository = repository
         self._revision = revision
         self._directory = directory
@@ -125,9 +126,6 @@ class V1GitRepoVolumeSource(object):
         """
 
         self._directory = directory
-
-
-#{}"
 
     def to_dict(self):
         """

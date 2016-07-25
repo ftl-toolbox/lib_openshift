@@ -53,6 +53,7 @@ class V1LifecycleHook(object):
             'tag_images': 'tagImages'
         }
 
+
         self._failure_policy = failure_policy
         self._exec_new_pod = exec_new_pod
         self._tag_images = tag_images
@@ -125,9 +126,6 @@ class V1LifecycleHook(object):
         """
 
         self._tag_images = tag_images
-
-
-#{}"
 
     def to_dict(self):
         """

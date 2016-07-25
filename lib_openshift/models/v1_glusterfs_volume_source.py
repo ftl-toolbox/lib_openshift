@@ -53,6 +53,7 @@ class V1GlusterfsVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._endpoints = endpoints
         self._path = path
         self._read_only = read_only
@@ -125,9 +126,6 @@ class V1GlusterfsVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

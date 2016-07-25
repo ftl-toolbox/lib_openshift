@@ -59,6 +59,7 @@ class V1TagEventCondition(object):
             'generation': 'generation'
         }
 
+
         self._type = type
         self._status = status
         self._last_transition_time = last_transition_time
@@ -203,9 +204,6 @@ class V1TagEventCondition(object):
         """
 
         self._generation = generation
-
-
-#{}"
 
     def to_dict(self):
         """

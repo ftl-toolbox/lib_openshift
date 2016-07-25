@@ -51,6 +51,7 @@ class JsonWatchEvent(object):
             'object': 'object'
         }
 
+
         self._type = type
         self._object = object
 
@@ -99,9 +100,6 @@ class JsonWatchEvent(object):
         """
 
         self._object = object
-
-
-#{}"
 
     def to_dict(self):
         """

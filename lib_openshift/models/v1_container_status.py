@@ -63,6 +63,7 @@ class V1ContainerStatus(object):
             'container_id': 'containerID'
         }
 
+
         self._name = name
         self._state = state
         self._last_state = last_state
@@ -255,9 +256,6 @@ class V1ContainerStatus(object):
         """
 
         self._container_id = container_id
-
-
-#{}"
 
     def to_dict(self):
         """

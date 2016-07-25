@@ -51,6 +51,7 @@ class V1EventSource(object):
             'host': 'host'
         }
 
+
         self._component = component
         self._host = host
 
@@ -99,9 +100,6 @@ class V1EventSource(object):
         """
 
         self._host = host
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -55,6 +55,7 @@ class V1RunAsUserStrategyOptions(object):
             'uid_range_max': 'uidRangeMax'
         }
 
+
         self._type = type
         self._uid = uid
         self._uid_range_min = uid_range_min
@@ -151,9 +152,6 @@ class V1RunAsUserStrategyOptions(object):
         """
 
         self._uid_range_max = uid_range_max
-
-
-#{}"
 
     def to_dict(self):
         """

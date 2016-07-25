@@ -59,6 +59,7 @@ class V1LimitRangeItem(object):
             'max_limit_request_ratio': 'maxLimitRequestRatio'
         }
 
+
         self._type = type
         self._max = max
         self._min = min
@@ -203,9 +204,6 @@ class V1LimitRangeItem(object):
         """
 
         self._max_limit_request_ratio = max_limit_request_ratio
-
-
-#{}"
 
     def to_dict(self):
         """

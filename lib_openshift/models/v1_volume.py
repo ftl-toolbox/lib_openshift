@@ -89,6 +89,7 @@ class V1Volume(object):
             'metadata': 'metadata'
         }
 
+
         self._name = name
         self._host_path = host_path
         self._empty_dir = empty_dir
@@ -593,9 +594,6 @@ class V1Volume(object):
         """
 
         self._metadata = metadata
-
-
-#{}"
 
     def to_dict(self):
         """

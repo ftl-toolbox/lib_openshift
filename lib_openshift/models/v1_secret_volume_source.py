@@ -49,6 +49,7 @@ class V1SecretVolumeSource(object):
             'secret_name': 'secretName'
         }
 
+
         self._secret_name = secret_name
 
     @property
@@ -73,9 +74,6 @@ class V1SecretVolumeSource(object):
         """
 
         self._secret_name = secret_name
-
-
-#{}"
 
     def to_dict(self):
         """

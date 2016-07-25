@@ -53,6 +53,7 @@ class V1EnvVarSource(object):
             'secret_key_ref': 'secretKeyRef'
         }
 
+
         self._field_ref = field_ref
         self._config_map_key_ref = config_map_key_ref
         self._secret_key_ref = secret_key_ref
@@ -125,9 +126,6 @@ class V1EnvVarSource(object):
         """
 
         self._secret_key_ref = secret_key_ref
-
-
-#{}"
 
     def to_dict(self):
         """

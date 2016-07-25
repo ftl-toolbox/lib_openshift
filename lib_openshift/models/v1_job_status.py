@@ -59,6 +59,7 @@ class V1JobStatus(object):
             'failed': 'failed'
         }
 
+
         self._conditions = conditions
         self._start_time = start_time
         self._completion_time = completion_time
@@ -203,9 +204,6 @@ class V1JobStatus(object):
         """
 
         self._failed = failed
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -53,6 +53,7 @@ class V1PersistentVolumeClaimStatus(object):
             'capacity': 'capacity'
         }
 
+
         self._phase = phase
         self._access_modes = access_modes
         self._capacity = capacity
@@ -125,9 +126,6 @@ class V1PersistentVolumeClaimStatus(object):
         """
 
         self._capacity = capacity
-
-
-#{}"
 
     def to_dict(self):
         """

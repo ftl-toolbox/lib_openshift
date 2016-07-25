@@ -49,6 +49,7 @@ class V1HostPathVolumeSource(object):
             'path': 'path'
         }
 
+
         self._path = path
 
     @property
@@ -73,9 +74,6 @@ class V1HostPathVolumeSource(object):
         """
 
         self._path = path
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -49,6 +49,7 @@ class V1FlockerVolumeSource(object):
             'dataset_name': 'datasetName'
         }
 
+
         self._dataset_name = dataset_name
 
     @property
@@ -73,9 +74,6 @@ class V1FlockerVolumeSource(object):
         """
 
         self._dataset_name = dataset_name
-
-
-#{}"
 
     def to_dict(self):
         """

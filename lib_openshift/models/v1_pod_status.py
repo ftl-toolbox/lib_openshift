@@ -63,6 +63,7 @@ class V1PodStatus(object):
             'container_statuses': 'containerStatuses'
         }
 
+
         self._phase = phase
         self._conditions = conditions
         self._message = message
@@ -255,9 +256,6 @@ class V1PodStatus(object):
         """
 
         self._container_statuses = container_statuses
-
-
-#{}"
 
     def to_dict(self):
         """

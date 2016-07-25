@@ -49,6 +49,7 @@ class V1RoutePort(object):
             'target_port': 'targetPort'
         }
 
+
         self._target_port = target_port
 
     @property
@@ -73,9 +74,6 @@ class V1RoutePort(object):
         """
 
         self._target_port = target_port
-
-
-#{}"
 
     def to_dict(self):
         """

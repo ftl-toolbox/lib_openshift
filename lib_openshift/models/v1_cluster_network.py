@@ -59,6 +59,25 @@ class V1ClusterNetwork(object):
             'service_network': 'serviceNetwork'
         }
 
+	self.operations = {
+            {method&#x3D;create_clusternetwork, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;replace_clusternetwork, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_clusternetwork, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_clusternetwork, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;patch_clusternetwork, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;watch_watch_clusternetwork, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -203,9 +222,6 @@ class V1ClusterNetwork(object):
         """
 
         self._service_network = service_network
-
-
-#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_clusternetwork, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_clusternetwork, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_clusternetwork, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_clusternetwork, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

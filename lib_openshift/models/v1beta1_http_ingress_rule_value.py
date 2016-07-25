@@ -49,6 +49,7 @@ class V1beta1HTTPIngressRuleValue(object):
             'paths': 'paths'
         }
 
+
         self._paths = paths
 
     @property
@@ -73,9 +74,6 @@ class V1beta1HTTPIngressRuleValue(object):
         """
 
         self._paths = paths
-
-
-#{}"
 
     def to_dict(self):
         """

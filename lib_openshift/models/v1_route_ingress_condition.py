@@ -57,6 +57,7 @@ class V1RouteIngressCondition(object):
             'last_transition_time': 'lastTransitionTime'
         }
 
+
         self._type = type
         self._status = status
         self._reason = reason
@@ -177,9 +178,6 @@ class V1RouteIngressCondition(object):
         """
 
         self._last_transition_time = last_transition_time
-
-
-#{}"
 
     def to_dict(self):
         """

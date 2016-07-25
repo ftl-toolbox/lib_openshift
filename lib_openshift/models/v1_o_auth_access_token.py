@@ -69,6 +69,16 @@ class V1OAuthAccessToken(object):
             'refresh_token': 'refreshToken'
         }
 
+	self.operations = {
+            {method&#x3D;create_oauthaccesstoken, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_oauthaccesstoken, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_oauthaccesstoken, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -333,9 +343,6 @@ class V1OAuthAccessToken(object):
         """
 
         self._refresh_token = refresh_token
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_oauthaccesstoken, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_oauthaccesstoken, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

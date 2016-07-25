@@ -55,6 +55,7 @@ class V1ExecNewPodHook(object):
             'volumes': 'volumes'
         }
 
+
         self._command = command
         self._env = env
         self._container_name = container_name
@@ -151,9 +152,6 @@ class V1ExecNewPodHook(object):
         """
 
         self._volumes = volumes
-
-
-#{}"
 
     def to_dict(self):
         """

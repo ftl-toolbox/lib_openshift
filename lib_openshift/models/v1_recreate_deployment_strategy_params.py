@@ -55,6 +55,7 @@ class V1RecreateDeploymentStrategyParams(object):
             'post': 'post'
         }
 
+
         self._timeout_seconds = timeout_seconds
         self._pre = pre
         self._mid = mid
@@ -151,9 +152,6 @@ class V1RecreateDeploymentStrategyParams(object):
         """
 
         self._post = post
-
-
-#{}"
 
     def to_dict(self):
         """

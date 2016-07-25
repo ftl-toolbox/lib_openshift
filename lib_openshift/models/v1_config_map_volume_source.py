@@ -51,6 +51,7 @@ class V1ConfigMapVolumeSource(object):
             'items': 'items'
         }
 
+
         self._name = name
         self._items = items
 
@@ -99,9 +100,6 @@ class V1ConfigMapVolumeSource(object):
         """
 
         self._items = items
-
-
-#{}"
 
     def to_dict(self):
         """

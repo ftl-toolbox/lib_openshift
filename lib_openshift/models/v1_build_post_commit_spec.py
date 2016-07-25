@@ -53,6 +53,7 @@ class V1BuildPostCommitSpec(object):
             'script': 'script'
         }
 
+
         self._command = command
         self._args = args
         self._script = script
@@ -125,9 +126,6 @@ class V1BuildPostCommitSpec(object):
         """
 
         self._script = script
-
-
-#{}"
 
     def to_dict(self):
         """

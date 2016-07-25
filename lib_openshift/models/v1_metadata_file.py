@@ -51,6 +51,7 @@ class V1MetadataFile(object):
             'field_ref': 'fieldRef'
         }
 
+
         self._name = name
         self._field_ref = field_ref
 
@@ -99,9 +100,6 @@ class V1MetadataFile(object):
         """
 
         self._field_ref = field_ref
-
-
-#{}"
 
     def to_dict(self):
         """

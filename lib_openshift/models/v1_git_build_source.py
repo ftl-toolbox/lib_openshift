@@ -55,6 +55,7 @@ class V1GitBuildSource(object):
             'https_proxy': 'httpsProxy'
         }
 
+
         self._uri = uri
         self._ref = ref
         self._http_proxy = http_proxy
@@ -151,9 +152,6 @@ class V1GitBuildSource(object):
         """
 
         self._https_proxy = https_proxy
-
-
-#{}"
 
     def to_dict(self):
         """

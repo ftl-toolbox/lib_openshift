@@ -55,6 +55,7 @@ class V1FCVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._target_ww_ns = target_ww_ns
         self._lun = lun
         self._fs_type = fs_type
@@ -151,9 +152,6 @@ class V1FCVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

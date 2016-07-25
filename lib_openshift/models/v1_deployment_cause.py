@@ -51,6 +51,7 @@ class V1DeploymentCause(object):
             'image_trigger': 'imageTrigger'
         }
 
+
         self._type = type
         self._image_trigger = image_trigger
 
@@ -99,9 +100,6 @@ class V1DeploymentCause(object):
         """
 
         self._image_trigger = image_trigger
-
-
-#{}"
 
     def to_dict(self):
         """

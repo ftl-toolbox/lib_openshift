@@ -51,6 +51,7 @@ class V1HTTPHeader(object):
             'value': 'value'
         }
 
+
         self._name = name
         self._value = value
 
@@ -99,9 +100,6 @@ class V1HTTPHeader(object):
         """
 
         self._value = value
-
-
-#{}"
 
     def to_dict(self):
         """

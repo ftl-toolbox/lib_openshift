@@ -53,6 +53,7 @@ class V1PersistentVolumeStatus(object):
             'reason': 'reason'
         }
 
+
         self._phase = phase
         self._message = message
         self._reason = reason
@@ -125,9 +126,6 @@ class V1PersistentVolumeStatus(object):
         """
 
         self._reason = reason
-
-
-#{}"
 
     def to_dict(self):
         """

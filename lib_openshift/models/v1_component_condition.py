@@ -55,6 +55,7 @@ class V1ComponentCondition(object):
             'error': 'error'
         }
 
+
         self._type = type
         self._status = status
         self._message = message
@@ -151,9 +152,6 @@ class V1ComponentCondition(object):
         """
 
         self._error = error
-
-
-#{}"
 
     def to_dict(self):
         """

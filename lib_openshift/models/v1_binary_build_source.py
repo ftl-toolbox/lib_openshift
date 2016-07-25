@@ -49,6 +49,7 @@ class V1BinaryBuildSource(object):
             'as_file': 'asFile'
         }
 
+
         self._as_file = as_file
 
     @property
@@ -73,9 +74,6 @@ class V1BinaryBuildSource(object):
         """
 
         self._as_file = as_file
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -67,6 +67,16 @@ class V1OAuthAuthorizeToken(object):
             'user_uid': 'userUID'
         }
 
+	self.operations = {
+            {method&#x3D;create_oauthauthorizetoken, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_oauthauthorizetoken, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_oauthauthorizetoken, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -307,9 +317,6 @@ class V1OAuthAuthorizeToken(object):
         """
 
         self._user_uid = user_uid
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_oauthauthorizetoken, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_oauthauthorizetoken, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

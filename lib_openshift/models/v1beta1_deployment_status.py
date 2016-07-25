@@ -57,6 +57,7 @@ class V1beta1DeploymentStatus(object):
             'unavailable_replicas': 'unavailableReplicas'
         }
 
+
         self._observed_generation = observed_generation
         self._replicas = replicas
         self._updated_replicas = updated_replicas
@@ -177,9 +178,6 @@ class V1beta1DeploymentStatus(object):
         """
 
         self._unavailable_replicas = unavailable_replicas
-
-
-#{}"
 
     def to_dict(self):
         """

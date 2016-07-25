@@ -53,6 +53,7 @@ class V1beta1IngressSpec(object):
             'rules': 'rules'
         }
 
+
         self._backend = backend
         self._tls = tls
         self._rules = rules
@@ -125,9 +126,6 @@ class V1beta1IngressSpec(object):
         """
 
         self._rules = rules
-
-
-#{}"
 
     def to_dict(self):
         """

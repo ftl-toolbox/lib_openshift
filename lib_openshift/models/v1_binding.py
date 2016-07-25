@@ -55,6 +55,7 @@ class V1Binding(object):
             'target': 'target'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +152,6 @@ class V1Binding(object):
         """
 
         self._target = target
-
-
-#{}"
 
     def to_dict(self):
         """

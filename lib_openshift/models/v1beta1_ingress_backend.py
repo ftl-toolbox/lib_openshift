@@ -51,6 +51,7 @@ class V1beta1IngressBackend(object):
             'service_port': 'servicePort'
         }
 
+
         self._service_name = service_name
         self._service_port = service_port
 
@@ -99,9 +100,6 @@ class V1beta1IngressBackend(object):
         """
 
         self._service_port = service_port
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -55,6 +55,7 @@ class V1BuildStrategy(object):
             'custom_strategy': 'customStrategy'
         }
 
+
         self._type = type
         self._docker_strategy = docker_strategy
         self._source_strategy = source_strategy
@@ -151,9 +152,6 @@ class V1BuildStrategy(object):
         """
 
         self._custom_strategy = custom_strategy
-
-
-#{}"
 
     def to_dict(self):
         """

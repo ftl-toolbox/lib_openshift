@@ -55,6 +55,10 @@ class V1ImageStreamImage(object):
             'image': 'image'
         }
 
+	self.operations = {
+            {method&#x3D;get_namespaced_imagestreamimage, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +155,6 @@ class V1ImageStreamImage(object):
         """
 
         self._image = image
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1KeyToPath(object):
             'path': 'path'
         }
 
+
         self._key = key
         self._path = path
 
@@ -99,9 +100,6 @@ class V1KeyToPath(object):
         """
 
         self._path = path
-
-
-#{}"
 
     def to_dict(self):
         """

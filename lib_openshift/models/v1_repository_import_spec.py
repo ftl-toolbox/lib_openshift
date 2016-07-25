@@ -53,6 +53,7 @@ class V1RepositoryImportSpec(object):
             'include_manifest': 'includeManifest'
         }
 
+
         self.__from = _from
         self._import_policy = import_policy
         self._include_manifest = include_manifest
@@ -125,9 +126,6 @@ class V1RepositoryImportSpec(object):
         """
 
         self._include_manifest = include_manifest
-
-
-#{}"
 
     def to_dict(self):
         """

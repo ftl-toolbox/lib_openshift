@@ -57,6 +57,7 @@ class UnversionedStatusDetails(object):
             'retry_after_seconds': 'retryAfterSeconds'
         }
 
+
         self._name = name
         self._group = group
         self._kind = kind
@@ -177,9 +178,6 @@ class UnversionedStatusDetails(object):
         """
 
         self._retry_after_seconds = retry_after_seconds
-
-
-#{}"
 
     def to_dict(self):
         """

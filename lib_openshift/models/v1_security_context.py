@@ -59,6 +59,7 @@ class V1SecurityContext(object):
             'read_only_root_filesystem': 'readOnlyRootFilesystem'
         }
 
+
         self._capabilities = capabilities
         self._privileged = privileged
         self._se_linux_options = se_linux_options
@@ -203,9 +204,6 @@ class V1SecurityContext(object):
         """
 
         self._read_only_root_filesystem = read_only_root_filesystem
-
-
-#{}"
 
     def to_dict(self):
         """

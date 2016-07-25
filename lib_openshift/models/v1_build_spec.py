@@ -63,6 +63,7 @@ class V1BuildSpec(object):
             'completion_deadline_seconds': 'completionDeadlineSeconds'
         }
 
+
         self._service_account = service_account
         self._source = source
         self._revision = revision
@@ -255,9 +256,6 @@ class V1BuildSpec(object):
         """
 
         self._completion_deadline_seconds = completion_deadline_seconds
-
-
-#{}"
 
     def to_dict(self):
         """

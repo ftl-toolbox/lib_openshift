@@ -49,6 +49,7 @@ class V1beta1RollbackConfig(object):
             'revision': 'revision'
         }
 
+
         self._revision = revision
 
     @property
@@ -73,9 +74,6 @@ class V1beta1RollbackConfig(object):
         """
 
         self._revision = revision
-
-
-#{}"
 
     def to_dict(self):
         """

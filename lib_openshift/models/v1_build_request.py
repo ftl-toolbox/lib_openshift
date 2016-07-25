@@ -65,6 +65,7 @@ class V1BuildRequest(object):
             'env': 'env'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -281,9 +282,6 @@ class V1BuildRequest(object):
         """
 
         self._env = env
-
-
-#{}"
 
     def to_dict(self):
         """

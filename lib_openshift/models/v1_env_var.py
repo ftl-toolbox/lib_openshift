@@ -53,6 +53,7 @@ class V1EnvVar(object):
             'value_from': 'valueFrom'
         }
 
+
         self._name = name
         self._value = value
         self._value_from = value_from
@@ -125,9 +126,6 @@ class V1EnvVar(object):
         """
 
         self._value_from = value_from
-
-
-#{}"
 
     def to_dict(self):
         """

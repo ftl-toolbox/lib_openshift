@@ -65,6 +65,7 @@ class V1BuildStatus(object):
             'config': 'config'
         }
 
+
         self._phase = phase
         self._cancelled = cancelled
         self._reason = reason
@@ -281,9 +282,6 @@ class V1BuildStatus(object):
         """
 
         self._config = config
-
-
-#{}"
 
     def to_dict(self):
         """

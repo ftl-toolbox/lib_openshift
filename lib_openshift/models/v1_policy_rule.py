@@ -59,6 +59,7 @@ class V1PolicyRule(object):
             'non_resource_ur_ls': 'nonResourceURLs'
         }
 
+
         self._verbs = verbs
         self._attribute_restrictions = attribute_restrictions
         self._api_groups = api_groups
@@ -203,9 +204,6 @@ class V1PolicyRule(object):
         """
 
         self._non_resource_ur_ls = non_resource_ur_ls
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1NamedClusterRole(object):
             'role': 'role'
         }
 
+
         self._name = name
         self._role = role
 
@@ -99,9 +100,6 @@ class V1NamedClusterRole(object):
         """
 
         self._role = role
-
-
-#{}"
 
     def to_dict(self):
         """

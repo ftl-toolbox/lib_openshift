@@ -53,6 +53,7 @@ class V1DeleteOptions(object):
             'grace_period_seconds': 'gracePeriodSeconds'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._grace_period_seconds = grace_period_seconds
@@ -125,9 +126,6 @@ class V1DeleteOptions(object):
         """
 
         self._grace_period_seconds = grace_period_seconds
-
-
-#{}"
 
     def to_dict(self):
         """

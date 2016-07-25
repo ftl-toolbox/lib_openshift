@@ -57,6 +57,7 @@ class V1beta1DeploymentRollback(object):
             'rollback_to': 'rollbackTo'
         }
 
+
         self._kind = kind
         self._api_version = api_version
         self._name = name
@@ -177,9 +178,6 @@ class V1beta1DeploymentRollback(object):
         """
 
         self._rollback_to = rollback_to
-
-
-#{}"
 
     def to_dict(self):
         """

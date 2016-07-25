@@ -61,6 +61,7 @@ class V1ContainerStateTerminated(object):
             'container_id': 'containerID'
         }
 
+
         self._exit_code = exit_code
         self._signal = signal
         self._reason = reason
@@ -229,9 +230,6 @@ class V1ContainerStateTerminated(object):
         """
 
         self._container_id = container_id
-
-
-#{}"
 
     def to_dict(self):
         """

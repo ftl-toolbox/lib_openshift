@@ -63,6 +63,7 @@ class V1NodeSystemInfo(object):
             'kube_proxy_version': 'kubeProxyVersion'
         }
 
+
         self._machine_id = machine_id
         self._system_uuid = system_uuid
         self._boot_id = boot_id
@@ -255,9 +256,6 @@ class V1NodeSystemInfo(object):
         """
 
         self._kube_proxy_version = kube_proxy_version
-
-
-#{}"
 
     def to_dict(self):
         """

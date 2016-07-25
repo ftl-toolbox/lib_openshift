@@ -65,6 +65,7 @@ class V1ServiceSpec(object):
             'load_balancer_ip': 'loadBalancerIP'
         }
 
+
         self._ports = ports
         self._selector = selector
         self._portal_ip = portal_ip
@@ -281,9 +282,6 @@ class V1ServiceSpec(object):
         """
 
         self._load_balancer_ip = load_balancer_ip
-
-
-#{}"
 
     def to_dict(self):
         """

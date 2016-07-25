@@ -51,6 +51,7 @@ class V1ScaleStatus(object):
             'selector': 'selector'
         }
 
+
         self._replicas = replicas
         self._selector = selector
 
@@ -99,9 +100,6 @@ class V1ScaleStatus(object):
         """
 
         self._selector = selector
-
-
-#{}"
 
     def to_dict(self):
         """

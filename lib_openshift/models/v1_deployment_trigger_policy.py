@@ -51,6 +51,7 @@ class V1DeploymentTriggerPolicy(object):
             'image_change_params': 'imageChangeParams'
         }
 
+
         self._type = type
         self._image_change_params = image_change_params
 
@@ -99,9 +100,6 @@ class V1DeploymentTriggerPolicy(object):
         """
 
         self._image_change_params = image_change_params
-
-
-#{}"
 
     def to_dict(self):
         """

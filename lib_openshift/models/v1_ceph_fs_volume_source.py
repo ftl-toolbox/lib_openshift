@@ -59,6 +59,7 @@ class V1CephFSVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._monitors = monitors
         self._path = path
         self._user = user
@@ -203,9 +204,6 @@ class V1CephFSVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

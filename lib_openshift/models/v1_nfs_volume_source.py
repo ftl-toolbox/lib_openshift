@@ -53,6 +53,7 @@ class V1NFSVolumeSource(object):
             'read_only': 'readOnly'
         }
 
+
         self._server = server
         self._path = path
         self._read_only = read_only
@@ -125,9 +126,6 @@ class V1NFSVolumeSource(object):
         """
 
         self._read_only = read_only
-
-
-#{}"
 
     def to_dict(self):
         """

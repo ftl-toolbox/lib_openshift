@@ -59,6 +59,7 @@ class V1TLSConfig(object):
             'insecure_edge_termination_policy': 'insecureEdgeTerminationPolicy'
         }
 
+
         self._termination = termination
         self._certificate = certificate
         self._key = key
@@ -203,9 +204,6 @@ class V1TLSConfig(object):
         """
 
         self._insecure_edge_termination_policy = insecure_edge_termination_policy
-
-
-#{}"
 
     def to_dict(self):
         """

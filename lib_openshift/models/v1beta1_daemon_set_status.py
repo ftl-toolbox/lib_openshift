@@ -53,6 +53,7 @@ class V1beta1DaemonSetStatus(object):
             'desired_number_scheduled': 'desiredNumberScheduled'
         }
 
+
         self._current_number_scheduled = current_number_scheduled
         self._number_misscheduled = number_misscheduled
         self._desired_number_scheduled = desired_number_scheduled
@@ -125,9 +126,6 @@ class V1beta1DaemonSetStatus(object):
         """
 
         self._desired_number_scheduled = desired_number_scheduled
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -51,6 +51,7 @@ class V1SecretBuildSource(object):
             'destination_dir': 'destinationDir'
         }
 
+
         self._secret = secret
         self._destination_dir = destination_dir
 
@@ -99,9 +100,6 @@ class V1SecretBuildSource(object):
         """
 
         self._destination_dir = destination_dir
-
-
-#{}"
 
     def to_dict(self):
         """

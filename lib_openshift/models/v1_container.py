@@ -83,6 +83,7 @@ class V1Container(object):
             'tty': 'tty'
         }
 
+
         self._name = name
         self._image = image
         self._command = command
@@ -515,9 +516,6 @@ class V1Container(object):
         """
 
         self._tty = tty
-
-
-#{}"
 
     def to_dict(self):
         """

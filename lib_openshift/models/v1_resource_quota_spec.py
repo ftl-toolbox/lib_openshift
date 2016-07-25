@@ -51,6 +51,7 @@ class V1ResourceQuotaSpec(object):
             'scopes': 'scopes'
         }
 
+
         self._hard = hard
         self._scopes = scopes
 
@@ -99,9 +100,6 @@ class V1ResourceQuotaSpec(object):
         """
 
         self._scopes = scopes
-
-
-#{}"
 
     def to_dict(self):
         """

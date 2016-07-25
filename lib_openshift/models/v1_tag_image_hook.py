@@ -51,6 +51,7 @@ class V1TagImageHook(object):
             'to': 'to'
         }
 
+
         self._container_name = container_name
         self._to = to
 
@@ -99,9 +100,6 @@ class V1TagImageHook(object):
         """
 
         self._to = to
-
-
-#{}"
 
     def to_dict(self):
         """

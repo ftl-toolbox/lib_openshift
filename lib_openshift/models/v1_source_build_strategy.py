@@ -59,6 +59,7 @@ class V1SourceBuildStrategy(object):
             'force_pull': 'forcePull'
         }
 
+
         self.__from = _from
         self._pull_secret = pull_secret
         self._env = env
@@ -203,9 +204,6 @@ class V1SourceBuildStrategy(object):
         """
 
         self._force_pull = force_pull
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -55,6 +55,7 @@ class V1GitSourceRevision(object):
             'message': 'message'
         }
 
+
         self._commit = commit
         self._author = author
         self._committer = committer
@@ -151,9 +152,6 @@ class V1GitSourceRevision(object):
         """
 
         self._message = message
-
-
-#{}"
 
     def to_dict(self):
         """

@@ -55,6 +55,22 @@ class V1ClusterRole(object):
             'rules': 'rules'
         }
 
+	self.operations = {
+            {method&#x3D;replace_clusterrole, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;delete_clusterrole, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;get_clusterrole, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;patch_clusterrole, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;create_clusterrole, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +167,6 @@ class V1ClusterRole(object):
         """
 
         self._rules = rules
-
-
-#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_clusterrole, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_clusterrole, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_clusterrole, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_clusterrole, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

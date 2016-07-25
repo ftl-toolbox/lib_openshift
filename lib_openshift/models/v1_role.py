@@ -55,6 +55,25 @@ class V1Role(object):
             'rules': 'rules'
         }
 
+	self.operations = {
+            {method&#x3D;create_namespaced_role, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;create_role, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+	self.operations = {
+            {method&#x3D;replace_namespaced_role, type&#x3D;update, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;delete_namespaced_role, type&#x3D;delete, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;get_namespaced_role, type&#x3D;read, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+	self.operations = {
+            {method&#x3D;patch_namespaced_role, type&#x3D;patch, class&#x3D;OapiV1, namespaced&#x3D;true}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -151,9 +170,6 @@ class V1Role(object):
         """
 
         self._rules = rules
-
-
-#{namespaced_replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_namespaced_role, className&#x3D;OapiV1}, namespaced_patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_namespaced_role, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_role, className&#x3D;OapiV1}, namespaced_delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_namespaced_role, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_role, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

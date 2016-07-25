@@ -51,6 +51,7 @@ class V1beta1LabelSelector(object):
             'match_expressions': 'matchExpressions'
         }
 
+
         self._match_labels = match_labels
         self._match_expressions = match_expressions
 
@@ -99,9 +100,6 @@ class V1beta1LabelSelector(object):
         """
 
         self._match_expressions = match_expressions
-
-
-#{}"
 
     def to_dict(self):
         """

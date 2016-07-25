@@ -53,6 +53,7 @@ class V1CrossVersionObjectReference(object):
             'api_version': 'apiVersion'
         }
 
+
         self._kind = kind
         self._name = name
         self._api_version = api_version
@@ -125,9 +126,6 @@ class V1CrossVersionObjectReference(object):
         """
 
         self._api_version = api_version
-
-
-#{}"
 
     def to_dict(self):
         """

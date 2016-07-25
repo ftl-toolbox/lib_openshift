@@ -49,6 +49,7 @@ class V1MetadataVolumeSource(object):
             'items': 'items'
         }
 
+
         self._items = items
 
     @property
@@ -73,9 +74,6 @@ class V1MetadataVolumeSource(object):
         """
 
         self._items = items
-
-
-#{}"
 
     def to_dict(self):
         """

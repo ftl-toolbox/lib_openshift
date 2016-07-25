@@ -57,6 +57,10 @@ class V1ProjectRequest(object):
             'description': 'description'
         }
 
+	self.operations = {
+            {method&#x3D;create_projectrequest, type&#x3D;create, class&#x3D;OapiV1, namespaced&#x3D;false}
+	}
+
         self._kind = kind
         self._api_version = api_version
         self._metadata = metadata
@@ -177,9 +181,6 @@ class V1ProjectRequest(object):
         """
 
         self._description = description
-
-
-#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_projectrequest, className&#x3D;OapiV1}}"
 
     def to_dict(self):
         """

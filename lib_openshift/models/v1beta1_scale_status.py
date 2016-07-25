@@ -53,6 +53,7 @@ class V1beta1ScaleStatus(object):
             'target_selector': 'targetSelector'
         }
 
+
         self._replicas = replicas
         self._selector = selector
         self._target_selector = target_selector
@@ -125,9 +126,6 @@ class V1beta1ScaleStatus(object):
         """
 
         self._target_selector = target_selector
-
-
-#{}"
 
     def to_dict(self):
         """

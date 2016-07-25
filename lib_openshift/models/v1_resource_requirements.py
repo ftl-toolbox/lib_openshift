@@ -51,6 +51,7 @@ class V1ResourceRequirements(object):
             'requests': 'requests'
         }
 
+
         self._limits = limits
         self._requests = requests
 
@@ -99,9 +100,6 @@ class V1ResourceRequirements(object):
         """
 
         self._requests = requests
-
-
-#{}"
 
     def to_dict(self):
         """

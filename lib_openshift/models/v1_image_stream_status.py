@@ -51,6 +51,7 @@ class V1ImageStreamStatus(object):
             'tags': 'tags'
         }
 
+
         self._docker_image_repository = docker_image_repository
         self._tags = tags
 
@@ -99,9 +100,6 @@ class V1ImageStreamStatus(object):
         """
 
         self._tags = tags
-
-
-#{}"
 
     def to_dict(self):
         """
