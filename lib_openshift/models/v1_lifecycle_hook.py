@@ -126,6 +126,9 @@ class V1LifecycleHook(object):
 
         self._tag_images = tag_images
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

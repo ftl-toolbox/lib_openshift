@@ -74,6 +74,9 @@ class V1NodeDaemonEndpoints(object):
 
         self._kubelet_endpoint = kubelet_endpoint
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

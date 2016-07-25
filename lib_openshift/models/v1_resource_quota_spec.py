@@ -100,6 +100,9 @@ class V1ResourceQuotaSpec(object):
 
         self._scopes = scopes
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

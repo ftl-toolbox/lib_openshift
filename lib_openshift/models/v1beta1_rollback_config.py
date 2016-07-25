@@ -74,6 +74,9 @@ class V1beta1RollbackConfig(object):
 
         self._revision = revision
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

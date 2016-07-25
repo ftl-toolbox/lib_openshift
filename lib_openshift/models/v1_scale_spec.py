@@ -74,6 +74,9 @@ class V1ScaleSpec(object):
 
         self._replicas = replicas
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

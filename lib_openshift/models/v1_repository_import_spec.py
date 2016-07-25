@@ -126,6 +126,9 @@ class V1RepositoryImportSpec(object):
 
         self._include_manifest = include_manifest
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

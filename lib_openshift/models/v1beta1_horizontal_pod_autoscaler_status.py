@@ -178,6 +178,9 @@ class V1beta1HorizontalPodAutoscalerStatus(object):
 
         self._current_cpu_utilization_percentage = current_cpu_utilization_percentage
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

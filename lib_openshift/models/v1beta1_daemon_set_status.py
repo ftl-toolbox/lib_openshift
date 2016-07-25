@@ -126,6 +126,9 @@ class V1beta1DaemonSetStatus(object):
 
         self._desired_number_scheduled = desired_number_scheduled
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

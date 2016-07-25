@@ -205,18 +205,8 @@ class V1ClusterPolicyBinding(object):
         self._role_bindings = role_bindings
 
 
+#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_clusterpolicybinding, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_clusterpolicybinding, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_clusterpolicybinding, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_clusterpolicybinding, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_clusterpolicybinding(self)
-
-
-    def replace(self, api):
-	api.replace_clusterpolicybinding(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_clusterpolicybinding(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

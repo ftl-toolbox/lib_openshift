@@ -100,6 +100,9 @@ class V1ImageChangeTrigger(object):
 
         self.__from = _from
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

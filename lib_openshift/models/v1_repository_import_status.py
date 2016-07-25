@@ -126,6 +126,9 @@ class V1RepositoryImportStatus(object):
 
         self._additional_tags = additional_tags
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

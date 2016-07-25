@@ -152,6 +152,9 @@ class V1DeploymentTriggerImageChangeParams(object):
 
         self._last_triggered_image = last_triggered_image
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

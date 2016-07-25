@@ -178,6 +178,9 @@ class V1beta1DeploymentStatus(object):
 
         self._unavailable_replicas = unavailable_replicas
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

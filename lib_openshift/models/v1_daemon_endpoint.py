@@ -74,6 +74,9 @@ class V1DaemonEndpoint(object):
 
         self._port = port
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

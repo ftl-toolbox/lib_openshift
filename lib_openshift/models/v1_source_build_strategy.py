@@ -204,6 +204,9 @@ class V1SourceBuildStrategy(object):
 
         self._force_pull = force_pull
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

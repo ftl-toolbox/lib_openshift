@@ -74,6 +74,9 @@ class V1WebHookTrigger(object):
 
         self._secret = secret
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

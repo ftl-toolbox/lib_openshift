@@ -204,6 +204,9 @@ class V1DeploymentConfigSpec(object):
 
         self._template = template
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

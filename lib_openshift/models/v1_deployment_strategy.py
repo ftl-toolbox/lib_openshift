@@ -230,6 +230,9 @@ class V1DeploymentStrategy(object):
 
         self._annotations = annotations
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

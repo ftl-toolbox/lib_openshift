@@ -256,6 +256,9 @@ class UnversionedStatus(object):
 
         self._code = code
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1NamedClusterRoleBinding(object):
 
         self._role_binding = role_binding
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

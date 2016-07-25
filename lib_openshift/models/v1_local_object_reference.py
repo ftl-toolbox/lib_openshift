@@ -74,6 +74,9 @@ class V1LocalObjectReference(object):
 
         self._name = name
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

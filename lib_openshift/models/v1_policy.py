@@ -178,6 +178,9 @@ class V1Policy(object):
 
         self._roles = roles
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

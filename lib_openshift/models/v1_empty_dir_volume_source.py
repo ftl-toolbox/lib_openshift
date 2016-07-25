@@ -74,6 +74,9 @@ class V1EmptyDirVolumeSource(object):
 
         self._medium = medium
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

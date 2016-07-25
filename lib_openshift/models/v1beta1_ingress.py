@@ -178,6 +178,9 @@ class V1beta1Ingress(object):
 
         self._status = status
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

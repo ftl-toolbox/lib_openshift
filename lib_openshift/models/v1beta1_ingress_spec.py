@@ -126,6 +126,9 @@ class V1beta1IngressSpec(object):
 
         self._rules = rules
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

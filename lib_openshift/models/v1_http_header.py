@@ -100,6 +100,9 @@ class V1HTTPHeader(object):
 
         self._value = value
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

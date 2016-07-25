@@ -126,6 +126,9 @@ class V1beta1LabelSelectorRequirement(object):
 
         self._values = values
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1ResourceRequirements(object):
 
         self._requests = requests
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

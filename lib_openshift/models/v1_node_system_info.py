@@ -256,6 +256,9 @@ class V1NodeSystemInfo(object):
 
         self._kube_proxy_version = kube_proxy_version
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

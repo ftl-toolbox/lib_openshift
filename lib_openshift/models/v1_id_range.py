@@ -100,6 +100,9 @@ class V1IDRange(object):
 
         self._max = max
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

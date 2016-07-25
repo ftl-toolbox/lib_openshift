@@ -178,6 +178,9 @@ class UnversionedStatusDetails(object):
 
         self._retry_after_seconds = retry_after_seconds
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

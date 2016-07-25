@@ -152,6 +152,9 @@ class V1BuildStrategy(object):
 
         self._custom_strategy = custom_strategy
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

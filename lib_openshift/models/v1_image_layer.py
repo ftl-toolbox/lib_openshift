@@ -100,6 +100,9 @@ class V1ImageLayer(object):
 
         self._size = size
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1beta1DeploymentStrategy(object):
 
         self._rolling_update = rolling_update
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

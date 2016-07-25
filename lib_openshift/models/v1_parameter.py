@@ -230,6 +230,9 @@ class V1Parameter(object):
 
         self._required = required
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

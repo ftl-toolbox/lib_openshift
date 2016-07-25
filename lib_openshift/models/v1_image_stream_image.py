@@ -152,6 +152,9 @@ class V1ImageStreamImage(object):
 
         self._image = image
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

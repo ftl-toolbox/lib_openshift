@@ -74,6 +74,9 @@ class V1SecretVolumeSource(object):
 
         self._secret_name = secret_name
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

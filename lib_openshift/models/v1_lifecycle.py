@@ -100,6 +100,9 @@ class V1Lifecycle(object):
 
         self._pre_stop = pre_stop
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

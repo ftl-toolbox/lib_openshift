@@ -74,6 +74,9 @@ class V1ServiceStatus(object):
 
         self._load_balancer = load_balancer
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

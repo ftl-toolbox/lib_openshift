@@ -152,6 +152,9 @@ class V1GitBuildSource(object):
 
         self._https_proxy = https_proxy
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

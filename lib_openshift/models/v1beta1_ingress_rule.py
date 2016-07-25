@@ -100,6 +100,9 @@ class V1beta1IngressRule(object):
 
         self._http = http
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -126,6 +126,9 @@ class V1GitRepoVolumeSource(object):
 
         self._directory = directory
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

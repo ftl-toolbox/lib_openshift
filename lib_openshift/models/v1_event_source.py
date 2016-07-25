@@ -100,6 +100,9 @@ class V1EventSource(object):
 
         self._host = host
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

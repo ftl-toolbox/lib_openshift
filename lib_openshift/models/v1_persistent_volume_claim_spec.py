@@ -126,6 +126,9 @@ class V1PersistentVolumeClaimSpec(object):
 
         self._volume_name = volume_name
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

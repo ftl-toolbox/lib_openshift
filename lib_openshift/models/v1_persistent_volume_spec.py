@@ -490,6 +490,9 @@ class V1PersistentVolumeSpec(object):
 
         self._persistent_volume_reclaim_policy = persistent_volume_reclaim_policy
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

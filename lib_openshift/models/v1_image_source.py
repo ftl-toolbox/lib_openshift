@@ -126,6 +126,9 @@ class V1ImageSource(object):
 
         self._pull_secret = pull_secret
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

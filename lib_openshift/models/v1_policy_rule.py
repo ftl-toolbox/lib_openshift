@@ -204,6 +204,9 @@ class V1PolicyRule(object):
 
         self._non_resource_ur_ls = non_resource_ur_ls
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

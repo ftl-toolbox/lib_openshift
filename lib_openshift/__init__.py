@@ -379,4 +379,6 @@ from .api_client import ApiClient
 
 from .configuration import Configuration
 
+from .wrapper import Wrapper,WrapperException
+
 configuration = Configuration()

@@ -100,6 +100,9 @@ class V1BuildOutput(object):
 
         self._push_secret = push_secret
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

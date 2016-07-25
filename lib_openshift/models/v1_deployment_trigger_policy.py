@@ -100,6 +100,9 @@ class V1DeploymentTriggerPolicy(object):
 
         self._image_change_params = image_change_params
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

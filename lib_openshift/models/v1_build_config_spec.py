@@ -282,6 +282,9 @@ class V1BuildConfigSpec(object):
 
         self._completion_deadline_seconds = completion_deadline_seconds
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

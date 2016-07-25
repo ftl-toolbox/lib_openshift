@@ -100,6 +100,9 @@ class V1DownwardAPIVolumeFile(object):
 
         self._field_ref = field_ref
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

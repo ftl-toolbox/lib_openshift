@@ -126,6 +126,9 @@ class V1PersistentVolumeStatus(object):
 
         self._reason = reason
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1ScaleStatus(object):
 
         self._selector = selector
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

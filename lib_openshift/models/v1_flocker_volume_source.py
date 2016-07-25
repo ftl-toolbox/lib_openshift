@@ -74,6 +74,9 @@ class V1FlockerVolumeSource(object):
 
         self._dataset_name = dataset_name
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

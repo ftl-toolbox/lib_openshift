@@ -100,6 +100,9 @@ class V1LoadBalancerIngress(object):
 
         self._hostname = hostname
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

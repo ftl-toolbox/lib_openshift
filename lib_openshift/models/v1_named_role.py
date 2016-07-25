@@ -100,6 +100,9 @@ class V1NamedRole(object):
 
         self._role = role
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

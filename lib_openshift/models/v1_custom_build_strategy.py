@@ -230,6 +230,9 @@ class V1CustomBuildStrategy(object):
 
         self._build_api_version = build_api_version
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

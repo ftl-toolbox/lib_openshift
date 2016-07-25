@@ -152,6 +152,9 @@ class V1ComponentStatus(object):
 
         self._conditions = conditions
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

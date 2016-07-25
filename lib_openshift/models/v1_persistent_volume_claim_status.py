@@ -126,6 +126,9 @@ class V1PersistentVolumeClaimStatus(object):
 
         self._capacity = capacity
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

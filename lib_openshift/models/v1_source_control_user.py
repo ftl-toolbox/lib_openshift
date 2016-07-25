@@ -100,6 +100,9 @@ class V1SourceControlUser(object):
 
         self._email = email
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

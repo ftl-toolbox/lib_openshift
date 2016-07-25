@@ -152,6 +152,9 @@ class V1RunAsUserStrategyOptions(object):
 
         self._uid_range_max = uid_range_max
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

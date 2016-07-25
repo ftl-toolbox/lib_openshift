@@ -100,6 +100,9 @@ class V1ImageSourcePath(object):
 
         self._destination_dir = destination_dir
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

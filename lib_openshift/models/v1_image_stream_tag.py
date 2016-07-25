@@ -231,13 +231,8 @@ class V1ImageStreamTag(object):
         self._image = image
 
 
+#{namespaced_replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_namespaced_imagestreamtag, className&#x3D;OapiV1}, namespaced_patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_namespaced_imagestreamtag, className&#x3D;OapiV1}, namespaced_delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_namespaced_imagestreamtag, className&#x3D;OapiV1}}"
 
-    def replace(self, api, namespace):
-	api.replace_namespaced_imagestreamtag(self, namespace)
-
-    @staticmethod
-    def delete(api, delete_options, namespace, name):
-        api.delete_namespaced_imagestreamtag(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

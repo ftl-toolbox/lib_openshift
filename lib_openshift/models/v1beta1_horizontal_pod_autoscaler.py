@@ -179,17 +179,8 @@ class V1beta1HorizontalPodAutoscaler(object):
         self._status = status
 
 
+#{namespaced_replace&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;replace_namespaced_horizontalpodautoscaler, className&#x3D;ApisExtensionsV1beta1}, namespaced_patch&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;patch_namespaced_horizontalpodautoscaler, className&#x3D;ApisExtensionsV1beta1}, create&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;create_horizontalpodautoscaler, className&#x3D;ApisExtensionsV1beta1}, namespaced_delete&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;delete_namespaced_horizontalpodautoscaler, className&#x3D;ApisExtensionsV1beta1}, namespaced_create&#x3D;{fileName&#x3D;apis_extensions_v1beta1.py, method&#x3D;create_namespaced_horizontalpodautoscaler, className&#x3D;ApisExtensionsV1beta1}}"
 
-    def create(self, api, namespace):
-	api.create_namespaced_horizontalpodautoscaler(self, namespace)
-
-
-    def replace(self, api, namespace):
-	api.replace_namespaced_horizontalpodautoscaler(self, namespace)
-
-    @staticmethod
-    def delete(api, delete_options, namespace, name):
-        api.delete_namespaced_horizontalpodautoscaler(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

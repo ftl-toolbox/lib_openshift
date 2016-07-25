@@ -152,6 +152,9 @@ class V1BuildTriggerPolicy(object):
 
         self._image_change = image_change
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

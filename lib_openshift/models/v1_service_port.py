@@ -178,6 +178,9 @@ class V1ServicePort(object):
 
         self._node_port = node_port
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

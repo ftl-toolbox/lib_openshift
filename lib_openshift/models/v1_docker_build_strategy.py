@@ -204,6 +204,9 @@ class V1DockerBuildStrategy(object):
 
         self._dockerfile_path = dockerfile_path
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

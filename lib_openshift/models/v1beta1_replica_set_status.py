@@ -126,6 +126,9 @@ class V1beta1ReplicaSetStatus(object):
 
         self._observed_generation = observed_generation
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

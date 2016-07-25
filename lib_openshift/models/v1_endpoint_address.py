@@ -100,6 +100,9 @@ class V1EndpointAddress(object):
 
         self._target_ref = target_ref
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

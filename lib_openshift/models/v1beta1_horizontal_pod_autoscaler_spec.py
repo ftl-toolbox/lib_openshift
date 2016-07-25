@@ -152,6 +152,9 @@ class V1beta1HorizontalPodAutoscalerSpec(object):
 
         self._cpu_utilization = cpu_utilization
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

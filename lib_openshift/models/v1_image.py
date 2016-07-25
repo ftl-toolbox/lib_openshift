@@ -257,18 +257,8 @@ class V1Image(object):
         self._docker_image_layers = docker_image_layers
 
 
+#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_image, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_image, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_image, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_image, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_image(self)
-
-
-    def replace(self, api):
-	api.replace_image(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_image(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

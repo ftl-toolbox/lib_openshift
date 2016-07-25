@@ -100,6 +100,9 @@ class V1Capabilities(object):
 
         self._drop = drop
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

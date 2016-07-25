@@ -178,6 +178,9 @@ class V1RouteIngressCondition(object):
 
         self._last_transition_time = last_transition_time
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

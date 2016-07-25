@@ -74,6 +74,9 @@ class V1BinaryBuildSource(object):
 
         self._as_file = as_file
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -103,49 +103,9 @@ class {{classname}}(object):
 {{/isReadOnly}}
 {{/vars}}
 {{#vendorExtensions.operations}}
-{{#namespaced_create}}
 
+#{{.}}"
 
-    def create(self, api, namespace):
-        api.{{method}}(self, namespace)
-{{/namespaced_create}}
-{{^namespaced_create}}
-{{#create}}
-
-
-    def create(self, api):
-        api.{{method}}(self)
-{{/create}}
-{{/namespaced_create}}
-{{#namespaced_replace}}
-
-
-    def replace(self, api, namespace):
-        api.{{method}}(self, namespace)
-{{/namespaced_replace}}
-{{^namespaced_replace}}
-{{#replace}}
-
-
-    def replace(self, api):
-        api.{{method}}(self)
-{{/replace}}
-{{/namespaced_replace}}
-{{#namespaced_delete}}
-
-    @staticmethod
-    def delete(api, delete_options, namespace, name):
-        api.{{method}}(delete_options, namespace, name)
-{{/namespaced_delete}}
-{{^namespaced_delete}}
-{{#delete}}
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.{{method}}(delete_options, name)
-{{/delete}}
-{{/namespaced_delete}}
 {{/vendorExtensions.operations}}
     def to_dict(self):
         """

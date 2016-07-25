@@ -74,6 +74,9 @@ class V1beta1CPUTargetUtilization(object):
 
         self._target_percentage = target_percentage
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

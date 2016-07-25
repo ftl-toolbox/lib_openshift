@@ -152,6 +152,9 @@ class V1beta1SubresourceReference(object):
 
         self._subresource = subresource
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

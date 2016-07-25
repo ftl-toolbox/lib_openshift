@@ -282,6 +282,9 @@ class V1BuildStatus(object):
 
         self._config = config
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

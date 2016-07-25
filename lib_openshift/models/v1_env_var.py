@@ -126,6 +126,9 @@ class V1EnvVar(object):
 
         self._value_from = value_from
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

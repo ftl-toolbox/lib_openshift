@@ -256,6 +256,9 @@ class V1PodStatus(object):
 
         self._container_statuses = container_statuses
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

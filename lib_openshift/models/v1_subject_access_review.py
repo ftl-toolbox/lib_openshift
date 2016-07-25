@@ -335,9 +335,8 @@ class V1SubjectAccessReview(object):
         self._groups = groups
 
 
+#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_subjectaccessreview, className&#x3D;OapiV1}, namespaced_create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_namespaced_subjectaccessreview, className&#x3D;OapiV1}}"
 
-    def create(self, api, namespace):
-	api.create_namespaced_subjectaccessreview(self, namespace)
     def to_dict(self):
         """
         Returns the model properties as a dict

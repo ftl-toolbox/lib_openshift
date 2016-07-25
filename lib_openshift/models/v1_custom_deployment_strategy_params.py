@@ -126,6 +126,9 @@ class V1CustomDeploymentStrategyParams(object):
 
         self._command = command
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

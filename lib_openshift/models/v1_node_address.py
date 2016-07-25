@@ -100,6 +100,9 @@ class V1NodeAddress(object):
 
         self._address = address
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

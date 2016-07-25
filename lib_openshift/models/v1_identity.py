@@ -230,6 +230,9 @@ class V1Identity(object):
 
         self._extra = extra
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

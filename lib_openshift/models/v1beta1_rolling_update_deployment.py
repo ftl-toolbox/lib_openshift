@@ -100,6 +100,9 @@ class V1beta1RollingUpdateDeployment(object):
 
         self._max_surge = max_surge
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

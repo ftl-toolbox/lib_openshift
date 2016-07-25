@@ -74,6 +74,9 @@ class V1NamespaceStatus(object):
 
         self._phase = phase
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

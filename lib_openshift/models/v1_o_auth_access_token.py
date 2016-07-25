@@ -335,14 +335,8 @@ class V1OAuthAccessToken(object):
         self._refresh_token = refresh_token
 
 
+#{create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_oauthaccesstoken, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_oauthaccesstoken, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_oauthaccesstoken(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_oauthaccesstoken(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

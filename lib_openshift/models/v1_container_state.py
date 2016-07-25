@@ -126,6 +126,9 @@ class V1ContainerState(object):
 
         self._terminated = terminated
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

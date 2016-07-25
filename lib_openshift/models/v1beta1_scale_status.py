@@ -126,6 +126,9 @@ class V1beta1ScaleStatus(object):
 
         self._target_selector = target_selector
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

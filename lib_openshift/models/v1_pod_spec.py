@@ -464,6 +464,9 @@ class V1PodSpec(object):
 
         self._image_pull_secrets = image_pull_secrets
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

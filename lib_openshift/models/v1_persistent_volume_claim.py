@@ -179,17 +179,8 @@ class V1PersistentVolumeClaim(object):
         self._status = status
 
 
+#{namespaced_replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_namespaced_persistentvolumeclaim, className&#x3D;ApiV1}, namespaced_patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_namespaced_persistentvolumeclaim, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_persistentvolumeclaim, className&#x3D;ApiV1}, namespaced_delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_namespaced_persistentvolumeclaim, className&#x3D;ApiV1}, namespaced_create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_namespaced_persistentvolumeclaim, className&#x3D;ApiV1}}"
 
-    def create(self, api, namespace):
-	api.create_namespaced_persistentvolumeclaim(self, namespace)
-
-
-    def replace(self, api, namespace):
-	api.replace_namespaced_persistentvolumeclaim(self, namespace)
-
-    @staticmethod
-    def delete(api, delete_options, namespace, name):
-        api.delete_namespaced_persistentvolumeclaim(delete_options, namespace, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

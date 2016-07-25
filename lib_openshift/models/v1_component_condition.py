@@ -152,6 +152,9 @@ class V1ComponentCondition(object):
 
         self._error = error
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

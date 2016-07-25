@@ -100,6 +100,9 @@ class V1BuildLog(object):
 
         self._api_version = api_version
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

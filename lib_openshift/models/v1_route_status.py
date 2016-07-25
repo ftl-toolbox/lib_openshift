@@ -74,6 +74,9 @@ class V1RouteStatus(object):
 
         self._ingress = ingress
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

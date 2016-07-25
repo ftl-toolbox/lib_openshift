@@ -178,6 +178,9 @@ class V1ContainerPort(object):
 
         self._host_ip = host_ip
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

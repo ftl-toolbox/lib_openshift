@@ -100,6 +100,9 @@ class JsonWatchEvent(object):
 
         self._object = object
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

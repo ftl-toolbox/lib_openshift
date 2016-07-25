@@ -126,6 +126,9 @@ class V1DeleteOptions(object):
 
         self._grace_period_seconds = grace_period_seconds
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -152,6 +152,9 @@ class V1ExecNewPodHook(object):
 
         self._volumes = volumes
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

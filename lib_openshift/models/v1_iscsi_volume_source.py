@@ -204,6 +204,9 @@ class V1ISCSIVolumeSource(object):
 
         self._read_only = read_only
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

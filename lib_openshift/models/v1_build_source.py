@@ -256,6 +256,9 @@ class V1BuildSource(object):
 
         self._secrets = secrets
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

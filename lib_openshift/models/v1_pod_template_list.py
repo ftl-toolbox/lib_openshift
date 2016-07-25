@@ -152,6 +152,9 @@ class V1PodTemplateList(object):
 
         self._items = items
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

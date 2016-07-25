@@ -179,18 +179,8 @@ class V1PersistentVolume(object):
         self._status = status
 
 
+#{patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_persistentvolume, className&#x3D;ApiV1}, replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_persistentvolume, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_persistentvolume, className&#x3D;ApiV1}, delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_persistentvolume, className&#x3D;ApiV1}}"
 
-    def create(self, api):
-	api.create_persistentvolume(self)
-
-
-    def replace(self, api):
-	api.replace_persistentvolume(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_persistentvolume(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

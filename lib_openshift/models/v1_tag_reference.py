@@ -204,6 +204,9 @@ class V1TagReference(object):
 
         self._import_policy = import_policy
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

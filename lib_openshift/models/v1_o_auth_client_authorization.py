@@ -231,18 +231,8 @@ class V1OAuthClientAuthorization(object):
         self._scopes = scopes
 
 
+#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_oauthclientauthorization, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_oauthclientauthorization, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_oauthclientauthorization, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_oauthclientauthorization, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_oauthclientauthorization(self)
-
-
-    def replace(self, api):
-	api.replace_oauthclientauthorization(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_oauthclientauthorization(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

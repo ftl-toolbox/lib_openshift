@@ -100,6 +100,9 @@ class V1SecretKeySelector(object):
 
         self._key = key
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1PodTemplateSpec(object):
 
         self._spec = spec
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

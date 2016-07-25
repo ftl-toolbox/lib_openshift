@@ -256,6 +256,9 @@ class V1NodeStatus(object):
 
         self._images = images
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

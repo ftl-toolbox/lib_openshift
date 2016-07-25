@@ -230,6 +230,9 @@ class V1ContainerStateTerminated(object):
 
         self._container_id = container_id
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

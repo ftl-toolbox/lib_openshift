@@ -204,6 +204,9 @@ class V1beta1JobStatus(object):
 
         self._failed = failed
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

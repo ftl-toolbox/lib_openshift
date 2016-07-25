@@ -204,6 +204,9 @@ class V1NodeCondition(object):
 
         self._message = message
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

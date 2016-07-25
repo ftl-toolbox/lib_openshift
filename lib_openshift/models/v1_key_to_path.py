@@ -100,6 +100,9 @@ class V1KeyToPath(object):
 
         self._path = path
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

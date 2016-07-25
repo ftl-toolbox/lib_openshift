@@ -100,6 +100,9 @@ class V1DeploymentCause(object):
 
         self._image_trigger = image_trigger
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

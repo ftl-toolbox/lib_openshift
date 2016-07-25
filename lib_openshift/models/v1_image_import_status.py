@@ -126,6 +126,9 @@ class V1ImageImportStatus(object):
 
         self._tag = tag
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -282,6 +282,9 @@ class V1ServiceSpec(object):
 
         self._load_balancer_ip = load_balancer_ip
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

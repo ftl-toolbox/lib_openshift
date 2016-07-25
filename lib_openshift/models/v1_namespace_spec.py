@@ -74,6 +74,9 @@ class V1NamespaceSpec(object):
 
         self._finalizers = finalizers
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

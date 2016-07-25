@@ -100,6 +100,9 @@ class V1beta1HTTPIngressPath(object):
 
         self._backend = backend
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

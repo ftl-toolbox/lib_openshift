@@ -179,18 +179,8 @@ class V1Namespace(object):
         self._status = status
 
 
+#{patch&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;patch_namespace, className&#x3D;ApiV1}, replace&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;replace_namespace, className&#x3D;ApiV1}, create&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;create_namespace, className&#x3D;ApiV1}, delete&#x3D;{fileName&#x3D;api_v1.py, method&#x3D;delete_namespace, className&#x3D;ApiV1}}"
 
-    def create(self, api):
-	api.create_namespace(self)
-
-
-    def replace(self, api):
-	api.replace_namespace(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_namespace(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

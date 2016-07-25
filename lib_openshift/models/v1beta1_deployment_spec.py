@@ -256,6 +256,9 @@ class V1beta1DeploymentSpec(object):
 
         self._rollback_to = rollback_to
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

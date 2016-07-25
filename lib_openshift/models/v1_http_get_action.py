@@ -178,6 +178,9 @@ class V1HTTPGetAction(object):
 
         self._http_headers = http_headers
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

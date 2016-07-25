@@ -231,18 +231,8 @@ class V1ClusterRoleBinding(object):
         self._role_ref = role_ref
 
 
+#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_clusterrolebinding, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_clusterrolebinding, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_clusterrolebinding, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_clusterrolebinding, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_clusterrolebinding(self)
-
-
-    def replace(self, api):
-	api.replace_clusterrolebinding(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_clusterrolebinding(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

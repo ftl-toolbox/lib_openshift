@@ -230,6 +230,9 @@ class V1ObjectReference(object):
 
         self._field_path = field_path
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -152,6 +152,9 @@ class V1NodeSpec(object):
 
         self._unschedulable = unschedulable
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

@@ -100,6 +100,9 @@ class V1TagImportPolicy(object):
 
         self._scheduled = scheduled
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

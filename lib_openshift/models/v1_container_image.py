@@ -100,6 +100,9 @@ class V1ContainerImage(object):
 
         self._size_bytes = size_bytes
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

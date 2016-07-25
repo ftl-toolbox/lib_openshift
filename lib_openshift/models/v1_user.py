@@ -205,18 +205,8 @@ class V1User(object):
         self._groups = groups
 
 
+#{patch&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;patch_user, className&#x3D;OapiV1}, replace&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;replace_user, className&#x3D;OapiV1}, create&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;create_user, className&#x3D;OapiV1}, delete&#x3D;{fileName&#x3D;oapi_v1.py, method&#x3D;delete_user, className&#x3D;OapiV1}}"
 
-    def create(self, api):
-	api.create_user(self)
-
-
-    def replace(self, api):
-	api.replace_user(self)
-
-
-    @staticmethod
-    def delete(api, delete_options, name):
-        api.delete_user(delete_options, name)
     def to_dict(self):
         """
         Returns the model properties as a dict

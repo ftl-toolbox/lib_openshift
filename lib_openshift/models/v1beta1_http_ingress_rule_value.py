@@ -74,6 +74,9 @@ class V1beta1HTTPIngressRuleValue(object):
 
         self._paths = paths
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

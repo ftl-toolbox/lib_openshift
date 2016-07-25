@@ -178,6 +178,9 @@ class V1DeploymentConfigRollbackSpec(object):
 
         self._include_strategy = include_strategy
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

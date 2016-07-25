@@ -100,6 +100,9 @@ class V1ImageStreamSpec(object):
 
         self._tags = tags
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

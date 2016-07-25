@@ -126,6 +126,9 @@ class V1BuildPostCommitSpec(object):
 
         self._script = script
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

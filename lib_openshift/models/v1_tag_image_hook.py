@@ -100,6 +100,9 @@ class V1TagImageHook(object):
 
         self._to = to
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

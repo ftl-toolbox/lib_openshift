@@ -100,6 +100,9 @@ class V1ResourceQuotaStatus(object):
 
         self._used = used
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict

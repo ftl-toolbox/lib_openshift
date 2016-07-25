@@ -100,6 +100,9 @@ class V1MetadataFile(object):
 
         self._field_ref = field_ref
 
+
+#{}"
+
     def to_dict(self):
         """
         Returns the model properties as a dict
