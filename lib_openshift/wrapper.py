@@ -23,7 +23,7 @@ class Wrapper(object):
     def namespace(self, name=None, api_version='v1', labels=None,
                   annotations=None, state='present'):
 
-        result = {'changed': False}
+        result = {'changed': False, 'namespace': {}}
 
         if name is None:
             raise WrapperException(msg="name is required")
@@ -38,7 +38,7 @@ class Wrapper(object):
             raise WrapperException(msg="annotations must be a dict")
 
         if api_version == 'v1':
-            from .models import V1Namespace,V1ObjectMeta#,V1NamespaceSpec
+            from .models import V1Namespace,V1ObjectMeta,V1DeleteOptions
             model = V1Namespace
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
@@ -62,42 +62,46 @@ class Wrapper(object):
         api_class = ApiV1
         # TODO: configure api_client appropriately for auth
         api_client = ApiClient(host=self._cluster['server'])
-        print('api_client: {0}'.format(api_client))
         api = api_class(api_client=api_client)
 
         already_exists = False
 
         try:
-            current_namespace = getattr(api, crud_ops['read']['method'])(name)
-            print("current_namespace: {0}".format(current_namespace))
+            namespace = getattr(api, crud_ops['read']['method'])(name)
             already_exists = True
         except ApiException as e:
             if e.status != 404:
                 raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
+        # TODO: add test mode
         if state == 'present':
             if already_exists:
-                pass
                 # TODO: compare and update if needed
+                result['changed'] = False
+                result['namespace'] = namespace
+
             else:
                 try:
                     metadata = V1ObjectMeta(name=name, labels=labels,
                                             annotations=annotations)
-                    body = V1Namespace(kind='namespace', api_version=api_version,
+                    body = V1Namespace(kind='Namespace', api_version=api_version,
                                        metadata=metadata)
-                    print("metadata: {0}".format(metadata))
-                    print("body: {0}".format(body))
                     namespace = getattr(api, crud_ops['create']['method'])(body)
-                    print("namespace: {0}".format(namespace))
+                    result['changed'] = True
+                    result['namespace'] = namespace.to_dict()
+                    return result
                 except ApiException as e:
                     raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
         elif state == 'absent' and already_exists:
-            pass
-            # TODO: delete
-            #delete_options = V1DeleteOptions()
-            #status = delete_method(delete_options, name)
-            # TODO: return data based on status
+            try:
+                delete_options = V1DeleteOptions()
+                status = getattr(api, crud_ops['delete']['method'])(delete_options, name)
+                result['changed'] = True
+                result['status'] = status
+                return result
+            except ApiException as e:
+                raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
         return result
 
