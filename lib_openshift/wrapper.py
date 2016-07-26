@@ -5,6 +5,8 @@ import json
 import importlib
 from .api_client import ApiClient
 from .rest import ApiException
+from .models import V1ObjectMeta,V1DeleteOptions
+from .apis import ApiV1,OapiV1
 
 
 class WrapperException(Exception):
@@ -20,13 +22,15 @@ class WrapperException(Exception):
 
 class Wrapper(object):
 
-    def namespace(self, name=None, api_version='v1', labels=None,
-                  annotations=None, state='present'):
-
-        result = {'changed': False, 'namespace': {}}
-
+    def _validate_common_args(self, namespaced=True, namespace=None,
+                              name=None, labels=None,
+                              annotations=None, state='present'):
+        # TODO: validate name against k8s limitations
         if name is None:
             raise WrapperException(msg="name is required")
+
+        if namespaced and namespace is None:
+            raise WrapperException(msg="namespace is required")
 
         if state not in ('present', 'absent'):
             raise WrapperException(msg="Unknown state: {0}".format(state))
@@ -37,12 +41,8 @@ class Wrapper(object):
         if annotations is not None and not is_instance(dict, annotations):
             raise WrapperException(msg="annotations must be a dict")
 
-        if api_version == 'v1':
-            from .models import V1Namespace,V1ObjectMeta,V1DeleteOptions
-            model = V1Namespace
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
+    def _get_crud_ops(self, model):
         operations = model.operations
         namespaced_ops = [op for op in operations if op['namespaced']]
         non_namespaced_ops = [op for op in operations if not op['namespaced']]
@@ -55,55 +55,138 @@ class Wrapper(object):
             for op in non_namespaced_ops:
                 if op_type not in crud_ops and op_type == op['type']:
                     crud_ops[op_type] = op
+        return crud_ops
 
-        # TODO: use api derived from model operations using importlib
-        #       http://stackoverflow.com/questions/13598035/importing-a-module-when-the-module-name-is-in-a-variable
-        from .apis import ApiV1
-        api_class = ApiV1
+
+    def _get_api(self, api_class):
         # TODO: configure api_client appropriately for auth
         api_client = ApiClient(host=self._cluster['server'])
         api = api_class(api_client=api_client)
+        return api
 
-        already_exists = False
+    def _get_k8s_object(self, api, method, name, namespace):
+        k8s_object = None
 
         try:
-            namespace = getattr(api, crud_ops['read']['method'])(name)
+            if namespace is None:
+                k8s_object = getattr(api, method)(name)
+            else:
+                k8s_object = getattr(api, method)(namespace, name)
             already_exists = True
         except ApiException as e:
             if e.status != 404:
                 raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
-        # TODO: add test mode
-        if state == 'present':
-            if already_exists:
-                # TODO: compare and update if needed
-                result['changed'] = False
-                result['namespace'] = namespace
+        return k8s_object
 
-            else:
-                try:
-                    metadata = V1ObjectMeta(name=name, labels=labels,
-                                            annotations=annotations)
-                    body = V1Namespace(kind='Namespace', api_version=api_version,
-                                       metadata=metadata)
-                    namespace = getattr(api, crud_ops['create']['method'])(body)
-                    result['changed'] = True
-                    result['namespace'] = namespace.to_dict()
-                    return result
-                except ApiException as e:
-                    raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
+    def _create_or_update_k8s_object(self, api, create_method,
+                                     update_method, k8s_object,
+                                     body, namespace):
+        changed = False
+        result = {}
 
-        elif state == 'absent' and already_exists:
+        if k8s_object is not None:
+            # TODO: compare k8s_object and body, update if needed
+            changed = False
+            result = k8s_object
+        else:
             try:
-                delete_options = V1DeleteOptions()
-                status = getattr(api, crud_ops['delete']['method'])(delete_options, name)
-                result['changed'] = True
-                result['status'] = status
-                return result
+                if namespace is None:
+                    k8s_object = getattr(api, create_method)(body)
+                else:
+                    k8s_object = getattr(api, create_method)(body, namespace)
+                changed = True
+                result = k8s_object.to_dict()
             except ApiException as e:
                 raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
+        return (changed, result)
 
-        return result
+    def _delete_k8s_object(self, api, delete_method, k8s_object,
+                           delete_options, name, namespace):
+        changed = False
+        status = {}
+        if k8s_object is not None:
+            try:
+                if namespace is None:
+                    status = getattr(api, delete_method)(delete_options, name)
+                else:
+                    status = getattr(api, delete_method)(delete_options,
+                                     namespace, name)
+                changed = True
+            except ApiException as e:
+                raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
+        return (changed, status)
+
+
+    def _k8s_object(self, model, namespace, name, api_version,
+                    labels, annotations, state, **model_kwargs):
+
+        # TODO: use api derived from model operations using importlib
+        #       http://stackoverflow.com/questions/13598035/importing-a-module-when-the-module-name-is-in-a-variable
+        from .apis import ApiV1
+        api_class = ApiV1
+
+        friendly_name = model.__name__.replace(api_version.capitalize(), '')
+
+        crud_ops = self._get_crud_ops(model)
+
+        api = self._get_api(api_class)
+
+        k8s_object = self._get_k8s_object(api, crud_ops['read']['method'], name, namespace)
+
+        # TODO: add test mode
+        if state == 'present':
+            metadata = V1ObjectMeta(name=name, labels=labels,
+                                    annotations=annotations)
+            body = model(kind=friendly_name, api_version=api_version,
+                         metadata=metadata, **model_kwargs)
+            (changed, result) = self._create_or_update_k8s_object(api,
+                                                                  crud_ops['create']['method'],
+                                                                  crud_ops['update']['method'],
+                                                                  k8s_object,
+                                                                  body, namespace)
+
+        elif state == 'absent':
+            delete_options = V1DeleteOptions()
+            (changed, result) = self._delete_k8s_object(api,
+                                                        crud_ops['delete']['method'],
+                                                        k8s_object, delete_options,
+                                                        name, namespace)
+        return {'changed': changed, friendly_name.lower(): result}
+
+
+
+    def namespace(self, name=None, api_version='v1', labels=None,
+                  annotations=None, state='present'):
+        self._validate_common_args(False, None, name, labels, annotations, state)
+        if api_version == 'v1':
+            from .models import V1Namespace
+            model = V1Namespace
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+
+        return self._k8s_object(model, None, name, api_version,
+                                labels, annotations, state)
+
+
+    def pod(self, namespace=None, name=None, api_version='v1', labels=None,
+            annotations=None, state='present'):
+        self._validate_common_args(True, namespace, name, labels, annotations, state)
+        if api_version == 'v1':
+            from .models import V1Pod, V1PodSpec, V1Container
+            model = V1Pod
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+
+        container = V1Container(name="nginx", image="nginx")
+        pod_spec = V1PodSpec(containers=[container])
+
+        return self._k8s_object(model, namespace, name, api_version,
+                                labels, annotations, state, spec=pod_spec)
+
+
 
 
 
