@@ -52,12 +52,6 @@ class V1ImageStreamTag(object):
             'method': 'get_namespaced_imagestreamtag',
             'namespaced': True
         },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_imagestreamtag',
-            'namespaced': True
-        },
     ]
 
 

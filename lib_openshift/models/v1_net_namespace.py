@@ -36,12 +36,6 @@ class V1NetNamespace(object):
     operations = [
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_netnamespace',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_netnamespace',
             'namespaced': False
@@ -62,12 +56,6 @@ class V1NetNamespace(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_netnamespace',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_netnamespace',
             'namespaced': False
         },
     ]

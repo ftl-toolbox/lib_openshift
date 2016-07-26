@@ -42,12 +42,6 @@ class V1ImageStream(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_imagestream',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
             'type': 'update',
             'method': 'replace_namespaced_imagestream',
             'namespaced': True
@@ -62,12 +56,6 @@ class V1ImageStream(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_namespaced_imagestream',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_imagestream',
             'namespaced': True
         },
         {

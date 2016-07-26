@@ -58,18 +58,6 @@ class V1PersistentVolume(object):
             'method': 'get_persistentvolume',
             'namespaced': False
         },
-        {
-            'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_persistentvolume',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_watch_persistentvolume',
-            'namespaced': False
-        },
     ]
 
 

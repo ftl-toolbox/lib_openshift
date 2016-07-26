@@ -54,21 +54,9 @@ class V1Job(object):
         },
         {
             'class': 'ApisBatchV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_job',
-            'namespaced': True
-        },
-        {
-            'class': 'ApisBatchV1',
             'type': 'create',
             'method': 'create_job',
             'namespaced': False
-        },
-        {
-            'class': 'ApisBatchV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_job',
-            'namespaced': True
         },
         {
             'class': 'ApisBatchV1',

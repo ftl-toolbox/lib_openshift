@@ -48,12 +48,6 @@ class V1ResourceQuota(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_resourcequota',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'update',
             'method': 'replace_namespaced_resourcequota',
             'namespaced': True
@@ -68,12 +62,6 @@ class V1ResourceQuota(object):
             'class': 'ApiV1',
             'type': 'read',
             'method': 'get_namespaced_resourcequota',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_resourcequota',
             'namespaced': True
         },
     ]

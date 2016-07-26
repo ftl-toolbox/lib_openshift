@@ -64,12 +64,6 @@ class V1Role(object):
             'method': 'get_namespaced_role',
             'namespaced': True
         },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_role',
-            'namespaced': True
-        },
     ]
 
 

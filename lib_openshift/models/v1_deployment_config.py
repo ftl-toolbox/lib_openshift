@@ -60,18 +60,6 @@ class V1DeploymentConfig(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_deploymentconfig',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_deploymentconfig',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_deploymentconfig',
             'namespaced': False

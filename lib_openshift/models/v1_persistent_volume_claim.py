@@ -60,21 +60,9 @@ class V1PersistentVolumeClaim(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_persistentvolumeclaim',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_persistentvolumeclaim',
             'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_persistentvolumeclaim',
-            'namespaced': True
         },
     ]
 

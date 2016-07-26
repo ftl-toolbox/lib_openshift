@@ -54,18 +54,6 @@ class V1SecurityContextConstraints(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_securitycontextconstraint',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_watch_securitycontextconstraint',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_securitycontextconstraint',
             'namespaced': False

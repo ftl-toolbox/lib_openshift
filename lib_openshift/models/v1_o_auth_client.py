@@ -36,12 +36,6 @@ class V1OAuthClient(object):
     operations = [
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_oauthclient',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_oauthclient',
             'namespaced': False
@@ -62,12 +56,6 @@ class V1OAuthClient(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_oauthclient',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_oauthclient',
             'namespaced': False
         },
     ]

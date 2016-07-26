@@ -36,12 +36,6 @@ class V1Secret(object):
     operations = [
         {
             'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_secret',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_secret',
             'namespaced': False
@@ -68,12 +62,6 @@ class V1Secret(object):
             'class': 'ApiV1',
             'type': 'read',
             'method': 'get_namespaced_secret',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_secret',
             'namespaced': True
         },
     ]

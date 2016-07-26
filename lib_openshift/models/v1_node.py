@@ -54,18 +54,6 @@ class V1Node(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_node',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_watch_node',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_node',
             'namespaced': False

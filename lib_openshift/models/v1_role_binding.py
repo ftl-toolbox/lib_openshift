@@ -64,12 +64,6 @@ class V1RoleBinding(object):
             'method': 'get_namespaced_rolebinding',
             'namespaced': True
         },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_rolebinding',
-            'namespaced': True
-        },
     ]
 
 

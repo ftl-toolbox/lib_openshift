@@ -54,12 +54,6 @@ class V1ClusterRoleBinding(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_clusterrolebinding',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_clusterrolebinding',
             'namespaced': False

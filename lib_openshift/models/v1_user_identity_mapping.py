@@ -54,12 +54,6 @@ class V1UserIdentityMapping(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_useridentitymapping',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_useridentitymapping',
             'namespaced': False

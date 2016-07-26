@@ -54,20 +54,8 @@ class V1Image(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_image',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_image',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_image',
             'namespaced': False
         },
     ]

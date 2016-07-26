@@ -48,12 +48,6 @@ class V1Template(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_template',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
             'type': 'update',
             'method': 'replace_namespaced_template',
             'namespaced': True
@@ -68,12 +62,6 @@ class V1Template(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_namespaced_template',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_template',
             'namespaced': True
         },
     ]

@@ -58,18 +58,6 @@ class V1ClusterNetwork(object):
             'method': 'get_clusternetwork',
             'namespaced': False
         },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_clusternetwork',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_clusternetwork',
-            'namespaced': False
-        },
     ]
 
 

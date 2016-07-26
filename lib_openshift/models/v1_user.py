@@ -36,12 +36,6 @@ class V1User(object):
     operations = [
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_user',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'update',
             'method': 'replace_user',
             'namespaced': False
@@ -56,12 +50,6 @@ class V1User(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_user',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_user',
             'namespaced': False
         },
         {

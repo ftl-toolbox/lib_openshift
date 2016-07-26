@@ -54,18 +54,6 @@ class V1OAuthClientAuthorization(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_oauthclientauthorization',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_oauthclientauthorization',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_oauthclientauthorization',
             'namespaced': False

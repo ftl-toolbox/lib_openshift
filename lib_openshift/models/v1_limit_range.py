@@ -54,18 +54,6 @@ class V1LimitRange(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_limitrange',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_limitrange',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_namespaced_limitrange',
             'namespaced': True

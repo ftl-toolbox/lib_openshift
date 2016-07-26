@@ -54,18 +54,6 @@ class V1Namespace(object):
         },
         {
             'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespace',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_watch_namespace',
-            'namespaced': False
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_namespace',
             'namespaced': False

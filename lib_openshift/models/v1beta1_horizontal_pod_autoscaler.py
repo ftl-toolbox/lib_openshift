@@ -64,18 +64,6 @@ class V1beta1HorizontalPodAutoscaler(object):
             'method': 'get_namespaced_horizontalpodautoscaler',
             'namespaced': True
         },
-        {
-            'class': 'ApisExtensionsV1beta1',
-            'type': 'patch',
-            'method': 'patch_namespaced_horizontalpodautoscaler',
-            'namespaced': True
-        },
-        {
-            'class': 'ApisExtensionsV1beta1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_horizontalpodautoscaler',
-            'namespaced': True
-        },
     ]
 
 

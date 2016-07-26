@@ -36,12 +36,6 @@ class V1Endpoints(object):
     operations = [
         {
             'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_endpoint',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_namespaced_endpoint',
             'namespaced': True
@@ -68,12 +62,6 @@ class V1Endpoints(object):
             'class': 'ApiV1',
             'type': 'read',
             'method': 'get_namespaced_endpoint',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_endpoint',
             'namespaced': True
         },
     ]

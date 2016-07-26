@@ -54,12 +54,6 @@ class V1ClusterRole(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_clusterrole',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_clusterrole',
             'namespaced': False

@@ -36,12 +36,6 @@ class V1Event(object):
     operations = [
         {
             'class': 'ApiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_event',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
             'type': 'create',
             'method': 'create_event',
             'namespaced': False
@@ -62,12 +56,6 @@ class V1Event(object):
             'class': 'ApiV1',
             'type': 'read',
             'method': 'get_namespaced_event',
-            'namespaced': True
-        },
-        {
-            'class': 'ApiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_event',
             'namespaced': True
         },
         {

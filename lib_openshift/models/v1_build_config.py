@@ -54,18 +54,6 @@ class V1BuildConfig(object):
         },
         {
             'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_namespaced_buildconfig',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_namespaced_watch_buildconfig',
-            'namespaced': True
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_buildconfig',
             'namespaced': False

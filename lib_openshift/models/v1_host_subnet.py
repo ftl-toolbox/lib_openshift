@@ -36,12 +36,6 @@ class V1HostSubnet(object):
     operations = [
         {
             'class': 'OapiV1',
-            'type': 'read',
-            'method': 'watch_watch_hostsubnet',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
             'type': 'create',
             'method': 'create_hostsubnet',
             'namespaced': False
@@ -62,12 +56,6 @@ class V1HostSubnet(object):
             'class': 'OapiV1',
             'type': 'read',
             'method': 'get_hostsubnet',
-            'namespaced': False
-        },
-        {
-            'class': 'OapiV1',
-            'type': 'patch',
-            'method': 'patch_hostsubnet',
             'namespaced': False
         },
     ]
