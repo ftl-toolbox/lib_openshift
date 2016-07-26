@@ -2,6 +2,9 @@ from __future__ import absolute_import
 import os
 import yaml
 import json
+import importlib
+from .api_client import ApiClient
+from .rest import ApiException
 
 
 class WrapperException(Exception):
@@ -35,40 +38,59 @@ class Wrapper(object):
             raise WrapperException(msg="annotations must be a dict")
 
         if api_version == 'v1':
-            from .models import V1Namespace
+            from .models import V1Namespace,V1ObjectMeta#,V1NamespaceSpec
             model = V1Namespace
-
-            from .apis import ApiV1
-            api = ApiV1
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
-        # TODO: allow for setting api_client param to override config
-#        api_object = api()
-#        operations = model.operations
-#        create_method = getattr(api_object, operations['crud']['create'])
-#        read_method = getattr(api_object, operations['crud']['read'])
-#        update_method = getattr(api_object, operations['crud']['update'])
-#        delete_method = getattr(api_object, operations['crud']['delete'])
-#
-#        current_namespace = read_method(name)
-#        # TODO: validate that it exists somehow
+        operations = model.operations
+        namespaced_ops = [op for op in operations if op['namespaced']]
+        non_namespaced_ops = [op for op in operations if not op['namespaced']]
+
+        crud_ops = {}
+        for op_type in ('create', 'read', 'update', 'delete'):
+            for op in namespaced_ops:
+                if op_type == op['type']:
+                    crud_ops[op_type] = op
+            for op in non_namespaced_ops:
+                if op_type not in crud_ops and op_type == op['type']:
+                    crud_ops[op_type] = op
+
+        # TODO: use api derived from model operations using importlib
+        #       http://stackoverflow.com/questions/13598035/importing-a-module-when-the-module-name-is-in-a-variable
+        from .apis import ApiV1
+        api_class = ApiV1
+        # TODO: configure api_client appropriately for auth
+        api_client = ApiClient(host=self._cluster['server'])
+        print('api_client: {0}'.format(api_client))
+        api = api_class(api_client=api_client)
+
         already_exists = False
+
+        try:
+            current_namespace = getattr(api, crud_ops['read']['method'])(name)
+            print("current_namespace: {0}".format(current_namespace))
+            already_exists = True
+        except ApiException as e:
+            if e.status != 404:
+                raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
         if state == 'present':
             if already_exists:
                 pass
                 # TODO: compare and update if needed
             else:
-                pass
-                # TODO: create
-                #metadata = v1ObjectMeta(...)
-                #namespace_spec = v1NamespaceSpec(...)
-                #namespace = V1Namespace(kind='namespace',
-                #                        api_version=api_version,
-                #                        metadata=metadata,
-                #                        spec=namespace_spec,
-                #                        status=V1NamespaceStatus())
+                try:
+                    metadata = V1ObjectMeta(name=name, labels=labels,
+                                            annotations=annotations)
+                    body = V1Namespace(kind='namespace', api_version=api_version,
+                                       metadata=metadata)
+                    print("metadata: {0}".format(metadata))
+                    print("body: {0}".format(body))
+                    namespace = getattr(api, crud_ops['create']['method'])(body)
+                    print("namespace: {0}".format(namespace))
+                except ApiException as e:
+                    raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
 
         elif state == 'absent' and already_exists:
             pass
