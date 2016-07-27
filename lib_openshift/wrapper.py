@@ -88,6 +88,69 @@ class Wrapper(object):
 
         return k8s_object
 
+    def _metadata_equals(self, existing, desired):
+        attrs_to_ignore = ('creation_timestamp', 'resource_version',
+                           'self_link', 'uid')
+        for attribute in existing.attribute_map.keys():
+            if attribute in attrs_to_ignore:
+                next
+            elif attribute == 'annotations':
+                existing_annotations = existing.annotations
+                desired_annotations = desired.annotations
+                if existing_annotations is None:
+                    existing_annotations = {}
+                if desired_annotations is None:
+                    desired_annotations = {}
+                if existing_annotations == desired_annotations:
+                    next
+                for scc_attr in ('mcs', 'supplemental-groups', 'uid-range'):
+                    scc_key = "openshift.io/sa.scc.{0}".format(scc_attr)
+                    if scc_key in existing_annotations:
+                        if scc_key in desired_annotations:
+                            if existing_annotations[scc_key] != desired_annotations[scc_key]:
+                                return False
+            elif getattr(existing, attribute) is None and getattr(desired, attribute) is not None:
+                return False
+            elif getattr(desired, attribute) is None and getattr(existing, attribute) is not None:
+                return False
+            elif getattr(existing, attribute) != getattr(desired, attribute):
+                return False
+        return True
+
+    def _merge_metadata(self, existing, desired):
+        return existing
+
+    def _k8s_objects_equals(self, existing, desired):
+        for attribute in existing.attribute_map.keys():
+            if attribute == 'metadata':
+                if not self._metadata_equals(existing.metadata, desired.metadata):
+                    import pdb; pdb.set_trace()
+                    return False
+            elif attribute == 'status':
+                next
+            elif existing.kind == 'Namespace' and attribute == 'spec':
+                if existing.spec.finalizers is not None and (desired.spec is None):
+                    if len(existing.spec.finalizers) == 1 and len(existing.spec.finalizers[0].to_dict()) != 0:
+                        import pdb; pdb.set_trace()
+                        return False
+                elif existing.spec != desired.spec:
+                    import pdb; pdb.set_trace()
+                    return False
+            elif getattr(existing, attribute) is None and getattr(desired, attribute) is not None:
+                import pdb; pdb.set_trace()
+                return False
+            elif getattr(desired, attribute) is None and getattr(existing, attribute) is not None:
+                import pdb; pdb.set_trace()
+                return False
+            elif getattr(existing, attribute) != getattr(desired, attribute):
+                import pdb; pdb.set_trace()
+                return False
+
+        return True
+
+    def _merge_k8s_object_for_update(self, existing, desired):
+        return existing
+
     def _create_or_update_k8s_object(self, api, create_method,
                                      update_method, k8s_object,
                                      body, namespace):
@@ -95,7 +158,21 @@ class Wrapper(object):
         result = {}
 
         if k8s_object is not None:
-            # TODO: compare k8s_object and body, update if needed
+#            if self._k8s_objects_equals(k8s_object, body):
+#                changed = False
+#                result = k8s_object
+#            else:
+#                merged = _merge_k8s_object_for_update(k8s_object, body)
+#                try:
+#                    if namespace is None:
+#                        k8s_object = getattr(api, update_method)(merged)
+#                    else:
+#                        k8s_object = getattr(api, update_method)(merged, namespace)
+#                    changed = True
+#                    result = k8s_object.to_dict()
+#                except ApiException as e:
+#                    raise WrapperException(msg="api request failed code: {0}, {1}".format(e.status, e))
+#
             changed = False
             result = k8s_object
         else:
