@@ -36,10 +36,10 @@ class Wrapper(object):
         if state not in ('present', 'absent'):
             raise WrapperException(msg="Unknown state: {0}".format(state))
 
-        if labels is not None and not is_instance(dict, labels):
+        if labels is not None and not isinstance(labels, dict):
             raise WrapperException(msg="labels must be a dict")
 
-        if annotations is not None and not is_instance(dict, annotations):
+        if annotations is not None and not isinstance(annotations, dict):
             raise WrapperException(msg="annotations must be a dict")
 
 
@@ -107,7 +107,7 @@ class Wrapper(object):
                 changed = True
                 result = k8s_object.to_dict()
             except ApiException as e:
-                raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
+                raise WrapperException(msg="api request failed code: {0}, {1}".format(e.status, e))
         return (changed, result)
 
     def _delete_k8s_object(self, api, delete_method, k8s_object,
@@ -244,11 +244,10 @@ class Wrapper(object):
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
-        metadata = Wrapper.metadata_from_datastructure(api_version, **(kwargs.get('metdata', {})))
+        metadata = Wrapper.metadata_from_datastructure(api_version, **(kwargs.get('metadata', {})))
         pod_spec = Wrapper.pod_spec_from_datastructure(api_version, **(kwargs.get('spec', {})))
         pod_template_spec = pod_template_spec_model(metadata=metadata, spec=pod_spec)
         return pod_template_spec
-
 
     def replication_controller(self, namespace=None, name=None, api_version='v1', labels=None,
                                annotations=None, state='present', replicas=1,
@@ -266,7 +265,6 @@ class Wrapper(object):
         pod_template_spec = Wrapper.pod_template_spec_from_datastructure(api_version, **template)
         rc_spec = rc_spec_model(replicas=replicas, selector=selector,
                                 template=pod_template_spec)
-        print(rc_spec)
 
         return self._k8s_object(api_class, model, namespace, name, api_version,
                                 labels, annotations, state, spec=rc_spec)
