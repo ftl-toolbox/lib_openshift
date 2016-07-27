@@ -142,8 +142,8 @@ class Wrapper(object):
         if state == 'present':
             if namespace is not None:
                 self.namespace(name=namespace, api_version=api_version, state='present')
-            metadata = V1ObjectMeta(name=name, labels=labels,
-                                    annotations=annotations)
+            metadata = Wrapper.metadata_from_datastructure(api_version, name=name,
+                                                           labels=labels, annotations=annotations)
             body = model(kind=friendly_name, api_version=api_version,
                          metadata=metadata, **model_kwargs)
             (changed, result) = self._create_or_update_k8s_object(api,
@@ -189,28 +189,88 @@ class Wrapper(object):
             containers=None):
         self._validate_common_args(True, namespace, name, labels, annotations, state)
         if api_version == 'v1':
-            from .models import V1Pod, V1PodSpec, V1Container
+            from .models import V1Pod
             model = V1Pod
-            container_model = V1Container
-            pod_spec_model = V1PodSpec
             from .apis import ApiV1
             api_class = ApiV1
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
-        if containers is None:
-            containers=[]
-        container_objects = []
-        for cd in containers:
-            container_objects.append(container_model(**cd))
-
-        pod_spec = pod_spec_model(restart_policy=restart_policy,
-                                  node_selector=node_selector,
-                                  host_network=host_network,
-                                  containers=container_objects)
+        pod_spec = Wrapper.pod_spec_from_datastructure(api_version,
+                                                       restart_policy=restart_policy,
+                                                       node_selector=node_selector,
+                                                       host_network=host_network,
+                                                       containers=containers)
 
         return self._k8s_object(api_class, model, namespace, name, api_version,
                                 labels, annotations, state, spec=pod_spec)
+
+    @staticmethod
+    def pod_spec_from_datastructure(api_version, **kwargs):
+        if api_version == 'v1':
+            from .models import V1PodSpec, V1Container
+            pod_spec_model = V1PodSpec
+            container_model = V1Container
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        containers = kwargs.get('containers', [])
+        if containers is None:
+            containers = []
+        container_objects = []
+        for cd in containers:
+            container_objects.append(container_model(**cd))
+        kwargs['containers'] = container_objects
+
+        pod_spec = pod_spec_model(**kwargs)
+        return pod_spec
+
+    @staticmethod
+    def metadata_from_datastructure(api_version, **kwargs):
+        if api_version == 'v1':
+            from .models import V1ObjectMeta
+            metadata_model = V1ObjectMeta
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        metadata = metadata_model(**kwargs)
+        return metadata
+
+    @staticmethod
+    def pod_template_spec_from_datastructure(api_version, **kwargs):
+        if api_version == 'v1':
+            from .models import V1PodTemplateSpec
+            pod_template_spec_model = V1PodTemplateSpec
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        metadata = Wrapper.metadata_from_datastructure(api_version, **(kwargs.get('metdata', {})))
+        pod_spec = Wrapper.pod_spec_from_datastructure(api_version, **(kwargs.get('spec', {})))
+        pod_template_spec = pod_template_spec_model(metadata=metadata, spec=pod_spec)
+        return pod_template_spec
+
+
+    def replication_controller(self, namespace=None, name=None, api_version='v1', labels=None,
+                               annotations=None, state='present', replicas=1,
+                               selector=None, template=None):
+        self._validate_common_args(True, namespace, name, labels, annotations, state)
+        if api_version == 'v1':
+            from .models import V1ReplicationController, V1ReplicationControllerSpec
+            model = V1ReplicationController
+            rc_spec_model = V1ReplicationControllerSpec
+            from .apis import ApiV1
+            api_class = ApiV1
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        pod_template_spec = Wrapper.pod_template_spec_from_datastructure(api_version, **template)
+        rc_spec = rc_spec_model(replicas=replicas, selector=selector,
+                                template=pod_template_spec)
+        print(rc_spec)
+
+        return self._k8s_object(api_class, model, namespace, name, api_version,
+                                labels, annotations, state, spec=rc_spec)
+
 
 
     def __init__(self, kubeconfig=None, api_endpoint=None, namespace=None,
