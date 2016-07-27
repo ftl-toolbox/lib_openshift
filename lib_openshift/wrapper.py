@@ -270,6 +270,44 @@ class Wrapper(object):
                                 labels, annotations, state, spec=rc_spec)
 
 
+    @staticmethod
+    def service_spec_from_datastructure(api_version, **kwargs):
+        if api_version == 'v1':
+            from .models import V1ServiceSpec, V1Container
+            service_spec_model = V1ServiceSpec
+            container_model = V1Container
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        service_spec = service_spec_model(**kwargs)
+        return service_spec
+
+
+    def service(self, namespace=None, name=None, api_version='v1', labels=None,
+                annotations=None, state='present', ports=None, selector=None,
+                cluster_ip=None, type=None, external_ips=None,
+                session_affinity=None, load_balancer_ip=None):
+        self._validate_common_args(True, namespace, name, labels, annotations, state)
+        if api_version == 'v1':
+            from .models import V1Service
+            model = V1Service
+            from .apis import ApiV1
+            api_class = ApiV1
+        else:
+            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+
+        # *_i_ps variables are a workaround for the generated library, where
+        # conversion from camel case to snake case is causing the odd naming
+        service_spec = Wrapper.service_spec_from_datastructure(
+                api_version,
+                ports=ports, selector=selector,
+                cluster_ip=cluster_ip, type=type, external_i_ps=external_ips,
+                session_affinity=session_affinity,
+                load_balancer_ip=load_balancer_ip)
+
+        return self._k8s_object(api_class, model, namespace, name, api_version,
+                                labels, annotations, state, spec=service_spec)
+
 
     def __init__(self, kubeconfig=None, api_endpoint=None, namespace=None,
                  username=None, password=None, token=None, client_cert=None,
