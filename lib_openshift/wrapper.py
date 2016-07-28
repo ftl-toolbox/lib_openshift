@@ -174,7 +174,7 @@ class Wrapper(object):
 #                    raise WrapperException(msg="api request failed code: {0}, {1}".format(e.status, e))
 #
             changed = False
-            result = k8s_object
+            result = k8s_object.to_dict()
         else:
             try:
                 if namespace is None:
@@ -193,11 +193,15 @@ class Wrapper(object):
         status = {}
         if k8s_object is not None:
             try:
-                if namespace is None:
-                    status = getattr(api, delete_method)(delete_options, name)
+                if k8s_object.kind in ('Service'):
+                    status = getattr(api, delete_method)(namespace, name).to_dict()
                 else:
-                    status = getattr(api, delete_method)(delete_options,
-                                     namespace, name)
+                    if namespace is None:
+                        status = getattr(api, delete_method)(delete_options,
+                                                             name).to_dict()
+                    else:
+                        status = getattr(api, delete_method)(delete_options,
+                                                             namespace, name).to_dict()
                 changed = True
             except ApiException as e:
                 raise WrapperException(msg="api request failed code: {0}, reason: {1}".format(e.status, e.reason))
@@ -237,7 +241,7 @@ class Wrapper(object):
                                                         name, namespace)
 
         # TODO: implement proper wait on object creation
-        time.sleep(1)
+        time.sleep(.1)
         return {'changed': changed, friendly_name.lower(): result}
 
 
@@ -339,6 +343,8 @@ class Wrapper(object):
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
+        if template is None:
+            template = {}
         pod_template_spec = Wrapper.pod_template_spec_from_datastructure(api_version, **template)
         rc_spec = rc_spec_model(replicas=replicas, selector=selector,
                                 template=pod_template_spec)
