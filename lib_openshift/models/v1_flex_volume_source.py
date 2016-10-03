@@ -36,31 +36,31 @@ class V1FlexVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'driver': 'str',
+        'fs_type': 'str',
+        'secret_ref': 'V1LocalObjectReference',
+        'read_only': 'bool',
+        'options': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'driver': 'driver',
+        'fs_type': 'fsType',
+        'secret_ref': 'secretRef',
+        'read_only': 'readOnly',
+        'options': 'options'
+    }
 
     def __init__(self, driver=None, fs_type=None, secret_ref=None, read_only=None, options=None):
         """
         V1FlexVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'driver': 'str',
-            'fs_type': 'str',
-            'secret_ref': 'V1LocalObjectReference',
-            'read_only': 'bool',
-            'options': 'object'
-        }
-
-        self.attribute_map = {
-            'driver': 'driver',
-            'fs_type': 'fsType',
-            'secret_ref': 'secretRef',
-            'read_only': 'readOnly',
-            'options': 'options'
-        }
 
         self._driver = driver
         self._fs_type = fs_type
@@ -189,7 +189,7 @@ class V1FlexVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1FlexVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

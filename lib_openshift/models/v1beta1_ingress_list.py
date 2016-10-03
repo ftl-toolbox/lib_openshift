@@ -36,29 +36,29 @@ class V1beta1IngressList(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'UnversionedListMeta',
+        'items': 'list[V1beta1Ingress]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'items': 'items'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, items=None):
         """
         V1beta1IngressList - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'UnversionedListMeta',
-            'items': 'list[V1beta1Ingress]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'items': 'items'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -163,7 +163,7 @@ class V1beta1IngressList(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1IngressList.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

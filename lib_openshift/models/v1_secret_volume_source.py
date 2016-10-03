@@ -36,23 +36,23 @@ class V1SecretVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'secret_name': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'secret_name': 'secretName'
+    }
 
     def __init__(self, secret_name=None):
         """
         V1SecretVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'secret_name': 'str'
-        }
-
-        self.attribute_map = {
-            'secret_name': 'secretName'
-        }
 
         self._secret_name = secret_name
 
@@ -85,7 +85,7 @@ class V1SecretVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SecretVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

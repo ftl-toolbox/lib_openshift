@@ -36,25 +36,25 @@ class V1ResourceRequirements(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'limits': 'object',
+        'requests': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'limits': 'limits',
+        'requests': 'requests'
+    }
 
     def __init__(self, limits=None, requests=None):
         """
         V1ResourceRequirements - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'limits': 'object',
-            'requests': 'object'
-        }
-
-        self.attribute_map = {
-            'limits': 'limits',
-            'requests': 'requests'
-        }
 
         self._limits = limits
         self._requests = requests
@@ -111,7 +111,7 @@ class V1ResourceRequirements(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ResourceRequirements.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

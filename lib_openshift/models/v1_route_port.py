@@ -36,23 +36,23 @@ class V1RoutePort(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'target_port': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'target_port': 'targetPort'
+    }
 
     def __init__(self, target_port=None):
         """
         V1RoutePort - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'target_port': 'str'
-        }
-
-        self.attribute_map = {
-            'target_port': 'targetPort'
-        }
 
         self._target_port = target_port
 
@@ -85,7 +85,7 @@ class V1RoutePort(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RoutePort.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

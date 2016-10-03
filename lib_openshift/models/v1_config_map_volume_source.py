@@ -36,25 +36,25 @@ class V1ConfigMapVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'items': 'list[V1KeyToPath]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'items': 'items'
+    }
 
     def __init__(self, name=None, items=None):
         """
         V1ConfigMapVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'items': 'list[V1KeyToPath]'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'items': 'items'
-        }
 
         self._name = name
         self._items = items
@@ -111,7 +111,7 @@ class V1ConfigMapVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ConfigMapVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

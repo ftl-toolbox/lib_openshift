@@ -36,25 +36,25 @@ class V1Capabilities(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'add': 'list[V1Capability]',
+        'drop': 'list[V1Capability]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'add': 'add',
+        'drop': 'drop'
+    }
 
     def __init__(self, add=None, drop=None):
         """
         V1Capabilities - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'add': 'list[V1Capability]',
-            'drop': 'list[V1Capability]'
-        }
-
-        self.attribute_map = {
-            'add': 'add',
-            'drop': 'drop'
-        }
 
         self._add = add
         self._drop = drop
@@ -111,7 +111,7 @@ class V1Capabilities(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Capabilities.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,29 +36,29 @@ class V1RunAsUserStrategyOptions(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'uid': 'int',
+        'uid_range_min': 'int',
+        'uid_range_max': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'uid': 'uid',
+        'uid_range_min': 'uidRangeMin',
+        'uid_range_max': 'uidRangeMax'
+    }
 
     def __init__(self, type=None, uid=None, uid_range_min=None, uid_range_max=None):
         """
         V1RunAsUserStrategyOptions - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'uid': 'int',
-            'uid_range_min': 'int',
-            'uid_range_max': 'int'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'uid': 'uid',
-            'uid_range_min': 'uidRangeMin',
-            'uid_range_max': 'uidRangeMax'
-        }
 
         self._type = type
         self._uid = uid
@@ -163,7 +163,7 @@ class V1RunAsUserStrategyOptions(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RunAsUserStrategyOptions.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1ObjectFieldSelector(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'api_version': 'str',
+        'field_path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'api_version': 'apiVersion',
+        'field_path': 'fieldPath'
+    }
 
     def __init__(self, api_version=None, field_path=None):
         """
         V1ObjectFieldSelector - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'api_version': 'str',
-            'field_path': 'str'
-        }
-
-        self.attribute_map = {
-            'api_version': 'apiVersion',
-            'field_path': 'fieldPath'
-        }
 
         self._api_version = api_version
         self._field_path = field_path
@@ -111,7 +111,7 @@ class V1ObjectFieldSelector(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ObjectFieldSelector.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

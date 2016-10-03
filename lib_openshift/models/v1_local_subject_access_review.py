@@ -48,43 +48,43 @@ class V1LocalSubjectAccessReview(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'namespace': 'str',
+        'verb': 'str',
+        'resource_api_group': 'str',
+        'resource_api_version': 'str',
+        'resource': 'str',
+        'resource_name': 'str',
+        'content': 'str',
+        'user': 'str',
+        'groups': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'namespace': 'namespace',
+        'verb': 'verb',
+        'resource_api_group': 'resourceAPIGroup',
+        'resource_api_version': 'resourceAPIVersion',
+        'resource': 'resource',
+        'resource_name': 'resourceName',
+        'content': 'content',
+        'user': 'user',
+        'groups': 'groups'
+    }
 
     def __init__(self, kind=None, api_version=None, namespace=None, verb=None, resource_api_group=None, resource_api_version=None, resource=None, resource_name=None, content=None, user=None, groups=None):
         """
         V1LocalSubjectAccessReview - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'namespace': 'str',
-            'verb': 'str',
-            'resource_api_group': 'str',
-            'resource_api_version': 'str',
-            'resource': 'str',
-            'resource_name': 'str',
-            'content': 'str',
-            'user': 'str',
-            'groups': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'namespace': 'namespace',
-            'verb': 'verb',
-            'resource_api_group': 'resourceAPIGroup',
-            'resource_api_version': 'resourceAPIVersion',
-            'resource': 'resource',
-            'resource_name': 'resourceName',
-            'content': 'content',
-            'user': 'user',
-            'groups': 'groups'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -357,7 +357,7 @@ class V1LocalSubjectAccessReview(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LocalSubjectAccessReview.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

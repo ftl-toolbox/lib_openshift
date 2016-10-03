@@ -36,25 +36,25 @@ class V1DownwardAPIVolumeFile(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'path': 'str',
+        'field_ref': 'V1ObjectFieldSelector'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'path': 'path',
+        'field_ref': 'fieldRef'
+    }
 
     def __init__(self, path=None, field_ref=None):
         """
         V1DownwardAPIVolumeFile - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'path': 'str',
-            'field_ref': 'V1ObjectFieldSelector'
-        }
-
-        self.attribute_map = {
-            'path': 'path',
-            'field_ref': 'fieldRef'
-        }
 
         self._path = path
         self._field_ref = field_ref
@@ -111,7 +111,7 @@ class V1DownwardAPIVolumeFile(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DownwardAPIVolumeFile.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,27 +36,27 @@ class V1LifecycleHook(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'failure_policy': 'str',
+        'exec_new_pod': 'V1ExecNewPodHook',
+        'tag_images': 'list[V1TagImageHook]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'failure_policy': 'failurePolicy',
+        'exec_new_pod': 'execNewPod',
+        'tag_images': 'tagImages'
+    }
 
     def __init__(self, failure_policy=None, exec_new_pod=None, tag_images=None):
         """
         V1LifecycleHook - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'failure_policy': 'str',
-            'exec_new_pod': 'V1ExecNewPodHook',
-            'tag_images': 'list[V1TagImageHook]'
-        }
-
-        self.attribute_map = {
-            'failure_policy': 'failurePolicy',
-            'exec_new_pod': 'execNewPod',
-            'tag_images': 'tagImages'
-        }
 
         self._failure_policy = failure_policy
         self._exec_new_pod = exec_new_pod
@@ -137,7 +137,7 @@ class V1LifecycleHook(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LifecycleHook.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

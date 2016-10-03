@@ -36,29 +36,29 @@ class V1GitSourceRevision(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'commit': 'str',
+        'author': 'V1SourceControlUser',
+        'committer': 'V1SourceControlUser',
+        'message': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'commit': 'commit',
+        'author': 'author',
+        'committer': 'committer',
+        'message': 'message'
+    }
 
     def __init__(self, commit=None, author=None, committer=None, message=None):
         """
         V1GitSourceRevision - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'commit': 'str',
-            'author': 'V1SourceControlUser',
-            'committer': 'V1SourceControlUser',
-            'message': 'str'
-        }
-
-        self.attribute_map = {
-            'commit': 'commit',
-            'author': 'author',
-            'committer': 'committer',
-            'message': 'message'
-        }
 
         self._commit = commit
         self._author = author
@@ -163,7 +163,7 @@ class V1GitSourceRevision(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1GitSourceRevision.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,27 +36,27 @@ class V1DeleteOptions(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'grace_period_seconds': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'grace_period_seconds': 'gracePeriodSeconds'
+    }
 
     def __init__(self, kind=None, api_version=None, grace_period_seconds=None):
         """
         V1DeleteOptions - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'grace_period_seconds': 'int'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'grace_period_seconds': 'gracePeriodSeconds'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -137,7 +137,7 @@ class V1DeleteOptions(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeleteOptions.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

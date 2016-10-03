@@ -36,27 +36,27 @@ class V1GitRepoVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'repository': 'str',
+        'revision': 'str',
+        'directory': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'repository': 'repository',
+        'revision': 'revision',
+        'directory': 'directory'
+    }
 
     def __init__(self, repository=None, revision=None, directory=None):
         """
         V1GitRepoVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'repository': 'str',
-            'revision': 'str',
-            'directory': 'str'
-        }
-
-        self.attribute_map = {
-            'repository': 'repository',
-            'revision': 'revision',
-            'directory': 'directory'
-        }
 
         self._repository = repository
         self._revision = revision
@@ -137,7 +137,7 @@ class V1GitRepoVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1GitRepoVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

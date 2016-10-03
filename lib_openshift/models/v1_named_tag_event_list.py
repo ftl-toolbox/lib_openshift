@@ -36,27 +36,27 @@ class V1NamedTagEventList(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'tag': 'str',
+        'items': 'list[V1TagEvent]',
+        'conditions': 'list[V1TagEventCondition]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'tag': 'tag',
+        'items': 'items',
+        'conditions': 'conditions'
+    }
 
     def __init__(self, tag=None, items=None, conditions=None):
         """
         V1NamedTagEventList - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'tag': 'str',
-            'items': 'list[V1TagEvent]',
-            'conditions': 'list[V1TagEventCondition]'
-        }
-
-        self.attribute_map = {
-            'tag': 'tag',
-            'items': 'items',
-            'conditions': 'conditions'
-        }
 
         self._tag = tag
         self._items = items
@@ -137,7 +137,7 @@ class V1NamedTagEventList(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NamedTagEventList.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,39 +36,39 @@ class V1BuildStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'phase': 'str',
+        'cancelled': 'bool',
+        'reason': 'str',
+        'message': 'str',
+        'start_timestamp': 'str',
+        'completion_timestamp': 'str',
+        'duration': 'TimeDuration',
+        'output_docker_image_reference': 'str',
+        'config': 'V1ObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'phase': 'phase',
+        'cancelled': 'cancelled',
+        'reason': 'reason',
+        'message': 'message',
+        'start_timestamp': 'startTimestamp',
+        'completion_timestamp': 'completionTimestamp',
+        'duration': 'duration',
+        'output_docker_image_reference': 'outputDockerImageReference',
+        'config': 'config'
+    }
 
     def __init__(self, phase=None, cancelled=None, reason=None, message=None, start_timestamp=None, completion_timestamp=None, duration=None, output_docker_image_reference=None, config=None):
         """
         V1BuildStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'phase': 'str',
-            'cancelled': 'bool',
-            'reason': 'str',
-            'message': 'str',
-            'start_timestamp': 'str',
-            'completion_timestamp': 'str',
-            'duration': 'TimeDuration',
-            'output_docker_image_reference': 'str',
-            'config': 'V1ObjectReference'
-        }
-
-        self.attribute_map = {
-            'phase': 'phase',
-            'cancelled': 'cancelled',
-            'reason': 'reason',
-            'message': 'message',
-            'start_timestamp': 'startTimestamp',
-            'completion_timestamp': 'completionTimestamp',
-            'duration': 'duration',
-            'output_docker_image_reference': 'outputDockerImageReference',
-            'config': 'config'
-        }
 
         self._phase = phase
         self._cancelled = cancelled
@@ -293,7 +293,7 @@ class V1BuildStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

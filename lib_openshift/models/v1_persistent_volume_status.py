@@ -36,27 +36,27 @@ class V1PersistentVolumeStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'phase': 'str',
+        'message': 'str',
+        'reason': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'phase': 'phase',
+        'message': 'message',
+        'reason': 'reason'
+    }
 
     def __init__(self, phase=None, message=None, reason=None):
         """
         V1PersistentVolumeStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'phase': 'str',
-            'message': 'str',
-            'reason': 'str'
-        }
-
-        self.attribute_map = {
-            'phase': 'phase',
-            'message': 'message',
-            'reason': 'reason'
-        }
 
         self._phase = phase
         self._message = message
@@ -137,7 +137,7 @@ class V1PersistentVolumeStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PersistentVolumeStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1KeyToPath(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'key': 'str',
+        'path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'key': 'key',
+        'path': 'path'
+    }
 
     def __init__(self, key=None, path=None):
         """
         V1KeyToPath - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'key': 'str',
-            'path': 'str'
-        }
-
-        self.attribute_map = {
-            'key': 'key',
-            'path': 'path'
-        }
 
         self._key = key
         self._path = path
@@ -111,7 +111,7 @@ class V1KeyToPath(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1KeyToPath.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

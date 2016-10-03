@@ -36,27 +36,27 @@ class V1RouteIngress(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'host': 'str',
+        'router_name': 'str',
+        'conditions': 'list[V1RouteIngressCondition]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'host': 'host',
+        'router_name': 'routerName',
+        'conditions': 'conditions'
+    }
 
     def __init__(self, host=None, router_name=None, conditions=None):
         """
         V1RouteIngress - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'host': 'str',
-            'router_name': 'str',
-            'conditions': 'list[V1RouteIngressCondition]'
-        }
-
-        self.attribute_map = {
-            'host': 'host',
-            'router_name': 'routerName',
-            'conditions': 'conditions'
-        }
 
         self._host = host
         self._router_name = router_name
@@ -137,7 +137,7 @@ class V1RouteIngress(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RouteIngress.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

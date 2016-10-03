@@ -36,25 +36,25 @@ class V1TagImportPolicy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'insecure': 'bool',
+        'scheduled': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'insecure': 'insecure',
+        'scheduled': 'scheduled'
+    }
 
     def __init__(self, insecure=None, scheduled=None):
         """
         V1TagImportPolicy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'insecure': 'bool',
-            'scheduled': 'bool'
-        }
-
-        self.attribute_map = {
-            'insecure': 'insecure',
-            'scheduled': 'scheduled'
-        }
 
         self._insecure = insecure
         self._scheduled = scheduled
@@ -111,7 +111,7 @@ class V1TagImportPolicy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1TagImportPolicy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

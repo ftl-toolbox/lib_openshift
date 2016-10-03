@@ -36,31 +36,31 @@ class V1beta1DeploymentStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'observed_generation': 'int',
+        'replicas': 'int',
+        'updated_replicas': 'int',
+        'available_replicas': 'int',
+        'unavailable_replicas': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'observed_generation': 'observedGeneration',
+        'replicas': 'replicas',
+        'updated_replicas': 'updatedReplicas',
+        'available_replicas': 'availableReplicas',
+        'unavailable_replicas': 'unavailableReplicas'
+    }
 
     def __init__(self, observed_generation=None, replicas=None, updated_replicas=None, available_replicas=None, unavailable_replicas=None):
         """
         V1beta1DeploymentStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'observed_generation': 'int',
-            'replicas': 'int',
-            'updated_replicas': 'int',
-            'available_replicas': 'int',
-            'unavailable_replicas': 'int'
-        }
-
-        self.attribute_map = {
-            'observed_generation': 'observedGeneration',
-            'replicas': 'replicas',
-            'updated_replicas': 'updatedReplicas',
-            'available_replicas': 'availableReplicas',
-            'unavailable_replicas': 'unavailableReplicas'
-        }
 
         self._observed_generation = observed_generation
         self._replicas = replicas
@@ -189,7 +189,7 @@ class V1beta1DeploymentStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DeploymentStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

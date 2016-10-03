@@ -36,27 +36,27 @@ class V1PersistentVolumeClaimSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'access_modes': 'list[V1PersistentVolumeAccessMode]',
+        'resources': 'V1ResourceRequirements',
+        'volume_name': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'access_modes': 'accessModes',
+        'resources': 'resources',
+        'volume_name': 'volumeName'
+    }
 
     def __init__(self, access_modes=None, resources=None, volume_name=None):
         """
         V1PersistentVolumeClaimSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'access_modes': 'list[V1PersistentVolumeAccessMode]',
-            'resources': 'V1ResourceRequirements',
-            'volume_name': 'str'
-        }
-
-        self.attribute_map = {
-            'access_modes': 'accessModes',
-            'resources': 'resources',
-            'volume_name': 'volumeName'
-        }
 
         self._access_modes = access_modes
         self._resources = resources
@@ -137,7 +137,7 @@ class V1PersistentVolumeClaimSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PersistentVolumeClaimSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

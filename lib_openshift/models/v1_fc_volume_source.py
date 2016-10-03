@@ -36,29 +36,29 @@ class V1FCVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'target_ww_ns': 'list[str]',
+        'lun': 'int',
+        'fs_type': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'target_ww_ns': 'targetWWNs',
+        'lun': 'lun',
+        'fs_type': 'fsType',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, target_ww_ns=None, lun=None, fs_type=None, read_only=None):
         """
         V1FCVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'target_ww_ns': 'list[str]',
-            'lun': 'int',
-            'fs_type': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'target_ww_ns': 'targetWWNs',
-            'lun': 'lun',
-            'fs_type': 'fsType',
-            'read_only': 'readOnly'
-        }
 
         self._target_ww_ns = target_ww_ns
         self._lun = lun
@@ -163,7 +163,7 @@ class V1FCVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1FCVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1SourceControlUser(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'email': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'email': 'email'
+    }
 
     def __init__(self, name=None, email=None):
         """
         V1SourceControlUser - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'email': 'str'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'email': 'email'
-        }
 
         self._name = name
         self._email = email
@@ -111,7 +111,7 @@ class V1SourceControlUser(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SourceControlUser.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

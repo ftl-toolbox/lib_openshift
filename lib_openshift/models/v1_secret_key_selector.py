@@ -36,25 +36,25 @@ class V1SecretKeySelector(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'key': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'key': 'key'
+    }
 
     def __init__(self, name=None, key=None):
         """
         V1SecretKeySelector - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'key': 'str'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'key': 'key'
-        }
 
         self._name = name
         self._key = key
@@ -111,7 +111,7 @@ class V1SecretKeySelector(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SecretKeySelector.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

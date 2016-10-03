@@ -36,27 +36,27 @@ class V1CustomDeploymentStrategyParams(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'image': 'str',
+        'environment': 'list[V1EnvVar]',
+        'command': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'image': 'image',
+        'environment': 'environment',
+        'command': 'command'
+    }
 
     def __init__(self, image=None, environment=None, command=None):
         """
         V1CustomDeploymentStrategyParams - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'image': 'str',
-            'environment': 'list[V1EnvVar]',
-            'command': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'image': 'image',
-            'environment': 'environment',
-            'command': 'command'
-        }
 
         self._image = image
         self._environment = environment
@@ -137,7 +137,7 @@ class V1CustomDeploymentStrategyParams(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1CustomDeploymentStrategyParams.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

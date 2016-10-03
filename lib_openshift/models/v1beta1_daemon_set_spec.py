@@ -36,25 +36,25 @@ class V1beta1DaemonSetSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'selector': 'V1beta1LabelSelector',
+        'template': 'V1PodTemplateSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'selector': 'selector',
+        'template': 'template'
+    }
 
     def __init__(self, selector=None, template=None):
         """
         V1beta1DaemonSetSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'selector': 'V1beta1LabelSelector',
-            'template': 'V1PodTemplateSpec'
-        }
-
-        self.attribute_map = {
-            'selector': 'selector',
-            'template': 'template'
-        }
 
         self._selector = selector
         self._template = template
@@ -111,7 +111,7 @@ class V1beta1DaemonSetSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DaemonSetSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

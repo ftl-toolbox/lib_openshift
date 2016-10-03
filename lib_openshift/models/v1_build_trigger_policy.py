@@ -36,29 +36,29 @@ class V1BuildTriggerPolicy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'github': 'V1WebHookTrigger',
+        'generic': 'V1WebHookTrigger',
+        'image_change': 'V1ImageChangeTrigger'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'github': 'github',
+        'generic': 'generic',
+        'image_change': 'imageChange'
+    }
 
     def __init__(self, type=None, github=None, generic=None, image_change=None):
         """
         V1BuildTriggerPolicy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'github': 'V1WebHookTrigger',
-            'generic': 'V1WebHookTrigger',
-            'image_change': 'V1ImageChangeTrigger'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'github': 'github',
-            'generic': 'generic',
-            'image_change': 'imageChange'
-        }
 
         self._type = type
         self._github = github
@@ -163,7 +163,7 @@ class V1BuildTriggerPolicy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildTriggerPolicy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

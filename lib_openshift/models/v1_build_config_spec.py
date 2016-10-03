@@ -36,39 +36,39 @@ class V1BuildConfigSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'triggers': 'list[V1BuildTriggerPolicy]',
+        'service_account': 'str',
+        'source': 'V1BuildSource',
+        'revision': 'V1SourceRevision',
+        'strategy': 'V1BuildStrategy',
+        'output': 'V1BuildOutput',
+        'resources': 'V1ResourceRequirements',
+        'post_commit': 'V1BuildPostCommitSpec',
+        'completion_deadline_seconds': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'triggers': 'triggers',
+        'service_account': 'serviceAccount',
+        'source': 'source',
+        'revision': 'revision',
+        'strategy': 'strategy',
+        'output': 'output',
+        'resources': 'resources',
+        'post_commit': 'postCommit',
+        'completion_deadline_seconds': 'completionDeadlineSeconds'
+    }
 
     def __init__(self, triggers=None, service_account=None, source=None, revision=None, strategy=None, output=None, resources=None, post_commit=None, completion_deadline_seconds=None):
         """
         V1BuildConfigSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'triggers': 'list[V1BuildTriggerPolicy]',
-            'service_account': 'str',
-            'source': 'V1BuildSource',
-            'revision': 'V1SourceRevision',
-            'strategy': 'V1BuildStrategy',
-            'output': 'V1BuildOutput',
-            'resources': 'V1ResourceRequirements',
-            'post_commit': 'V1BuildPostCommitSpec',
-            'completion_deadline_seconds': 'int'
-        }
-
-        self.attribute_map = {
-            'triggers': 'triggers',
-            'service_account': 'serviceAccount',
-            'source': 'source',
-            'revision': 'revision',
-            'strategy': 'strategy',
-            'output': 'output',
-            'resources': 'resources',
-            'post_commit': 'postCommit',
-            'completion_deadline_seconds': 'completionDeadlineSeconds'
-        }
 
         self._triggers = triggers
         self._service_account = service_account
@@ -293,7 +293,7 @@ class V1BuildConfigSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildConfigSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

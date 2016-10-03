@@ -60,35 +60,35 @@ class V1OAuthClientAuthorization(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'client_name': 'str',
+        'user_name': 'str',
+        'user_uid': 'str',
+        'scopes': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'client_name': 'clientName',
+        'user_name': 'userName',
+        'user_uid': 'userUID',
+        'scopes': 'scopes'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, client_name=None, user_name=None, user_uid=None, scopes=None):
         """
         V1OAuthClientAuthorization - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'client_name': 'str',
-            'user_name': 'str',
-            'user_uid': 'str',
-            'scopes': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'client_name': 'clientName',
-            'user_name': 'userName',
-            'user_uid': 'userUID',
-            'scopes': 'scopes'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -265,7 +265,7 @@ class V1OAuthClientAuthorization(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1OAuthClientAuthorization.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

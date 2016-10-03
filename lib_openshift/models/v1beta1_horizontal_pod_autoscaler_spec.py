@@ -36,29 +36,29 @@ class V1beta1HorizontalPodAutoscalerSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'scale_ref': 'V1beta1SubresourceReference',
+        'min_replicas': 'int',
+        'max_replicas': 'int',
+        'cpu_utilization': 'V1beta1CPUTargetUtilization'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'scale_ref': 'scaleRef',
+        'min_replicas': 'minReplicas',
+        'max_replicas': 'maxReplicas',
+        'cpu_utilization': 'cpuUtilization'
+    }
 
     def __init__(self, scale_ref=None, min_replicas=None, max_replicas=None, cpu_utilization=None):
         """
         V1beta1HorizontalPodAutoscalerSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'scale_ref': 'V1beta1SubresourceReference',
-            'min_replicas': 'int',
-            'max_replicas': 'int',
-            'cpu_utilization': 'V1beta1CPUTargetUtilization'
-        }
-
-        self.attribute_map = {
-            'scale_ref': 'scaleRef',
-            'min_replicas': 'minReplicas',
-            'max_replicas': 'maxReplicas',
-            'cpu_utilization': 'cpuUtilization'
-        }
 
         self._scale_ref = scale_ref
         self._min_replicas = min_replicas
@@ -163,7 +163,7 @@ class V1beta1HorizontalPodAutoscalerSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1HorizontalPodAutoscalerSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

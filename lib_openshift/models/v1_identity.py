@@ -36,35 +36,35 @@ class V1Identity(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'provider_name': 'str',
+        'provider_user_name': 'str',
+        'user': 'V1ObjectReference',
+        'extra': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'provider_name': 'providerName',
+        'provider_user_name': 'providerUserName',
+        'user': 'user',
+        'extra': 'extra'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, provider_name=None, provider_user_name=None, user=None, extra=None):
         """
         V1Identity - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'provider_name': 'str',
-            'provider_user_name': 'str',
-            'user': 'V1ObjectReference',
-            'extra': 'object'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'provider_name': 'providerName',
-            'provider_user_name': 'providerUserName',
-            'user': 'user',
-            'extra': 'extra'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -241,7 +241,7 @@ class V1Identity(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Identity.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,31 +36,31 @@ class V1ClusterPolicy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'last_modified': 'str',
+        'roles': 'list[V1NamedClusterRole]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'last_modified': 'lastModified',
+        'roles': 'roles'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, last_modified=None, roles=None):
         """
         V1ClusterPolicy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'last_modified': 'str',
-            'roles': 'list[V1NamedClusterRole]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'last_modified': 'lastModified',
-            'roles': 'roles'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -189,7 +189,7 @@ class V1ClusterPolicy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ClusterPolicy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

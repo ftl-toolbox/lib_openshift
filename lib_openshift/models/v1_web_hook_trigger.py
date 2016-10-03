@@ -36,23 +36,23 @@ class V1WebHookTrigger(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'secret': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'secret': 'secret'
+    }
 
     def __init__(self, secret=None):
         """
         V1WebHookTrigger - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'secret': 'str'
-        }
-
-        self.attribute_map = {
-            'secret': 'secret'
-        }
 
         self._secret = secret
 
@@ -85,7 +85,7 @@ class V1WebHookTrigger(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1WebHookTrigger.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

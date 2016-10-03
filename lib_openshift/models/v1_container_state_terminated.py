@@ -36,35 +36,35 @@ class V1ContainerStateTerminated(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'exit_code': 'int',
+        'signal': 'int',
+        'reason': 'str',
+        'message': 'str',
+        'started_at': 'str',
+        'finished_at': 'str',
+        'container_id': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'exit_code': 'exitCode',
+        'signal': 'signal',
+        'reason': 'reason',
+        'message': 'message',
+        'started_at': 'startedAt',
+        'finished_at': 'finishedAt',
+        'container_id': 'containerID'
+    }
 
     def __init__(self, exit_code=None, signal=None, reason=None, message=None, started_at=None, finished_at=None, container_id=None):
         """
         V1ContainerStateTerminated - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'exit_code': 'int',
-            'signal': 'int',
-            'reason': 'str',
-            'message': 'str',
-            'started_at': 'str',
-            'finished_at': 'str',
-            'container_id': 'str'
-        }
-
-        self.attribute_map = {
-            'exit_code': 'exitCode',
-            'signal': 'signal',
-            'reason': 'reason',
-            'message': 'message',
-            'started_at': 'startedAt',
-            'finished_at': 'finishedAt',
-            'container_id': 'containerID'
-        }
 
         self._exit_code = exit_code
         self._signal = signal
@@ -241,7 +241,7 @@ class V1ContainerStateTerminated(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ContainerStateTerminated.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

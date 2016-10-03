@@ -36,55 +36,55 @@ class V1PersistentVolumeSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'capacity': 'object',
+        'gce_persistent_disk': 'V1GCEPersistentDiskVolumeSource',
+        'aws_elastic_block_store': 'V1AWSElasticBlockStoreVolumeSource',
+        'host_path': 'V1HostPathVolumeSource',
+        'glusterfs': 'V1GlusterfsVolumeSource',
+        'nfs': 'V1NFSVolumeSource',
+        'rbd': 'V1RBDVolumeSource',
+        'iscsi': 'V1ISCSIVolumeSource',
+        'cinder': 'V1CinderVolumeSource',
+        'cephfs': 'V1CephFSVolumeSource',
+        'fc': 'V1FCVolumeSource',
+        'flocker': 'V1FlockerVolumeSource',
+        'flex_volume': 'V1FlexVolumeSource',
+        'azure_file': 'V1AzureFileVolumeSource',
+        'access_modes': 'list[V1PersistentVolumeAccessMode]',
+        'claim_ref': 'V1ObjectReference',
+        'persistent_volume_reclaim_policy': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'capacity': 'capacity',
+        'gce_persistent_disk': 'gcePersistentDisk',
+        'aws_elastic_block_store': 'awsElasticBlockStore',
+        'host_path': 'hostPath',
+        'glusterfs': 'glusterfs',
+        'nfs': 'nfs',
+        'rbd': 'rbd',
+        'iscsi': 'iscsi',
+        'cinder': 'cinder',
+        'cephfs': 'cephfs',
+        'fc': 'fc',
+        'flocker': 'flocker',
+        'flex_volume': 'flexVolume',
+        'azure_file': 'azureFile',
+        'access_modes': 'accessModes',
+        'claim_ref': 'claimRef',
+        'persistent_volume_reclaim_policy': 'persistentVolumeReclaimPolicy'
+    }
 
     def __init__(self, capacity=None, gce_persistent_disk=None, aws_elastic_block_store=None, host_path=None, glusterfs=None, nfs=None, rbd=None, iscsi=None, cinder=None, cephfs=None, fc=None, flocker=None, flex_volume=None, azure_file=None, access_modes=None, claim_ref=None, persistent_volume_reclaim_policy=None):
         """
         V1PersistentVolumeSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'capacity': 'object',
-            'gce_persistent_disk': 'V1GCEPersistentDiskVolumeSource',
-            'aws_elastic_block_store': 'V1AWSElasticBlockStoreVolumeSource',
-            'host_path': 'V1HostPathVolumeSource',
-            'glusterfs': 'V1GlusterfsVolumeSource',
-            'nfs': 'V1NFSVolumeSource',
-            'rbd': 'V1RBDVolumeSource',
-            'iscsi': 'V1ISCSIVolumeSource',
-            'cinder': 'V1CinderVolumeSource',
-            'cephfs': 'V1CephFSVolumeSource',
-            'fc': 'V1FCVolumeSource',
-            'flocker': 'V1FlockerVolumeSource',
-            'flex_volume': 'V1FlexVolumeSource',
-            'azure_file': 'V1AzureFileVolumeSource',
-            'access_modes': 'list[V1PersistentVolumeAccessMode]',
-            'claim_ref': 'V1ObjectReference',
-            'persistent_volume_reclaim_policy': 'str'
-        }
-
-        self.attribute_map = {
-            'capacity': 'capacity',
-            'gce_persistent_disk': 'gcePersistentDisk',
-            'aws_elastic_block_store': 'awsElasticBlockStore',
-            'host_path': 'hostPath',
-            'glusterfs': 'glusterfs',
-            'nfs': 'nfs',
-            'rbd': 'rbd',
-            'iscsi': 'iscsi',
-            'cinder': 'cinder',
-            'cephfs': 'cephfs',
-            'fc': 'fc',
-            'flocker': 'flocker',
-            'flex_volume': 'flexVolume',
-            'azure_file': 'azureFile',
-            'access_modes': 'accessModes',
-            'claim_ref': 'claimRef',
-            'persistent_volume_reclaim_policy': 'persistentVolumeReclaimPolicy'
-        }
 
         self._capacity = capacity
         self._gce_persistent_disk = gce_persistent_disk
@@ -501,7 +501,7 @@ class V1PersistentVolumeSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PersistentVolumeSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

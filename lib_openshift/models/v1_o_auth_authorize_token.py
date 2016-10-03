@@ -54,41 +54,41 @@ class V1OAuthAuthorizeToken(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'client_name': 'str',
+        'expires_in': 'int',
+        'scopes': 'list[str]',
+        'redirect_uri': 'str',
+        'state': 'str',
+        'user_name': 'str',
+        'user_uid': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'client_name': 'clientName',
+        'expires_in': 'expiresIn',
+        'scopes': 'scopes',
+        'redirect_uri': 'redirectURI',
+        'state': 'state',
+        'user_name': 'userName',
+        'user_uid': 'userUID'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, client_name=None, expires_in=None, scopes=None, redirect_uri=None, state=None, user_name=None, user_uid=None):
         """
         V1OAuthAuthorizeToken - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'client_name': 'str',
-            'expires_in': 'int',
-            'scopes': 'list[str]',
-            'redirect_uri': 'str',
-            'state': 'str',
-            'user_name': 'str',
-            'user_uid': 'str'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'client_name': 'clientName',
-            'expires_in': 'expiresIn',
-            'scopes': 'scopes',
-            'redirect_uri': 'redirectURI',
-            'state': 'state',
-            'user_name': 'userName',
-            'user_uid': 'userUID'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -337,7 +337,7 @@ class V1OAuthAuthorizeToken(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1OAuthAuthorizeToken.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

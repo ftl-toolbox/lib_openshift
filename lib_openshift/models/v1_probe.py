@@ -36,37 +36,37 @@ class V1Probe(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_exec': 'V1ExecAction',
+        'http_get': 'V1HTTPGetAction',
+        'tcp_socket': 'V1TCPSocketAction',
+        'initial_delay_seconds': 'int',
+        'timeout_seconds': 'int',
+        'period_seconds': 'int',
+        'success_threshold': 'int',
+        'failure_threshold': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_exec': 'exec',
+        'http_get': 'httpGet',
+        'tcp_socket': 'tcpSocket',
+        'initial_delay_seconds': 'initialDelaySeconds',
+        'timeout_seconds': 'timeoutSeconds',
+        'period_seconds': 'periodSeconds',
+        'success_threshold': 'successThreshold',
+        'failure_threshold': 'failureThreshold'
+    }
 
     def __init__(self, _exec=None, http_get=None, tcp_socket=None, initial_delay_seconds=None, timeout_seconds=None, period_seconds=None, success_threshold=None, failure_threshold=None):
         """
         V1Probe - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_exec': 'V1ExecAction',
-            'http_get': 'V1HTTPGetAction',
-            'tcp_socket': 'V1TCPSocketAction',
-            'initial_delay_seconds': 'int',
-            'timeout_seconds': 'int',
-            'period_seconds': 'int',
-            'success_threshold': 'int',
-            'failure_threshold': 'int'
-        }
-
-        self.attribute_map = {
-            '_exec': 'exec',
-            'http_get': 'httpGet',
-            'tcp_socket': 'tcpSocket',
-            'initial_delay_seconds': 'initialDelaySeconds',
-            'timeout_seconds': 'timeoutSeconds',
-            'period_seconds': 'periodSeconds',
-            'success_threshold': 'successThreshold',
-            'failure_threshold': 'failureThreshold'
-        }
 
         self.__exec = _exec
         self._http_get = http_get
@@ -267,7 +267,7 @@ class V1Probe(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Probe.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

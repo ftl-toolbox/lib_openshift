@@ -36,33 +36,33 @@ class V1TLSConfig(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'termination': 'str',
+        'certificate': 'str',
+        'key': 'str',
+        'ca_certificate': 'str',
+        'destination_ca_certificate': 'str',
+        'insecure_edge_termination_policy': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'termination': 'termination',
+        'certificate': 'certificate',
+        'key': 'key',
+        'ca_certificate': 'caCertificate',
+        'destination_ca_certificate': 'destinationCACertificate',
+        'insecure_edge_termination_policy': 'insecureEdgeTerminationPolicy'
+    }
 
     def __init__(self, termination=None, certificate=None, key=None, ca_certificate=None, destination_ca_certificate=None, insecure_edge_termination_policy=None):
         """
         V1TLSConfig - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'termination': 'str',
-            'certificate': 'str',
-            'key': 'str',
-            'ca_certificate': 'str',
-            'destination_ca_certificate': 'str',
-            'insecure_edge_termination_policy': 'str'
-        }
-
-        self.attribute_map = {
-            'termination': 'termination',
-            'certificate': 'certificate',
-            'key': 'key',
-            'ca_certificate': 'caCertificate',
-            'destination_ca_certificate': 'destinationCACertificate',
-            'insecure_edge_termination_policy': 'insecureEdgeTerminationPolicy'
-        }
 
         self._termination = termination
         self._certificate = certificate
@@ -215,7 +215,7 @@ class V1TLSConfig(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1TLSConfig.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

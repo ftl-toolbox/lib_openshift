@@ -36,29 +36,29 @@ class V1TagEvent(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'created': 'str',
+        'docker_image_reference': 'str',
+        'image': 'str',
+        'generation': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'created': 'created',
+        'docker_image_reference': 'dockerImageReference',
+        'image': 'image',
+        'generation': 'generation'
+    }
 
     def __init__(self, created=None, docker_image_reference=None, image=None, generation=None):
         """
         V1TagEvent - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'created': 'str',
-            'docker_image_reference': 'str',
-            'image': 'str',
-            'generation': 'int'
-        }
-
-        self.attribute_map = {
-            'created': 'created',
-            'docker_image_reference': 'dockerImageReference',
-            'image': 'image',
-            'generation': 'generation'
-        }
 
         self._created = created
         self._docker_image_reference = docker_image_reference
@@ -163,7 +163,7 @@ class V1TagEvent(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1TagEvent.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

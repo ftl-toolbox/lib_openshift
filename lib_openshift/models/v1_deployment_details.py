@@ -36,25 +36,25 @@ class V1DeploymentDetails(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'message': 'str',
+        'causes': 'list[V1DeploymentCause]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'message': 'message',
+        'causes': 'causes'
+    }
 
     def __init__(self, message=None, causes=None):
         """
         V1DeploymentDetails - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'message': 'str',
-            'causes': 'list[V1DeploymentCause]'
-        }
-
-        self.attribute_map = {
-            'message': 'message',
-            'causes': 'causes'
-        }
 
         self._message = message
         self._causes = causes
@@ -111,7 +111,7 @@ class V1DeploymentDetails(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentDetails.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

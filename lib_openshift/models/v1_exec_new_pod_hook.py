@@ -36,29 +36,29 @@ class V1ExecNewPodHook(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'command': 'list[str]',
+        'env': 'list[V1EnvVar]',
+        'container_name': 'str',
+        'volumes': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'command': 'command',
+        'env': 'env',
+        'container_name': 'containerName',
+        'volumes': 'volumes'
+    }
 
     def __init__(self, command=None, env=None, container_name=None, volumes=None):
         """
         V1ExecNewPodHook - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'command': 'list[str]',
-            'env': 'list[V1EnvVar]',
-            'container_name': 'str',
-            'volumes': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'command': 'command',
-            'env': 'env',
-            'container_name': 'containerName',
-            'volumes': 'volumes'
-        }
 
         self._command = command
         self._env = env
@@ -163,7 +163,7 @@ class V1ExecNewPodHook(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ExecNewPodHook.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

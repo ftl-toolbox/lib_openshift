@@ -36,27 +36,27 @@ class V1beta1DaemonSetStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'current_number_scheduled': 'int',
+        'number_misscheduled': 'int',
+        'desired_number_scheduled': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'current_number_scheduled': 'currentNumberScheduled',
+        'number_misscheduled': 'numberMisscheduled',
+        'desired_number_scheduled': 'desiredNumberScheduled'
+    }
 
     def __init__(self, current_number_scheduled=None, number_misscheduled=None, desired_number_scheduled=None):
         """
         V1beta1DaemonSetStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'current_number_scheduled': 'int',
-            'number_misscheduled': 'int',
-            'desired_number_scheduled': 'int'
-        }
-
-        self.attribute_map = {
-            'current_number_scheduled': 'currentNumberScheduled',
-            'number_misscheduled': 'numberMisscheduled',
-            'desired_number_scheduled': 'desiredNumberScheduled'
-        }
 
         self._current_number_scheduled = current_number_scheduled
         self._number_misscheduled = number_misscheduled
@@ -137,7 +137,7 @@ class V1beta1DaemonSetStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DaemonSetStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

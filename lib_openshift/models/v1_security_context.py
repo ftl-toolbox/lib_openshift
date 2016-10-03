@@ -36,33 +36,33 @@ class V1SecurityContext(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'capabilities': 'V1Capabilities',
+        'privileged': 'bool',
+        'se_linux_options': 'V1SELinuxOptions',
+        'run_as_user': 'int',
+        'run_as_non_root': 'bool',
+        'read_only_root_filesystem': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'capabilities': 'capabilities',
+        'privileged': 'privileged',
+        'se_linux_options': 'seLinuxOptions',
+        'run_as_user': 'runAsUser',
+        'run_as_non_root': 'runAsNonRoot',
+        'read_only_root_filesystem': 'readOnlyRootFilesystem'
+    }
 
     def __init__(self, capabilities=None, privileged=None, se_linux_options=None, run_as_user=None, run_as_non_root=None, read_only_root_filesystem=None):
         """
         V1SecurityContext - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'capabilities': 'V1Capabilities',
-            'privileged': 'bool',
-            'se_linux_options': 'V1SELinuxOptions',
-            'run_as_user': 'int',
-            'run_as_non_root': 'bool',
-            'read_only_root_filesystem': 'bool'
-        }
-
-        self.attribute_map = {
-            'capabilities': 'capabilities',
-            'privileged': 'privileged',
-            'se_linux_options': 'seLinuxOptions',
-            'run_as_user': 'runAsUser',
-            'run_as_non_root': 'runAsNonRoot',
-            'read_only_root_filesystem': 'readOnlyRootFilesystem'
-        }
 
         self._capabilities = capabilities
         self._privileged = privileged
@@ -215,7 +215,7 @@ class V1SecurityContext(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SecurityContext.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

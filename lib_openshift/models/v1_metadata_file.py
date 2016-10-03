@@ -36,25 +36,25 @@ class V1MetadataFile(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'field_ref': 'V1ObjectFieldSelector'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'field_ref': 'fieldRef'
+    }
 
     def __init__(self, name=None, field_ref=None):
         """
         V1MetadataFile - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'field_ref': 'V1ObjectFieldSelector'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'field_ref': 'fieldRef'
-        }
 
         self._name = name
         self._field_ref = field_ref
@@ -111,7 +111,7 @@ class V1MetadataFile(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1MetadataFile.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

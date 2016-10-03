@@ -36,27 +36,27 @@ class V1AzureFileVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'secret_name': 'str',
+        'share_name': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'secret_name': 'secretName',
+        'share_name': 'shareName',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, secret_name=None, share_name=None, read_only=None):
         """
         V1AzureFileVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'secret_name': 'str',
-            'share_name': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'secret_name': 'secretName',
-            'share_name': 'shareName',
-            'read_only': 'readOnly'
-        }
 
         self._secret_name = secret_name
         self._share_name = share_name
@@ -137,7 +137,7 @@ class V1AzureFileVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1AzureFileVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

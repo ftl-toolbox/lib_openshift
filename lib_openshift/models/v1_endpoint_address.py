@@ -36,25 +36,25 @@ class V1EndpointAddress(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'ip': 'str',
+        'target_ref': 'V1ObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'ip': 'ip',
+        'target_ref': 'targetRef'
+    }
 
     def __init__(self, ip=None, target_ref=None):
         """
         V1EndpointAddress - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'ip': 'str',
-            'target_ref': 'V1ObjectReference'
-        }
-
-        self.attribute_map = {
-            'ip': 'ip',
-            'target_ref': 'targetRef'
-        }
 
         self._ip = ip
         self._target_ref = target_ref
@@ -111,7 +111,7 @@ class V1EndpointAddress(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1EndpointAddress.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

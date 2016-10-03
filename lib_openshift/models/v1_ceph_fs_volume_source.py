@@ -36,33 +36,33 @@ class V1CephFSVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'monitors': 'list[str]',
+        'path': 'str',
+        'user': 'str',
+        'secret_file': 'str',
+        'secret_ref': 'V1LocalObjectReference',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'monitors': 'monitors',
+        'path': 'path',
+        'user': 'user',
+        'secret_file': 'secretFile',
+        'secret_ref': 'secretRef',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, monitors=None, path=None, user=None, secret_file=None, secret_ref=None, read_only=None):
         """
         V1CephFSVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'monitors': 'list[str]',
-            'path': 'str',
-            'user': 'str',
-            'secret_file': 'str',
-            'secret_ref': 'V1LocalObjectReference',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'monitors': 'monitors',
-            'path': 'path',
-            'user': 'user',
-            'secret_file': 'secretFile',
-            'secret_ref': 'secretRef',
-            'read_only': 'readOnly'
-        }
 
         self._monitors = monitors
         self._path = path
@@ -215,7 +215,7 @@ class V1CephFSVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1CephFSVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

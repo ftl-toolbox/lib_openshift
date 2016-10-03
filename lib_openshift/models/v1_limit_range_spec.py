@@ -36,23 +36,23 @@ class V1LimitRangeSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'limits': 'list[V1LimitRangeItem]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'limits': 'limits'
+    }
 
     def __init__(self, limits=None):
         """
         V1LimitRangeSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'limits': 'list[V1LimitRangeItem]'
-        }
-
-        self.attribute_map = {
-            'limits': 'limits'
-        }
 
         self._limits = limits
 
@@ -85,7 +85,7 @@ class V1LimitRangeSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LimitRangeSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

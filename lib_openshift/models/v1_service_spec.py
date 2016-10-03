@@ -36,39 +36,39 @@ class V1ServiceSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'ports': 'list[V1ServicePort]',
+        'selector': 'object',
+        'portal_ip': 'str',
+        'cluster_ip': 'str',
+        'type': 'str',
+        'external_i_ps': 'list[str]',
+        'deprecated_public_i_ps': 'list[str]',
+        'session_affinity': 'str',
+        'load_balancer_ip': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'ports': 'ports',
+        'selector': 'selector',
+        'portal_ip': 'portalIP',
+        'cluster_ip': 'clusterIP',
+        'type': 'type',
+        'external_i_ps': 'externalIPs',
+        'deprecated_public_i_ps': 'deprecatedPublicIPs',
+        'session_affinity': 'sessionAffinity',
+        'load_balancer_ip': 'loadBalancerIP'
+    }
 
     def __init__(self, ports=None, selector=None, portal_ip=None, cluster_ip=None, type=None, external_i_ps=None, deprecated_public_i_ps=None, session_affinity=None, load_balancer_ip=None):
         """
         V1ServiceSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'ports': 'list[V1ServicePort]',
-            'selector': 'object',
-            'portal_ip': 'str',
-            'cluster_ip': 'str',
-            'type': 'str',
-            'external_i_ps': 'list[str]',
-            'deprecated_public_i_ps': 'list[str]',
-            'session_affinity': 'str',
-            'load_balancer_ip': 'str'
-        }
-
-        self.attribute_map = {
-            'ports': 'ports',
-            'selector': 'selector',
-            'portal_ip': 'portalIP',
-            'cluster_ip': 'clusterIP',
-            'type': 'type',
-            'external_i_ps': 'externalIPs',
-            'deprecated_public_i_ps': 'deprecatedPublicIPs',
-            'session_affinity': 'sessionAffinity',
-            'load_balancer_ip': 'loadBalancerIP'
-        }
 
         self._ports = ports
         self._selector = selector
@@ -293,7 +293,7 @@ class V1ServiceSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ServiceSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

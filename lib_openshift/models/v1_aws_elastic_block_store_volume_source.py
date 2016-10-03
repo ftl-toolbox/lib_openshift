@@ -36,29 +36,29 @@ class V1AWSElasticBlockStoreVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'volume_id': 'str',
+        'fs_type': 'str',
+        'partition': 'int',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'volume_id': 'volumeID',
+        'fs_type': 'fsType',
+        'partition': 'partition',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, volume_id=None, fs_type=None, partition=None, read_only=None):
         """
         V1AWSElasticBlockStoreVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'volume_id': 'str',
-            'fs_type': 'str',
-            'partition': 'int',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'volume_id': 'volumeID',
-            'fs_type': 'fsType',
-            'partition': 'partition',
-            'read_only': 'readOnly'
-        }
 
         self._volume_id = volume_id
         self._fs_type = fs_type
@@ -163,7 +163,7 @@ class V1AWSElasticBlockStoreVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1AWSElasticBlockStoreVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

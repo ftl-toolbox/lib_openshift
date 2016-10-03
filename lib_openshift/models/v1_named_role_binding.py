@@ -36,25 +36,25 @@ class V1NamedRoleBinding(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'role_binding': 'V1RoleBinding'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'role_binding': 'roleBinding'
+    }
 
     def __init__(self, name=None, role_binding=None):
         """
         V1NamedRoleBinding - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'role_binding': 'V1RoleBinding'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'role_binding': 'roleBinding'
-        }
 
         self._name = name
         self._role_binding = role_binding
@@ -111,7 +111,7 @@ class V1NamedRoleBinding(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NamedRoleBinding.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,53 +36,53 @@ class V1PodSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'volumes': 'list[V1Volume]',
+        'containers': 'list[V1Container]',
+        'restart_policy': 'str',
+        'termination_grace_period_seconds': 'int',
+        'active_deadline_seconds': 'int',
+        'dns_policy': 'str',
+        'node_selector': 'object',
+        'host': 'str',
+        'service_account_name': 'str',
+        'service_account': 'str',
+        'node_name': 'str',
+        'host_network': 'bool',
+        'host_pid': 'bool',
+        'host_ipc': 'bool',
+        'security_context': 'V1PodSecurityContext',
+        'image_pull_secrets': 'list[V1LocalObjectReference]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'volumes': 'volumes',
+        'containers': 'containers',
+        'restart_policy': 'restartPolicy',
+        'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
+        'active_deadline_seconds': 'activeDeadlineSeconds',
+        'dns_policy': 'dnsPolicy',
+        'node_selector': 'nodeSelector',
+        'host': 'host',
+        'service_account_name': 'serviceAccountName',
+        'service_account': 'serviceAccount',
+        'node_name': 'nodeName',
+        'host_network': 'hostNetwork',
+        'host_pid': 'hostPID',
+        'host_ipc': 'hostIPC',
+        'security_context': 'securityContext',
+        'image_pull_secrets': 'imagePullSecrets'
+    }
 
     def __init__(self, volumes=None, containers=None, restart_policy=None, termination_grace_period_seconds=None, active_deadline_seconds=None, dns_policy=None, node_selector=None, host=None, service_account_name=None, service_account=None, node_name=None, host_network=None, host_pid=None, host_ipc=None, security_context=None, image_pull_secrets=None):
         """
         V1PodSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'volumes': 'list[V1Volume]',
-            'containers': 'list[V1Container]',
-            'restart_policy': 'str',
-            'termination_grace_period_seconds': 'int',
-            'active_deadline_seconds': 'int',
-            'dns_policy': 'str',
-            'node_selector': 'object',
-            'host': 'str',
-            'service_account_name': 'str',
-            'service_account': 'str',
-            'node_name': 'str',
-            'host_network': 'bool',
-            'host_pid': 'bool',
-            'host_ipc': 'bool',
-            'security_context': 'V1PodSecurityContext',
-            'image_pull_secrets': 'list[V1LocalObjectReference]'
-        }
-
-        self.attribute_map = {
-            'volumes': 'volumes',
-            'containers': 'containers',
-            'restart_policy': 'restartPolicy',
-            'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
-            'active_deadline_seconds': 'activeDeadlineSeconds',
-            'dns_policy': 'dnsPolicy',
-            'node_selector': 'nodeSelector',
-            'host': 'host',
-            'service_account_name': 'serviceAccountName',
-            'service_account': 'serviceAccount',
-            'node_name': 'nodeName',
-            'host_network': 'hostNetwork',
-            'host_pid': 'hostPID',
-            'host_ipc': 'hostIPC',
-            'security_context': 'securityContext',
-            'image_pull_secrets': 'imagePullSecrets'
-        }
 
         self._volumes = volumes
         self._containers = containers
@@ -475,7 +475,7 @@ class V1PodSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PodSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

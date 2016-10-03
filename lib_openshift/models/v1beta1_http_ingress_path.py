@@ -36,25 +36,25 @@ class V1beta1HTTPIngressPath(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'path': 'str',
+        'backend': 'V1beta1IngressBackend'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'path': 'path',
+        'backend': 'backend'
+    }
 
     def __init__(self, path=None, backend=None):
         """
         V1beta1HTTPIngressPath - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'path': 'str',
-            'backend': 'V1beta1IngressBackend'
-        }
-
-        self.attribute_map = {
-            'path': 'path',
-            'backend': 'backend'
-        }
 
         self._path = path
         self._backend = backend
@@ -111,7 +111,7 @@ class V1beta1HTTPIngressPath(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1HTTPIngressPath.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

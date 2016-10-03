@@ -36,31 +36,31 @@ class V1ServicePort(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'protocol': 'str',
+        'port': 'int',
+        'target_port': 'str',
+        'node_port': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'protocol': 'protocol',
+        'port': 'port',
+        'target_port': 'targetPort',
+        'node_port': 'nodePort'
+    }
 
     def __init__(self, name=None, protocol=None, port=None, target_port=None, node_port=None):
         """
         V1ServicePort - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'protocol': 'str',
-            'port': 'int',
-            'target_port': 'str',
-            'node_port': 'int'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'protocol': 'protocol',
-            'port': 'port',
-            'target_port': 'targetPort',
-            'node_port': 'nodePort'
-        }
 
         self._name = name
         self._protocol = protocol
@@ -189,7 +189,7 @@ class V1ServicePort(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ServicePort.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,63 +36,63 @@ class V1Volume(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'host_path': 'V1HostPathVolumeSource',
+        'empty_dir': 'V1EmptyDirVolumeSource',
+        'gce_persistent_disk': 'V1GCEPersistentDiskVolumeSource',
+        'aws_elastic_block_store': 'V1AWSElasticBlockStoreVolumeSource',
+        'git_repo': 'V1GitRepoVolumeSource',
+        'secret': 'V1SecretVolumeSource',
+        'nfs': 'V1NFSVolumeSource',
+        'iscsi': 'V1ISCSIVolumeSource',
+        'glusterfs': 'V1GlusterfsVolumeSource',
+        'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
+        'rbd': 'V1RBDVolumeSource',
+        'flex_volume': 'V1FlexVolumeSource',
+        'cinder': 'V1CinderVolumeSource',
+        'cephfs': 'V1CephFSVolumeSource',
+        'flocker': 'V1FlockerVolumeSource',
+        'downward_api': 'V1DownwardAPIVolumeSource',
+        'fc': 'V1FCVolumeSource',
+        'azure_file': 'V1AzureFileVolumeSource',
+        'config_map': 'V1ConfigMapVolumeSource',
+        'metadata': 'V1MetadataVolumeSource'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'host_path': 'hostPath',
+        'empty_dir': 'emptyDir',
+        'gce_persistent_disk': 'gcePersistentDisk',
+        'aws_elastic_block_store': 'awsElasticBlockStore',
+        'git_repo': 'gitRepo',
+        'secret': 'secret',
+        'nfs': 'nfs',
+        'iscsi': 'iscsi',
+        'glusterfs': 'glusterfs',
+        'persistent_volume_claim': 'persistentVolumeClaim',
+        'rbd': 'rbd',
+        'flex_volume': 'flexVolume',
+        'cinder': 'cinder',
+        'cephfs': 'cephfs',
+        'flocker': 'flocker',
+        'downward_api': 'downwardAPI',
+        'fc': 'fc',
+        'azure_file': 'azureFile',
+        'config_map': 'configMap',
+        'metadata': 'metadata'
+    }
 
     def __init__(self, name=None, host_path=None, empty_dir=None, gce_persistent_disk=None, aws_elastic_block_store=None, git_repo=None, secret=None, nfs=None, iscsi=None, glusterfs=None, persistent_volume_claim=None, rbd=None, flex_volume=None, cinder=None, cephfs=None, flocker=None, downward_api=None, fc=None, azure_file=None, config_map=None, metadata=None):
         """
         V1Volume - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'host_path': 'V1HostPathVolumeSource',
-            'empty_dir': 'V1EmptyDirVolumeSource',
-            'gce_persistent_disk': 'V1GCEPersistentDiskVolumeSource',
-            'aws_elastic_block_store': 'V1AWSElasticBlockStoreVolumeSource',
-            'git_repo': 'V1GitRepoVolumeSource',
-            'secret': 'V1SecretVolumeSource',
-            'nfs': 'V1NFSVolumeSource',
-            'iscsi': 'V1ISCSIVolumeSource',
-            'glusterfs': 'V1GlusterfsVolumeSource',
-            'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
-            'rbd': 'V1RBDVolumeSource',
-            'flex_volume': 'V1FlexVolumeSource',
-            'cinder': 'V1CinderVolumeSource',
-            'cephfs': 'V1CephFSVolumeSource',
-            'flocker': 'V1FlockerVolumeSource',
-            'downward_api': 'V1DownwardAPIVolumeSource',
-            'fc': 'V1FCVolumeSource',
-            'azure_file': 'V1AzureFileVolumeSource',
-            'config_map': 'V1ConfigMapVolumeSource',
-            'metadata': 'V1MetadataVolumeSource'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'host_path': 'hostPath',
-            'empty_dir': 'emptyDir',
-            'gce_persistent_disk': 'gcePersistentDisk',
-            'aws_elastic_block_store': 'awsElasticBlockStore',
-            'git_repo': 'gitRepo',
-            'secret': 'secret',
-            'nfs': 'nfs',
-            'iscsi': 'iscsi',
-            'glusterfs': 'glusterfs',
-            'persistent_volume_claim': 'persistentVolumeClaim',
-            'rbd': 'rbd',
-            'flex_volume': 'flexVolume',
-            'cinder': 'cinder',
-            'cephfs': 'cephfs',
-            'flocker': 'flocker',
-            'downward_api': 'downwardAPI',
-            'fc': 'fc',
-            'azure_file': 'azureFile',
-            'config_map': 'configMap',
-            'metadata': 'metadata'
-        }
 
         self._name = name
         self._host_path = host_path
@@ -605,7 +605,7 @@ class V1Volume(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Volume.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

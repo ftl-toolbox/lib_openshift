@@ -36,29 +36,29 @@ class V1NodeSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'pod_cidr': 'str',
+        'external_id': 'str',
+        'provider_id': 'str',
+        'unschedulable': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'pod_cidr': 'podCIDR',
+        'external_id': 'externalID',
+        'provider_id': 'providerID',
+        'unschedulable': 'unschedulable'
+    }
 
     def __init__(self, pod_cidr=None, external_id=None, provider_id=None, unschedulable=None):
         """
         V1NodeSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'pod_cidr': 'str',
-            'external_id': 'str',
-            'provider_id': 'str',
-            'unschedulable': 'bool'
-        }
-
-        self.attribute_map = {
-            'pod_cidr': 'podCIDR',
-            'external_id': 'externalID',
-            'provider_id': 'providerID',
-            'unschedulable': 'unschedulable'
-        }
 
         self._pod_cidr = pod_cidr
         self._external_id = external_id
@@ -163,7 +163,7 @@ class V1NodeSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NodeSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

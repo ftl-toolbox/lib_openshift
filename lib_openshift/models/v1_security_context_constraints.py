@@ -60,63 +60,63 @@ class V1SecurityContextConstraints(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'priority': 'int',
+        'allow_privileged_container': 'bool',
+        'default_add_capabilities': 'list[V1Capability]',
+        'required_drop_capabilities': 'list[V1Capability]',
+        'allowed_capabilities': 'list[V1Capability]',
+        'allow_host_dir_volume_plugin': 'bool',
+        'volumes': 'list[V1FSType]',
+        'allow_host_network': 'bool',
+        'allow_host_ports': 'bool',
+        'allow_host_pid': 'bool',
+        'allow_host_ipc': 'bool',
+        'se_linux_context': 'V1SELinuxContextStrategyOptions',
+        'run_as_user': 'V1RunAsUserStrategyOptions',
+        'supplemental_groups': 'V1SupplementalGroupsStrategyOptions',
+        'fs_group': 'V1FSGroupStrategyOptions',
+        'read_only_root_filesystem': 'bool',
+        'users': 'list[str]',
+        'groups': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'priority': 'priority',
+        'allow_privileged_container': 'allowPrivilegedContainer',
+        'default_add_capabilities': 'defaultAddCapabilities',
+        'required_drop_capabilities': 'requiredDropCapabilities',
+        'allowed_capabilities': 'allowedCapabilities',
+        'allow_host_dir_volume_plugin': 'allowHostDirVolumePlugin',
+        'volumes': 'volumes',
+        'allow_host_network': 'allowHostNetwork',
+        'allow_host_ports': 'allowHostPorts',
+        'allow_host_pid': 'allowHostPID',
+        'allow_host_ipc': 'allowHostIPC',
+        'se_linux_context': 'seLinuxContext',
+        'run_as_user': 'runAsUser',
+        'supplemental_groups': 'supplementalGroups',
+        'fs_group': 'fsGroup',
+        'read_only_root_filesystem': 'readOnlyRootFilesystem',
+        'users': 'users',
+        'groups': 'groups'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, priority=None, allow_privileged_container=None, default_add_capabilities=None, required_drop_capabilities=None, allowed_capabilities=None, allow_host_dir_volume_plugin=None, volumes=None, allow_host_network=None, allow_host_ports=None, allow_host_pid=None, allow_host_ipc=None, se_linux_context=None, run_as_user=None, supplemental_groups=None, fs_group=None, read_only_root_filesystem=None, users=None, groups=None):
         """
         V1SecurityContextConstraints - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'priority': 'int',
-            'allow_privileged_container': 'bool',
-            'default_add_capabilities': 'list[V1Capability]',
-            'required_drop_capabilities': 'list[V1Capability]',
-            'allowed_capabilities': 'list[V1Capability]',
-            'allow_host_dir_volume_plugin': 'bool',
-            'volumes': 'list[V1FSType]',
-            'allow_host_network': 'bool',
-            'allow_host_ports': 'bool',
-            'allow_host_pid': 'bool',
-            'allow_host_ipc': 'bool',
-            'se_linux_context': 'V1SELinuxContextStrategyOptions',
-            'run_as_user': 'V1RunAsUserStrategyOptions',
-            'supplemental_groups': 'V1SupplementalGroupsStrategyOptions',
-            'fs_group': 'V1FSGroupStrategyOptions',
-            'read_only_root_filesystem': 'bool',
-            'users': 'list[str]',
-            'groups': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'priority': 'priority',
-            'allow_privileged_container': 'allowPrivilegedContainer',
-            'default_add_capabilities': 'defaultAddCapabilities',
-            'required_drop_capabilities': 'requiredDropCapabilities',
-            'allowed_capabilities': 'allowedCapabilities',
-            'allow_host_dir_volume_plugin': 'allowHostDirVolumePlugin',
-            'volumes': 'volumes',
-            'allow_host_network': 'allowHostNetwork',
-            'allow_host_ports': 'allowHostPorts',
-            'allow_host_pid': 'allowHostPID',
-            'allow_host_ipc': 'allowHostIPC',
-            'se_linux_context': 'seLinuxContext',
-            'run_as_user': 'runAsUser',
-            'supplemental_groups': 'supplementalGroups',
-            'fs_group': 'fsGroup',
-            'read_only_root_filesystem': 'readOnlyRootFilesystem',
-            'users': 'users',
-            'groups': 'groups'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -629,7 +629,7 @@ class V1SecurityContextConstraints(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SecurityContextConstraints.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

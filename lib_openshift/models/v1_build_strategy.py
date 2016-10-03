@@ -36,29 +36,29 @@ class V1BuildStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'docker_strategy': 'V1DockerBuildStrategy',
+        'source_strategy': 'V1SourceBuildStrategy',
+        'custom_strategy': 'V1CustomBuildStrategy'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'docker_strategy': 'dockerStrategy',
+        'source_strategy': 'sourceStrategy',
+        'custom_strategy': 'customStrategy'
+    }
 
     def __init__(self, type=None, docker_strategy=None, source_strategy=None, custom_strategy=None):
         """
         V1BuildStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'docker_strategy': 'V1DockerBuildStrategy',
-            'source_strategy': 'V1SourceBuildStrategy',
-            'custom_strategy': 'V1CustomBuildStrategy'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'docker_strategy': 'dockerStrategy',
-            'source_strategy': 'sourceStrategy',
-            'custom_strategy': 'customStrategy'
-        }
 
         self._type = type
         self._docker_strategy = docker_strategy
@@ -163,7 +163,7 @@ class V1BuildStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

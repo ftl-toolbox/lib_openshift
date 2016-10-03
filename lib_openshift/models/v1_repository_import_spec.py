@@ -36,27 +36,27 @@ class V1RepositoryImportSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'import_policy': 'V1TagImportPolicy',
+        'include_manifest': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'import_policy': 'importPolicy',
+        'include_manifest': 'includeManifest'
+    }
 
     def __init__(self, _from=None, import_policy=None, include_manifest=None):
         """
         V1RepositoryImportSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'import_policy': 'V1TagImportPolicy',
-            'include_manifest': 'bool'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'import_policy': 'importPolicy',
-            'include_manifest': 'includeManifest'
-        }
 
         self.__from = _from
         self._import_policy = import_policy
@@ -137,7 +137,7 @@ class V1RepositoryImportSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RepositoryImportSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

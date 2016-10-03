@@ -36,37 +36,37 @@ class V1NodeStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'capacity': 'object',
+        'allocatable': 'object',
+        'phase': 'str',
+        'conditions': 'list[V1NodeCondition]',
+        'addresses': 'list[V1NodeAddress]',
+        'daemon_endpoints': 'V1NodeDaemonEndpoints',
+        'node_info': 'V1NodeSystemInfo',
+        'images': 'list[V1ContainerImage]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'capacity': 'capacity',
+        'allocatable': 'allocatable',
+        'phase': 'phase',
+        'conditions': 'conditions',
+        'addresses': 'addresses',
+        'daemon_endpoints': 'daemonEndpoints',
+        'node_info': 'nodeInfo',
+        'images': 'images'
+    }
 
     def __init__(self, capacity=None, allocatable=None, phase=None, conditions=None, addresses=None, daemon_endpoints=None, node_info=None, images=None):
         """
         V1NodeStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'capacity': 'object',
-            'allocatable': 'object',
-            'phase': 'str',
-            'conditions': 'list[V1NodeCondition]',
-            'addresses': 'list[V1NodeAddress]',
-            'daemon_endpoints': 'V1NodeDaemonEndpoints',
-            'node_info': 'V1NodeSystemInfo',
-            'images': 'list[V1ContainerImage]'
-        }
-
-        self.attribute_map = {
-            'capacity': 'capacity',
-            'allocatable': 'allocatable',
-            'phase': 'phase',
-            'conditions': 'conditions',
-            'addresses': 'addresses',
-            'daemon_endpoints': 'daemonEndpoints',
-            'node_info': 'nodeInfo',
-            'images': 'images'
-        }
 
         self._capacity = capacity
         self._allocatable = allocatable
@@ -267,7 +267,7 @@ class V1NodeStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NodeStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

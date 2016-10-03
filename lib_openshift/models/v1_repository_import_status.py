@@ -36,27 +36,27 @@ class V1RepositoryImportStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'status': 'UnversionedStatus',
+        'images': 'list[V1ImageImportStatus]',
+        'additional_tags': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'status': 'status',
+        'images': 'images',
+        'additional_tags': 'additionalTags'
+    }
 
     def __init__(self, status=None, images=None, additional_tags=None):
         """
         V1RepositoryImportStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'status': 'UnversionedStatus',
-            'images': 'list[V1ImageImportStatus]',
-            'additional_tags': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'status': 'status',
-            'images': 'images',
-            'additional_tags': 'additionalTags'
-        }
 
         self._status = status
         self._images = images
@@ -137,7 +137,7 @@ class V1RepositoryImportStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RepositoryImportStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

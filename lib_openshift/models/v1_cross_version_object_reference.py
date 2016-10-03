@@ -36,27 +36,27 @@ class V1CrossVersionObjectReference(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'name': 'str',
+        'api_version': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'name': 'name',
+        'api_version': 'apiVersion'
+    }
 
     def __init__(self, kind=None, name=None, api_version=None):
         """
         V1CrossVersionObjectReference - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'name': 'str',
-            'api_version': 'str'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'name': 'name',
-            'api_version': 'apiVersion'
-        }
 
         self._kind = kind
         self._name = name
@@ -137,7 +137,7 @@ class V1CrossVersionObjectReference(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1CrossVersionObjectReference.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

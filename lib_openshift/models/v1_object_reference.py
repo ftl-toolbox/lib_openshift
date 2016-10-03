@@ -36,35 +36,35 @@ class V1ObjectReference(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'namespace': 'str',
+        'name': 'str',
+        'uid': 'str',
+        'api_version': 'str',
+        'resource_version': 'str',
+        'field_path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'namespace': 'namespace',
+        'name': 'name',
+        'uid': 'uid',
+        'api_version': 'apiVersion',
+        'resource_version': 'resourceVersion',
+        'field_path': 'fieldPath'
+    }
 
     def __init__(self, kind=None, namespace=None, name=None, uid=None, api_version=None, resource_version=None, field_path=None):
         """
         V1ObjectReference - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'namespace': 'str',
-            'name': 'str',
-            'uid': 'str',
-            'api_version': 'str',
-            'resource_version': 'str',
-            'field_path': 'str'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'namespace': 'namespace',
-            'name': 'name',
-            'uid': 'uid',
-            'api_version': 'apiVersion',
-            'resource_version': 'resourceVersion',
-            'field_path': 'fieldPath'
-        }
 
         self._kind = kind
         self._namespace = namespace
@@ -241,7 +241,7 @@ class V1ObjectReference(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ObjectReference.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

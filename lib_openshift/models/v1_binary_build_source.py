@@ -36,23 +36,23 @@ class V1BinaryBuildSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'as_file': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'as_file': 'asFile'
+    }
 
     def __init__(self, as_file=None):
         """
         V1BinaryBuildSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'as_file': 'str'
-        }
-
-        self.attribute_map = {
-            'as_file': 'asFile'
-        }
 
         self._as_file = as_file
 
@@ -85,7 +85,7 @@ class V1BinaryBuildSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BinaryBuildSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

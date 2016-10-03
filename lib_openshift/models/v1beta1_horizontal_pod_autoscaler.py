@@ -66,31 +66,31 @@ class V1beta1HorizontalPodAutoscaler(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'spec': 'V1beta1HorizontalPodAutoscalerSpec',
+        'status': 'V1beta1HorizontalPodAutoscalerStatus'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'spec': 'spec',
+        'status': 'status'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, spec=None, status=None):
         """
         V1beta1HorizontalPodAutoscaler - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'spec': 'V1beta1HorizontalPodAutoscalerSpec',
-            'status': 'V1beta1HorizontalPodAutoscalerStatus'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'spec': 'spec',
-            'status': 'status'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -219,7 +219,7 @@ class V1beta1HorizontalPodAutoscaler(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1HorizontalPodAutoscaler.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

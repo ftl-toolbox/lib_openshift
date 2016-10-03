@@ -36,29 +36,29 @@ class V1GitBuildSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'uri': 'str',
+        'ref': 'str',
+        'http_proxy': 'str',
+        'https_proxy': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'uri': 'uri',
+        'ref': 'ref',
+        'http_proxy': 'httpProxy',
+        'https_proxy': 'httpsProxy'
+    }
 
     def __init__(self, uri=None, ref=None, http_proxy=None, https_proxy=None):
         """
         V1GitBuildSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'uri': 'str',
-            'ref': 'str',
-            'http_proxy': 'str',
-            'https_proxy': 'str'
-        }
-
-        self.attribute_map = {
-            'uri': 'uri',
-            'ref': 'ref',
-            'http_proxy': 'httpProxy',
-            'https_proxy': 'httpsProxy'
-        }
 
         self._uri = uri
         self._ref = ref
@@ -163,7 +163,7 @@ class V1GitBuildSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1GitBuildSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

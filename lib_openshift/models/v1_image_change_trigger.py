@@ -36,25 +36,25 @@ class V1ImageChangeTrigger(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'last_triggered_image_id': 'str',
+        '_from': 'V1ObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'last_triggered_image_id': 'lastTriggeredImageID',
+        '_from': 'from'
+    }
 
     def __init__(self, last_triggered_image_id=None, _from=None):
         """
         V1ImageChangeTrigger - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'last_triggered_image_id': 'str',
-            '_from': 'V1ObjectReference'
-        }
-
-        self.attribute_map = {
-            'last_triggered_image_id': 'lastTriggeredImageID',
-            '_from': 'from'
-        }
 
         self._last_triggered_image_id = last_triggered_image_id
         self.__from = _from
@@ -111,7 +111,7 @@ class V1ImageChangeTrigger(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageChangeTrigger.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

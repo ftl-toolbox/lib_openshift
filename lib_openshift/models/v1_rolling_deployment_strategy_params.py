@@ -36,37 +36,37 @@ class V1RollingDeploymentStrategyParams(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'update_period_seconds': 'int',
+        'interval_seconds': 'int',
+        'timeout_seconds': 'int',
+        'max_unavailable': 'str',
+        'max_surge': 'str',
+        'update_percent': 'int',
+        'pre': 'V1LifecycleHook',
+        'post': 'V1LifecycleHook'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'update_period_seconds': 'updatePeriodSeconds',
+        'interval_seconds': 'intervalSeconds',
+        'timeout_seconds': 'timeoutSeconds',
+        'max_unavailable': 'maxUnavailable',
+        'max_surge': 'maxSurge',
+        'update_percent': 'updatePercent',
+        'pre': 'pre',
+        'post': 'post'
+    }
 
     def __init__(self, update_period_seconds=None, interval_seconds=None, timeout_seconds=None, max_unavailable=None, max_surge=None, update_percent=None, pre=None, post=None):
         """
         V1RollingDeploymentStrategyParams - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'update_period_seconds': 'int',
-            'interval_seconds': 'int',
-            'timeout_seconds': 'int',
-            'max_unavailable': 'str',
-            'max_surge': 'str',
-            'update_percent': 'int',
-            'pre': 'V1LifecycleHook',
-            'post': 'V1LifecycleHook'
-        }
-
-        self.attribute_map = {
-            'update_period_seconds': 'updatePeriodSeconds',
-            'interval_seconds': 'intervalSeconds',
-            'timeout_seconds': 'timeoutSeconds',
-            'max_unavailable': 'maxUnavailable',
-            'max_surge': 'maxSurge',
-            'update_percent': 'updatePercent',
-            'pre': 'pre',
-            'post': 'post'
-        }
 
         self._update_period_seconds = update_period_seconds
         self._interval_seconds = interval_seconds
@@ -267,7 +267,7 @@ class V1RollingDeploymentStrategyParams(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RollingDeploymentStrategyParams.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

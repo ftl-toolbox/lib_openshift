@@ -36,33 +36,33 @@ class V1LimitRangeItem(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'max': 'object',
+        'min': 'object',
+        'default': 'object',
+        'default_request': 'object',
+        'max_limit_request_ratio': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'max': 'max',
+        'min': 'min',
+        'default': 'default',
+        'default_request': 'defaultRequest',
+        'max_limit_request_ratio': 'maxLimitRequestRatio'
+    }
 
     def __init__(self, type=None, max=None, min=None, default=None, default_request=None, max_limit_request_ratio=None):
         """
         V1LimitRangeItem - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'max': 'object',
-            'min': 'object',
-            'default': 'object',
-            'default_request': 'object',
-            'max_limit_request_ratio': 'object'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'max': 'max',
-            'min': 'min',
-            'default': 'default',
-            'default_request': 'defaultRequest',
-            'max_limit_request_ratio': 'maxLimitRequestRatio'
-        }
 
         self._type = type
         self._max = max
@@ -215,7 +215,7 @@ class V1LimitRangeItem(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LimitRangeItem.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,31 +36,31 @@ class V1RouteIngressCondition(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'status': 'str',
+        'reason': 'str',
+        'message': 'str',
+        'last_transition_time': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'status': 'status',
+        'reason': 'reason',
+        'message': 'message',
+        'last_transition_time': 'lastTransitionTime'
+    }
 
     def __init__(self, type=None, status=None, reason=None, message=None, last_transition_time=None):
         """
         V1RouteIngressCondition - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'status': 'str',
-            'reason': 'str',
-            'message': 'str',
-            'last_transition_time': 'str'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'status': 'status',
-            'reason': 'reason',
-            'message': 'message',
-            'last_transition_time': 'lastTransitionTime'
-        }
 
         self._type = type
         self._status = status
@@ -189,7 +189,7 @@ class V1RouteIngressCondition(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RouteIngressCondition.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

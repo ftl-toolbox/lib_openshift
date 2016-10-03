@@ -36,23 +36,23 @@ class V1NamespaceStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'phase': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'phase': 'phase'
+    }
 
     def __init__(self, phase=None):
         """
         V1NamespaceStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'phase': 'str'
-        }
-
-        self.attribute_map = {
-            'phase': 'phase'
-        }
 
         self._phase = phase
 
@@ -85,7 +85,7 @@ class V1NamespaceStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NamespaceStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

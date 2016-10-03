@@ -36,33 +36,33 @@ class V1TagReference(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'annotations': 'object',
+        '_from': 'V1ObjectReference',
+        'reference': 'bool',
+        'generation': 'int',
+        'import_policy': 'V1TagImportPolicy'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'annotations': 'annotations',
+        '_from': 'from',
+        'reference': 'reference',
+        'generation': 'generation',
+        'import_policy': 'importPolicy'
+    }
 
     def __init__(self, name=None, annotations=None, _from=None, reference=None, generation=None, import_policy=None):
         """
         V1TagReference - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'annotations': 'object',
-            '_from': 'V1ObjectReference',
-            'reference': 'bool',
-            'generation': 'int',
-            'import_policy': 'V1TagImportPolicy'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'annotations': 'annotations',
-            '_from': 'from',
-            'reference': 'reference',
-            'generation': 'generation',
-            'import_policy': 'importPolicy'
-        }
 
         self._name = name
         self._annotations = annotations
@@ -215,7 +215,7 @@ class V1TagReference(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1TagReference.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

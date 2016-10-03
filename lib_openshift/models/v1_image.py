@@ -60,37 +60,37 @@ class V1Image(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'docker_image_reference': 'str',
+        'docker_image_metadata': 'str',
+        'docker_image_metadata_version': 'str',
+        'docker_image_manifest': 'str',
+        'docker_image_layers': 'list[V1ImageLayer]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'docker_image_reference': 'dockerImageReference',
+        'docker_image_metadata': 'dockerImageMetadata',
+        'docker_image_metadata_version': 'dockerImageMetadataVersion',
+        'docker_image_manifest': 'dockerImageManifest',
+        'docker_image_layers': 'dockerImageLayers'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, docker_image_reference=None, docker_image_metadata=None, docker_image_metadata_version=None, docker_image_manifest=None, docker_image_layers=None):
         """
         V1Image - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'docker_image_reference': 'str',
-            'docker_image_metadata': 'str',
-            'docker_image_metadata_version': 'str',
-            'docker_image_manifest': 'str',
-            'docker_image_layers': 'list[V1ImageLayer]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'docker_image_reference': 'dockerImageReference',
-            'docker_image_metadata': 'dockerImageMetadata',
-            'docker_image_metadata_version': 'dockerImageMetadataVersion',
-            'docker_image_manifest': 'dockerImageManifest',
-            'docker_image_layers': 'dockerImageLayers'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -291,7 +291,7 @@ class V1Image(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Image.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(
