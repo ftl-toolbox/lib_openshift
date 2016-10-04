@@ -36,33 +36,33 @@ class V1DeploymentConfigSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'strategy': 'V1DeploymentStrategy',
+        'triggers': 'list[V1DeploymentTriggerPolicy]',
+        'replicas': 'int',
+        'test': 'bool',
+        'selector': 'object',
+        'template': 'V1PodTemplateSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'strategy': 'strategy',
+        'triggers': 'triggers',
+        'replicas': 'replicas',
+        'test': 'test',
+        'selector': 'selector',
+        'template': 'template'
+    }
 
     def __init__(self, strategy=None, triggers=None, replicas=None, test=None, selector=None, template=None):
         """
         V1DeploymentConfigSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'strategy': 'V1DeploymentStrategy',
-            'triggers': 'list[V1DeploymentTriggerPolicy]',
-            'replicas': 'int',
-            'test': 'bool',
-            'selector': 'object',
-            'template': 'V1PodTemplateSpec'
-        }
-
-        self.attribute_map = {
-            'strategy': 'strategy',
-            'triggers': 'triggers',
-            'replicas': 'replicas',
-            'test': 'test',
-            'selector': 'selector',
-            'template': 'template'
-        }
 
         self._strategy = strategy
         self._triggers = triggers
@@ -215,7 +215,7 @@ class V1DeploymentConfigSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentConfigSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1BuildOutput(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'to': 'V1ObjectReference',
+        'push_secret': 'V1LocalObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'to': 'to',
+        'push_secret': 'pushSecret'
+    }
 
     def __init__(self, to=None, push_secret=None):
         """
         V1BuildOutput - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'to': 'V1ObjectReference',
-            'push_secret': 'V1LocalObjectReference'
-        }
-
-        self.attribute_map = {
-            'to': 'to',
-            'push_secret': 'pushSecret'
-        }
 
         self._to = to
         self._push_secret = push_secret
@@ -111,7 +111,7 @@ class V1BuildOutput(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildOutput.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

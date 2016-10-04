@@ -36,37 +36,37 @@ class V1PodStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'phase': 'str',
+        'conditions': 'list[V1PodCondition]',
+        'message': 'str',
+        'reason': 'str',
+        'host_ip': 'str',
+        'pod_ip': 'str',
+        'start_time': 'str',
+        'container_statuses': 'list[V1ContainerStatus]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'phase': 'phase',
+        'conditions': 'conditions',
+        'message': 'message',
+        'reason': 'reason',
+        'host_ip': 'hostIP',
+        'pod_ip': 'podIP',
+        'start_time': 'startTime',
+        'container_statuses': 'containerStatuses'
+    }
 
     def __init__(self, phase=None, conditions=None, message=None, reason=None, host_ip=None, pod_ip=None, start_time=None, container_statuses=None):
         """
         V1PodStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'phase': 'str',
-            'conditions': 'list[V1PodCondition]',
-            'message': 'str',
-            'reason': 'str',
-            'host_ip': 'str',
-            'pod_ip': 'str',
-            'start_time': 'str',
-            'container_statuses': 'list[V1ContainerStatus]'
-        }
-
-        self.attribute_map = {
-            'phase': 'phase',
-            'conditions': 'conditions',
-            'message': 'message',
-            'reason': 'reason',
-            'host_ip': 'hostIP',
-            'pod_ip': 'podIP',
-            'start_time': 'startTime',
-            'container_statuses': 'containerStatuses'
-        }
 
         self._phase = phase
         self._conditions = conditions
@@ -267,7 +267,7 @@ class V1PodStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PodStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

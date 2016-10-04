@@ -36,31 +36,31 @@ class V1beta1HorizontalPodAutoscalerStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'observed_generation': 'int',
+        'last_scale_time': 'str',
+        'current_replicas': 'int',
+        'desired_replicas': 'int',
+        'current_cpu_utilization_percentage': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'observed_generation': 'observedGeneration',
+        'last_scale_time': 'lastScaleTime',
+        'current_replicas': 'currentReplicas',
+        'desired_replicas': 'desiredReplicas',
+        'current_cpu_utilization_percentage': 'currentCPUUtilizationPercentage'
+    }
 
     def __init__(self, observed_generation=None, last_scale_time=None, current_replicas=None, desired_replicas=None, current_cpu_utilization_percentage=None):
         """
         V1beta1HorizontalPodAutoscalerStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'observed_generation': 'int',
-            'last_scale_time': 'str',
-            'current_replicas': 'int',
-            'desired_replicas': 'int',
-            'current_cpu_utilization_percentage': 'int'
-        }
-
-        self.attribute_map = {
-            'observed_generation': 'observedGeneration',
-            'last_scale_time': 'lastScaleTime',
-            'current_replicas': 'currentReplicas',
-            'desired_replicas': 'desiredReplicas',
-            'current_cpu_utilization_percentage': 'currentCPUUtilizationPercentage'
-        }
 
         self._observed_generation = observed_generation
         self._last_scale_time = last_scale_time
@@ -189,7 +189,7 @@ class V1beta1HorizontalPodAutoscalerStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1HorizontalPodAutoscalerStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1beta1LabelSelector(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'match_labels': 'object',
+        'match_expressions': 'list[V1beta1LabelSelectorRequirement]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'match_labels': 'matchLabels',
+        'match_expressions': 'matchExpressions'
+    }
 
     def __init__(self, match_labels=None, match_expressions=None):
         """
         V1beta1LabelSelector - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'match_labels': 'object',
-            'match_expressions': 'list[V1beta1LabelSelectorRequirement]'
-        }
-
-        self.attribute_map = {
-            'match_labels': 'matchLabels',
-            'match_expressions': 'matchExpressions'
-        }
 
         self._match_labels = match_labels
         self._match_expressions = match_expressions
@@ -111,7 +111,7 @@ class V1beta1LabelSelector(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1LabelSelector.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

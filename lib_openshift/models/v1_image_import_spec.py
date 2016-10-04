@@ -36,29 +36,29 @@ class V1ImageImportSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'to': 'V1LocalObjectReference',
+        'import_policy': 'V1TagImportPolicy',
+        'include_manifest': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'to': 'to',
+        'import_policy': 'importPolicy',
+        'include_manifest': 'includeManifest'
+    }
 
     def __init__(self, _from=None, to=None, import_policy=None, include_manifest=None):
         """
         V1ImageImportSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'to': 'V1LocalObjectReference',
-            'import_policy': 'V1TagImportPolicy',
-            'include_manifest': 'bool'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'to': 'to',
-            'import_policy': 'importPolicy',
-            'include_manifest': 'includeManifest'
-        }
 
         self.__from = _from
         self._to = to
@@ -163,7 +163,7 @@ class V1ImageImportSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageImportSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

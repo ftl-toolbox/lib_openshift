@@ -36,23 +36,23 @@ class V1ExecAction(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'command': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'command': 'command'
+    }
 
     def __init__(self, command=None):
         """
         V1ExecAction - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'command': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'command': 'command'
-        }
 
         self._command = command
 
@@ -85,7 +85,7 @@ class V1ExecAction(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ExecAction.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

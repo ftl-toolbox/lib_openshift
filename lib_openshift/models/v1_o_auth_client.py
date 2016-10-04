@@ -60,33 +60,33 @@ class V1OAuthClient(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'secret': 'str',
+        'respond_with_challenges': 'bool',
+        'redirect_ur_is': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'secret': 'secret',
+        'respond_with_challenges': 'respondWithChallenges',
+        'redirect_ur_is': 'redirectURIs'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, secret=None, respond_with_challenges=None, redirect_ur_is=None):
         """
         V1OAuthClient - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'secret': 'str',
-            'respond_with_challenges': 'bool',
-            'redirect_ur_is': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'secret': 'secret',
-            'respond_with_challenges': 'respondWithChallenges',
-            'redirect_ur_is': 'redirectURIs'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -239,7 +239,7 @@ class V1OAuthClient(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1OAuthClient.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

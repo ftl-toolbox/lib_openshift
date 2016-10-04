@@ -36,25 +36,25 @@ class V1NodeAddress(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'address': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'address': 'address'
+    }
 
     def __init__(self, type=None, address=None):
         """
         V1NodeAddress - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'address': 'str'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'address': 'address'
-        }
 
         self._type = type
         self._address = address
@@ -111,7 +111,7 @@ class V1NodeAddress(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NodeAddress.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

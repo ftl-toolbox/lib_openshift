@@ -36,33 +36,33 @@ class V1ISCSIVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'target_portal': 'str',
+        'iqn': 'str',
+        'lun': 'int',
+        'iscsi_interface': 'str',
+        'fs_type': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'target_portal': 'targetPortal',
+        'iqn': 'iqn',
+        'lun': 'lun',
+        'iscsi_interface': 'iscsiInterface',
+        'fs_type': 'fsType',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, target_portal=None, iqn=None, lun=None, iscsi_interface=None, fs_type=None, read_only=None):
         """
         V1ISCSIVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'target_portal': 'str',
-            'iqn': 'str',
-            'lun': 'int',
-            'iscsi_interface': 'str',
-            'fs_type': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'target_portal': 'targetPortal',
-            'iqn': 'iqn',
-            'lun': 'lun',
-            'iscsi_interface': 'iscsiInterface',
-            'fs_type': 'fsType',
-            'read_only': 'readOnly'
-        }
 
         self._target_portal = target_portal
         self._iqn = iqn
@@ -215,7 +215,7 @@ class V1ISCSIVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ISCSIVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

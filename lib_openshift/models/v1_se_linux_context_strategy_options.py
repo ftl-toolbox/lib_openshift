@@ -36,25 +36,25 @@ class V1SELinuxContextStrategyOptions(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'se_linux_options': 'V1SELinuxOptions'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'se_linux_options': 'seLinuxOptions'
+    }
 
     def __init__(self, type=None, se_linux_options=None):
         """
         V1SELinuxContextStrategyOptions - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'se_linux_options': 'V1SELinuxOptions'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'se_linux_options': 'seLinuxOptions'
-        }
 
         self._type = type
         self._se_linux_options = se_linux_options
@@ -111,7 +111,7 @@ class V1SELinuxContextStrategyOptions(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SELinuxContextStrategyOptions.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

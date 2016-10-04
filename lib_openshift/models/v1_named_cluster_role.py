@@ -36,25 +36,25 @@ class V1NamedClusterRole(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'role': 'V1ClusterRole'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'role': 'role'
+    }
 
     def __init__(self, name=None, role=None):
         """
         V1NamedClusterRole - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'role': 'V1ClusterRole'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'role': 'role'
-        }
 
         self._name = name
         self._role = role
@@ -111,7 +111,7 @@ class V1NamedClusterRole(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NamedClusterRole.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

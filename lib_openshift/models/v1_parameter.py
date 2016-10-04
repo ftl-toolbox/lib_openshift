@@ -36,35 +36,35 @@ class V1Parameter(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'display_name': 'str',
+        'description': 'str',
+        'value': 'str',
+        'generate': 'str',
+        '_from': 'str',
+        'required': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'display_name': 'displayName',
+        'description': 'description',
+        'value': 'value',
+        'generate': 'generate',
+        '_from': 'from',
+        'required': 'required'
+    }
 
     def __init__(self, name=None, display_name=None, description=None, value=None, generate=None, _from=None, required=None):
         """
         V1Parameter - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'display_name': 'str',
-            'description': 'str',
-            'value': 'str',
-            'generate': 'str',
-            '_from': 'str',
-            'required': 'bool'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'display_name': 'displayName',
-            'description': 'description',
-            'value': 'value',
-            'generate': 'generate',
-            '_from': 'from',
-            'required': 'required'
-        }
 
         self._name = name
         self._display_name = display_name
@@ -241,7 +241,7 @@ class V1Parameter(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Parameter.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

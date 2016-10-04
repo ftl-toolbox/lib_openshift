@@ -36,27 +36,27 @@ class V1beta1IngressSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'backend': 'V1beta1IngressBackend',
+        'tls': 'list[V1beta1IngressTLS]',
+        'rules': 'list[V1beta1IngressRule]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'backend': 'backend',
+        'tls': 'tls',
+        'rules': 'rules'
+    }
 
     def __init__(self, backend=None, tls=None, rules=None):
         """
         V1beta1IngressSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'backend': 'V1beta1IngressBackend',
-            'tls': 'list[V1beta1IngressTLS]',
-            'rules': 'list[V1beta1IngressRule]'
-        }
-
-        self.attribute_map = {
-            'backend': 'backend',
-            'tls': 'tls',
-            'rules': 'rules'
-        }
 
         self._backend = backend
         self._tls = tls
@@ -137,7 +137,7 @@ class V1beta1IngressSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1IngressSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

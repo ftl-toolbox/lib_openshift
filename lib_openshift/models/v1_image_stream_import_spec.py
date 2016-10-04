@@ -36,27 +36,27 @@ class V1ImageStreamImportSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_import': 'bool',
+        'repository': 'V1RepositoryImportSpec',
+        'images': 'list[V1ImageImportSpec]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_import': 'import',
+        'repository': 'repository',
+        'images': 'images'
+    }
 
     def __init__(self, _import=None, repository=None, images=None):
         """
         V1ImageStreamImportSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_import': 'bool',
-            'repository': 'V1RepositoryImportSpec',
-            'images': 'list[V1ImageImportSpec]'
-        }
-
-        self.attribute_map = {
-            '_import': 'import',
-            'repository': 'repository',
-            'images': 'images'
-        }
 
         self.__import = _import
         self._repository = repository
@@ -137,7 +137,7 @@ class V1ImageStreamImportSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageStreamImportSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

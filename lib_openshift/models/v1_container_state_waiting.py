@@ -36,25 +36,25 @@ class V1ContainerStateWaiting(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'reason': 'str',
+        'message': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'reason': 'reason',
+        'message': 'message'
+    }
 
     def __init__(self, reason=None, message=None):
         """
         V1ContainerStateWaiting - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'reason': 'str',
-            'message': 'str'
-        }
-
-        self.attribute_map = {
-            'reason': 'reason',
-            'message': 'message'
-        }
 
         self._reason = reason
         self._message = message
@@ -111,7 +111,7 @@ class V1ContainerStateWaiting(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ContainerStateWaiting.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

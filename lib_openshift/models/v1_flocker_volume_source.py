@@ -36,23 +36,23 @@ class V1FlockerVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'dataset_name': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'dataset_name': 'datasetName'
+    }
 
     def __init__(self, dataset_name=None):
         """
         V1FlockerVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'dataset_name': 'str'
-        }
-
-        self.attribute_map = {
-            'dataset_name': 'datasetName'
-        }
 
         self._dataset_name = dataset_name
 
@@ -85,7 +85,7 @@ class V1FlockerVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1FlockerVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

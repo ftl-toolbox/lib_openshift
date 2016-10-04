@@ -36,25 +36,25 @@ class V1PodTemplateSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'metadata': 'V1ObjectMeta',
+        'spec': 'V1PodSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'metadata': 'metadata',
+        'spec': 'spec'
+    }
 
     def __init__(self, metadata=None, spec=None):
         """
         V1PodTemplateSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'metadata': 'V1ObjectMeta',
-            'spec': 'V1PodSpec'
-        }
-
-        self.attribute_map = {
-            'metadata': 'metadata',
-            'spec': 'spec'
-        }
 
         self._metadata = metadata
         self._spec = spec
@@ -111,7 +111,7 @@ class V1PodTemplateSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PodTemplateSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

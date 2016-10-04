@@ -36,27 +36,27 @@ class V1EnvVarSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'field_ref': 'V1ObjectFieldSelector',
+        'config_map_key_ref': 'V1ConfigMapKeySelector',
+        'secret_key_ref': 'V1SecretKeySelector'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'field_ref': 'fieldRef',
+        'config_map_key_ref': 'configMapKeyRef',
+        'secret_key_ref': 'secretKeyRef'
+    }
 
     def __init__(self, field_ref=None, config_map_key_ref=None, secret_key_ref=None):
         """
         V1EnvVarSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'field_ref': 'V1ObjectFieldSelector',
-            'config_map_key_ref': 'V1ConfigMapKeySelector',
-            'secret_key_ref': 'V1SecretKeySelector'
-        }
-
-        self.attribute_map = {
-            'field_ref': 'fieldRef',
-            'config_map_key_ref': 'configMapKeyRef',
-            'secret_key_ref': 'secretKeyRef'
-        }
 
         self._field_ref = field_ref
         self._config_map_key_ref = config_map_key_ref
@@ -137,7 +137,7 @@ class V1EnvVarSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1EnvVarSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

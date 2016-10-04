@@ -36,25 +36,25 @@ class V1ImageLayer(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'size': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'size': 'size'
+    }
 
     def __init__(self, name=None, size=None):
         """
         V1ImageLayer - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'size': 'int'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'size': 'size'
-        }
 
         self._name = name
         self._size = size
@@ -111,7 +111,7 @@ class V1ImageLayer(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageLayer.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

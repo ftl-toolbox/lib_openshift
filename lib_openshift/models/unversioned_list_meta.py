@@ -36,25 +36,25 @@ class UnversionedListMeta(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'self_link': 'str',
+        'resource_version': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'self_link': 'selfLink',
+        'resource_version': 'resourceVersion'
+    }
 
     def __init__(self, self_link=None, resource_version=None):
         """
         UnversionedListMeta - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'self_link': 'str',
-            'resource_version': 'str'
-        }
-
-        self.attribute_map = {
-            'self_link': 'selfLink',
-            'resource_version': 'resourceVersion'
-        }
 
         self._self_link = self_link
         self._resource_version = resource_version
@@ -111,7 +111,7 @@ class UnversionedListMeta(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(UnversionedListMeta.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

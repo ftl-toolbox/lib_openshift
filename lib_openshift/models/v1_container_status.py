@@ -36,37 +36,37 @@ class V1ContainerStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'state': 'V1ContainerState',
+        'last_state': 'V1ContainerState',
+        'ready': 'bool',
+        'restart_count': 'int',
+        'image': 'str',
+        'image_id': 'str',
+        'container_id': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'state': 'state',
+        'last_state': 'lastState',
+        'ready': 'ready',
+        'restart_count': 'restartCount',
+        'image': 'image',
+        'image_id': 'imageID',
+        'container_id': 'containerID'
+    }
 
     def __init__(self, name=None, state=None, last_state=None, ready=None, restart_count=None, image=None, image_id=None, container_id=None):
         """
         V1ContainerStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'state': 'V1ContainerState',
-            'last_state': 'V1ContainerState',
-            'ready': 'bool',
-            'restart_count': 'int',
-            'image': 'str',
-            'image_id': 'str',
-            'container_id': 'str'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'state': 'state',
-            'last_state': 'lastState',
-            'ready': 'ready',
-            'restart_count': 'restartCount',
-            'image': 'image',
-            'image_id': 'imageID',
-            'container_id': 'containerID'
-        }
 
         self._name = name
         self._state = state
@@ -267,7 +267,7 @@ class V1ContainerStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ContainerStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

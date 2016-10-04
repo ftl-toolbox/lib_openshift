@@ -36,27 +36,27 @@ class V1VolumeMount(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'read_only': 'bool',
+        'mount_path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'read_only': 'readOnly',
+        'mount_path': 'mountPath'
+    }
 
     def __init__(self, name=None, read_only=None, mount_path=None):
         """
         V1VolumeMount - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'read_only': 'bool',
-            'mount_path': 'str'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'read_only': 'readOnly',
-            'mount_path': 'mountPath'
-        }
 
         self._name = name
         self._read_only = read_only
@@ -137,7 +137,7 @@ class V1VolumeMount(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1VolumeMount.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

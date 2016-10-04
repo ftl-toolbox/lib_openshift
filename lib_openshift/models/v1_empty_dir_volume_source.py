@@ -36,23 +36,23 @@ class V1EmptyDirVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'medium': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'medium': 'medium'
+    }
 
     def __init__(self, medium=None):
         """
         V1EmptyDirVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'medium': 'str'
-        }
-
-        self.attribute_map = {
-            'medium': 'medium'
-        }
 
         self._medium = medium
 
@@ -85,7 +85,7 @@ class V1EmptyDirVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1EmptyDirVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

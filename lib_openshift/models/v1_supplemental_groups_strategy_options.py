@@ -36,25 +36,25 @@ class V1SupplementalGroupsStrategyOptions(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'ranges': 'list[V1IDRange]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'ranges': 'ranges'
+    }
 
     def __init__(self, type=None, ranges=None):
         """
         V1SupplementalGroupsStrategyOptions - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'ranges': 'list[V1IDRange]'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'ranges': 'ranges'
-        }
 
         self._type = type
         self._ranges = ranges
@@ -111,7 +111,7 @@ class V1SupplementalGroupsStrategyOptions(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SupplementalGroupsStrategyOptions.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

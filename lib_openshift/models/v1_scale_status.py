@@ -36,25 +36,25 @@ class V1ScaleStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'replicas': 'int',
+        'selector': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'replicas': 'replicas',
+        'selector': 'selector'
+    }
 
     def __init__(self, replicas=None, selector=None):
         """
         V1ScaleStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'replicas': 'int',
-            'selector': 'str'
-        }
-
-        self.attribute_map = {
-            'replicas': 'replicas',
-            'selector': 'selector'
-        }
 
         self._replicas = replicas
         self._selector = selector
@@ -111,7 +111,7 @@ class V1ScaleStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ScaleStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

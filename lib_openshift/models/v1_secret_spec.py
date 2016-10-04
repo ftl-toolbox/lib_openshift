@@ -36,25 +36,25 @@ class V1SecretSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'secret_source': 'V1LocalObjectReference',
+        'mount_path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'secret_source': 'secretSource',
+        'mount_path': 'mountPath'
+    }
 
     def __init__(self, secret_source=None, mount_path=None):
         """
         V1SecretSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'secret_source': 'V1LocalObjectReference',
-            'mount_path': 'str'
-        }
-
-        self.attribute_map = {
-            'secret_source': 'secretSource',
-            'mount_path': 'mountPath'
-        }
 
         self._secret_source = secret_source
         self._mount_path = mount_path
@@ -111,7 +111,7 @@ class V1SecretSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SecretSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

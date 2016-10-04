@@ -3,12 +3,14 @@ import os
 import yaml
 import json
 import importlib
+import string
 import time
 from .api_client import ApiClient
 from .rest import ApiException
 from .models import V1ObjectMeta,V1DeleteOptions
 from .apis import ApiV1,OapiV1
-
+from lib_openshift import models
+from lib_openshift import apis
 
 class WrapperException(Exception):
 
@@ -23,15 +25,12 @@ class WrapperException(Exception):
 
 class Wrapper(object):
 
-    def _validate_common_args(self, namespaced=True, namespace=None,
+    def _validate_common_args(self, model, namespace=None,
                               name=None, labels=None,
                               annotations=None, state='present'):
         # TODO: validate name against k8s limitations
         if name is None:
             raise WrapperException(msg="name is required")
-
-        if namespaced and namespace is None:
-            raise WrapperException(msg="namespace is required")
 
         if state not in ('present', 'absent'):
             raise WrapperException(msg="Unknown state: {0}".format(state))
@@ -41,6 +40,11 @@ class Wrapper(object):
 
         if annotations is not None and not isinstance(annotations, dict):
             raise WrapperException(msg="annotations must be a dict")
+
+        crud_ops = self._get_crud_ops(model)
+        namespaced = crud_ops['read']['namespaced']
+        if namespaced and namespace is None:
+            raise WrapperException(msg="namespace is required")
 
 
     def _get_crud_ops(self, model):
@@ -59,7 +63,7 @@ class Wrapper(object):
         return crud_ops
 
 
-    def _get_api(self, api_class):
+    def _get_api_client(self):
         # TODO: add basic auth, client cert auth, ca certificate and
         # tls_insecure settings
         header_name = None
@@ -70,12 +74,23 @@ class Wrapper(object):
         api_client = ApiClient(host=self._cluster['server'],
                                header_name=header_name,
                                header_value=header_value)
-        api = api_class(api_client=api_client)
+        return api_client
+
+
+    def _get_api(self, api_class, api_client=None):
+        if api_client is None:
+            api_client = self._get_api_client()
+
+        api_class_obj = getattr(apis, api_class)
+        api = api_class_obj(api_client=api_client)
         return api
 
-    def _get_k8s_object(self, api, method, name, namespace):
-        k8s_object = None
+    def _get_k8s_object(self, model, name, namespace):
+        crud_ops = self._get_crud_ops(model)
+        api = self._get_api(crud_ops['read']['class'])
+        method = crud_ops['read']['method']
 
+        k8s_object = None
         try:
             if namespace is None:
                 k8s_object = getattr(api, method)(name)
@@ -151,11 +166,14 @@ class Wrapper(object):
     def _merge_k8s_object_for_update(self, existing, desired):
         return existing
 
-    def _create_or_update_k8s_object(self, api, create_method,
-                                     update_method, k8s_object,
+    def _create_or_update_k8s_object(self, model, k8s_object,
                                      body, namespace):
         changed = False
         result = {}
+        crud_ops = self._get_crud_ops(model)
+        api = self._get_api(crud_ops['create']['class'])
+        create_method = crud_ops['create']['method']
+        update_method = crud_ops['update']['method']
 
         if k8s_object is not None:
 #            if self._k8s_objects_equals(k8s_object, body):
@@ -187,8 +205,11 @@ class Wrapper(object):
                 raise WrapperException(msg="api request failed code: {0}, {1}".format(e.status, e))
         return (changed, result)
 
-    def _delete_k8s_object(self, api, delete_method, k8s_object,
+    def _delete_k8s_object(self, model, k8s_object,
                            delete_options, name, namespace):
+        crud_ops = self._get_crud_ops(model)
+        api = self._get_api(crud_ops['delete']['class'])
+        delete_method = crud_ops['delete']['method']
         changed = False
         status = {}
         if k8s_object is not None:
@@ -208,16 +229,12 @@ class Wrapper(object):
         return (changed, status)
 
 
-    def _k8s_object(self, api_class, model, namespace, name, api_version,
+    def _k8s_object(self, model, namespace, name, api_version,
                     labels, annotations, state, **model_kwargs):
 
         friendly_name = model.__name__.replace(api_version.capitalize(), '')
 
-        crud_ops = self._get_crud_ops(model)
-
-        api = self._get_api(api_class)
-
-        k8s_object = self._get_k8s_object(api, crud_ops['read']['method'], name, namespace)
+        k8s_object = self._get_k8s_object(model, name, namespace)
 
         # TODO: add check mode
         if state == 'present':
@@ -227,16 +244,13 @@ class Wrapper(object):
                                                            labels=labels, annotations=annotations)
             body = model(kind=friendly_name, api_version=api_version,
                          metadata=metadata, **model_kwargs)
-            (changed, result) = self._create_or_update_k8s_object(api,
-                                                                  crud_ops['create']['method'],
-                                                                  crud_ops['update']['method'],
+            (changed, result) = self._create_or_update_k8s_object(model,
                                                                   k8s_object,
                                                                   body, namespace)
 
         elif state == 'absent':
             delete_options = V1DeleteOptions()
-            (changed, result) = self._delete_k8s_object(api,
-                                                        crud_ops['delete']['method'],
+            (changed, result) = self._delete_k8s_object(model,
                                                         k8s_object, delete_options,
                                                         name, namespace)
 
@@ -244,67 +258,9 @@ class Wrapper(object):
         time.sleep(.1)
         return {'changed': changed, friendly_name.lower(): result}
 
-
-
-    def namespace(self, name=None, api_version='v1', labels=None,
-                  annotations=None, state='present'):
-        self._validate_common_args(False, None, name, labels, annotations, state)
-        if api_version == 'v1':
-            # TODO: use api derived from model operations using importlib
-            #       http://stackoverflow.com/questions/13598035/importing-a-module-when-the-module-name-is-in-a-variable
-            from .models import V1Namespace
-            model = V1Namespace
-            from .apis import ApiV1
-            api_class = ApiV1
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
-
-
-        return self._k8s_object(api_class, model, None, name, api_version,
-                                labels, annotations, state)
-
-
-    def pod(self, namespace=None, name=None, api_version='v1', labels=None,
-            annotations=None, state='present', restart_policy=None,
-            node_selector=None, host_network=False, volumes=None,
-            containers=None):
-        self._validate_common_args(True, namespace, name, labels, annotations, state)
-        if api_version == 'v1':
-            from .models import V1Pod
-            model = V1Pod
-            from .apis import ApiV1
-            api_class = ApiV1
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
-
-        pod_spec = Wrapper.pod_spec_from_datastructure(api_version,
-                                                       restart_policy=restart_policy,
-                                                       node_selector=node_selector,
-                                                       host_network=host_network,
-                                                       containers=containers)
-
-        return self._k8s_object(api_class, model, namespace, name, api_version,
-                                labels, annotations, state, spec=pod_spec)
-
-    @staticmethod
-    def pod_spec_from_datastructure(api_version, **kwargs):
-        if api_version == 'v1':
-            from .models import V1PodSpec, V1Container
-            pod_spec_model = V1PodSpec
-            container_model = V1Container
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
-
-        containers = kwargs.get('containers', [])
-        if containers is None:
-            containers = []
-        container_objects = []
-        for cd in containers:
-            container_objects.append(container_model(**cd))
-        kwargs['containers'] = container_objects
-
-        pod_spec = pod_spec_model(**kwargs)
-        return pod_spec
+#    def namespace(self, name=None, api_version='v1', labels=None,
+#                  annotations=None, state='present'):
+#        self._validate_common_args(False, None, name, labels, annotations, state)
 
     @staticmethod
     def metadata_from_datastructure(api_version, **kwargs):
@@ -317,79 +273,104 @@ class Wrapper(object):
         metadata = metadata_model(**kwargs)
         return metadata
 
-    @staticmethod
-    def pod_template_spec_from_datastructure(api_version, **kwargs):
-        if api_version == 'v1':
-            from .models import V1PodTemplateSpec
-            pod_template_spec_model = V1PodTemplateSpec
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
-
-        metadata = Wrapper.metadata_from_datastructure(api_version, **(kwargs.get('metadata', {})))
-        pod_spec = Wrapper.pod_spec_from_datastructure(api_version, **(kwargs.get('spec', {})))
-        pod_template_spec = pod_template_spec_model(metadata=metadata, spec=pod_spec)
-        return pod_template_spec
-
-    def replication_controller(self, namespace=None, name=None, api_version='v1', labels=None,
-                               annotations=None, state='present', replicas=1,
-                               selector=None, template=None):
-        self._validate_common_args(True, namespace, name, labels, annotations, state)
-        if api_version == 'v1':
-            from .models import V1ReplicationController, V1ReplicationControllerSpec
-            model = V1ReplicationController
-            rc_spec_model = V1ReplicationControllerSpec
-            from .apis import ApiV1
-            api_class = ApiV1
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
-
-        if template is None:
-            template = {}
-        pod_template_spec = Wrapper.pod_template_spec_from_datastructure(api_version, **template)
-        rc_spec = rc_spec_model(replicas=replicas, selector=selector,
-                                template=pod_template_spec)
-
-        return self._k8s_object(api_class, model, namespace, name, api_version,
-                                labels, annotations, state, spec=rc_spec)
-
 
     @staticmethod
-    def service_spec_from_datastructure(api_version, **kwargs):
-        if api_version == 'v1':
-            from .models import V1ServiceSpec, V1Container
-            service_spec_model = V1ServiceSpec
-            container_model = V1Container
+    def translate_params(model, **kwargs):
+        '''Translate kwargs to parameters of the model's constructor
+        Args:
+            model(class): class which constructor needs to be translated to
+        Returns:
+            dict of parameters ready to use in the constructor.
+        '''
+        res = {}
+        for i,param in enumerate(model.__init__.__code__.co_varnames):
+            if param in kwargs:
+                res[param] = kwargs[param]
+        return res
+
+    @staticmethod
+    def get_child_models(model):
+        '''Get the list of child models for the current model
+        Args:
+            model: model class
+        Returns:
+            a list of tuples (attribute, class, child_type), where
+        attribute is the name of the child attribute, class - the class
+        name of the child model, child_type - list if the child is a list
+        '''
+        res = []
+        for attr, swagger_t in model.swagger_types.iteritems():
+            if swagger_t in ['str', 'int', 'object', 'bool', 'list[str]']:
+                continue
+            if swagger_t.startswith('list['):
+                child_type = 'list'
+                child_model = swagger_t[5:-1]
+            else:
+                child_type = None
+                child_model = swagger_t
+            res.append((attr, child_model, child_type))
+        return res
+
+    @staticmethod
+    def k8s_obj_spec_from_datastructure(object_name, **kwargs):
+        '''Create spec ready to be used in the object.
+        Args:
+            api_version(str): version of the api
+            kwargs: object description
+        '''
+        if kwargs['api_version'] == 'v1':
+            spec_model_name = kwargs['api_version'].capitalize() + string.capwords(object_name, '_').replace('_', '') + 'Spec'
+            spec_model = getattr(models, spec_model_name)
         else:
             raise WrapperException(msg="unsupported api version: {0}".format(api_version))
 
-        service_spec = service_spec_model(**kwargs)
-        return service_spec
+        params = Wrapper.translate_params(spec_model, **kwargs)
+        child_models_list = Wrapper.get_child_models(spec_model)
+        for ch_model in child_models_list:
+            if ch_model[1] in kwargs.copy():
+                if isinstance(kwargs[ch_model[1]], list):
+                    cur_spec = []
+                    for child in kwargs[ch_model[1]]:
+                        cur_spec.append(k8s_obj_spec_from_datastructure(ch_model[2], child))
+                else:
+                    cur_spec = k8s_obj_spec_from_datastructure(ch_model[2], kwargs[ch_model[1]])
+                kwargs[ch_model[1]] = cur_spec
+
+        spec = spec_model(**params)
+        return spec
+
+    def __getattr__(self, name):
+        def obj_mapper(**kwargs):
+            if 'kind' in kwargs:
+                del kwargs['kind']
+            return self.k8s_object(kind=name, **kwargs)
+
+        return obj_mapper
 
 
-    def service(self, namespace=None, name=None, api_version='v1', labels=None,
-                annotations=None, state='present', ports=None, selector=None,
-                cluster_ip=None, type=None, external_ips=None,
-                session_affinity=None, load_balancer_ip=None):
-        self._validate_common_args(True, namespace, name, labels, annotations, state)
-        if api_version == 'v1':
-            from .models import V1Service
-            model = V1Service
-            from .apis import ApiV1
-            api_class = ApiV1
-        else:
-            raise WrapperException(msg="unsupported api version: {0}".format(api_version))
+    def k8s_object(self, **kwargs):
+        # TODO: Distinguish the object topology and import nested objects as needed!
+        kind = kwargs['kind']
+        api_version = kwargs.setdefault('api_version', 'v1')
 
-        # *_i_ps variables are a workaround for the generated library, where
-        # conversion from camel case to snake case is causing the odd naming
-        service_spec = Wrapper.service_spec_from_datastructure(
-                api_version,
-                ports=ports, selector=selector,
-                cluster_ip=cluster_ip, type=type, external_i_ps=external_ips,
-                session_affinity=session_affinity,
-                load_balancer_ip=load_balancer_ip)
+        camelName = string.capwords(kind, '_').replace('_', '')
+        model_name = api_version.capitalize() + camelName
+        if model_name not in dir(models):
+            raise WrapperException(msg="unsupported k8s object: {0}".format(name))
 
-        return self._k8s_object(api_class, model, namespace, name, api_version,
-                                labels, annotations, state, spec=service_spec)
+        model = getattr(models, model_name)
+        obj_spec = Wrapper.k8s_obj_spec_from_datastructure(kind, **kwargs)
+
+        namespace = kwargs.get('namespace', None)
+        name = kwargs.get('name', None)
+        labels = kwargs.get('labels',{})
+        annotations = kwargs.get('annotations', {})
+        state = kwargs.get('state', 'present')
+
+        self._validate_common_args(model, namespace, name, labels, annotations, state)
+
+        return self._k8s_object(model, namespace, name, api_version,
+                                labels, annotations, state, spec=obj_spec)
 
 
     def __init__(self, kubeconfig=None, api_endpoint=None, namespace=None,

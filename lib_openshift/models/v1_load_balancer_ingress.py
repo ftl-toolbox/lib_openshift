@@ -36,25 +36,25 @@ class V1LoadBalancerIngress(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'ip': 'str',
+        'hostname': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'ip': 'ip',
+        'hostname': 'hostname'
+    }
 
     def __init__(self, ip=None, hostname=None):
         """
         V1LoadBalancerIngress - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'ip': 'str',
-            'hostname': 'str'
-        }
-
-        self.attribute_map = {
-            'ip': 'ip',
-            'hostname': 'hostname'
-        }
 
         self._ip = ip
         self._hostname = hostname
@@ -111,7 +111,7 @@ class V1LoadBalancerIngress(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LoadBalancerIngress.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

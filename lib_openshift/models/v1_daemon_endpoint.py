@@ -36,23 +36,23 @@ class V1DaemonEndpoint(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'port': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'port': 'Port'
+    }
 
     def __init__(self, port=None):
         """
         V1DaemonEndpoint - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'port': 'int'
-        }
-
-        self.attribute_map = {
-            'port': 'Port'
-        }
 
         self._port = port
 
@@ -85,7 +85,7 @@ class V1DaemonEndpoint(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DaemonEndpoint.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

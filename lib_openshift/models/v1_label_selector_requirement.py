@@ -36,27 +36,27 @@ class V1LabelSelectorRequirement(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'key': 'str',
+        'operator': 'str',
+        'values': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'key': 'key',
+        'operator': 'operator',
+        'values': 'values'
+    }
 
     def __init__(self, key=None, operator=None, values=None):
         """
         V1LabelSelectorRequirement - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'key': 'str',
-            'operator': 'str',
-            'values': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'key': 'key',
-            'operator': 'operator',
-            'values': 'values'
-        }
 
         self._key = key
         self._operator = operator
@@ -137,7 +137,7 @@ class V1LabelSelectorRequirement(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1LabelSelectorRequirement.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

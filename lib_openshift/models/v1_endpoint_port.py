@@ -36,27 +36,27 @@ class V1EndpointPort(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'port': 'int',
+        'protocol': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'port': 'port',
+        'protocol': 'protocol'
+    }
 
     def __init__(self, name=None, port=None, protocol=None):
         """
         V1EndpointPort - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'port': 'int',
-            'protocol': 'str'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'port': 'port',
-            'protocol': 'protocol'
-        }
 
         self._name = name
         self._port = port
@@ -137,7 +137,7 @@ class V1EndpointPort(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1EndpointPort.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

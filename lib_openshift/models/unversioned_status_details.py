@@ -36,31 +36,31 @@ class UnversionedStatusDetails(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'group': 'str',
+        'kind': 'str',
+        'causes': 'list[UnversionedStatusCause]',
+        'retry_after_seconds': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'group': 'group',
+        'kind': 'kind',
+        'causes': 'causes',
+        'retry_after_seconds': 'retryAfterSeconds'
+    }
 
     def __init__(self, name=None, group=None, kind=None, causes=None, retry_after_seconds=None):
         """
         UnversionedStatusDetails - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'group': 'str',
-            'kind': 'str',
-            'causes': 'list[UnversionedStatusCause]',
-            'retry_after_seconds': 'int'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'group': 'group',
-            'kind': 'kind',
-            'causes': 'causes',
-            'retry_after_seconds': 'retryAfterSeconds'
-        }
 
         self._name = name
         self._group = group
@@ -189,7 +189,7 @@ class UnversionedStatusDetails(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(UnversionedStatusDetails.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,29 +36,29 @@ class V1DeploymentTriggerImageChangeParams(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'automatic': 'bool',
+        'container_names': 'list[str]',
+        '_from': 'V1ObjectReference',
+        'last_triggered_image': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'automatic': 'automatic',
+        'container_names': 'containerNames',
+        '_from': 'from',
+        'last_triggered_image': 'lastTriggeredImage'
+    }
 
     def __init__(self, automatic=None, container_names=None, _from=None, last_triggered_image=None):
         """
         V1DeploymentTriggerImageChangeParams - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'automatic': 'bool',
-            'container_names': 'list[str]',
-            '_from': 'V1ObjectReference',
-            'last_triggered_image': 'str'
-        }
-
-        self.attribute_map = {
-            'automatic': 'automatic',
-            'container_names': 'containerNames',
-            '_from': 'from',
-            'last_triggered_image': 'lastTriggeredImage'
-        }
 
         self._automatic = automatic
         self._container_names = container_names
@@ -163,7 +163,7 @@ class V1DeploymentTriggerImageChangeParams(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentTriggerImageChangeParams.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

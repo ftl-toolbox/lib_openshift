@@ -36,57 +36,57 @@ class V1Container(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'image': 'str',
+        'command': 'list[str]',
+        'args': 'list[str]',
+        'working_dir': 'str',
+        'ports': 'list[V1ContainerPort]',
+        'env': 'list[V1EnvVar]',
+        'resources': 'V1ResourceRequirements',
+        'volume_mounts': 'list[V1VolumeMount]',
+        'liveness_probe': 'V1Probe',
+        'readiness_probe': 'V1Probe',
+        'lifecycle': 'V1Lifecycle',
+        'termination_message_path': 'str',
+        'image_pull_policy': 'str',
+        'security_context': 'V1SecurityContext',
+        'stdin': 'bool',
+        'stdin_once': 'bool',
+        'tty': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'image': 'image',
+        'command': 'command',
+        'args': 'args',
+        'working_dir': 'workingDir',
+        'ports': 'ports',
+        'env': 'env',
+        'resources': 'resources',
+        'volume_mounts': 'volumeMounts',
+        'liveness_probe': 'livenessProbe',
+        'readiness_probe': 'readinessProbe',
+        'lifecycle': 'lifecycle',
+        'termination_message_path': 'terminationMessagePath',
+        'image_pull_policy': 'imagePullPolicy',
+        'security_context': 'securityContext',
+        'stdin': 'stdin',
+        'stdin_once': 'stdinOnce',
+        'tty': 'tty'
+    }
 
     def __init__(self, name=None, image=None, command=None, args=None, working_dir=None, ports=None, env=None, resources=None, volume_mounts=None, liveness_probe=None, readiness_probe=None, lifecycle=None, termination_message_path=None, image_pull_policy=None, security_context=None, stdin=None, stdin_once=None, tty=None):
         """
         V1Container - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'image': 'str',
-            'command': 'list[str]',
-            'args': 'list[str]',
-            'working_dir': 'str',
-            'ports': 'list[V1ContainerPort]',
-            'env': 'list[V1EnvVar]',
-            'resources': 'V1ResourceRequirements',
-            'volume_mounts': 'list[V1VolumeMount]',
-            'liveness_probe': 'V1Probe',
-            'readiness_probe': 'V1Probe',
-            'lifecycle': 'V1Lifecycle',
-            'termination_message_path': 'str',
-            'image_pull_policy': 'str',
-            'security_context': 'V1SecurityContext',
-            'stdin': 'bool',
-            'stdin_once': 'bool',
-            'tty': 'bool'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'image': 'image',
-            'command': 'command',
-            'args': 'args',
-            'working_dir': 'workingDir',
-            'ports': 'ports',
-            'env': 'env',
-            'resources': 'resources',
-            'volume_mounts': 'volumeMounts',
-            'liveness_probe': 'livenessProbe',
-            'readiness_probe': 'readinessProbe',
-            'lifecycle': 'lifecycle',
-            'termination_message_path': 'terminationMessagePath',
-            'image_pull_policy': 'imagePullPolicy',
-            'security_context': 'securityContext',
-            'stdin': 'stdin',
-            'stdin_once': 'stdinOnce',
-            'tty': 'tty'
-        }
 
         self._name = name
         self._image = image
@@ -527,7 +527,7 @@ class V1Container(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Container.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

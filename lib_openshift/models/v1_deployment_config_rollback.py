@@ -48,27 +48,27 @@ class V1DeploymentConfigRollback(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'spec': 'V1DeploymentConfigRollbackSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'spec': 'spec'
+    }
 
     def __init__(self, kind=None, api_version=None, spec=None):
         """
         V1DeploymentConfigRollback - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'spec': 'V1DeploymentConfigRollbackSpec'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'spec': 'spec'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -149,7 +149,7 @@ class V1DeploymentConfigRollback(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentConfigRollback.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

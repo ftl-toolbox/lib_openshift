@@ -36,25 +36,25 @@ class V1ContainerImage(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'names': 'list[str]',
+        'size_bytes': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'names': 'names',
+        'size_bytes': 'sizeBytes'
+    }
 
     def __init__(self, names=None, size_bytes=None):
         """
         V1ContainerImage - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'names': 'list[str]',
-            'size_bytes': 'int'
-        }
-
-        self.attribute_map = {
-            'names': 'names',
-            'size_bytes': 'sizeBytes'
-        }
 
         self._names = names
         self._size_bytes = size_bytes
@@ -111,7 +111,7 @@ class V1ContainerImage(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ContainerImage.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

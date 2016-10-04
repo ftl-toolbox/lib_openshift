@@ -66,31 +66,31 @@ class V1ServiceAccount(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'secrets': 'list[V1ObjectReference]',
+        'image_pull_secrets': 'list[V1LocalObjectReference]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'secrets': 'secrets',
+        'image_pull_secrets': 'imagePullSecrets'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, secrets=None, image_pull_secrets=None):
         """
         V1ServiceAccount - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'secrets': 'list[V1ObjectReference]',
-            'image_pull_secrets': 'list[V1LocalObjectReference]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'secrets': 'secrets',
-            'image_pull_secrets': 'imagePullSecrets'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -219,7 +219,7 @@ class V1ServiceAccount(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ServiceAccount.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

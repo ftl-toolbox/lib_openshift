@@ -36,27 +36,27 @@ class V1beta1ReplicaSetSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'replicas': 'int',
+        'selector': 'V1beta1LabelSelector',
+        'template': 'V1PodTemplateSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'replicas': 'replicas',
+        'selector': 'selector',
+        'template': 'template'
+    }
 
     def __init__(self, replicas=None, selector=None, template=None):
         """
         V1beta1ReplicaSetSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'replicas': 'int',
-            'selector': 'V1beta1LabelSelector',
-            'template': 'V1PodTemplateSpec'
-        }
-
-        self.attribute_map = {
-            'replicas': 'replicas',
-            'selector': 'selector',
-            'template': 'template'
-        }
 
         self._replicas = replicas
         self._selector = selector
@@ -137,7 +137,7 @@ class V1beta1ReplicaSetSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1ReplicaSetSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

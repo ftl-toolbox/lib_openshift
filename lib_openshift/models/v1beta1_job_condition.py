@@ -36,33 +36,33 @@ class V1beta1JobCondition(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'status': 'str',
+        'last_probe_time': 'str',
+        'last_transition_time': 'str',
+        'reason': 'str',
+        'message': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'status': 'status',
+        'last_probe_time': 'lastProbeTime',
+        'last_transition_time': 'lastTransitionTime',
+        'reason': 'reason',
+        'message': 'message'
+    }
 
     def __init__(self, type=None, status=None, last_probe_time=None, last_transition_time=None, reason=None, message=None):
         """
         V1beta1JobCondition - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'status': 'str',
-            'last_probe_time': 'str',
-            'last_transition_time': 'str',
-            'reason': 'str',
-            'message': 'str'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'status': 'status',
-            'last_probe_time': 'lastProbeTime',
-            'last_transition_time': 'lastTransitionTime',
-            'reason': 'reason',
-            'message': 'message'
-        }
 
         self._type = type
         self._status = status
@@ -215,7 +215,7 @@ class V1beta1JobCondition(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1JobCondition.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

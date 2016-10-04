@@ -36,33 +36,33 @@ class V1PolicyRule(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'verbs': 'list[str]',
+        'attribute_restrictions': 'str',
+        'api_groups': 'list[str]',
+        'resources': 'list[str]',
+        'resource_names': 'list[str]',
+        'non_resource_ur_ls': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'verbs': 'verbs',
+        'attribute_restrictions': 'attributeRestrictions',
+        'api_groups': 'apiGroups',
+        'resources': 'resources',
+        'resource_names': 'resourceNames',
+        'non_resource_ur_ls': 'nonResourceURLs'
+    }
 
     def __init__(self, verbs=None, attribute_restrictions=None, api_groups=None, resources=None, resource_names=None, non_resource_ur_ls=None):
         """
         V1PolicyRule - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'verbs': 'list[str]',
-            'attribute_restrictions': 'str',
-            'api_groups': 'list[str]',
-            'resources': 'list[str]',
-            'resource_names': 'list[str]',
-            'non_resource_ur_ls': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'verbs': 'verbs',
-            'attribute_restrictions': 'attributeRestrictions',
-            'api_groups': 'apiGroups',
-            'resources': 'resources',
-            'resource_names': 'resourceNames',
-            'non_resource_ur_ls': 'nonResourceURLs'
-        }
 
         self._verbs = verbs
         self._attribute_restrictions = attribute_restrictions
@@ -215,7 +215,7 @@ class V1PolicyRule(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PolicyRule.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

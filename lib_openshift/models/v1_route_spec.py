@@ -36,31 +36,31 @@ class V1RouteSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'host': 'str',
+        'path': 'str',
+        'to': 'V1ObjectReference',
+        'port': 'V1RoutePort',
+        'tls': 'V1TLSConfig'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'host': 'host',
+        'path': 'path',
+        'to': 'to',
+        'port': 'port',
+        'tls': 'tls'
+    }
 
     def __init__(self, host=None, path=None, to=None, port=None, tls=None):
         """
         V1RouteSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'host': 'str',
-            'path': 'str',
-            'to': 'V1ObjectReference',
-            'port': 'V1RoutePort',
-            'tls': 'V1TLSConfig'
-        }
-
-        self.attribute_map = {
-            'host': 'host',
-            'path': 'path',
-            'to': 'to',
-            'port': 'port',
-            'tls': 'tls'
-        }
 
         self._host = host
         self._path = path
@@ -189,7 +189,7 @@ class V1RouteSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RouteSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

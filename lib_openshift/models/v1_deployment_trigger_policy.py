@@ -36,25 +36,25 @@ class V1DeploymentTriggerPolicy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'image_change_params': 'V1DeploymentTriggerImageChangeParams'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'image_change_params': 'imageChangeParams'
+    }
 
     def __init__(self, type=None, image_change_params=None):
         """
         V1DeploymentTriggerPolicy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'image_change_params': 'V1DeploymentTriggerImageChangeParams'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'image_change_params': 'imageChangeParams'
-        }
 
         self._type = type
         self._image_change_params = image_change_params
@@ -111,7 +111,7 @@ class V1DeploymentTriggerPolicy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentTriggerPolicy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,23 +36,23 @@ class V1FinalizerName(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        
+    }
 
     def __init__(self):
         """
         V1FinalizerName - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            
-        }
-
-        self.attribute_map = {
-            
-        }
 
     def to_dict(self):
         """
@@ -60,7 +60,7 @@ class V1FinalizerName(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1FinalizerName.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

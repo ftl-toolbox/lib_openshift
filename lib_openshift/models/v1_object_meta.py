@@ -36,45 +36,45 @@ class V1ObjectMeta(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'name': 'str',
+        'generate_name': 'str',
+        'namespace': 'str',
+        'self_link': 'str',
+        'uid': 'str',
+        'resource_version': 'str',
+        'generation': 'int',
+        'creation_timestamp': 'str',
+        'deletion_timestamp': 'str',
+        'deletion_grace_period_seconds': 'int',
+        'labels': 'object',
+        'annotations': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'name': 'name',
+        'generate_name': 'generateName',
+        'namespace': 'namespace',
+        'self_link': 'selfLink',
+        'uid': 'uid',
+        'resource_version': 'resourceVersion',
+        'generation': 'generation',
+        'creation_timestamp': 'creationTimestamp',
+        'deletion_timestamp': 'deletionTimestamp',
+        'deletion_grace_period_seconds': 'deletionGracePeriodSeconds',
+        'labels': 'labels',
+        'annotations': 'annotations'
+    }
 
     def __init__(self, name=None, generate_name=None, namespace=None, self_link=None, uid=None, resource_version=None, generation=None, creation_timestamp=None, deletion_timestamp=None, deletion_grace_period_seconds=None, labels=None, annotations=None):
         """
         V1ObjectMeta - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'name': 'str',
-            'generate_name': 'str',
-            'namespace': 'str',
-            'self_link': 'str',
-            'uid': 'str',
-            'resource_version': 'str',
-            'generation': 'int',
-            'creation_timestamp': 'str',
-            'deletion_timestamp': 'str',
-            'deletion_grace_period_seconds': 'int',
-            'labels': 'object',
-            'annotations': 'object'
-        }
-
-        self.attribute_map = {
-            'name': 'name',
-            'generate_name': 'generateName',
-            'namespace': 'namespace',
-            'self_link': 'selfLink',
-            'uid': 'uid',
-            'resource_version': 'resourceVersion',
-            'generation': 'generation',
-            'creation_timestamp': 'creationTimestamp',
-            'deletion_timestamp': 'deletionTimestamp',
-            'deletion_grace_period_seconds': 'deletionGracePeriodSeconds',
-            'labels': 'labels',
-            'annotations': 'annotations'
-        }
 
         self._name = name
         self._generate_name = generate_name
@@ -371,7 +371,7 @@ class V1ObjectMeta(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ObjectMeta.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

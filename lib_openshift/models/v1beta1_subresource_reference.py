@@ -36,29 +36,29 @@ class V1beta1SubresourceReference(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'name': 'str',
+        'api_version': 'str',
+        'subresource': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'name': 'name',
+        'api_version': 'apiVersion',
+        'subresource': 'subresource'
+    }
 
     def __init__(self, kind=None, name=None, api_version=None, subresource=None):
         """
         V1beta1SubresourceReference - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'name': 'str',
-            'api_version': 'str',
-            'subresource': 'str'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'name': 'name',
-            'api_version': 'apiVersion',
-            'subresource': 'subresource'
-        }
 
         self._kind = kind
         self._name = name
@@ -163,7 +163,7 @@ class V1beta1SubresourceReference(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1SubresourceReference.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

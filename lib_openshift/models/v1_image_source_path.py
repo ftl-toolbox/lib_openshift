@@ -36,25 +36,25 @@ class V1ImageSourcePath(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'source_path': 'str',
+        'destination_dir': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'source_path': 'sourcePath',
+        'destination_dir': 'destinationDir'
+    }
 
     def __init__(self, source_path=None, destination_dir=None):
         """
         V1ImageSourcePath - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'source_path': 'str',
-            'destination_dir': 'str'
-        }
-
-        self.attribute_map = {
-            'source_path': 'sourcePath',
-            'destination_dir': 'destinationDir'
-        }
 
         self._source_path = source_path
         self._destination_dir = destination_dir
@@ -111,7 +111,7 @@ class V1ImageSourcePath(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageSourcePath.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

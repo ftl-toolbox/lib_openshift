@@ -36,29 +36,29 @@ class V1HorizontalPodAutoscalerSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'scale_target_ref': 'V1CrossVersionObjectReference',
+        'min_replicas': 'int',
+        'max_replicas': 'int',
+        'target_cpu_utilization_percentage': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'scale_target_ref': 'scaleTargetRef',
+        'min_replicas': 'minReplicas',
+        'max_replicas': 'maxReplicas',
+        'target_cpu_utilization_percentage': 'targetCPUUtilizationPercentage'
+    }
 
     def __init__(self, scale_target_ref=None, min_replicas=None, max_replicas=None, target_cpu_utilization_percentage=None):
         """
         V1HorizontalPodAutoscalerSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'scale_target_ref': 'V1CrossVersionObjectReference',
-            'min_replicas': 'int',
-            'max_replicas': 'int',
-            'target_cpu_utilization_percentage': 'int'
-        }
-
-        self.attribute_map = {
-            'scale_target_ref': 'scaleTargetRef',
-            'min_replicas': 'minReplicas',
-            'max_replicas': 'maxReplicas',
-            'target_cpu_utilization_percentage': 'targetCPUUtilizationPercentage'
-        }
 
         self._scale_target_ref = scale_target_ref
         self._min_replicas = min_replicas
@@ -163,7 +163,7 @@ class V1HorizontalPodAutoscalerSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1HorizontalPodAutoscalerSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

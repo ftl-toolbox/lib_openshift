@@ -60,33 +60,33 @@ class V1User(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'full_name': 'str',
+        'identities': 'list[str]',
+        'groups': 'list[str]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'full_name': 'fullName',
+        'identities': 'identities',
+        'groups': 'groups'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, full_name=None, identities=None, groups=None):
         """
         V1User - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'full_name': 'str',
-            'identities': 'list[str]',
-            'groups': 'list[str]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'full_name': 'fullName',
-            'identities': 'identities',
-            'groups': 'groups'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -239,7 +239,7 @@ class V1User(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1User.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

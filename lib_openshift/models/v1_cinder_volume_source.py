@@ -36,27 +36,27 @@ class V1CinderVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'volume_id': 'str',
+        'fs_type': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'volume_id': 'volumeID',
+        'fs_type': 'fsType',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, volume_id=None, fs_type=None, read_only=None):
         """
         V1CinderVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'volume_id': 'str',
-            'fs_type': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'volume_id': 'volumeID',
-            'fs_type': 'fsType',
-            'read_only': 'readOnly'
-        }
 
         self._volume_id = volume_id
         self._fs_type = fs_type
@@ -137,7 +137,7 @@ class V1CinderVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1CinderVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

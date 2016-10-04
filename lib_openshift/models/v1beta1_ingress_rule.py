@@ -36,25 +36,25 @@ class V1beta1IngressRule(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'host': 'str',
+        'http': 'V1beta1HTTPIngressRuleValue'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'host': 'host',
+        'http': 'http'
+    }
 
     def __init__(self, host=None, http=None):
         """
         V1beta1IngressRule - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'host': 'str',
-            'http': 'V1beta1HTTPIngressRuleValue'
-        }
-
-        self.attribute_map = {
-            'host': 'host',
-            'http': 'http'
-        }
 
         self._host = host
         self._http = http
@@ -111,7 +111,7 @@ class V1beta1IngressRule(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1IngressRule.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,25 +36,25 @@ class V1SourceRevision(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'git': 'V1GitSourceRevision'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'git': 'git'
+    }
 
     def __init__(self, type=None, git=None):
         """
         V1SourceRevision - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'git': 'V1GitSourceRevision'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'git': 'git'
-        }
 
         self._type = type
         self._git = git
@@ -111,7 +111,7 @@ class V1SourceRevision(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SourceRevision.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -66,43 +66,43 @@ class V1Event(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'involved_object': 'V1ObjectReference',
+        'reason': 'str',
+        'message': 'str',
+        'source': 'V1EventSource',
+        'first_timestamp': 'str',
+        'last_timestamp': 'str',
+        'count': 'int',
+        'type': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'involved_object': 'involvedObject',
+        'reason': 'reason',
+        'message': 'message',
+        'source': 'source',
+        'first_timestamp': 'firstTimestamp',
+        'last_timestamp': 'lastTimestamp',
+        'count': 'count',
+        'type': 'type'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, involved_object=None, reason=None, message=None, source=None, first_timestamp=None, last_timestamp=None, count=None, type=None):
         """
         V1Event - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'involved_object': 'V1ObjectReference',
-            'reason': 'str',
-            'message': 'str',
-            'source': 'V1EventSource',
-            'first_timestamp': 'str',
-            'last_timestamp': 'str',
-            'count': 'int',
-            'type': 'str'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'involved_object': 'involvedObject',
-            'reason': 'reason',
-            'message': 'message',
-            'source': 'source',
-            'first_timestamp': 'firstTimestamp',
-            'last_timestamp': 'lastTimestamp',
-            'count': 'count',
-            'type': 'type'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -375,7 +375,7 @@ class V1Event(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Event.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

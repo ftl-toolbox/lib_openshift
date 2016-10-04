@@ -36,27 +36,27 @@ class V1GlusterfsVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'endpoints': 'str',
+        'path': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'endpoints': 'endpoints',
+        'path': 'path',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, endpoints=None, path=None, read_only=None):
         """
         V1GlusterfsVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'endpoints': 'str',
-            'path': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'endpoints': 'endpoints',
-            'path': 'path',
-            'read_only': 'readOnly'
-        }
 
         self._endpoints = endpoints
         self._path = path
@@ -137,7 +137,7 @@ class V1GlusterfsVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1GlusterfsVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,33 +36,33 @@ class V1beta1JobSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'parallelism': 'int',
+        'completions': 'int',
+        'active_deadline_seconds': 'int',
+        'selector': 'V1beta1LabelSelector',
+        'auto_selector': 'bool',
+        'template': 'V1PodTemplateSpec'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'parallelism': 'parallelism',
+        'completions': 'completions',
+        'active_deadline_seconds': 'activeDeadlineSeconds',
+        'selector': 'selector',
+        'auto_selector': 'autoSelector',
+        'template': 'template'
+    }
 
     def __init__(self, parallelism=None, completions=None, active_deadline_seconds=None, selector=None, auto_selector=None, template=None):
         """
         V1beta1JobSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'parallelism': 'int',
-            'completions': 'int',
-            'active_deadline_seconds': 'int',
-            'selector': 'V1beta1LabelSelector',
-            'auto_selector': 'bool',
-            'template': 'V1PodTemplateSpec'
-        }
-
-        self.attribute_map = {
-            'parallelism': 'parallelism',
-            'completions': 'completions',
-            'active_deadline_seconds': 'activeDeadlineSeconds',
-            'selector': 'selector',
-            'auto_selector': 'autoSelector',
-            'template': 'template'
-        }
 
         self._parallelism = parallelism
         self._completions = completions
@@ -215,7 +215,7 @@ class V1beta1JobSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1JobSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

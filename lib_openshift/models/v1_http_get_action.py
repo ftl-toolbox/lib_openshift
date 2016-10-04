@@ -36,31 +36,31 @@ class V1HTTPGetAction(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'path': 'str',
+        'port': 'str',
+        'host': 'str',
+        'scheme': 'str',
+        'http_headers': 'list[V1HTTPHeader]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'path': 'path',
+        'port': 'port',
+        'host': 'host',
+        'scheme': 'scheme',
+        'http_headers': 'httpHeaders'
+    }
 
     def __init__(self, path=None, port=None, host=None, scheme=None, http_headers=None):
         """
         V1HTTPGetAction - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'path': 'str',
-            'port': 'str',
-            'host': 'str',
-            'scheme': 'str',
-            'http_headers': 'list[V1HTTPHeader]'
-        }
-
-        self.attribute_map = {
-            'path': 'path',
-            'port': 'port',
-            'host': 'host',
-            'scheme': 'scheme',
-            'http_headers': 'httpHeaders'
-        }
 
         self._path = path
         self._port = port
@@ -189,7 +189,7 @@ class V1HTTPGetAction(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1HTTPGetAction.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

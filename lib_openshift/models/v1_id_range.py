@@ -36,25 +36,25 @@ class V1IDRange(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'min': 'int',
+        'max': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'min': 'min',
+        'max': 'max'
+    }
 
     def __init__(self, min=None, max=None):
         """
         V1IDRange - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'min': 'int',
-            'max': 'int'
-        }
-
-        self.attribute_map = {
-            'min': 'min',
-            'max': 'max'
-        }
 
         self._min = min
         self._max = max
@@ -111,7 +111,7 @@ class V1IDRange(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1IDRange.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

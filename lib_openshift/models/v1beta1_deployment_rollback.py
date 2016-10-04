@@ -36,31 +36,31 @@ class V1beta1DeploymentRollback(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'name': 'str',
+        'updated_annotations': 'object',
+        'rollback_to': 'V1beta1RollbackConfig'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'name': 'name',
+        'updated_annotations': 'updatedAnnotations',
+        'rollback_to': 'rollbackTo'
+    }
 
     def __init__(self, kind=None, api_version=None, name=None, updated_annotations=None, rollback_to=None):
         """
         V1beta1DeploymentRollback - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'name': 'str',
-            'updated_annotations': 'object',
-            'rollback_to': 'V1beta1RollbackConfig'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'name': 'name',
-            'updated_annotations': 'updatedAnnotations',
-            'rollback_to': 'rollbackTo'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -189,7 +189,7 @@ class V1beta1DeploymentRollback(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DeploymentRollback.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

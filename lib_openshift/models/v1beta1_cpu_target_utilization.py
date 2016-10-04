@@ -36,23 +36,23 @@ class V1beta1CPUTargetUtilization(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'target_percentage': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'target_percentage': 'targetPercentage'
+    }
 
     def __init__(self, target_percentage=None):
         """
         V1beta1CPUTargetUtilization - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'target_percentage': 'int'
-        }
-
-        self.attribute_map = {
-            'target_percentage': 'targetPercentage'
-        }
 
         self._target_percentage = target_percentage
 
@@ -85,7 +85,7 @@ class V1beta1CPUTargetUtilization(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1CPUTargetUtilization.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

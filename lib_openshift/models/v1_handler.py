@@ -36,27 +36,27 @@ class V1Handler(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_exec': 'V1ExecAction',
+        'http_get': 'V1HTTPGetAction',
+        'tcp_socket': 'V1TCPSocketAction'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_exec': 'exec',
+        'http_get': 'httpGet',
+        'tcp_socket': 'tcpSocket'
+    }
 
     def __init__(self, _exec=None, http_get=None, tcp_socket=None):
         """
         V1Handler - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_exec': 'V1ExecAction',
-            'http_get': 'V1HTTPGetAction',
-            'tcp_socket': 'V1TCPSocketAction'
-        }
-
-        self.attribute_map = {
-            '_exec': 'exec',
-            'http_get': 'httpGet',
-            'tcp_socket': 'tcpSocket'
-        }
 
         self.__exec = _exec
         self._http_get = http_get
@@ -137,7 +137,7 @@ class V1Handler(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Handler.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

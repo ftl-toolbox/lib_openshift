@@ -36,39 +36,39 @@ class V1BuildRequest(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'revision': 'V1SourceRevision',
+        'triggered_by_image': 'V1ObjectReference',
+        '_from': 'V1ObjectReference',
+        'binary': 'V1BinaryBuildSource',
+        'last_version': 'int',
+        'env': 'list[V1EnvVar]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'revision': 'revision',
+        'triggered_by_image': 'triggeredByImage',
+        '_from': 'from',
+        'binary': 'binary',
+        'last_version': 'lastVersion',
+        'env': 'env'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, revision=None, triggered_by_image=None, _from=None, binary=None, last_version=None, env=None):
         """
         V1BuildRequest - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'revision': 'V1SourceRevision',
-            'triggered_by_image': 'V1ObjectReference',
-            '_from': 'V1ObjectReference',
-            'binary': 'V1BinaryBuildSource',
-            'last_version': 'int',
-            'env': 'list[V1EnvVar]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'revision': 'revision',
-            'triggered_by_image': 'triggeredByImage',
-            '_from': 'from',
-            'binary': 'binary',
-            'last_version': 'lastVersion',
-            'env': 'env'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -293,7 +293,7 @@ class V1BuildRequest(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildRequest.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

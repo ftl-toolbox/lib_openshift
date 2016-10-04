@@ -36,31 +36,31 @@ class V1PodSecurityContext(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'se_linux_options': 'V1SELinuxOptions',
+        'run_as_user': 'int',
+        'run_as_non_root': 'bool',
+        'supplemental_groups': 'list[int]',
+        'fs_group': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'se_linux_options': 'seLinuxOptions',
+        'run_as_user': 'runAsUser',
+        'run_as_non_root': 'runAsNonRoot',
+        'supplemental_groups': 'supplementalGroups',
+        'fs_group': 'fsGroup'
+    }
 
     def __init__(self, se_linux_options=None, run_as_user=None, run_as_non_root=None, supplemental_groups=None, fs_group=None):
         """
         V1PodSecurityContext - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'se_linux_options': 'V1SELinuxOptions',
-            'run_as_user': 'int',
-            'run_as_non_root': 'bool',
-            'supplemental_groups': 'list[int]',
-            'fs_group': 'int'
-        }
-
-        self.attribute_map = {
-            'se_linux_options': 'seLinuxOptions',
-            'run_as_user': 'runAsUser',
-            'run_as_non_root': 'runAsNonRoot',
-            'supplemental_groups': 'supplementalGroups',
-            'fs_group': 'fsGroup'
-        }
 
         self._se_linux_options = se_linux_options
         self._run_as_user = run_as_user
@@ -189,7 +189,7 @@ class V1PodSecurityContext(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PodSecurityContext.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

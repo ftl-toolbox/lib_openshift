@@ -36,33 +36,33 @@ class V1SourceBuildStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'pull_secret': 'V1LocalObjectReference',
+        'env': 'list[V1EnvVar]',
+        'scripts': 'str',
+        'incremental': 'bool',
+        'force_pull': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'pull_secret': 'pullSecret',
+        'env': 'env',
+        'scripts': 'scripts',
+        'incremental': 'incremental',
+        'force_pull': 'forcePull'
+    }
 
     def __init__(self, _from=None, pull_secret=None, env=None, scripts=None, incremental=None, force_pull=None):
         """
         V1SourceBuildStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'pull_secret': 'V1LocalObjectReference',
-            'env': 'list[V1EnvVar]',
-            'scripts': 'str',
-            'incremental': 'bool',
-            'force_pull': 'bool'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'pull_secret': 'pullSecret',
-            'env': 'env',
-            'scripts': 'scripts',
-            'incremental': 'incremental',
-            'force_pull': 'forcePull'
-        }
 
         self.__from = _from
         self._pull_secret = pull_secret
@@ -215,7 +215,7 @@ class V1SourceBuildStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SourceBuildStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

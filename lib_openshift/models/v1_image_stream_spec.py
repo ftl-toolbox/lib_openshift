@@ -36,25 +36,25 @@ class V1ImageStreamSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'docker_image_repository': 'str',
+        'tags': 'list[V1TagReference]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'docker_image_repository': 'dockerImageRepository',
+        'tags': 'tags'
+    }
 
     def __init__(self, docker_image_repository=None, tags=None):
         """
         V1ImageStreamSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'docker_image_repository': 'str',
-            'tags': 'list[V1TagReference]'
-        }
-
-        self.attribute_map = {
-            'docker_image_repository': 'dockerImageRepository',
-            'tags': 'tags'
-        }
 
         self._docker_image_repository = docker_image_repository
         self._tags = tags
@@ -111,7 +111,7 @@ class V1ImageStreamSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ImageStreamSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

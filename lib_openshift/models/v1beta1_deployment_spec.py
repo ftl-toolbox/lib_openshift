@@ -36,37 +36,37 @@ class V1beta1DeploymentSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'replicas': 'int',
+        'selector': 'V1beta1LabelSelector',
+        'template': 'V1PodTemplateSpec',
+        'strategy': 'V1beta1DeploymentStrategy',
+        'min_ready_seconds': 'int',
+        'revision_history_limit': 'int',
+        'paused': 'bool',
+        'rollback_to': 'V1beta1RollbackConfig'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'replicas': 'replicas',
+        'selector': 'selector',
+        'template': 'template',
+        'strategy': 'strategy',
+        'min_ready_seconds': 'minReadySeconds',
+        'revision_history_limit': 'revisionHistoryLimit',
+        'paused': 'paused',
+        'rollback_to': 'rollbackTo'
+    }
 
     def __init__(self, replicas=None, selector=None, template=None, strategy=None, min_ready_seconds=None, revision_history_limit=None, paused=None, rollback_to=None):
         """
         V1beta1DeploymentSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'replicas': 'int',
-            'selector': 'V1beta1LabelSelector',
-            'template': 'V1PodTemplateSpec',
-            'strategy': 'V1beta1DeploymentStrategy',
-            'min_ready_seconds': 'int',
-            'revision_history_limit': 'int',
-            'paused': 'bool',
-            'rollback_to': 'V1beta1RollbackConfig'
-        }
-
-        self.attribute_map = {
-            'replicas': 'replicas',
-            'selector': 'selector',
-            'template': 'template',
-            'strategy': 'strategy',
-            'min_ready_seconds': 'minReadySeconds',
-            'revision_history_limit': 'revisionHistoryLimit',
-            'paused': 'paused',
-            'rollback_to': 'rollbackTo'
-        }
 
         self._replicas = replicas
         self._selector = selector
@@ -267,7 +267,7 @@ class V1beta1DeploymentSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DeploymentSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

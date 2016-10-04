@@ -36,33 +36,33 @@ class V1JobStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'conditions': 'list[V1JobCondition]',
+        'start_time': 'str',
+        'completion_time': 'str',
+        'active': 'int',
+        'succeeded': 'int',
+        'failed': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'conditions': 'conditions',
+        'start_time': 'startTime',
+        'completion_time': 'completionTime',
+        'active': 'active',
+        'succeeded': 'succeeded',
+        'failed': 'failed'
+    }
 
     def __init__(self, conditions=None, start_time=None, completion_time=None, active=None, succeeded=None, failed=None):
         """
         V1JobStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'conditions': 'list[V1JobCondition]',
-            'start_time': 'str',
-            'completion_time': 'str',
-            'active': 'int',
-            'succeeded': 'int',
-            'failed': 'int'
-        }
-
-        self.attribute_map = {
-            'conditions': 'conditions',
-            'start_time': 'startTime',
-            'completion_time': 'completionTime',
-            'active': 'active',
-            'succeeded': 'succeeded',
-            'failed': 'failed'
-        }
 
         self._conditions = conditions
         self._start_time = start_time
@@ -215,7 +215,7 @@ class V1JobStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1JobStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

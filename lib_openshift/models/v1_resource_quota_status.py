@@ -36,25 +36,25 @@ class V1ResourceQuotaStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'hard': 'object',
+        'used': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'hard': 'hard',
+        'used': 'used'
+    }
 
     def __init__(self, hard=None, used=None):
         """
         V1ResourceQuotaStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'hard': 'object',
-            'used': 'object'
-        }
-
-        self.attribute_map = {
-            'hard': 'hard',
-            'used': 'used'
-        }
 
         self._hard = hard
         self._used = used
@@ -111,7 +111,7 @@ class V1ResourceQuotaStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ResourceQuotaStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

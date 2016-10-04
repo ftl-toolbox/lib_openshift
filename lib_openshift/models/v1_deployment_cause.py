@@ -36,25 +36,25 @@ class V1DeploymentCause(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'image_trigger': 'V1DeploymentCauseImageTrigger'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'image_trigger': 'imageTrigger'
+    }
 
     def __init__(self, type=None, image_trigger=None):
         """
         V1DeploymentCause - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'image_trigger': 'V1DeploymentCauseImageTrigger'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'image_trigger': 'imageTrigger'
-        }
 
         self._type = type
         self._image_trigger = image_trigger
@@ -111,7 +111,7 @@ class V1DeploymentCause(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentCause.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

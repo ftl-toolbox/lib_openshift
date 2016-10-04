@@ -36,23 +36,23 @@ class V1NamespaceSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'finalizers': 'list[V1FinalizerName]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'finalizers': 'finalizers'
+    }
 
     def __init__(self, finalizers=None):
         """
         V1NamespaceSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'finalizers': 'list[V1FinalizerName]'
-        }
-
-        self.attribute_map = {
-            'finalizers': 'finalizers'
-        }
 
         self._finalizers = finalizers
 
@@ -85,7 +85,7 @@ class V1NamespaceSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NamespaceSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

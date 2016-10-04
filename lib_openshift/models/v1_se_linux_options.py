@@ -36,29 +36,29 @@ class V1SELinuxOptions(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'user': 'str',
+        'role': 'str',
+        'type': 'str',
+        'level': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'user': 'user',
+        'role': 'role',
+        'type': 'type',
+        'level': 'level'
+    }
 
     def __init__(self, user=None, role=None, type=None, level=None):
         """
         V1SELinuxOptions - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'user': 'str',
-            'role': 'str',
-            'type': 'str',
-            'level': 'str'
-        }
-
-        self.attribute_map = {
-            'user': 'user',
-            'role': 'role',
-            'type': 'type',
-            'level': 'level'
-        }
 
         self._user = user
         self._role = role
@@ -163,7 +163,7 @@ class V1SELinuxOptions(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1SELinuxOptions.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

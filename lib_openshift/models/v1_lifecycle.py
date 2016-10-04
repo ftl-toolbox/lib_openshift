@@ -36,25 +36,25 @@ class V1Lifecycle(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'post_start': 'V1Handler',
+        'pre_stop': 'V1Handler'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'post_start': 'postStart',
+        'pre_stop': 'preStop'
+    }
 
     def __init__(self, post_start=None, pre_stop=None):
         """
         V1Lifecycle - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'post_start': 'V1Handler',
-            'pre_stop': 'V1Handler'
-        }
-
-        self.attribute_map = {
-            'post_start': 'postStart',
-            'pre_stop': 'preStop'
-        }
 
         self._post_start = post_start
         self._pre_stop = pre_stop
@@ -111,7 +111,7 @@ class V1Lifecycle(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Lifecycle.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

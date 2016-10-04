@@ -36,29 +36,29 @@ class V1RecreateDeploymentStrategyParams(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'timeout_seconds': 'int',
+        'pre': 'V1LifecycleHook',
+        'mid': 'V1LifecycleHook',
+        'post': 'V1LifecycleHook'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'timeout_seconds': 'timeoutSeconds',
+        'pre': 'pre',
+        'mid': 'mid',
+        'post': 'post'
+    }
 
     def __init__(self, timeout_seconds=None, pre=None, mid=None, post=None):
         """
         V1RecreateDeploymentStrategyParams - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'timeout_seconds': 'int',
-            'pre': 'V1LifecycleHook',
-            'mid': 'V1LifecycleHook',
-            'post': 'V1LifecycleHook'
-        }
-
-        self.attribute_map = {
-            'timeout_seconds': 'timeoutSeconds',
-            'pre': 'pre',
-            'mid': 'mid',
-            'post': 'post'
-        }
 
         self._timeout_seconds = timeout_seconds
         self._pre = pre
@@ -163,7 +163,7 @@ class V1RecreateDeploymentStrategyParams(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RecreateDeploymentStrategyParams.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

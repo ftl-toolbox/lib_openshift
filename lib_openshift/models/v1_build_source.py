@@ -36,37 +36,37 @@ class V1BuildSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'binary': 'V1BinaryBuildSource',
+        'dockerfile': 'str',
+        'git': 'V1GitBuildSource',
+        'images': 'list[V1ImageSource]',
+        'context_dir': 'str',
+        'source_secret': 'V1LocalObjectReference',
+        'secrets': 'list[V1SecretBuildSource]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'binary': 'binary',
+        'dockerfile': 'dockerfile',
+        'git': 'git',
+        'images': 'images',
+        'context_dir': 'contextDir',
+        'source_secret': 'sourceSecret',
+        'secrets': 'secrets'
+    }
 
     def __init__(self, type=None, binary=None, dockerfile=None, git=None, images=None, context_dir=None, source_secret=None, secrets=None):
         """
         V1BuildSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'binary': 'V1BinaryBuildSource',
-            'dockerfile': 'str',
-            'git': 'V1GitBuildSource',
-            'images': 'list[V1ImageSource]',
-            'context_dir': 'str',
-            'source_secret': 'V1LocalObjectReference',
-            'secrets': 'list[V1SecretBuildSource]'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'binary': 'binary',
-            'dockerfile': 'dockerfile',
-            'git': 'git',
-            'images': 'images',
-            'context_dir': 'contextDir',
-            'source_secret': 'sourceSecret',
-            'secrets': 'secrets'
-        }
 
         self._type = type
         self._binary = binary
@@ -267,7 +267,7 @@ class V1BuildSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

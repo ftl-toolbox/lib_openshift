@@ -36,35 +36,35 @@ class V1DeploymentStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'custom_params': 'V1CustomDeploymentStrategyParams',
+        'recreate_params': 'V1RecreateDeploymentStrategyParams',
+        'rolling_params': 'V1RollingDeploymentStrategyParams',
+        'resources': 'V1ResourceRequirements',
+        'labels': 'object',
+        'annotations': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'custom_params': 'customParams',
+        'recreate_params': 'recreateParams',
+        'rolling_params': 'rollingParams',
+        'resources': 'resources',
+        'labels': 'labels',
+        'annotations': 'annotations'
+    }
 
     def __init__(self, type=None, custom_params=None, recreate_params=None, rolling_params=None, resources=None, labels=None, annotations=None):
         """
         V1DeploymentStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'custom_params': 'V1CustomDeploymentStrategyParams',
-            'recreate_params': 'V1RecreateDeploymentStrategyParams',
-            'rolling_params': 'V1RollingDeploymentStrategyParams',
-            'resources': 'V1ResourceRequirements',
-            'labels': 'object',
-            'annotations': 'object'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'custom_params': 'customParams',
-            'recreate_params': 'recreateParams',
-            'rolling_params': 'rollingParams',
-            'resources': 'resources',
-            'labels': 'labels',
-            'annotations': 'annotations'
-        }
 
         self._type = type
         self._custom_params = custom_params
@@ -241,7 +241,7 @@ class V1DeploymentStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

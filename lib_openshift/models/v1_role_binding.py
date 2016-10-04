@@ -66,35 +66,35 @@ class V1RoleBinding(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'user_names': 'list[str]',
+        'group_names': 'list[str]',
+        'subjects': 'list[V1ObjectReference]',
+        'role_ref': 'V1ObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'user_names': 'userNames',
+        'group_names': 'groupNames',
+        'subjects': 'subjects',
+        'role_ref': 'roleRef'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, user_names=None, group_names=None, subjects=None, role_ref=None):
         """
         V1RoleBinding - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'user_names': 'list[str]',
-            'group_names': 'list[str]',
-            'subjects': 'list[V1ObjectReference]',
-            'role_ref': 'V1ObjectReference'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'user_names': 'userNames',
-            'group_names': 'groupNames',
-            'subjects': 'subjects',
-            'role_ref': 'roleRef'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -271,7 +271,7 @@ class V1RoleBinding(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1RoleBinding.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

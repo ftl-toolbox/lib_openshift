@@ -36,31 +36,31 @@ class V1DeploymentConfigRollbackSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'include_triggers': 'bool',
+        'include_template': 'bool',
+        'include_replication_meta': 'bool',
+        'include_strategy': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'include_triggers': 'includeTriggers',
+        'include_template': 'includeTemplate',
+        'include_replication_meta': 'includeReplicationMeta',
+        'include_strategy': 'includeStrategy'
+    }
 
     def __init__(self, _from=None, include_triggers=None, include_template=None, include_replication_meta=None, include_strategy=None):
         """
         V1DeploymentConfigRollbackSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'include_triggers': 'bool',
-            'include_template': 'bool',
-            'include_replication_meta': 'bool',
-            'include_strategy': 'bool'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'include_triggers': 'includeTriggers',
-            'include_template': 'includeTemplate',
-            'include_replication_meta': 'includeReplicationMeta',
-            'include_strategy': 'includeStrategy'
-        }
 
         self.__from = _from
         self._include_triggers = include_triggers
@@ -189,7 +189,7 @@ class V1DeploymentConfigRollbackSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DeploymentConfigRollbackSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

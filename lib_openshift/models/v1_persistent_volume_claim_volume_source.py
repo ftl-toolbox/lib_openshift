@@ -36,25 +36,25 @@ class V1PersistentVolumeClaimVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'claim_name': 'str',
+        'read_only': 'bool'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'claim_name': 'claimName',
+        'read_only': 'readOnly'
+    }
 
     def __init__(self, claim_name=None, read_only=None):
         """
         V1PersistentVolumeClaimVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'claim_name': 'str',
-            'read_only': 'bool'
-        }
-
-        self.attribute_map = {
-            'claim_name': 'claimName',
-            'read_only': 'readOnly'
-        }
 
         self._claim_name = claim_name
         self._read_only = read_only
@@ -111,7 +111,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PersistentVolumeClaimVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -66,33 +66,33 @@ class V1Template(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'objects': 'list[RuntimeRawExtension]',
+        'parameters': 'list[V1Parameter]',
+        'labels': 'object'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'objects': 'objects',
+        'parameters': 'parameters',
+        'labels': 'labels'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, objects=None, parameters=None, labels=None):
         """
         V1Template - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'objects': 'list[RuntimeRawExtension]',
-            'parameters': 'list[V1Parameter]',
-            'labels': 'object'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'objects': 'objects',
-            'parameters': 'parameters',
-            'labels': 'labels'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -245,7 +245,7 @@ class V1Template(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1Template.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

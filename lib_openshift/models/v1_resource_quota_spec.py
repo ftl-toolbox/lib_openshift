@@ -36,25 +36,25 @@ class V1ResourceQuotaSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'hard': 'object',
+        'scopes': 'list[V1ResourceQuotaScope]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'hard': 'hard',
+        'scopes': 'scopes'
+    }
 
     def __init__(self, hard=None, scopes=None):
         """
         V1ResourceQuotaSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'hard': 'object',
-            'scopes': 'list[V1ResourceQuotaScope]'
-        }
-
-        self.attribute_map = {
-            'hard': 'hard',
-            'scopes': 'scopes'
-        }
 
         self._hard = hard
         self._scopes = scopes
@@ -111,7 +111,7 @@ class V1ResourceQuotaSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ResourceQuotaSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

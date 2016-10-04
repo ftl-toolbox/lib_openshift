@@ -36,29 +36,29 @@ class V1ComponentCondition(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'status': 'str',
+        'message': 'str',
+        'error': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'status': 'status',
+        'message': 'message',
+        'error': 'error'
+    }
 
     def __init__(self, type=None, status=None, message=None, error=None):
         """
         V1ComponentCondition - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'status': 'str',
-            'message': 'str',
-            'error': 'str'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'status': 'status',
-            'message': 'message',
-            'error': 'error'
-        }
 
         self._type = type
         self._status = status
@@ -163,7 +163,7 @@ class V1ComponentCondition(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ComponentCondition.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

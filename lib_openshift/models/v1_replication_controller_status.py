@@ -36,27 +36,27 @@ class V1ReplicationControllerStatus(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'replicas': 'int',
+        'fully_labeled_replicas': 'int',
+        'observed_generation': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'replicas': 'replicas',
+        'fully_labeled_replicas': 'fullyLabeledReplicas',
+        'observed_generation': 'observedGeneration'
+    }
 
     def __init__(self, replicas=None, fully_labeled_replicas=None, observed_generation=None):
         """
         V1ReplicationControllerStatus - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'replicas': 'int',
-            'fully_labeled_replicas': 'int',
-            'observed_generation': 'int'
-        }
-
-        self.attribute_map = {
-            'replicas': 'replicas',
-            'fully_labeled_replicas': 'fullyLabeledReplicas',
-            'observed_generation': 'observedGeneration'
-        }
 
         self._replicas = replicas
         self._fully_labeled_replicas = fully_labeled_replicas
@@ -137,7 +137,7 @@ class V1ReplicationControllerStatus(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1ReplicationControllerStatus.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,33 +36,33 @@ class V1DockerBuildStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'pull_secret': 'V1LocalObjectReference',
+        'no_cache': 'bool',
+        'env': 'list[V1EnvVar]',
+        'force_pull': 'bool',
+        'dockerfile_path': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'pull_secret': 'pullSecret',
+        'no_cache': 'noCache',
+        'env': 'env',
+        'force_pull': 'forcePull',
+        'dockerfile_path': 'dockerfilePath'
+    }
 
     def __init__(self, _from=None, pull_secret=None, no_cache=None, env=None, force_pull=None, dockerfile_path=None):
         """
         V1DockerBuildStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'pull_secret': 'V1LocalObjectReference',
-            'no_cache': 'bool',
-            'env': 'list[V1EnvVar]',
-            'force_pull': 'bool',
-            'dockerfile_path': 'str'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'pull_secret': 'pullSecret',
-            'no_cache': 'noCache',
-            'env': 'env',
-            'force_pull': 'forcePull',
-            'dockerfile_path': 'dockerfilePath'
-        }
 
         self.__from = _from
         self._pull_secret = pull_secret
@@ -215,7 +215,7 @@ class V1DockerBuildStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DockerBuildStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

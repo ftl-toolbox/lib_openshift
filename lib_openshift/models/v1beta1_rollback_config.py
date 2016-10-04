@@ -36,23 +36,23 @@ class V1beta1RollbackConfig(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'revision': 'int'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'revision': 'revision'
+    }
 
     def __init__(self, revision=None):
         """
         V1beta1RollbackConfig - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'revision': 'int'
-        }
-
-        self.attribute_map = {
-            'revision': 'revision'
-        }
 
         self._revision = revision
 
@@ -85,7 +85,7 @@ class V1beta1RollbackConfig(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1RollbackConfig.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

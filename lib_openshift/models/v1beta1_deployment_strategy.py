@@ -36,25 +36,25 @@ class V1beta1DeploymentStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'type': 'str',
+        'rolling_update': 'V1beta1RollingUpdateDeployment'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'type': 'type',
+        'rolling_update': 'rollingUpdate'
+    }
 
     def __init__(self, type=None, rolling_update=None):
         """
         V1beta1DeploymentStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'type': 'str',
-            'rolling_update': 'V1beta1RollingUpdateDeployment'
-        }
-
-        self.attribute_map = {
-            'type': 'type',
-            'rolling_update': 'rollingUpdate'
-        }
 
         self._type = type
         self._rolling_update = rolling_update
@@ -111,7 +111,7 @@ class V1beta1DeploymentStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1DeploymentStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

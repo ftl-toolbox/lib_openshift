@@ -36,27 +36,27 @@ class V1EndpointSubset(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'addresses': 'list[V1EndpointAddress]',
+        'not_ready_addresses': 'list[V1EndpointAddress]',
+        'ports': 'list[V1EndpointPort]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'addresses': 'addresses',
+        'not_ready_addresses': 'notReadyAddresses',
+        'ports': 'ports'
+    }
 
     def __init__(self, addresses=None, not_ready_addresses=None, ports=None):
         """
         V1EndpointSubset - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'addresses': 'list[V1EndpointAddress]',
-            'not_ready_addresses': 'list[V1EndpointAddress]',
-            'ports': 'list[V1EndpointPort]'
-        }
-
-        self.attribute_map = {
-            'addresses': 'addresses',
-            'not_ready_addresses': 'notReadyAddresses',
-            'ports': 'ports'
-        }
 
         self._addresses = addresses
         self._not_ready_addresses = not_ready_addresses
@@ -137,7 +137,7 @@ class V1EndpointSubset(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1EndpointSubset.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

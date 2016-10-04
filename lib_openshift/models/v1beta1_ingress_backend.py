@@ -36,25 +36,25 @@ class V1beta1IngressBackend(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'service_name': 'str',
+        'service_port': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'service_name': 'serviceName',
+        'service_port': 'servicePort'
+    }
 
     def __init__(self, service_name=None, service_port=None):
         """
         V1beta1IngressBackend - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'service_name': 'str',
-            'service_port': 'str'
-        }
-
-        self.attribute_map = {
-            'service_name': 'serviceName',
-            'service_port': 'servicePort'
-        }
 
         self._service_name = service_name
         self._service_port = service_port
@@ -111,7 +111,7 @@ class V1beta1IngressBackend(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1beta1IngressBackend.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

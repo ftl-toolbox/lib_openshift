@@ -36,25 +36,25 @@ class V1TagImageHook(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'container_name': 'str',
+        'to': 'V1ObjectReference'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'container_name': 'containerName',
+        'to': 'to'
+    }
 
     def __init__(self, container_name=None, to=None):
         """
         V1TagImageHook - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'container_name': 'str',
-            'to': 'V1ObjectReference'
-        }
-
-        self.attribute_map = {
-            'container_name': 'containerName',
-            'to': 'to'
-        }
 
         self._container_name = container_name
         self._to = to
@@ -111,7 +111,7 @@ class V1TagImageHook(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1TagImageHook.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

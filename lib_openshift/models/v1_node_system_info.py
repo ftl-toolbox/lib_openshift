@@ -36,37 +36,37 @@ class V1NodeSystemInfo(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'machine_id': 'str',
+        'system_uuid': 'str',
+        'boot_id': 'str',
+        'kernel_version': 'str',
+        'os_image': 'str',
+        'container_runtime_version': 'str',
+        'kubelet_version': 'str',
+        'kube_proxy_version': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'machine_id': 'machineID',
+        'system_uuid': 'systemUUID',
+        'boot_id': 'bootID',
+        'kernel_version': 'kernelVersion',
+        'os_image': 'osImage',
+        'container_runtime_version': 'containerRuntimeVersion',
+        'kubelet_version': 'kubeletVersion',
+        'kube_proxy_version': 'kubeProxyVersion'
+    }
 
     def __init__(self, machine_id=None, system_uuid=None, boot_id=None, kernel_version=None, os_image=None, container_runtime_version=None, kubelet_version=None, kube_proxy_version=None):
         """
         V1NodeSystemInfo - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'machine_id': 'str',
-            'system_uuid': 'str',
-            'boot_id': 'str',
-            'kernel_version': 'str',
-            'os_image': 'str',
-            'container_runtime_version': 'str',
-            'kubelet_version': 'str',
-            'kube_proxy_version': 'str'
-        }
-
-        self.attribute_map = {
-            'machine_id': 'machineID',
-            'system_uuid': 'systemUUID',
-            'boot_id': 'bootID',
-            'kernel_version': 'kernelVersion',
-            'os_image': 'osImage',
-            'container_runtime_version': 'containerRuntimeVersion',
-            'kubelet_version': 'kubeletVersion',
-            'kube_proxy_version': 'kubeProxyVersion'
-        }
 
         self._machine_id = machine_id
         self._system_uuid = system_uuid
@@ -267,7 +267,7 @@ class V1NodeSystemInfo(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1NodeSystemInfo.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

@@ -36,35 +36,35 @@ class V1CustomBuildStrategy(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        '_from': 'V1ObjectReference',
+        'pull_secret': 'V1LocalObjectReference',
+        'env': 'list[V1EnvVar]',
+        'expose_docker_socket': 'bool',
+        'force_pull': 'bool',
+        'secrets': 'list[V1SecretSpec]',
+        'build_api_version': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        '_from': 'from',
+        'pull_secret': 'pullSecret',
+        'env': 'env',
+        'expose_docker_socket': 'exposeDockerSocket',
+        'force_pull': 'forcePull',
+        'secrets': 'secrets',
+        'build_api_version': 'buildAPIVersion'
+    }
 
     def __init__(self, _from=None, pull_secret=None, env=None, expose_docker_socket=None, force_pull=None, secrets=None, build_api_version=None):
         """
         V1CustomBuildStrategy - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            '_from': 'V1ObjectReference',
-            'pull_secret': 'V1LocalObjectReference',
-            'env': 'list[V1EnvVar]',
-            'expose_docker_socket': 'bool',
-            'force_pull': 'bool',
-            'secrets': 'list[V1SecretSpec]',
-            'build_api_version': 'str'
-        }
-
-        self.attribute_map = {
-            '_from': 'from',
-            'pull_secret': 'pullSecret',
-            'env': 'env',
-            'expose_docker_socket': 'exposeDockerSocket',
-            'force_pull': 'forcePull',
-            'secrets': 'secrets',
-            'build_api_version': 'buildAPIVersion'
-        }
 
         self.__from = _from
         self._pull_secret = pull_secret
@@ -241,7 +241,7 @@ class V1CustomBuildStrategy(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1CustomBuildStrategy.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

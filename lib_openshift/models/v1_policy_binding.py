@@ -66,33 +66,33 @@ class V1PolicyBinding(object):
         },
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'kind': 'str',
+        'api_version': 'str',
+        'metadata': 'V1ObjectMeta',
+        'last_modified': 'str',
+        'policy_ref': 'V1ObjectReference',
+        'role_bindings': 'list[V1NamedRoleBinding]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'kind': 'kind',
+        'api_version': 'apiVersion',
+        'metadata': 'metadata',
+        'last_modified': 'lastModified',
+        'policy_ref': 'policyRef',
+        'role_bindings': 'roleBindings'
+    }
 
     def __init__(self, kind=None, api_version=None, metadata=None, last_modified=None, policy_ref=None, role_bindings=None):
         """
         V1PolicyBinding - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'kind': 'str',
-            'api_version': 'str',
-            'metadata': 'V1ObjectMeta',
-            'last_modified': 'str',
-            'policy_ref': 'V1ObjectReference',
-            'role_bindings': 'list[V1NamedRoleBinding]'
-        }
-
-        self.attribute_map = {
-            'kind': 'kind',
-            'api_version': 'apiVersion',
-            'metadata': 'metadata',
-            'last_modified': 'lastModified',
-            'policy_ref': 'policyRef',
-            'role_bindings': 'roleBindings'
-        }
 
         self._kind = kind
         self._api_version = api_version
@@ -245,7 +245,7 @@ class V1PolicyBinding(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1PolicyBinding.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

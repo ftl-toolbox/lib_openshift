@@ -36,23 +36,23 @@ class V1DownwardAPIVolumeSource(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'items': 'list[V1DownwardAPIVolumeFile]'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'items': 'items'
+    }
 
     def __init__(self, items=None):
         """
         V1DownwardAPIVolumeSource - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'items': 'list[V1DownwardAPIVolumeFile]'
-        }
-
-        self.attribute_map = {
-            'items': 'items'
-        }
 
         self._items = items
 
@@ -85,7 +85,7 @@ class V1DownwardAPIVolumeSource(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1DownwardAPIVolumeSource.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(

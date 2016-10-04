@@ -36,27 +36,27 @@ class V1BuildPostCommitSpec(object):
     operations = [
     ]
 
+    # The key is attribute name
+    # and the value is attribute type.
+    swagger_types = {
+        'command': 'list[str]',
+        'args': 'list[str]',
+        'script': 'str'
+    }
+
+    # The key is attribute name
+    # and the value is json key in definition.
+    attribute_map = {
+        'command': 'command',
+        'args': 'args',
+        'script': 'script'
+    }
 
     def __init__(self, command=None, args=None, script=None):
         """
         V1BuildPostCommitSpec - a model defined in Swagger
 
-        :param dict swaggerTypes: The key is attribute name
-                                  and the value is attribute type.
-        :param dict attributeMap: The key is attribute name
-                                  and the value is json key in definition.
         """
-        self.swagger_types = {
-            'command': 'list[str]',
-            'args': 'list[str]',
-            'script': 'str'
-        }
-
-        self.attribute_map = {
-            'command': 'command',
-            'args': 'args',
-            'script': 'script'
-        }
 
         self._command = command
         self._args = args
@@ -137,7 +137,7 @@ class V1BuildPostCommitSpec(object):
         """
         result = {}
 
-        for attr, _ in iteritems(self.swagger_types):
+        for attr, _ in iteritems(V1BuildPostCommitSpec.swagger_types):
             value = getattr(self, attr)
             if isinstance(value, list):
                 result[attr] = list(map(
